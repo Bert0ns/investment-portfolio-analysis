@@ -5,17 +5,27 @@ import { Issuer, EtfConfig } from '../lib/types';
 import { getCsvParser } from '../lib/parsers';
 
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from './ui/dialog';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Button } from './ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { toast } from 'sonner';
+import { Plus } from 'lucide-react';
 
 interface EtfFormProps {
   onAddEtf: (etf: EtfConfig) => void;
 }
 
 export default function EtfForm({ onAddEtf }: EtfFormProps) {
+  const [open, setOpen] = useState(false);
   const [name, setName] = useState('');
   const [issuer, setIssuer] = useState<Issuer>('iShares');
   const [ter, setTer] = useState('');
@@ -73,6 +83,8 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
       setName('');
       setTer('');
       setFile(null);
+      setOpen(false); // Close dialog on success
+
       toast.success('ETF Added', {
         description: `${name} has been successfully added to your portfolio.`,
       });
@@ -86,12 +98,22 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
   };
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Add New ETF</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger
+        render={
+          <Button className="w-full flex items-center justify-center gap-2 py-6 text-base shadow-sm" />
+        }
+      >
+        <Plus size={20} /> Add New ETF
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Add New ETF</DialogTitle>
+          <DialogDescription>
+            Enter the ETF details and upload its holdings CSV to add it to your portfolio.
+          </DialogDescription>
+        </DialogHeader>
+        <form onSubmit={handleSubmit} className="space-y-4 mt-2">
           <div className="space-y-2">
             <Label htmlFor="etf-name">ETF Name / Ticker</Label>
             <Input
@@ -142,11 +164,11 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
             />
           </div>
 
-          <Button type="submit" disabled={isLoading} className="w-full">
-            {isLoading ? 'Processing...' : 'Add ETF'}
+          <Button type="submit" disabled={isLoading} className="w-full mt-6">
+            {isLoading ? 'Processing...' : 'Add ETF to Portfolio'}
           </Button>
         </form>
-      </CardContent>
-    </Card>
+      </DialogContent>
+    </Dialog>
   );
 }

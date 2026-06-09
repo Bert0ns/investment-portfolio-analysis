@@ -18,6 +18,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
   - Elegant error handling (e.g., CSV files with missing columns) via non-blocking error messages on the UI (e.g., Toast notifications).
 
 - **Design & UI (Tailwind CSS):**
+  - Use shacnui as default
   - Simple, modern, and minimalist aesthetics (Vercel/Radix UI inspiration).
   - Use card containers with soft borders, soft shadows, ample whitespace (generous padding), and a sober color palette.
   - Fully responsive layout (Grid/Flexbox).
