@@ -114,13 +114,13 @@ export default function PortfolioSliders({
   const isUnderweight = totalWeight < 100;
 
   return (
-    <Card className="h-full flex flex-col min-h-[300px]">
+    <Card className="h-full flex flex-col min-h-75">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle>Portfolio Weights</CardTitle>
       </CardHeader>
 
       <CardContent className="flex-1 flex flex-col pt-0 space-y-6">
-        <div className="flex-1 overflow-y-auto space-y-6 pr-2">
+        <div className="flex-1 space-y-6 pr-2">
           {etfs.map((etf) => (
             <EtfSliderRow
               key={etf.id}

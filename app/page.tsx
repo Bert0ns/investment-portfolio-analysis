@@ -42,16 +42,18 @@ export default function Home() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Left Column: Form & Sliders */}
-          <div className="lg:col-span-1 space-y-6 flex flex-col">
-            <EtfForm onAddEtf={addEtf} />
-            <div className="flex-1 min-h-100">
-              <PortfolioSliders
-                etfs={etfs}
-                totalWeight={totalWeight}
-                onUpdateWeight={updateEtfWeight}
-                onRemove={removeEtf}
-                onReset={loadDefaults}
-              />
+          <div className="lg:col-span-1 relative">
+            <div className="sticky top-6 space-y-6 max-h-[calc(100vh-3rem)] flex flex-col">
+              <EtfForm onAddEtf={addEtf} />
+              <div className="flex-1 overflow-y-auto pr-2 pb-4 scrollbar-thin scrollbar-thumb-gray-200">
+                <PortfolioSliders
+                  etfs={etfs}
+                  totalWeight={totalWeight}
+                  onUpdateWeight={updateEtfWeight}
+                  onRemove={removeEtf}
+                  onReset={loadDefaults}
+                />
+              </div>
             </div>
           </div>
 
