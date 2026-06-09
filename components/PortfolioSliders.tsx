@@ -109,9 +109,6 @@ export default function PortfolioSliders({
     <Card className="h-full flex flex-col min-h-[300px]">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle>Portfolio Weights</CardTitle>
-        <Button variant="ghost" size="icon" onClick={onReset} title="Reset to defaults">
-          <RotateCcw size={18} className="text-muted-foreground" />
-        </Button>
       </CardHeader>
 
       <CardContent className="flex-1 flex flex-col pt-0 space-y-6">
@@ -156,6 +153,28 @@ export default function PortfolioSliders({
             {isOverweight && 'Your portfolio exceeds 100%. Please reduce some weights.'}
             {isUnderweight && `You have ${(100 - totalWeight).toFixed(1)}% left to allocate.`}
             {!isOverweight && !isUnderweight && 'Perfectly allocated.'}
+          </div>
+
+          <div className="mt-6">
+            <Button
+              variant="outline"
+              className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/10 border-dashed"
+              onClick={() => {
+                if (
+                  window.confirm(
+                    'Warning: This will permanently delete your current portfolio configuration and replace it with the default sample ETFs. Continue?'
+                  )
+                ) {
+                  onReset();
+                }
+              }}
+            >
+              <RotateCcw size={14} className="mr-2" />
+              Reset to Default Portfolio
+            </Button>
+            <p className="text-[10px] text-center text-muted-foreground mt-2 opacity-70">
+              Note: This will delete your current configuration.
+            </p>
           </div>
         </div>
       </CardContent>
