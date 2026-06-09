@@ -22,11 +22,11 @@ interface SavingsPlanCalculatorProps {
 }
 
 export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculatorProps) {
-  const [initialInvestment, setInitialInvestment] = useState(5000);
-  const [monthlyContribution, setMonthlyContribution] = useState(500);
-  const [years, setYears] = useState(20);
+  const [initialInvestment, setInitialInvestment] = useState(0);
+  const [monthlyContribution, setMonthlyContribution] = useState(833);
+  const [years, setYears] = useState(10);
   const [expectedReturn, setExpectedReturn] = useState(6);
-  const [stopAccumulatingMonths, setStopAccumulatingMonths] = useState(240);
+  const [stopAccumulatingMonths, setStopAccumulatingMonths] = useState(6);
 
   const activeEtfs = etfs.filter((e) => e.globalWeight > 0);
   const clampedStopMonths = Math.min(stopAccumulatingMonths, years * 12);
