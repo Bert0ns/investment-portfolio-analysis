@@ -266,6 +266,18 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
 
           <div className="space-y-2">
             <Label htmlFor="csv-file">Holdings CSV File</Label>
+            <div className="bg-blue-50 dark:bg-blue-950/30 text-blue-800 dark:text-blue-300 p-3 rounded-lg text-xs leading-relaxed border border-blue-200 dark:border-blue-800/50 mb-2 mt-1 shadow-sm">
+              <strong className="block mb-1 text-blue-900 dark:text-blue-200">
+                How to get the CSV file:
+              </strong>
+              Go to the ETF issuer's official website (e.g., iShares, Vanguard, Amundi), search for
+              your ETF, and find the section containing the holdings/participations. Download the
+              list as a <strong>CSV (UTF-8)</strong>. <br />
+              <span className="text-red-700 dark:text-red-400 font-semibold mt-1 block">
+                ⚠️ Do not edit or open the file in Excel before uploading! Just upload it directly
+                as downloaded.
+              </span>
+            </div>
             <Input
               id="csv-file"
               type="file"
