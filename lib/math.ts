@@ -5,6 +5,37 @@ export interface AggregationResult {
   value: number;
 }
 
+function normalizeSector(sector: string): string {
+  if (!sector || sector === 'Unknown' || sector === 'N/A') return 'Unknown';
+
+  const s = sector.trim().toLowerCase();
+
+  if (
+    s === 'it' ||
+    s.includes('information technology') ||
+    s.includes('technology') ||
+    s.includes('tecnologia')
+  )
+    return 'Information Technology';
+  if (s.includes('finanziari') || s.includes('financial') || s.includes('finance'))
+    return 'Financials';
+  if (s.includes('industr') || s.includes('industrali')) return 'Industrials';
+  if (s.includes('health') || s.includes('sanità') || s.includes('sanita') || s.includes('cura'))
+    return 'Healthcare';
+  if (s.includes('discrezionali') || s.includes('discretionary') || s.includes('cyclical'))
+    return 'Consumer Discretionary';
+  if (s.includes('staples') || s.includes('beni di consumo') || s.includes('defensive'))
+    return 'Consumer Staples';
+  if (s.includes('material')) return 'Materials';
+  if (s.includes('energ')) return 'Energy';
+  if (s.includes('utilit') || s.includes('pubblica utilità')) return 'Utilities';
+  if (s.includes('communication') || s.includes('telecom')) return 'Communication Services';
+  if (s.includes('real estate') || s.includes('immobiliare')) return 'Real Estate';
+
+  // Return the original sector with title case as fallback
+  return sector.charAt(0).toUpperCase() + sector.slice(1);
+}
+
 export function aggregateBy(
   etfs: EtfConfig[],
   key: 'sector' | 'country' | 'currency'
@@ -18,7 +49,11 @@ export function aggregateBy(
     for (const holding of etf.holdings) {
       // holding.weight is also typically 0-100
       const actualWeight = holding.weight * globalMultiplier;
-      const groupingKey = holding[key] || 'Unknown';
+      let groupingKey = holding[key] || 'Unknown';
+
+      if (key === 'sector') {
+        groupingKey = normalizeSector(groupingKey);
+      }
 
       map.set(groupingKey, (map.get(groupingKey) || 0) + actualWeight);
     }
