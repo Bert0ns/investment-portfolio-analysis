@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import { EtfConfig } from '../lib/types';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 import { Slider } from './ui/slider';
+import { Input } from './ui/input';
 import {
   AreaChart,
   Area,
@@ -254,11 +255,19 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
             </CardHeader>
             <CardContent className="space-y-8">
               <div className="space-y-3">
-                <div className="flex justify-between items-end">
+                <div className="flex justify-between items-center">
                   <label className="text-sm font-medium text-foreground">Initial Investment</label>
-                  <span className="font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-md">
-                    {formatCurrency(initialInvestment)}
-                  </span>
+                  <div className="relative w-28">
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm font-bold">
+                      $
+                    </span>
+                    <Input
+                      type="number"
+                      value={initialInvestment}
+                      onChange={(e) => setInitialInvestment(Number(e.target.value) || 0)}
+                      className="h-8 pl-6 pr-2 text-right font-bold text-primary bg-primary/10 border-primary/20 focus-visible:ring-primary/30"
+                    />
+                  </div>
                 </div>
                 <Slider
                   value={[initialInvestment]}
@@ -270,13 +279,21 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
               </div>
 
               <div className="space-y-3">
-                <div className="flex justify-between items-end">
+                <div className="flex justify-between items-center">
                   <label className="text-sm font-medium text-foreground">
                     Monthly Contribution
                   </label>
-                  <span className="font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-md">
-                    {formatCurrency(monthlyContribution)}
-                  </span>
+                  <div className="relative w-28">
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm font-bold">
+                      $
+                    </span>
+                    <Input
+                      type="number"
+                      value={monthlyContribution}
+                      onChange={(e) => setMonthlyContribution(Number(e.target.value) || 0)}
+                      className="h-8 pl-6 pr-2 text-right font-bold text-primary bg-primary/10 border-primary/20 focus-visible:ring-primary/30"
+                    />
+                  </div>
                 </div>
                 <Slider
                   value={[monthlyContribution]}
@@ -288,11 +305,19 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
               </div>
 
               <div className="space-y-3">
-                <div className="flex justify-between items-end">
+                <div className="flex justify-between items-center">
                   <label className="text-sm font-medium text-foreground">Duration</label>
-                  <span className="font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-md">
-                    {years} Years
-                  </span>
+                  <div className="relative w-24">
+                    <Input
+                      type="number"
+                      value={years}
+                      onChange={(e) => setYears(Number(e.target.value) || 0)}
+                      className="h-8 pr-10 text-right font-bold text-primary bg-primary/10 border-primary/20 focus-visible:ring-primary/30"
+                    />
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground text-xs font-bold pointer-events-none">
+                      Yrs
+                    </span>
+                  </div>
                 </div>
                 <Slider
                   value={[years]}
@@ -304,13 +329,21 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
               </div>
 
               <div className="space-y-3">
-                <div className="flex justify-between items-end">
+                <div className="flex justify-between items-center">
                   <label className="text-sm font-medium text-foreground">
                     Expected Return (Yearly)
                   </label>
-                  <span className="font-bold text-emerald-600 bg-emerald-500/10 px-2 py-0.5 rounded-md">
-                    {expectedReturn}%
-                  </span>
+                  <div className="relative w-20">
+                    <Input
+                      type="number"
+                      value={expectedReturn}
+                      onChange={(e) => setExpectedReturn(Number(e.target.value) || 0)}
+                      className="h-8 pr-6 text-right font-bold text-emerald-600 bg-emerald-500/10 border-emerald-500/20 focus-visible:ring-emerald-500/30"
+                    />
+                    <span className="absolute right-2 top-1/2 -translate-y-1/2 text-emerald-600 text-xs font-bold pointer-events-none">
+                      %
+                    </span>
+                  </div>
                 </div>
                 <Slider
                   value={[expectedReturn]}
@@ -325,13 +358,21 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
               </div>
 
               <div className="space-y-3 pt-4 border-t border-dashed">
-                <div className="flex justify-between items-end">
+                <div className="flex justify-between items-center">
                   <label className="text-sm font-medium text-foreground">
                     Stop Contributing After
                   </label>
-                  <span className="font-bold text-blue-600 bg-blue-500/10 px-2 py-0.5 rounded-md">
-                    {clampedStopMonths} Months
-                  </span>
+                  <div className="relative w-24">
+                    <Input
+                      type="number"
+                      value={clampedStopMonths}
+                      onChange={(e) => setStopAccumulatingMonths(Number(e.target.value) || 0)}
+                      className="h-8 pr-9 text-right font-bold text-blue-600 bg-blue-500/10 border-blue-500/20 focus-visible:ring-blue-500/30"
+                    />
+                    <span className="absolute right-2 top-1/2 -translate-y-1/2 text-blue-600 text-xs font-bold pointer-events-none">
+                      Mo
+                    </span>
+                  </div>
                 </div>
                 <Slider
                   value={[clampedStopMonths]}
