@@ -1,13 +1,14 @@
 'use client';
 
 import { EtfConfig } from '../lib/types';
-import { Trash2 } from 'lucide-react';
+import { Trash2, RotateCcw } from 'lucide-react';
 
 interface PortfolioSlidersProps {
   etfs: EtfConfig[];
   totalWeight: number;
   onUpdateWeight: (id: string, weight: number) => void;
   onRemove: (id: string) => void;
+  onReset: () => void;
 }
 
 export default function PortfolioSliders({
@@ -15,12 +16,20 @@ export default function PortfolioSliders({
   totalWeight,
   onUpdateWeight,
   onRemove,
+  onReset,
 }: PortfolioSlidersProps) {
   if (etfs.length === 0) {
     return (
       <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center h-full text-gray-500 min-h-[300px]">
         <p className="font-medium text-gray-700">No ETFs added yet.</p>
         <p className="text-sm mt-1">Upload a CSV to start building your portfolio.</p>
+        <button
+          onClick={onReset}
+          className="mt-6 flex items-center space-x-2 px-4 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg transition-colors font-medium text-sm"
+        >
+          <RotateCcw size={16} />
+          <span>Load Default Portfolio</span>
+        </button>
       </div>
     );
   }
@@ -30,7 +39,16 @@ export default function PortfolioSliders({
 
   return (
     <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-full flex flex-col min-h-[300px]">
-      <h2 className="text-xl font-semibold mb-6 text-gray-800">Portfolio Weights</h2>
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-xl font-semibold text-gray-800">Portfolio Weights</h2>
+        <button
+          onClick={onReset}
+          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+          title="Reset to defaults"
+        >
+          <RotateCcw size={18} />
+        </button>
+      </div>
 
       <div className="flex-1 overflow-y-auto space-y-6 pr-2">
         {etfs.map((etf) => (

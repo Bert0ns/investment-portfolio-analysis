@@ -1,0 +1,358 @@
+﻿;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;Amundi ETF;;;;;;
+;;;;;;;
+;TITOLI DETENUTI DAL FONDO;;;;;;
+;;;;;;;
+;Nome del fondo;Amundi Prime Japan UCITS ETF DR (D);;;;;
+;Codice ISIN;LU1931974775;;;;;
+;Metodologia di Replica;Physical;;;;;
+;;;;;;;
+;Attivi in gestione nel fondo al 05/06/2026;680.212,03 mln JPY;;;;;
+;Valuta di riferimento;JPY;;;;;
+;;;;;;;
+;Si prega di notare che i dati relativi ai titoli detenuti a livello del fondo possono cambiare quotidianamente. Dati ritenuti esatti al 05/06/2026. Si prega di fare riferimento al sito per le ultime informazioni diponibili.;;;;;;
+;;;;;;;
+;Codice ISIN;Nome;Asset class;Valuta;Peso;Settore;Paese
+;JP3902900004;MITSUBISHI UFJ FINANCIAL GROUP;EQUITY;JPY; 3,97%;Finanziari;Giappone
+;JP3633400001;TOYOTA MOTOR CORP;EQUITY;JPY; 3,27%;Beni voluttuari;Giappone
+;JP3571400005;TOKYO ELECTRON  JPY50;EQUITY;JPY; 2,93%;Information Technology;Giappone
+;JP3436100006;SOFTBANK GROUP CORP;EQUITY;JPY; 2,87%;Servizi di comunicazione;Giappone
+;JP3890350006;SUMITOMO MITSUI FINANCIAL GROUP;EQUITY;JPY; 2,56%;Finanziari;Giappone
+;JP3788600009;HITACHI LTD;EQUITY;JPY; 2,49%;Industrali;Giappone
+;JP3435000009;SONY GROUP CORP (JT);EQUITY;JPY; 2,32%;Beni voluttuari;Giappone
+;JP3122400009;ADVANTEST CORP  Y50;EQUITY;JPY; 2,12%;Information Technology;Giappone
+;JP3885780001;MIZUHO FINANCIAL GROUP INC;EQUITY;JPY; 2,07%;Finanziari;Giappone
+;JP3898400001;MITSUBISHI CORPORATION;EQUITY;JPY; 1,78%;Industrali;Giappone
+;JP3914400001;MURATA MANUFACT CO LTD  JPY50;EQUITY;JPY; 1,77%;Information Technology;Giappone
+;JP3236200006;KEYENCE CORP  JPY50;EQUITY;JPY; 1,56%;Information Technology;Giappone
+;JP3802300008;FAST RETAILING CO  JPY50;EQUITY;JPY; 1,50%;Beni voluttuari;Giappone
+;JP3970300004;RECRUIT HOLDINGS CO LTD;EQUITY;JPY; 1,47%;Industrali;Giappone
+;JP3236330001;KIOXIA HOLDINGS CORP;EQUITY;JPY; 1,42%;Information Technology;Giappone
+;JP3371200001;SHIN-ETSU CHEM CO  JPY50;EQUITY;JPY; 1,34%;Materiali;Giappone
+;JP3910660004;TOKIO MARINE HOLDINGS INC;EQUITY;JPY; 1,33%;Finanziari;Giappone
+;JP3893600001;MITSUI & CO LTD;EQUITY;JPY; 1,30%;Industrali;Giappone
+;JP3900000005;MITSUBISHI HVY IND JPY50;EQUITY;JPY; 1,28%;Industrali;Giappone
+;JP3143600009;ITOCHU CORP;EQUITY;JPY; 1,27%;Industrali;Giappone
+;JP3902400005;MITSUBISHI ELEC CP JPY50;EQUITY;JPY; 1,26%;Industrali;Giappone
+;JP3407400005;SUMITOMO ELEC INDS JPY50;EQUITY;JPY; 1,03%;Beni voluttuari;Giappone
+;JP3837800006;HOYA CORP;EQUITY;JPY; 0,95%;Sanità;Giappone
+;JP3756600007;NINTENDO CO LTD;EQUITY;JPY; 0,93%;Servizi di comunicazione;Giappone
+;JP3866800000;PANASONIC HOLDINGS CORP;EQUITY;JPY; 0,91%;Beni voluttuari;Giappone
+;JP3496400007;KDDI CORP;EQUITY;JPY; 0,88%;Servizi di comunicazione;Giappone
+;JP3735400008;NTT INC;EQUITY;JPY; 0,85%;Servizi di comunicazione;Giappone
+;JP3538800008;TDK CORP;EQUITY;JPY; 0,85%;Information Technology;Giappone
+;JP3463000004;TAKEDA PHARMACEUTICAL;EQUITY;JPY; 0,82%;Sanità;Giappone
+;JP3164720009;RENESAS ELECTRONICS CORP;EQUITY;JPY; 0,81%;Information Technology;Giappone
+;JP3877600001;MARUBENI CORP;EQUITY;JPY; 0,80%;Industrali;Giappone
+;JP3404600003;SUMITOMO CORP  Y50;EQUITY;JPY; 0,79%;Industrali;Giappone
+;JP3802400006;FANUC CORP;EQUITY;JPY; 0,77%;Industrali;Giappone
+;JP3811000003;FUJIKURA LTD;EQUITY;JPY; 0,75%;Industrali;Giappone
+;JP3200450009;ORIX CORP;EQUITY;JPY; 0,75%;Finanziari;Giappone
+;JP3726800000;JAPAN TOBACCO INC;EQUITY;JPY; 0,72%;Beni di prima necessità;Giappone
+;JP3548600000;DISCO CORP;EQUITY;JPY; 0,70%;Information Technology;Giappone
+;JP3481800005;DAIKIN INDUSTRIES LTD;EQUITY;JPY; 0,70%;Industrali;Giappone
+;JP3818000006;FUJITSU LIMITED;EQUITY;JPY; 0,67%;Information Technology;Giappone
+;JP3732000009;SOFTBANK CORP;EQUITY;JPY; 0,65%;Servizi di comunicazione;Giappone
+;JP3304200003;KOMATSU LTD;EQUITY;JPY; 0,64%;Industrali;Giappone
+;JP3476480003;DAI-ICHI LIFE HLDG INC;EQUITY;JPY; 0,62%;Finanziari;Giappone
+;JP3890310000;MS&AD INSURANCE GROUP HOLDIN;EQUITY;JPY; 0,61%;Finanziari;Giappone
+;JP3854600008;HONDA MOTOR CO LTD;EQUITY;JPY; 0,59%;Beni voluttuari;Giappone
+;JP3733000008;NEC CORP;EQUITY;JPY; 0,58%;Information Technology;Giappone
+;JP3165000005;SOMPO HOLDINGS INC;EQUITY;JPY; 0,56%;Finanziari;Giappone
+;JP3249600002;KYOCERA CORP;EQUITY;JPY; 0,54%;Information Technology;Giappone
+;JP3519400000;CHUGAI PHARMACEUTICAL CO LTD;EQUITY;JPY; 0,53%;Sanità;Giappone
+;JP3188220002;OTSUKA HOLDINGS CO LTD;EQUITY;JPY; 0,51%;Sanità;Giappone
+;JP3148800000;IBIDEN CO LTD;EQUITY;JPY; 0,51%;Information Technology;Giappone
+;JP3899600005;MITSUBISHI ESTATE CO LTD Y50;EQUITY;JPY; 0,50%;Immobiliare;Giappone
+;JP3500610005;RESONA HOLDINGS INC;EQUITY;JPY; 0,50%;Finanziari;Giappone
+;JP3946750001;JAPAN POST BANK CO LTD;EQUITY;JPY; 0,47%;Finanziari;Giappone
+;JP3475350009;DAIICHI SANKYO;EQUITY;JPY; 0,47%;Sanità;Giappone
+;JP3422950000;SEVEN & I HOLDINGS CO LTD;EQUITY;JPY; 0,46%;Beni di prima necessità;Giappone
+;JP3635000007;TOYOTA TSUSHO CORP;EQUITY;JPY; 0,46%;Industrali;Giappone
+;JP3119600009;AJINOMOTO CO INC;EQUITY;JPY; 0,46%;Beni di prima necessità;Giappone
+;JP3814000000;FUJIFILM HOLDINGS CORP;EQUITY;JPY; 0,45%;Information Technology;Giappone
+;JP3762600009;NOMURA HOLDINGS INC;EQUITY;JPY; 0,45%;Finanziari;Giappone
+;JP3893200000;MITSUI FUDOSAN CO  JPY50;EQUITY;JPY; 0,44%;Immobiliare;Giappone
+;;;CASH;JPY; 0,43%; ; 
+;JP3242800005;CANON INC;EQUITY;JPY; 0,43%;Information Technology;Giappone
+;JP3942400007;ASTELLAS PHARMA INC;EQUITY;JPY; 0,42%;Sanità;Giappone
+;JP3892100003;SUMITOMO MITSUI TRUST HOLDINGS;EQUITY;JPY; 0,41%;Finanziari;Giappone
+;JP3752900005;JAPAN POST HOLDINGS CO LTD;EQUITY;JPY; 0,40%;Finanziari;Giappone
+;JP3162600005;SMC CORP;EQUITY;JPY; 0,40%;Industrali;Giappone
+;JP3830800003;BRIDGESTONE CORP  JPY50;EQUITY;JPY; 0,39%;Beni voluttuari;Giappone
+;JP3783600004;EAST JAPAN RAILWAY JPY50000;EQUITY;JPY; 0,38%;Industrali;Giappone
+;JP3386450005;ENEOS HOLDINGS INC;EQUITY;JPY; 0,37%;Energy;Giappone
+;JP3979200007;LASERTEC CORP;EQUITY;JPY; 0,36%;Information Technology;Giappone
+;JP3388200002;AEON CO LTD;EQUITY;JPY; 0,35%;Beni di prima necessità;Giappone
+;JP3827200001;FURUKAWA ELECTRIC CO;EQUITY;JPY; 0,35%;Industrali;Giappone
+;JP3294460005;INPEX CORP;EQUITY;JPY; 0,34%;Energy;Giappone
+;JP3551500006;DENSO CORP;EQUITY;JPY; 0,34%;Beni voluttuari;Giappone
+;JP3546800008;TERUMO CORP  JPY50;EQUITY;JPY; 0,33%;Sanità;Giappone
+;JP3368000000;RESONAC HOLDINGS CORP;EQUITY;JPY; 0,33%;Materiali;Giappone
+;JP3397200001;SUZUKI MOTOR CORP  Y50;EQUITY;JPY; 0,32%;Beni voluttuari;Giappone
+;JP3409000001;SUMITOMO REALTY & DEVELOPMEN;EQUITY;JPY; 0,32%;Immobiliare;Giappone
+;JP3566800003;CENTRAL JAPAN RAILWAY CO;EQUITY;JPY; 0,31%;Industrali;Giappone
+;JP3118000003;ASICS CORP;EQUITY;JPY; 0,30%;Beni voluttuari;Giappone
+;JP3381000003;NIPPON STEEL SUMITOMO METAL;EQUITY;JPY; 0,30%;Materiali;Giappone
+;JP3266400005;KUBOTA CORP  JPY50;EQUITY;JPY; 0,29%;Industrali;Giappone
+;JP3134800006;IHI CORP;EQUITY;JPY; 0,29%;Industrali;Giappone
+;JP3421800008;SECOM CO LTD;EQUITY;JPY; 0,29%;Industrali;Giappone
+;JP3205800000;KAO CORP;EQUITY;JPY; 0,28%;Beni di prima necessità;Giappone
+;JP3166000004;EBARA CORP;EQUITY;JPY; 0,28%;Industrali;Giappone
+;JP3734800000;NIDEC CORP;EQUITY;JPY; 0,27%;Industrali;Giappone
+;JP3888400003;MITSUI KINZOKU CO LTD;EQUITY;JPY; 0,26%;Materiali;Giappone
+;JP3210200006;KAJIMA CORP  JPY50;EQUITY;JPY; 0,26%;Industrali;Giappone
+;JP3505000004;DAIWA HOUSE INDUSTRY;EQUITY;JPY; 0,26%;Immobiliare;Giappone
+;JP3198900007;ORIENTAL LAND CO LTD;EQUITY;JPY; 0,26%;Beni voluttuari;Giappone
+;JP3497400006;DAIFUKU CO LTD;EQUITY;JPY; 0,25%;Industrali;Giappone
+;JP3224200000;KAWASAKI HEAVY IND JPY50;EQUITY;JPY; 0,25%;Industrali;Giappone
+;JP3111200006;ASAHI KASEI CORP;EQUITY;JPY; 0,24%;Materiali;Giappone
+;JP3402600005;SUMITOMO METAL MNG JPY50;EQUITY;JPY; 0,24%;Materiali;Giappone
+;JP3116000005;ASAHI GROUP HOLDINGS;EQUITY;JPY; 0,24%;Beni di prima necessità;Giappone
+;JP3347200002;SHIONOGI & CO LTD;EQUITY;JPY; 0,24%;Sanità;Giappone
+;;;CASH;JPY; 0,24%; ; 
+;JP3778630008;BANDAI NAMCO HOLDINGS INC;EQUITY;JPY; 0,23%;Beni voluttuari;Giappone
+;JP3753000003;NIPPON YUSEN KK  JPY50;EQUITY;JPY; 0,23%;Industrali;Giappone
+;JP3539220008;T&D HOLDINGS INC;EQUITY;JPY; 0,23%;Finanziari;Giappone
+;JP3228600007;KANSAI ELECTRIC POWER;EQUITY;JPY; 0,23%;Beni di pubblica utilità;Giappone
+;JP3820000002;FUJI ELECTRIC CO;EQUITY;JPY; 0,23%;Industrali;Giappone
+;JP3684000007;NITTO DENKO;EQUITY;JPY; 0,23%;Materiali;Giappone
+;JP3494600004;SCREEN HOLDINGS CO;EQUITY;JPY; 0,22%;Information Technology;Giappone
+;JP3502200003;DAIWA SECURITIES GROUP INC;EQUITY;JPY; 0,22%;Finanziari;Giappone
+;JP3183200009;JAPAN EXCHANGE GROUP INC;EQUITY;JPY; 0,22%;Finanziari;Giappone
+;JP3258000003;KIRIN HOLDINGS;EQUITY;JPY; 0,22%;Beni di prima necessità;Giappone
+;JP3201200007;OLYMPUS CORPORATION;EQUITY;JPY; 0,22%;Sanità;Giappone
+;JP3443600006;TAISEI CORP;EQUITY;JPY; 0,22%;Industrali;Giappone
+;JP3379550001;JX ADVANCED METALS CORP;EQUITY;JPY; 0,22%;Materiali;Giappone
+;JP3573000001;TOKYO GAS CO  Y50;EQUITY;JPY; 0,22%;Beni di pubblica utilità;Giappone
+;JP3180400008;OSAKA GAS CO  JPY50;EQUITY;JPY; 0,22%;Beni di pubblica utilità;Giappone
+;JP3190000004;OBAYASHI CORP;EQUITY;JPY; 0,21%;Industrali;Giappone
+;JP3362700001;MITSUI OSK LINES LTD;EQUITY;JPY; 0,21%;Industrali;Giappone
+;JP3762800005;NOMURA RESEARCH INSTITUTE;EQUITY;JPY; 0,21%;Information Technology;Giappone
+;JP3420600003;SEKISUI HOUSE LTD JPY50;EQUITY;JPY; 0,21%;Beni voluttuari;Giappone
+;JP3300200007;KONAMI GROUP CORP;EQUITY;JPY; 0,21%;Servizi di comunicazione;Giappone
+;JP3526600006;CHUBU ELECTRIC POWER CO INC;EQUITY;JPY; 0,20%;Beni di pubblica utilità;Giappone
+;JP3976300008;RYOHIN KEIKAKU CO LTD;EQUITY;JPY; 0,20%;Beni voluttuari;Giappone
+;JP3305990008;YOKOHAMA FINANCIAL GROUP INC;EQUITY;JPY; 0,20%;Finanziari;Giappone
+;JP3982800009;ROHM CO LTD;EQUITY;JPY; 0,19%;Information Technology;Giappone
+;JP3436120004;SBI HOLDINGS INC;EQUITY;JPY; 0,19%;Finanziari;Giappone
+;JP3906000009;MINEBEA MITSUMI INC;EQUITY;JPY; 0,18%;Industrali;Giappone
+;JP3738600000;NITERRA CO LTD;EQUITY;JPY; 0,17%;Beni voluttuari;Giappone
+;JP3639650005;PAN PACIFIC INTERNATIONAL HO;EQUITY;JPY; 0,17%;Beni voluttuari;Giappone
+;JP3293330001;KOKUSAI ELECTRIC CORP;EQUITY;JPY; 0,17%;Information Technology;Giappone
+;JP3932000007;YASKAWA ELECTRIC CORP;EQUITY;JPY; 0,17%;Industrali;Giappone
+;JP3621000003;TORAY INDUSTRIES INC;EQUITY;JPY; 0,17%;Materiali;Giappone
+;JP3511800009;CHIBA BANK LTD/THE;EQUITY;JPY; 0,17%;Finanziari;Giappone
+;JP3695200000;NGK INSULATORS  JPY50;EQUITY;JPY; 0,17%;Industrali;Giappone
+;JP3112000009;AGC INC;EQUITY;JPY; 0,16%;Industrali;Giappone
+;JP3814800003;SUBARU CORP;EQUITY;JPY; 0,15%;Beni voluttuari;Giappone
+;JP3252200005;KYOTO FINANCIAL GROUP INC;EQUITY;JPY; 0,15%;Finanziari;Giappone
+;JP3358800005;SHIMIZU CORP;EQUITY;JPY; 0,15%;Industrali;Giappone
+;JP3897700005;MITSUBISHI CHEMICAL CORP;EQUITY;JPY; 0,14%;Materiali;Giappone
+;JP3862400003;MAKITA CORP;EQUITY;JPY; 0,14%;Industrali;Giappone
+;JP3351500008;SHIZUOKA FINANCIAL GROUP INC;EQUITY;JPY; 0,14%;Finanziari;Giappone
+;JP3173400007;OBIC CO LTD;EQUITY;JPY; 0,14%;Information Technology;Giappone
+;JP3429800000;ANA HOLDINGS INC;EQUITY;JPY; 0,14%;Industrali;Giappone
+;JP3805010000;FUKUOKA FINANCIAL GROUP INC;EQUITY;JPY; 0,14%;Finanziari;Giappone
+;JP3117700009;MEBUKI FINANCIAL GROUP INC;EQUITY;JPY; 0,13%;Finanziari;Giappone
+;JP3102000001;AISIN CORP;EQUITY;JPY; 0,13%;Beni voluttuari;Giappone
+;JP3358000002;SHIMANO INC  JPY50;EQUITY;JPY; 0,13%;Beni voluttuari;Giappone
+;JP3894900004;ISETAN MITSUKOSHI HOLDINGS;EQUITY;JPY; 0,13%;Beni voluttuari;Giappone
+;JP3137200006;ISUZU MOTORS LTD;EQUITY;JPY; 0,13%;Beni voluttuari;Giappone
+;JP3705200008;JAPAN AIRLINES CO LTD;EQUITY;JPY; 0,12%;Industrali;Giappone
+;JP3596200000;TOTO LTD;EQUITY;JPY; 0,12%;Industrali;Giappone
+;JP3955000009;YOKOGAWA ELECTRIC CORP;EQUITY;JPY; 0,12%;Information Technology;Giappone
+;JP3142500002;IDEMITSU KOSAN CO LTD;EQUITY;JPY; 0,12%;Energy;Giappone
+;JP3967200001;RAKUTEN GROUP INC;EQUITY;JPY; 0,12%;Beni voluttuari;Giappone
+;JP3197800000;OMRON CORP;EQUITY;JPY; 0,12%;Information Technology;Giappone
+;JP3663900003;SOJITZ CORP;EQUITY;JPY; 0,12%;Industrali;Giappone
+;JP3659000008;WEST JAPAN RAILWAY CO;EQUITY;JPY; 0,12%;Industrali;Giappone
+;JP3688370000;NIPPON EXPRESS HOLDINGS INC;EQUITY;JPY; 0,12%;Industrali;Giappone
+;JP3885400006;MISUMI GROUP INC;EQUITY;JPY; 0,12%;Industrali;Giappone
+;JP3240400006;KIKKOMAN CORPORATION;EQUITY;JPY; 0,12%;Beni di prima necessità;Giappone
+;JP3942800008;YAMAHA MOTOR;EQUITY;JPY; 0,12%;Beni voluttuari;Giappone
+;JP3499800005;MITSUBISHI UFJ LEASE FINANCE;EQUITY;JPY; 0,12%;Finanziari;Giappone
+;JP3397150008;FOOD & LIFE COMPANIES LTD;EQUITY;JPY; 0,12%;Beni voluttuari;Giappone
+;JP3933800009;LY CORP;EQUITY;JPY; 0,12%;Servizi di comunicazione;Giappone
+;JP3629000005;TOPPAN HOLDINGS INC;EQUITY;JPY; 0,11%;Industrali;Giappone
+;JP3571800006;TOKYO OHKA KOGYO CO LTD;EQUITY;JPY; 0,11%;Materiali;Giappone
+;JP3711600001;NIPPON SANSO HOLDINGS CORP;EQUITY;JPY; 0,11%;Materiali;Giappone
+;JP3774200004;HANKYU HANSHIN HLDGS INC;EQUITY;JPY; 0,11%;Industrali;Giappone
+;JP3951600000;UNICHARM CORP;EQUITY;JPY; 0,11%;Beni di prima necessità;Giappone
+;JP3351600006;SHISEIDO CO  Y50;EQUITY;JPY; 0,11%;Beni di prima necessità;Giappone
+;JP3756100008;NITORI HOLDINGS CO LTD;EQUITY;JPY; 0,11%;Beni voluttuari;Giappone
+;JP3027670003;NIPPON BUILDING FUND INC;EQUITY;JPY; 0,11%;Immobiliare;Giappone
+;JP3270000007;KURITA WATER INDUSTRIES LTD;EQUITY;JPY; 0,11%;Industrali;Giappone
+;JP3493800001;DAI NIPPON PRINTING CO LTD;EQUITY;JPY; 0,11%;Industrali;Giappone
+;JP3218900003;CAPCOM CO LTD Y50;EQUITY;JPY; 0,11%;Servizi di comunicazione;Giappone
+;JP3223800008;KAWASAKI KISEN KAI JPY50;EQUITY;JPY; 0,11%;Industrali;Giappone
+;JP3160400002;EISAI CO LTD Y50;EQUITY;JPY; 0,11%;Sanità;Giappone
+;JP3830000000;BROTHER INDUSTRIES LTD;EQUITY;JPY; 0,10%;Information Technology;Giappone
+;JP3769000005;HACHIJUNI BANK  JPY50;EQUITY;JPY; 0,10%;Finanziari;Giappone
+;JP3386030005;JFE HOLDINGS INC;EQUITY;JPY; 0,10%;Materiali;Giappone
+;JP3670800006;NISSAN CHEMICAL;EQUITY;JPY; 0,10%;Materiali;Giappone
+;JP3122800000;AMADA CO LTD;EQUITY;JPY; 0,10%;Industrali;Giappone
+;JP3613000003;TOYO SUISAN KAISHA JPY50;EQUITY;JPY; 0,10%;Beni di prima necessità;Giappone
+;JP3360800001;HULIC CO LTD;EQUITY;JPY; 0,10%;Immobiliare;Giappone
+;JP3955800002;YOKOHAMA RUBBER;EQUITY;JPY; 0,10%;Beni voluttuari;Giappone
+;JP3357200009;SHIMADZU CORP  Y50;EQUITY;JPY; 0,10%;Information Technology;Giappone
+;JP3343200006;SANRIO CO LTD;EQUITY;JPY; 0,10%;Beni voluttuari;Giappone
+;JP3918000005;MEIJI HOLDINGS CO LTD;EQUITY;JPY; 0,10%;Beni di prima necessità;Giappone
+;JP3197600004;ONO PHARMACEUTICAL;EQUITY;JPY; 0,10%;Sanità;Giappone
+;JP3486800000;DAITO TRUST CONST  JPY50;EQUITY;JPY; 0,10%;Immobiliare;Giappone
+;JP3749400002;NIPPON PAINT CO LTD;EQUITY;JPY; 0,09%;Materiali;Giappone
+;JP3419400001;SEKISUI CHEMICAL  JPY50;EQUITY;JPY; 0,09%;Industrali;Giappone
+;JP3896800004;MITSUBISHI GAS CHEMICAL CO;EQUITY;JPY; 0,09%;Materiali;Giappone
+;JP3110650003;ASAHI INTECC CO LTD;EQUITY;JPY; 0,09%;Sanità;Giappone
+;JP3771800004;HAMAMATSU PHOTONICS;EQUITY;JPY; 0,09%;Information Technology;Giappone
+;JP3401400001;SUMITOMO CHEMICAL  Y50;EQUITY;JPY; 0,09%;Materiali;Giappone
+;JP3574200006;TOKYU CORP;EQUITY;JPY; 0,09%;Industrali;Giappone
+;JP3595200001;TOSOH CORP;EQUITY;JPY; 0,09%;Materiali;Giappone
+;JP3637300009;TREND MICRO INC;EQUITY;JPY; 0,09%;Information Technology;Giappone
+;JP3799000009;HIROSE ELECTRIC CO LTD;EQUITY;JPY; 0,09%;Information Technology;Giappone
+;JP3027680002;JAPAN REAL ESTATE INVESTMENT;EQUITY;JPY; 0,09%;Immobiliare;Giappone
+;JP3414750004;SEIKO EPSON CORP;EQUITY;JPY; 0,09%;Information Technology;Giappone
+;JP3585800000;TOKYO ELECTRIC POWER COMPANY;EQUITY;JPY; 0,09%;Beni di pubblica utilità;Giappone
+;JP3973400009;RICOH CO LTD;EQUITY;JPY; 0,09%;Information Technology;Giappone
+;JP3435350008;SONY FINANCIAL GROUP INC;EQUITY;JPY; 0,09%;Finanziari;Giappone
+;JP3039710003;JAPAN METROPOLITAN FUND INVE;EQUITY;JPY; 0,08%;Immobiliare;Giappone
+;JP3835250006;BAYCURRENT INC;EQUITY;JPY; 0,08%;Industrali;Giappone
+;JP3869010003;MATSUKIYOCOCOKARA & CO;EQUITY;JPY; 0,08%;Beni di prima necessità;Giappone
+;JP3672400003;NISSAN MOTOR CO LTD;EQUITY;JPY; 0,08%;Beni voluttuari;Giappone
+;JP3569200003;TOKYU FUDOSAN HLDGS CORP;EQUITY;JPY; 0,08%;Immobiliare;Giappone
+;JP3758190007;NEXON CO LTD;EQUITY;JPY; 0,08%;Servizi di comunicazione;Giappone
+;JP3588600001;TBS HOLDINGS INC;EQUITY;JPY; 0,08%;Servizi di comunicazione;Giappone
+;JP3246400000;KYUSHU ELEC POWER  JPY500;EQUITY;JPY; 0,08%;Beni di pubblica utilità;Giappone
+;JP3233250004;JAPAN POST INSURANCE CO LTD;EQUITY;JPY; 0,08%;Finanziari;Giappone
+;JP3888300005;MITSUI CHEMICALS INC;EQUITY;JPY; 0,08%;Materiali;Giappone
+;JP3937200008;AZBIL CORP;EQUITY;JPY; 0,08%;Information Technology;Giappone
+;JP3263000006;KINDEN CORP;EQUITY;JPY; 0,08%;Industrali;Giappone
+;JP3351100007;SYSMEX CORPORATION;EQUITY;JPY; 0,08%;Sanità;Giappone
+;JP3104890003;TIS INC;EQUITY;JPY; 0,08%;Information Technology;Giappone
+;JP3429300001;ZENSHO HOLDINGS CO LTD;EQUITY;JPY; 0,08%;Beni voluttuari;Giappone
+;JP3931600005;YAKULT HONSHA CO LTD;EQUITY;JPY; 0,08%;Beni di prima necessità;Giappone
+;JP3260800002;KINTETSU GROUP HOLDINGS CO LTD;EQUITY;JPY; 0,07%;Industrali;Giappone
+;JP3551200003;ELECTRIC POWER DEVELOPEMENT C;EQUITY;JPY; 0,07%;Beni di pubblica utilità;Giappone
+;JP3188200004;OTSUKA CORP;EQUITY;JPY; 0,07%;Information Technology;Giappone
+;JP3344400001;SANWA HOLDINGS CORPORATION;EQUITY;JPY; 0,07%;Industrali;Giappone
+;JP3868400007;MAZDA MOTOR CORP  JPY50;EQUITY;JPY; 0,07%;Beni voluttuari;Giappone
+;JP3435750009;M3 INC;EQUITY;JPY; 0,07%;Sanità;Giappone
+;JP3409800004;SUMITOMO FORESTRY  Y50;EQUITY;JPY; 0,07%;Beni voluttuari;Giappone
+;JP3417200007;SEIBU HOLDINGS INC;EQUITY;JPY; 0,07%;Industrali;Giappone
+;JP3944130008;USS CO LTD;EQUITY;JPY; 0,07%;Beni voluttuari;Giappone
+;JP3750500005;MCDONALD  S HOLDINGS CO JAPAN;EQUITY;JPY; 0,07%;Beni voluttuari;Giappone
+;JP3598600009;TOHO CO LTD/TOKYO;EQUITY;JPY; 0,07%;Servizi di comunicazione;Giappone
+;JP3230600003;KANDENKO CO LTD;EQUITY;JPY; 0,07%;Industrali;Giappone
+;JP3174410005;OJI HOLDINGS CORP;EQUITY;JPY; 0,07%;Materiali;Giappone
+;JP3173540000;OPEN HOUSE GROUP CO LTD;EQUITY;JPY; 0,07%;Beni voluttuari;Giappone
+;JP3048110005;NOMURA REAL ESTATE MASTER FU;EQUITY;JPY; 0,07%;Immobiliare;Giappone
+;JP3551520004;DENTSU GROUP INC;EQUITY;JPY; 0,07%;Servizi di comunicazione;Giappone
+;JP3047510007;GLP J-REIT;EQUITY;JPY; 0,07%;Immobiliare;Giappone
+;JP3405400007;SUMITOMO HEAVY INDUSTRIES;EQUITY;JPY; 0,07%;Industrali;Giappone
+;JP3768600003;HASEKO CORPORATION;EQUITY;JPY; 0,07%;Beni voluttuari;Giappone
+;JP3047550003;NIPPON PROLOGIS REIT INC;EQUITY;JPY; 0,06%;Immobiliare;Giappone
+;JP3311400000;CYBER AGENT INC;EQUITY;JPY; 0,06%;Servizi di comunicazione;Giappone
+;JP3164630000;SQUARE ENIX HOLDINGS CO LTD;EQUITY;JPY; 0,06%;Servizi di comunicazione;Giappone
+;JP3336000009;SANTEN PHARMACEUTICAL CO LTD-OSA;EQUITY;JPY; 0,06%;Sanità;Giappone
+;JP3787000003;HITACHI CONSTRUCTION MACHINE;EQUITY;JPY; 0,06%;Industrali;Giappone
+;JP3386380004;J FRONT RETAILING CO LTD;EQUITY;JPY; 0,06%;Beni voluttuari;Giappone
+;JP3845770001;HOSHIZAKI CORP;EQUITY;JPY; 0,06%;Industrali;Giappone
+;JP3256000005;KYOWA KIRIN CO LTD;EQUITY;JPY; 0,06%;Sanità;Giappone
+;JP3597800006;TOBU RAILWAY CO  Y50;EQUITY;JPY; 0,06%;Industrali;Giappone
+;JP3284600008;KOITO MANUFACTURING CO LTD;EQUITY;JPY; 0,06%;Beni voluttuari;Giappone
+;JP3336560002;SUNTORY BEVERAGE & FOOD LTD;EQUITY;JPY; 0,06%;Beni di prima necessità;Giappone
+;JP3196000008;ODAKYU ELECTRIC RAILWAY;EQUITY;JPY; 0,06%;Industrali;Giappone
+;JP3046390005;DAIWAHOUSE RESIDENTIAL INV;EQUITY;JPY; 0,06%;Immobiliare;Giappone
+;JP3045540006;UNITED URBAN INVESTMENT CORP;EQUITY;JPY; 0,06%;Immobiliare;Giappone
+;JP3743000006;NH FOODS LTD;EQUITY;JPY; 0,05%;Beni di prima necessità;Giappone
+;JP3040880001;ORIX JREIT INC;EQUITY;JPY; 0,05%;Immobiliare;Giappone
+;JP3783420007;HIKARI TSUSHIN INC;EQUITY;JPY; 0,05%;Industrali;Giappone
+;JP3160670000;AIR WATER INC;EQUITY;JPY; 0,05%;Materiali;Giappone
+;JP3657400002;NIKON CORP;EQUITY;JPY; 0,05%;Beni voluttuari;Giappone
+;JP3940000007;YAMATO HOLDINGS CO LTD;EQUITY;JPY; 0,05%;Industrali;Giappone
+;JP3626800001;LIXIL CORP;EQUITY;JPY; 0,05%;Industrali;Giappone
+;JP3982400008;ROHTO PHARMACEUTICAL CO LTD;EQUITY;JPY; 0,05%;Beni di prima necessità;Giappone
+;JP3247010006;KYUSHU RAILWAY COMPANY;EQUITY;JPY; 0,05%;Industrali;Giappone
+;JP3268950007;MEDIPAL HOLDINGS CORP;EQUITY;JPY; 0,05%;Sanità;Giappone
+;JP3732200005;NIPPON TELEVISION HOLDINGS JPY500;EQUITY;JPY; 0,05%;Servizi di comunicazione;Giappone
+;JP3922950005;MONOTARO CO LTD;EQUITY;JPY; 0,05%;Industrali;Giappone
+;JP3762900003;NOMURA REAL ESTATE;EQUITY;JPY; 0,05%;Immobiliare;Giappone
+;JP3269600007;KURARAY CO LTD;EQUITY;JPY; 0,05%;Materiali;Giappone
+;JP3278600006;KEISEI ELECTRIC RAILWY Y50;EQUITY;JPY; 0,05%;Industrali;Giappone
+;JP3675600005;NISSIN FOODS HOLDINGS;EQUITY;JPY; 0,05%;Beni di prima necessità;Giappone
+;JP3605400005;TOHOKU ELECTRIC POWER;EQUITY;JPY; 0,05%;Beni di pubblica utilità;Giappone
+;JP3967220009;RAKUTEN BANK LTD;EQUITY;JPY; 0,05%;Finanziari;Giappone
+;JP3547670004;PERSOL HOLDINGS CO;EQUITY;JPY; 0,05%;Industrali;Giappone
+;JP3358200008;SHIMAMURA CO LTD;EQUITY;JPY; 0,05%;Beni voluttuari;Giappone
+;JP3870400003;MARUI GROUP CO LTD;EQUITY;JPY; 0,05%;Finanziari;Giappone
+;JP3939000000;YAMADA HOLDINGS CO LTD;EQUITY;JPY; 0,05%;Beni voluttuari;Giappone
+;JP3676800000;NISSHIN SEIFUN GROUP INC;EQUITY;JPY; 0,05%;Beni di prima necessità;Giappone
+;JP3399310006;ZOZO INC;EQUITY;JPY; 0,05%;Beni voluttuari;Giappone
+;JP3293200006;COCA-COLA BOTTLERS JAPAN HOL;EQUITY;JPY; 0,05%;Beni di prima necessità;Giappone
+;JP3244800003;KEWPIE CORP;EQUITY;JPY; 0,04%;Beni di prima necessità;Giappone
+;JP3935600001;YAMAZAKI BAKING CO JPY50;EQUITY;JPY; 0,04%;Beni di prima necessità;Giappone
+;JP3665200006;NICHIREI CORPORATION;EQUITY;JPY; 0,04%;Beni di prima necessità;Giappone
+;JP3583900000;TOKYO METRO CO LTD;EQUITY;JPY; 0,04%;Industrali;Giappone
+;JP3536150000;TSURUHA HOLDINGS INC;EQUITY;JPY; 0,04%;Beni di prima necessità;Giappone
+;JP3942600002;YAMAHA CORP;EQUITY;JPY; 0,04%;Beni voluttuari;Giappone
+;JP3162770006;SG HOLDINGS LTD;EQUITY;JPY; 0,04%;Industrali;Giappone
+;JP3424950008;TOKYO CENTURY CORP;EQUITY;JPY; 0,04%;Finanziari;Giappone
+;JP3431900004;ALSOK CO LTD;EQUITY;JPY; 0,04%;Industrali;Giappone
+;JP3126340003;ALFRESA HOLDINGS CORP;EQUITY;JPY; 0,04%;Sanità;Giappone
+;JP3291200008;KOBE BUSSAN CO LTD;EQUITY;JPY; 0,04%;Beni di prima necessità;Giappone
+;JP3419050004;SEGA SAMMY HOLDINGS INC;EQUITY;JPY; 0,04%;Beni voluttuari;Giappone
+;JP3277800003;KEIO CORP;EQUITY;JPY; 0,04%;Industrali;Giappone
+;JP3729000004;SBI SHINSEI BANK LTD;EQUITY;JPY; 0,04%;Finanziari;Giappone
+;JP3977400005;RINNAI CORP  JPY50;EQUITY;JPY; 0,04%;Beni voluttuari;Giappone
+;JP3404200002;SUMITOMO RUBBER INDUSTRIES LTD;EQUITY;JPY; 0,04%;Beni voluttuari;Giappone
+;JP3385890003;GMO PAYMENT GATEWAY INC;EQUITY;JPY; 0,04%;Finanziari;Giappone
+;JP3131090007;IIDA GROUP HOLDINGS CO LTD;EQUITY;JPY; 0,04%;Beni voluttuari;Giappone
+;JP3689500001;ORACLE CORPORATION JAPAN;EQUITY;JPY; 0,03%;Information Technology;Giappone
+;JP3819400007;FUJI MEDIA HOLDINGS;EQUITY;JPY; 0,03%;Servizi di comunicazione;Giappone
+;JP3397060009;SUGI HOLDINGS CO LTD;EQUITY;JPY; 0,03%;Beni di prima necessità;Giappone
+;JP3336600006;SUNDRUG CO LTD;EQUITY;JPY; 0,03%;Beni di prima necessità;Giappone
+;JP3152740001;ABC-MART INC;EQUITY;JPY; 0,03%;Beni voluttuari;Giappone
+;JP3495000006;SUMITOMO PHARMA CO LTD;EQUITY;JPY; 0,02%;Sanità;Giappone
+;JP3298400007;COSMOS PHARMARCEUTICAL;EQUITY;JPY; 0,02%;Beni di prima necessità;Giappone
+;JP3899800001;MITSUBISHI MOTOR CORP JPY50;EQUITY;JPY; 0,02%;Beni voluttuari;Giappone
+;JP3283460008;KOEI TECMO HOLDINGS CO LTD;EQUITY;JPY; 0,02%;Servizi di comunicazione;Giappone
+;JP3173500004;OBIC BUSINESS CONSULTANTS;EQUITY;JPY; 0,02%;Information Technology;Giappone
+;JP3108600002;ACOM CO LTD;EQUITY;JPY; 0,02%;Finanziari;Giappone
+;;TOPIX INDX 06/26 OSE;FUTURE;JPY; 0,02%;;Giappone
+;JP3560200002;TOEI ANIMATION CO LTD;EQUITY;JPY; 0,01%;Servizi di comunicazione;Giappone
+;JP3100020001;ARCHION CORP;EQUITY;JPY; 0,01%;Industrali;Giappone
+;US70450C1018;PAYPAY CORP;EQUITY;USD; 0,00%;Finanziari;Giappone
+;;;;;;;
+;;;;;;;
+;Fonte : Amundi Asset Management;;;;;;
+;;;;;;;
+;"Informazioni promozionali e non contrattuali, che non devono essere considerate come un consiglio o una raccomandazione di investimento, una sollecitazione all'investimento, un'offerta o un acquisto.
+Prima della sottoscrizione, per ulteriori informazioni sui rischi applicabili al Fondo e sulle Informazioni (come definite di seguito), i potenziali investitori devono leggere la documentazione d’offerta dei Fondi approvati dall'Autorité des Marchés Financiers (per i FCP francesi), dalla Commission de Surveillance du Secteur Financier (""CSSF"") per i comparti della Sicav lussemburghese Amundi Index Solutions (la ""SICAV"") o dalla Central Bank of Ireland per i comparti della ICAV irlandese Amundi ETF ICAV (tutti insieme i ""Comparti""), compreso il KID, disponibile su amundi.com /amundietf.com o su richiesta presso la sede della società di gestione.
+L'investimento in un fondo comporta un notevole grado di rischio (i rischi sono descritti in dettaglio nel KID e nel Prospetto informativo).
+Le performance passate del fondo non possono essere considerate un indicatore affidabile di risultati futuri e non offrono alcuna garanzia di rendimento.
+L'esattezza, l'esaustività o la pertinenza delle informazioni, delle previsioni e delle analisi fornite non sono garantite. Si basano su fonti considerate affidabili e possono cambiare senza preavviso. Si tratta inevitabilmente di informazioni parziali, fornite sulla base dei dati di mercato rilevati in un determinato momento e soggette a modifiche.
+Questo materiale non è destinato a cittadini o residenti degli Stati Uniti d'America o a qualsiasi ""U.S. Person"", come questo termine è definito nella SEC Regulation S ai sensi dello U.S. Securities Act del 1933. La definizione di US Person è indicata nella sezione delle menzioni legali su amundi.com o amundietf.com e nel Prospetto dei Comparti.
+Le informazioni sopra riportate sono state ottenute dall'inventario contabile del Fondo, ma non rappresentano tutti i dati del Fondo. L'inventario contabile è la contabilità dettagliata delle attività del Fondo.
+La data di calcolo delle informazioni è indicata sopra la tabella.
+Le informazioni di cui sopra si basano, tra l'altro, sui dati di mercato a una certa data e possono quindi variare nel tempo.
+Le informazioni di cui sopra sono pubblicate con un ritardo di almeno tre giorni di negoziazione rispetto ai dati di mercato in tempo reale. La pubblicazione delle informazioni è pertanto soggetta a un ritardo. Pertanto, vi invitiamo a consultare le date di aggiornamento di queste Informazioni nelle sezioni sopra indicate.";;;;;;
+;"Replica Sintetica/Indiretta:
+Il Fondo, gestito con un approccio di replica sintetica/indiretta, investe in derivati, fornendo la performance dell'indice in cambio della performance degli attivi (che possono non  includere necessariamente i componenti dell'indice di cui si cerca di replicare la performance).
+
+Replica Fisica/Diretta:
+- Solo per la Replica Fisica dei Fondi di diritto francese: il Fondo è gestito con un approccio di replica fisica. Questo consiste nell'investire nei titoli che compongono l'indice in proporzioni il più possibile simili a quelle dell'indice.
+- Solo per la Replica Fisica dei Fondi obbligazionari della SICAV AIS: il Fondo è gestito con un approccio di replica diretta, che consiste principalmente nell'investire direttamente in obbligazioni che rappresentano i componenti dell'indice in una proporzione il più possibile simile a quella dell'indice.
+- Solo per la Replica Fisica dei Fondi azionari della SICAV AIS: il Fondo è gestito con un approccio di replica fisica, principalmente attraverso investimenti diretti in titoli e/o altre attività idonee che rappresentano i componenti dell'indice in una proporzione molto vicina a quella dell'indice.
+- Solo per la Replica Fisica a campionamento dei Fondi della SICAV AIS: il Fondo è gestito con un approccio di replica diretta, principalmente attraverso investimenti diretti in titoli e/o altre attività idonee che rappresentano i componenti dell'indice. Non si prevede che il Fondo detenga in via permanente tutti i componenti dell'indice o nelle stesse proporzioni dell'indice. Il Fondo può anche detenere alcuni titoli che non sono componenti sottostanti dell'indice.";;;;;;
+;"I dati contenuti nel presente documento non sono stati validati dal revisore esterno del Fondo.
+Il presente documento non è stato esaminato, timbrato o approvato da alcuna Autorità finanziaria.
+È vietata la riproduzione senza il consenso scritto di Amundi Asset Management SAS.
+Amundi ETF, Indexing & Smart Beta designa l'attività ETF, Indexing & Smart Beta di Amundi Asset Management.
+Amundi Asset Management, con un capitale sociale di 1.143.615.555 euro, è un gestore di investimenti regolamentato dall'Autorité des Marchés Financiers francese con il n. GP 04000036, con sede legale a: Milano. GP 04000036, sede legale: 91-93 boulevard Pasteur - 75015 PARIGI - Francia 437 574 452 RCS Paris è la società di gestione del portafoglio del Fondo.
+""Amundi Index Solutions, SICAV lussemburghese, RCS B206810, con sede al 5, allée Scheffer, L-2520 Lussemburgo. I comparti sono stati approvati per la distribuzione al pubblico in Lussemburgo dalla Commission de Surveillance du Secteur Financier del Lussemburgo (CSSF).
+""Amundi ETF ICAV"", ICAV irlandese, con sede all'1 George’s Quay Plaza, George’s Quay, Dublin 2, D02 V002, Irlanda. I comparti sono stati approvati per la distribuzione al pubblico in Irlanda dalla Central Bank of Ireland (CBI).";;;;;;
