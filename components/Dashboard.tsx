@@ -11,6 +11,7 @@ import { PieChartCard } from './charts/PieChartCard';
 import { ConcentrationChart } from './charts/ConcentrationChart';
 import { DistributionChart } from './charts/DistributionChart';
 import { EtfBarChartCard } from './charts/EtfBarChartCard';
+import { SavingsPlanCalculator } from './SavingsPlanCalculator';
 
 interface DashboardProps {
   etfs: EtfConfig[];
@@ -18,9 +19,9 @@ interface DashboardProps {
 }
 
 export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
-  const [activeTab, setActiveTab] = useState<'Overview' | 'Fund Details' | 'Risk Analysis'>(
-    'Overview'
-  );
+  const [activeTab, setActiveTab] = useState<
+    'Overview' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'
+  >('Overview');
 
   const geoData = useMemo(() => aggregateBy(etfs, 'country').slice(0, 10), [etfs]);
   const sectorData = useMemo(() => aggregateBy(etfs, 'sector').slice(0, 10), [etfs]);
@@ -120,10 +121,11 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
     );
   }
 
-  const tabs: Array<'Overview' | 'Fund Details' | 'Risk Analysis'> = [
+  const tabs: Array<'Overview' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'> = [
     'Overview',
     'Fund Details',
     'Risk Analysis',
+    'Savings Plan',
   ];
 
   return (
@@ -287,6 +289,12 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
               />
             </div>
           </>
+        )}
+
+        {activeTab === 'Savings Plan' && (
+          <div className="lg:col-span-2 transition-transform duration-300 animate-in fade-in">
+            <SavingsPlanCalculator etfs={etfs} totalWeight={totalWeight} />
+          </div>
         )}
       </div>
     </div>
