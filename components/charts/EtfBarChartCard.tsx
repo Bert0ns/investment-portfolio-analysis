@@ -19,13 +19,14 @@ interface EtfBarChartCardProps {
   colorOffset?: number;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomTooltip = ({
   active,
   payload,
   unit,
 }: {
   active?: boolean;
-  payload?: Array<Record<string, unknown>>;
+  payload?: any;
   unit: string;
 }) => {
   if (active && payload && payload.length) {

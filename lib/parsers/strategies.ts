@@ -45,8 +45,8 @@ async function parseCustomCsv(
       skipEmptyLines: true,
       delimiter,
       dynamicTyping: false,
-      complete: (results) => resolve(results.data),
-      error: (error) => reject(error),
+      complete: (results) => resolve(results.data as Record<string, unknown>[]),
+      error: (error: Error) => reject(error),
     });
   });
 }

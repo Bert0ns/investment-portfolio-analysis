@@ -19,7 +19,7 @@ export function ChartTitleWithInfo({ title, info }: { title: string; info: strin
   return (
     <div className="flex items-center gap-2">
       <CardTitle>{title}</CardTitle>
-      <UITooltip delay={200}>
+      <UITooltip>
         <TooltipTrigger className="inline-flex outline-none focus:ring-2 focus:ring-ring rounded-full">
           <Info
             size={16}
