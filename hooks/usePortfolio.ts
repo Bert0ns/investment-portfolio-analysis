@@ -152,6 +152,7 @@ export function usePortfolio() {
             const defaultMatch = DEFAULT_ETFS.find((d) => d.name === typedEtf.name);
             return {
               ...typedEtf,
+              id: typedEtf.id || crypto.randomUUID(),
               isin: typedEtf.isin || defaultMatch?.isin || '',
               replicationMethod:
                 typedEtf.replicationMethod || defaultMatch?.replicationMethod || 'Physical',
@@ -159,7 +160,7 @@ export function usePortfolio() {
               fundAge: typedEtf.fundAge || defaultMatch?.fundAge || 0,
               useOfProfit: typedEtf.useOfProfit || defaultMatch?.useOfProfit || 'Accumulating',
               domicile: typedEtf.domicile || defaultMatch?.domicile || 'Ireland',
-            };
+            } as EtfConfig;
           });
 
           setEtfs(parsed as EtfConfig[]);

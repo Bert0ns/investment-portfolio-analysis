@@ -127,7 +127,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                       dx={-10}
                     />
                     <Tooltip
-                      formatter={(value: number | string) => formatCurrency(Number(value) || 0)}
+                      formatter={(value: any) => formatCurrency(Number(value) || 0)}
                       labelFormatter={(label) => `Year ${label}`}
                       contentStyle={{
                         borderRadius: '12px',
