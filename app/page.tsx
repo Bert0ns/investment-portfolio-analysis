@@ -1,90 +1,64 @@
-'use client';
+import Link from 'next/link';
+import { ArrowRight, BarChart3, Globe, Layers } from 'lucide-react';
+import { buttonVariants } from '@/components/ui/button';
 
-import { usePortfolio } from '../hooks/usePortfolio';
-import EtfForm from '../components/EtfForm';
-import PortfolioSliders from '../components/PortfolioSliders';
-import Dashboard from '../components/Dashboard';
-
-export default function Home() {
-  const {
-    etfs,
-    isLoaded,
-    isLoadingDefaults,
-    totalWeight,
-    addEtf,
-    removeEtf,
-    updateEtfWeight,
-    loadDefaults,
-  } = usePortfolio();
-
-  if (!isLoaded || isLoadingDefaults) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <p className="text-gray-500 animate-pulse">
-          {isLoadingDefaults ? 'Parsing default ETF CSVs...' : 'Loading portfolio...'}
-        </p>
-      </div>
-    );
-  }
-
+export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-gray-50 p-6 md:p-10 font-sans text-gray-900">
-      <div className="max-w-7xl mx-auto space-y-6">
-        <header className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 tracking-tight">
-              ETF Portfolio Analyzer
-            </h1>
-            <p className="text-gray-500 mt-2">
-              Upload your ETF holdings CSVs, configure weights, and analyze your true underlying
-              exposure.
+    <main className="min-h-[calc(100vh-4rem)] bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        <div className="text-center max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+            Unveil Your True <span className="text-blue-600 dark:text-blue-500">ETF Exposure</span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10">
+            A powerful, 100% client-side tool to deeply analyze your custom ETF portfolios. Upload
+            official holdings CSVs, allocate capital, and discover your true underlying global
+            exposure.
+          </p>
+          <div className="flex justify-center gap-4">
+            <Link
+              href="/analyzer"
+              className={buttonVariants({
+                size: 'lg',
+                className:
+                  'px-8 py-6 text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-lg',
+              })}
+            >
+              Launch Analyzer <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-24">
+          <div className="text-center flex flex-col items-center">
+            <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6">
+              <Layers className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+            </div>
+            <h3 className="text-xl font-bold mb-3">Multi-Issuer Support</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Seamlessly parse official CSVs from iShares, Vanguard, Amundi, and Lyxor with zero
+              manual formatting needed.
             </p>
           </div>
-          <a
-            href="https://github.com/Bert0ns/investment-portfolio-analysis"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors bg-gray-900 text-gray-50 hover:bg-gray-900/90 rounded-md shrink-0"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-github"
-            >
-              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-              <path d="M9 18c-4.51 2-5-2-7-2" />
-            </svg>
-            Star on GitHub
-          </a>
-        </header>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left Column: Form & Sliders */}
-          <div className="lg:col-span-1 relative">
-            <div className="lg:sticky lg:top-6 space-y-6 lg:max-h-[calc(100vh-3rem)] flex flex-col">
-              <EtfForm onAddEtf={addEtf} />
-              <div className="flex-1 lg:overflow-y-auto pr-2 pb-4 scrollbar-thin scrollbar-thumb-gray-200">
-                <PortfolioSliders
-                  etfs={etfs}
-                  totalWeight={totalWeight}
-                  onUpdateWeight={updateEtfWeight}
-                  onRemove={removeEtf}
-                  onReset={loadDefaults}
-                />
-              </div>
+          <div className="text-center flex flex-col items-center">
+            <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6">
+              <Globe className="w-8 h-8 text-blue-600 dark:text-blue-400" />
             </div>
+            <h3 className="text-xl font-bold mb-3">True Geographic Mapping</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Aggregate the thousands of underlying holdings to see exactly which countries and
+              sectors your money is really in.
+            </p>
           </div>
-
-          {/* Right Column: Dashboard */}
-          <div className="lg:col-span-2">
-            <Dashboard etfs={etfs} totalWeight={totalWeight} />
+          <div className="text-center flex flex-col items-center">
+            <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6">
+              <BarChart3 className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+            </div>
+            <h3 className="text-xl font-bold mb-3">100% Private & Serverless</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Your financial data never leaves your browser. All parsing and math are executed
+              locally in real-time.
+            </p>
           </div>
         </div>
       </div>

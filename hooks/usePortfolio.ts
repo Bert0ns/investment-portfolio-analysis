@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { EtfConfig, Issuer, ReplicationMethod, UseOfProfit, Domicile } from '../lib/types';
 import { getCsvParser } from '../lib/parsers';
 import { toast } from 'sonner';
-import { getItem, setItem, removeItem } from '../lib/indexeddb';
+import { getItem, setItem } from '../lib/indexeddb';
 
 const STORAGE_KEY = 'etf_portfolio_data';
 
@@ -141,7 +141,9 @@ export function usePortfolio() {
             try {
               parsed = JSON.parse(ls);
               localStorage.removeItem(STORAGE_KEY);
-            } catch (e) {}
+            } catch {
+              // Ignore
+            }
           }
         }
 

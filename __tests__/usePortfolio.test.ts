@@ -1,6 +1,6 @@
 import { renderHook, act, waitFor } from '@testing-library/react';
 import { usePortfolio } from '../hooks/usePortfolio';
-import { getItem, setItem } from '../lib/indexeddb';
+import { getItem } from '../lib/indexeddb';
 
 jest.mock('../lib/indexeddb', () => ({
   getItem: jest.fn(),
