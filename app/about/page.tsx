@@ -15,7 +15,7 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
-            We believe that understanding your true financial exposure shouldn't require an
+            We believe that understanding your true financial exposure shouldn&apos;t require an
             expensive wealth manager. This tool brings institutional-grade transparency directly to
             your browser.
           </p>

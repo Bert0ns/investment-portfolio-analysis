@@ -11,10 +11,12 @@ import {
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { COLORS, ChartTitleWithInfo } from './Shared';
 
+type ChartData = { name: string; value: number };
+
 interface EtfBarChartCardProps {
   title: string;
   info: string;
-  data: { name: string; value: number }[];
+  data: ChartData[];
   unit: string;
   colorOffset?: number;
 }
@@ -25,7 +27,7 @@ const CustomTooltip = ({
   unit,
 }: {
   active?: boolean;
-  payload?: readonly any[];
+  payload?: readonly { payload: ChartData; value: number }[];
   unit: string;
 }) => {
   if (active && payload && payload.length) {

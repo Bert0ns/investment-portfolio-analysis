@@ -3,11 +3,13 @@ import { ConcentrationChart } from '../charts/ConcentrationChart';
 import { DistributionChart } from '../charts/DistributionChart';
 import { PieChartCard } from '../charts/PieChartCard';
 
+type ChartData = { name: string; value: number }[];
+
 interface RiskAnalysisTabProps {
-  concentrationData: any;
-  weightDistributionData: any;
-  replicationData: any;
-  profitData: any;
+  concentrationData: ChartData;
+  weightDistributionData: ChartData;
+  replicationData: ChartData;
+  profitData: ChartData;
 }
 
 export function RiskAnalysisTab({

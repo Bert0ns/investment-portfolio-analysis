@@ -2,11 +2,13 @@ import React from 'react';
 import { PieChartCard } from '../charts/PieChartCard';
 import { EtfBarChartCard } from '../charts/EtfBarChartCard';
 
+type ChartData = { name: string; value: number }[];
+
 interface FundDetailsTabProps {
-  providerData: any;
-  domicileData: any;
-  fundSizeData: any;
-  fundAgeData: any;
+  providerData: ChartData;
+  domicileData: ChartData;
+  fundSizeData: ChartData;
+  fundAgeData: ChartData;
 }
 
 export function FundDetailsTab({

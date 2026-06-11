@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, LayoutDashboard, Info, ExternalLink } from 'lucide-react';
 import {
   Sheet,
@@ -15,9 +16,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
         <div className="flex justify-between h-16 items-center w-full">
           <div className="flex items-center gap-3 relative z-10">
-            <img
+            <Image
               src="/logo.svg"
               alt="Portfolio Analyzer"
+              width={32}
+              height={32}
               className="w-8 h-8 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
             />
             <Link href="/" className="font-black text-xl tracking-widest uppercase hidden sm:block">
@@ -66,9 +69,11 @@ export default function Navbar() {
                 <SheetDescription className="sr-only">Navigation menu</SheetDescription>
 
                 <div className="flex flex-col items-center justify-center gap-4 mb-8 border-b border-white/10 pb-8 mt-10">
-                  <img
+                  <Image
                     src="/logo.svg"
                     alt="Portfolio Analyzer Logo"
+                    width={64}
+                    height={64}
                     className="w-16 h-16 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)]"
                   />
                   <span className="font-black text-2xl uppercase tracking-widest text-center">

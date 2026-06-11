@@ -2,12 +2,14 @@ import React from 'react';
 import { TopHoldingsChart } from '../charts/TopHoldingsChart';
 import { PieChartCard } from '../charts/PieChartCard';
 
+type ChartData = { name: string; value: number }[];
+
 interface OverviewTabProps {
-  topHoldings: any;
-  etfAllocationData: any;
-  sectorData: any;
-  geoData: any;
-  currencyData: any;
+  topHoldings: ChartData;
+  etfAllocationData: ChartData;
+  sectorData: ChartData;
+  geoData: ChartData;
+  currencyData: ChartData;
 }
 
 export function OverviewTab({
