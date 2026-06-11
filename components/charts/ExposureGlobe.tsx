@@ -8,8 +8,10 @@ import { Play, Pause } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 import { GlobeMesh } from './globe/GlobeMesh';
 import { BASE_COORDINATES, ALIASES } from '../../lib/utils/Coordinates';
+import { useTranslation } from '../../lib/i18n/LanguageContext';
 
 export function ExposureGlobe({ data }: { data: { name: string; value: number }[] }) {
+  const { t } = useTranslation();
   const [isRotating, setIsRotating] = useState(true);
 
   // Calculate true number of mapped unique regions
@@ -59,14 +61,14 @@ export function ExposureGlobe({ data }: { data: { name: string; value: number }[
           {/* Overlay UI */}
           <div className="absolute bottom-6 left-6 pointer-events-none flex flex-col gap-3">
             <p className="text-[10px] text-amber-400 font-mono bg-black/40 px-3 py-1.5 border border-amber-500/30 backdrop-blur-md uppercase tracking-widest shadow-[0_0_10px_rgba(245,158,11,0.1)] rounded-sm w-max">
-              {uniqueRegionsCount} Regions Active
+              {uniqueRegionsCount} {t.threeDVisuals.regionsActive}
             </p>
             <button
               onClick={() => setIsRotating(!isRotating)}
               className="pointer-events-auto text-[10px] text-cyan-400 font-mono bg-black/40 px-3 py-1.5 border border-cyan-500/30 backdrop-blur-md uppercase tracking-widest hover:bg-cyan-900/40 transition-colors shadow-[0_0_10px_rgba(34,211,238,0.1)] rounded-sm flex items-center justify-center w-max gap-2"
             >
               {isRotating ? <Pause size={12} /> : <Play size={12} />}
-              {isRotating ? 'Pause Rotation' : 'Resume Rotation'}
+              {isRotating ? t.threeDVisuals.pauseRotation : t.threeDVisuals.resumeRotation}
             </button>
           </div>
         </div>

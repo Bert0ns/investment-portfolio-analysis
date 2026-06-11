@@ -3,6 +3,15 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Dashboard from '../components/Dashboard';
 import { EtfConfig } from '../lib/types';
 
+jest.mock('../lib/i18n/LanguageContext', () => ({
+  useTranslation: () => ({
+    language: 'en',
+    setLanguage: jest.fn(),
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    t: require('../lib/i18n/dictionaries').dictionaries.en,
+  }),
+}));
+
 describe('Dashboard Component', () => {
   const mockEtfs: EtfConfig[] = [
     {
@@ -24,9 +33,9 @@ describe('Dashboard Component', () => {
 
   it('renders empty state when no ETFs have weight', () => {
     render(<Dashboard etfs={[]} totalWeight={0} />);
-    expect(screen.getByText('No Data to Display')).toBeInTheDocument();
+    expect(screen.getByText('No active ETFs to display.')).toBeInTheDocument();
     expect(
-      screen.getByText('Add ETFs and allocate weight to see your portfolio analysis.')
+      screen.getByText('Add some ETFs and allocate weights to see your portfolio analysis.')
     ).toBeInTheDocument();
   });
 

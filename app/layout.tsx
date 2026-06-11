@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import Navbar from '@/components/Navbar';
+import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import './globals.css';
 
 const inter = Inter({
@@ -32,11 +33,13 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange={false}
         >
-          <TooltipProvider>
-            <Navbar />
-            {children}
-            <Toaster />
-          </TooltipProvider>
+          <LanguageProvider>
+            <TooltipProvider>
+              <Navbar />
+              {children}
+              <Toaster />
+            </TooltipProvider>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -4,12 +4,14 @@ import { EtfConfig } from '../../lib/types';
 import { searchHoldings } from '../../lib/math';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
 import { useDebounce } from '../../hooks/useDebounce';
+import { useTranslation } from '../../lib/i18n/LanguageContext';
 
 interface DeepDiveTabProps {
   etfs: EtfConfig[];
 }
 
 export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
+  const { t } = useTranslation();
   const [query, setQuery] = useState('');
   const debouncedQuery = useDebounce(query, 300);
 
@@ -23,12 +25,9 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
         <CardHeader className="bg-muted/20 border-b border-border pb-6">
           <CardTitle className="text-2xl flex items-center gap-2">
             <Search className="w-6 h-6 text-primary" />
-            Holdings Deep Dive
+            {t.deepDiveTab.title}
           </CardTitle>
-          <CardDescription className="text-base mt-2">
-            Search for specific assets (e.g., "NVIDIA", "Apple", "TSLA") across all your parsed ETFs
-            to discover your true aggregate exposure.
-          </CardDescription>
+          <CardDescription className="text-base mt-2">{t.deepDiveTab.description}</CardDescription>
         </CardHeader>
         <CardContent className="pt-6">
           <div className="relative max-w-2xl mx-auto">
@@ -37,7 +36,7 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
             </div>
             <input
               type="text"
-              placeholder="Search by company name or ticker..."
+              placeholder={t.deepDiveTab.searchPlaceholder}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-background border-2 border-border rounded-xl text-lg focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/20 transition-all shadow-sm"
@@ -50,8 +49,10 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
         <Card className="border-dashed">
           <CardContent className="flex flex-col items-center justify-center py-16 text-center text-muted-foreground">
             <Building className="w-12 h-12 mb-4 opacity-50" />
-            <p className="text-lg">No holdings found matching "{query}"</p>
-            <p className="text-sm mt-2">Try a different company name or ticker symbol.</p>
+            <p className="text-lg">
+              {t.deepDiveTab.noHoldingsFound} &quot;{query}&quot;
+            </p>
+            <p className="text-sm mt-2">{t.deepDiveTab.tryDifferent}</p>
           </CardContent>
         </Card>
       )}
@@ -68,12 +69,12 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
                   <div>
                     <CardTitle className="text-lg font-bold leading-tight">{result.name}</CardTitle>
                     <p className="text-sm text-muted-foreground mt-1 font-mono">
-                      {result.ticker !== 'N/A' ? result.ticker : 'Unknown Ticker'}
+                      {result.ticker !== 'N/A' ? result.ticker : t.deepDiveTab.unknownTicker}
                     </p>
                   </div>
                   <div className="text-right">
                     <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
-                      Total Exposure
+                      {t.deepDiveTab.totalExposure}
                     </p>
                     <p className="text-2xl font-black text-primary">
                       {result.totalWeight.toFixed(2)}%
@@ -85,7 +86,7 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
                 <div className="space-y-3">
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
                     <PieChart className="w-3.5 h-3.5" />
-                    Exposure Breakdown
+                    {t.deepDiveTab.exposureBreakdown}
                   </p>
                   {result.breakdown.map((b) => (
                     <div
@@ -95,7 +96,7 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
                       <div className="min-w-0 flex-1 pr-4">
                         <p className="font-medium text-sm truncate">{b.etfName}</p>
                         <p className="text-xs text-muted-foreground mt-0.5">
-                          Fund internal weight: {b.internalWeight.toFixed(2)}%
+                          {t.deepDiveTab.fundInternalWeight}: {b.internalWeight.toFixed(2)}%
                         </p>
                       </div>
                       <div className="text-right shrink-0">

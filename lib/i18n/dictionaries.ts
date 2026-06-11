@@ -1,0 +1,461 @@
+export type Language = 'en' | 'it';
+
+export const dictionaries = {
+  en: {
+    navbar: {
+      title: 'Investment Portfolio Analysis',
+      dashboard: 'Dashboard',
+      about: 'About',
+      github: 'GitHub',
+      menu: 'Menu',
+      theme: 'Theme',
+      language: 'Language',
+    },
+    languageSwitcher: {
+      en: 'English',
+      it: 'Italiano',
+    },
+    dashboard: {
+      title: 'Dashboard',
+      emptyState: 'No active ETFs to display.',
+      emptyStateDesc: 'Add some ETFs and allocate weights to see your portfolio analysis.',
+      unknown: 'Unknown',
+      top: 'Top',
+    },
+    overviewTab: {
+      weightedAvgTer: 'Weighted Avg TER',
+      totalAssets: 'Total Assets Analyzed',
+      activeEtfs: 'Active ETFs',
+      tabOverview: 'Overview',
+      tabDeepDive: 'Deep Dive',
+      tabFundDetails: 'Fund Details',
+      tabRiskAnalysis: 'Risk Analysis',
+      tabSavingsPlan: 'Savings Plan',
+      tab3DVisuals: '3D Visuals',
+      exposureGlobe: 'Exposure Globe',
+      concentrationNetwork: 'Concentration Network',
+      topHoldingsRendered: 'Top Holdings Rendered',
+      concentrationPhysics: 'Concentration Physics',
+      livePhysics: 'Live Physics Engine',
+      etfAllocationTitle: 'ETF Allocation',
+      etfAllocationInfo:
+        'A macro-level breakdown of the weights you assigned to each individual ETF in your portfolio.',
+      sectorExposureTitle: 'Sector Exposure',
+      sectorExposureInfo:
+        'The industry breakdown (e.g., Technology, Healthcare) of the underlying companies in your portfolio.',
+      geoExposureTitle: 'Geographic Exposure',
+      geoExposureInfo:
+        'A breakdown of the physical country locations of the underlying companies in your portfolio.',
+      currencyExposureTitle: 'Currency Exposure',
+      currencyExposureInfo:
+        'Your risk exposure to different foreign exchange currencies based on the trading currency of your underlying assets.',
+    },
+    etfForm: {
+      addEtf: 'Add New ETF',
+      enterDetails:
+        'Enter the ETF details and upload its holdings CSV to add it to your portfolio.',
+      name: 'ETF Name / Ticker',
+      isin: 'ISIN Code',
+      provider: 'Provider',
+      ter: 'TER (%)',
+      replication: 'Replication Method',
+      useOfProfit: 'Use of Profit',
+      fundSize: 'Fund Size ($M)',
+      fundAge: 'Fund Age (Years)',
+      domicile: 'Domicile',
+      csvFile: 'Holdings CSV File',
+      howToCsvTitle: 'How to get the CSV file:',
+      howToCsvDesc:
+        "Go to the ETF issuer's official website, search for your ETF, and find the section containing the holdings. Download the list as a",
+      csvWarning:
+        '⚠️ Do not edit or open the file in Excel before uploading! Just upload it directly as downloaded.',
+      processing: 'Processing...',
+      addToPortfolio: 'Add ETF to Portfolio',
+      missingFields: 'Missing fields',
+      missingFieldsDesc: 'Please fill all fields and upload a CSV file.',
+      invalidTer: 'Invalid TER',
+      invalidSize: 'Invalid Fund Size',
+      invalidAge: 'Invalid Fund Age',
+      parseError: 'Parse Error',
+      emptyFile: 'Empty File',
+      emptyFileDesc: 'No valid holdings found in the CSV. Please check the file format.',
+      etfAdded: 'ETF Added',
+    },
+    fundDetailsTab: {
+      providerAllocationTitle: 'Provider Allocation',
+      providerAllocationInfo:
+        'A breakdown of the financial institutions that manage your ETFs (e.g., Vanguard, iShares).',
+      fundDomicileTitle: 'Fund Domicile',
+      fundDomicileInfo:
+        'The legal jurisdiction where your ETFs are registered (important for taxation).',
+      fundSizeTitle: 'Fund Size',
+      fundSizeInfo:
+        'Total Assets Under Management (AUM) for each ETF in your portfolio (in millions).',
+      fundAgeTitle: 'Fund Age',
+      fundAgeInfo: 'The number of years since each ETF was launched.',
+      yearsUnit: 'Years',
+      millionsUnit: '$M',
+    },
+    riskAnalysisTab: {
+      replicationMethodTitle: 'Replication Method',
+      replicationMethodInfo:
+        'How the ETFs track their indices: Physical (buying actual stocks) vs Synthetic (using derivatives).',
+      useOfProfitTitle: 'Use of Profit',
+      useOfProfitInfo:
+        'Accumulating (reinvests dividends automatically) vs Distributing (pays dividends out to you).',
+    },
+    deepDiveTab: {
+      title: 'Holdings Deep Dive',
+      description:
+        'Search for specific assets (e.g., "NVIDIA", "Apple", "TSLA") across all your parsed ETFs to discover your true aggregate exposure.',
+      searchPlaceholder: 'Search by company name or ticker...',
+      noHoldingsFound: 'No holdings found matching',
+      tryDifferent: 'Try a different company name or ticker symbol.',
+      unknownTicker: 'Unknown Ticker',
+      totalExposure: 'Total Exposure',
+      exposureBreakdown: 'Exposure Breakdown',
+      fundInternalWeight: 'Fund internal weight',
+    },
+    savingsPlan: {
+      totalInvested: 'Total Invested',
+      totalInterestEarned: 'Total Interest Earned',
+      projectedFutureValue: 'Projected Future Value',
+      growthProjection: 'Growth Projection over',
+      years: 'Years',
+      nextMonthBuyingPlan: "Next Month's Buying Plan",
+      allocateWeightMsg: 'Allocate some weight to your ETFs to see the dynamic buying plan.',
+      maintainTargetMsg:
+        'To maintain your precise target allocations, here is exactly how to distribute your next',
+      contribution: 'contribution:',
+      weight: 'Weight',
+      warningPortfolioWeight: 'Your total portfolio weight is currently',
+      warningPortfolioNormalized:
+        'instead of 100%. The monetary amounts shown above have been mathematically normalized to proportionally match your',
+      planSettings: 'Plan Settings',
+      initialInvestment: 'Initial Investment',
+      monthlyContribution: 'Monthly Contribution',
+      duration: 'Duration',
+      expectedReturn: 'Expected Return (Yearly)',
+      historicalAverage: 'Historically, the S&P 500 averages ~7-10% annually.',
+      stopContributingAfter: 'Stop Contributing After',
+      freezeInvestments: 'Freeze investments after',
+      months: 'months, while interest continues to compound.',
+      yearsShort: 'Yrs',
+      monthsShort: 'Mo',
+      year: 'Year',
+      totalValue: 'Total Value',
+      investedCapital: 'Invested Capital',
+    },
+    landing: {
+      unveil: 'Unveil Your True',
+      exposure: 'Exposure',
+      subtitle: 'A powerful, fully client-side tool to deeply analyze your custom ETF portfolios.',
+      launchSystem: 'Launch System',
+      multiIssuer: 'Multi-Issuer',
+      multiIssuerDesc:
+        'Seamlessly parse official CSVs from iShares, Vanguard, Amundi, and Lyxor with zero manual formatting.',
+      globalMapping: 'Global Mapping',
+      globalMappingDesc:
+        'Aggregate thousands of underlying holdings to see exactly which countries and sectors your money is really in.',
+      serverless: 'Serverless',
+      serverlessDesc:
+        'Your financial data never leaves your browser. All parsing and math are executed locally in real-time.',
+    },
+    about: {
+      empowering: 'Empowering',
+      investors: 'Investors',
+      subtitle:
+        "We believe that understanding your true financial exposure shouldn't require an expensive wealth manager. This tool brings institutional-grade transparency directly to your browser.",
+      overlapProblem: 'The Overlap Problem',
+      overlapP1:
+        'When you purchase multiple broad-market Exchange Traded Funds (ETFs), you are almost certainly buying the same companies multiple times over without realizing it.',
+      overlapP2:
+        'A standard S&P 500 ETF and a developed World ETF both contain heavy concentrations of the exact same tech giants. We built this tool to parse the raw CSV holdings files from major issuers (iShares, Vanguard, Amundi) and reveal your true underlying exposure across the globe.',
+      privacyFirst: 'Privacy First',
+      privacyP1Start:
+        'Financial data is deeply personal. We architected this application to be entirely',
+      privacyClientSide: 'client-side',
+      privacyP1End: '. It relies exclusively on your local device to do the heavy lifting.',
+      privacyP2:
+        'When you upload your CSVs, the mathematical aggregations and data mapping happen right inside your browser engine. There are no databases, no tracking cookies, and your portfolio structure remains 100% private at all times.',
+      futureRoadmap: 'Future Roadmap',
+      roadmapDescStart: 'We are actively working on integrating advanced',
+      threeJs: 'Three.js',
+      roadmapDescEnd:
+        '3D visualizations. Upcoming features include an Interactive Exposure Globe mapping your investments worldwide and a Top Holdings Constellation network graph, pushing the boundaries of web-based financial analytics.',
+    },
+    analyzer: {
+      parsingDefaults: 'Parsing Default Nodes...',
+      initializing: 'Initializing Workspace...',
+    },
+    portfolioSliders: {
+      removeEtf: 'Remove ETF',
+      noEtfsAdded: 'No ETFs added yet.',
+      uploadCsvToStart: 'Upload a CSV to start building your portfolio.',
+      loadDefaultPortfolio: 'Load Default Portfolio',
+      portfolioWeights: 'Portfolio Weights',
+      totalAllocation: 'Total Allocation',
+      exceeds100: 'Your portfolio exceeds 100%. Please reduce some weights.',
+      leftToAllocate: 'left to allocate.',
+      perfectlyAllocated: 'Perfectly allocated.',
+      resetToDefault: 'Reset to Default Portfolio',
+      resetWarning:
+        'Warning: This will permanently delete your current portfolio configuration and replace it with the default sample ETFs. Continue?',
+      noteDeleteConfig: 'Note: This will delete your current configuration.',
+      youHave: 'You have ',
+    },
+    charts: {
+      topHoldingsTitle: 'Top 10 Holdings',
+      topHoldingsInfo:
+        'The 10 largest individual companies you own across all your active ETFs, aggregated by their proportional weight.',
+      concentrationTitle: 'Portfolio Concentration (Top 50 Holdings)',
+      concentrationInfo:
+        'A cumulative sum of your top 50 holdings. Helps identify if your portfolio is top-heavy (e.g., your top 5 stocks making up 30% of your net worth).',
+      distributionTitle: 'Holdings Weight Distribution',
+      distributionInfo:
+        'Groups your underlying stocks by their individual size. Determines if you hold a few large positions vs thousands of tiny fractional positions.',
+    },
+    threeDVisuals: {
+      regionsActive: 'Regions Active',
+      pauseRotation: 'Pause Rotation',
+      resumeRotation: 'Resume Rotation',
+      legend: 'Legend',
+      etfs: 'ETFs',
+      overlappingHoldings: 'Overlapping Holdings',
+      networkLegendDesc:
+        'Lines pull overlapping companies towards the center. Thicker lines and faster particles indicate heavier concentration weight.',
+    },
+  },
+  it: {
+    navbar: {
+      title: 'Analisi Portafoglio',
+      dashboard: 'Dashboard',
+      about: 'Chi Siamo',
+      github: 'GitHub',
+      menu: 'Menu',
+      theme: 'Tema',
+      language: 'Lingua',
+    },
+    languageSwitcher: {
+      en: 'Inglese',
+      it: 'Italiano',
+    },
+    dashboard: {
+      title: 'Dashboard',
+      emptyState: 'Nessun ETF attivo da mostrare.',
+      emptyStateDesc:
+        "Aggiungi alcuni ETF e assegna i pesi per vedere l'analisi del tuo portafoglio.",
+      unknown: 'Sconosciuto',
+      top: 'Prime',
+    },
+    overviewTab: {
+      weightedAvgTer: 'TER Medio Ponderato',
+      totalAssets: 'Totale Asset Analizzati',
+      activeEtfs: 'ETF Attivi',
+      tabOverview: 'Panoramica',
+      tabDeepDive: 'Analisi Dettagliata',
+      tabFundDetails: 'Dettagli Fondo',
+      tabRiskAnalysis: 'Analisi del Rischio',
+      tabSavingsPlan: 'Piano di Accumulo',
+      tab3DVisuals: 'Visualizzazione 3D',
+      exposureGlobe: 'Esposizione Globale',
+      concentrationNetwork: 'Rete di Concentrazione',
+      topHoldingsRendered: 'Top Partecipazioni Mostrate',
+      concentrationPhysics: 'Fisica Concentrazione',
+      livePhysics: 'Motore Fisico Live',
+      etfAllocationTitle: 'Allocazione ETF',
+      etfAllocationInfo:
+        'Una scomposizione a livello macro dei pesi assegnati a ciascun singolo ETF nel portafoglio.',
+      sectorExposureTitle: 'Esposizione Settoriale',
+      sectorExposureInfo:
+        'La suddivisione per settore (es. Tecnologia, Salute) delle aziende sottostanti nel portafoglio.',
+      geoExposureTitle: 'Esposizione Geografica',
+      geoExposureInfo:
+        'Una ripartizione delle sedi fisiche per paese delle società sottostanti nel portafoglio.',
+      currencyExposureTitle: 'Esposizione Valutaria',
+      currencyExposureInfo:
+        'La tua esposizione al rischio di diverse valute basata sulla valuta di negoziazione degli asset sottostanti.',
+    },
+    etfForm: {
+      addEtf: 'Aggiungi Nuovo ETF',
+      enterDetails:
+        "Inserisci i dettagli dell'ETF e carica il CSV delle partecipazioni per aggiungerlo al portafoglio.",
+      name: 'Nome ETF / Ticker',
+      isin: 'Codice ISIN',
+      provider: 'Emittente',
+      ter: 'TER (%)',
+      replication: 'Metodo di Replica',
+      useOfProfit: 'Utilizzo dei Proventi',
+      fundSize: 'Dimensione Fondo ($M)',
+      fundAge: 'Età Fondo (Anni)',
+      domicile: 'Domicilio',
+      csvFile: 'File CSV Partecipazioni',
+      howToCsvTitle: 'Come ottenere il file CSV:',
+      howToCsvDesc:
+        "Vai sul sito ufficiale dell'emittente dell'ETF, cerca il tuo ETF e trova la sezione contenente le partecipazioni. Scarica la lista in formato",
+      csvWarning:
+        '⚠️ Non modificare o aprire il file in Excel prima di caricarlo! Caricalo direttamente come scaricato.',
+      processing: 'Elaborazione in corso...',
+      addToPortfolio: 'Aggiungi ETF al Portafoglio',
+      missingFields: 'Campi mancanti',
+      missingFieldsDesc: 'Compila tutti i campi e carica un file CSV.',
+      invalidTer: 'TER non valido',
+      invalidSize: 'Dimensione Fondo non valida',
+      invalidAge: 'Età Fondo non valida',
+      parseError: 'Errore di Lettura',
+      emptyFile: 'File Vuoto',
+      emptyFileDesc:
+        'Nessuna partecipazione valida trovata nel CSV. Controlla il formato del file.',
+      etfAdded: 'ETF Aggiunto',
+    },
+    fundDetailsTab: {
+      providerAllocationTitle: 'Allocazione Emittenti',
+      providerAllocationInfo:
+        'Una ripartizione delle istituzioni finanziarie che gestiscono i tuoi ETF (es. Vanguard, iShares).',
+      fundDomicileTitle: 'Domicilio Fondo',
+      fundDomicileInfo:
+        'La giurisdizione legale in cui sono registrati i tuoi ETF (importante per la tassazione).',
+      fundSizeTitle: 'Dimensione Fondo',
+      fundSizeInfo:
+        'Totale degli Asset Under Management (AUM) per ogni ETF nel portafoglio (in milioni).',
+      fundAgeTitle: 'Età Fondo',
+      fundAgeInfo: 'Il numero di anni dal lancio di ciascun ETF.',
+      yearsUnit: 'Anni',
+      millionsUnit: 'M$',
+    },
+    riskAnalysisTab: {
+      replicationMethodTitle: 'Metodo di Replica',
+      replicationMethodInfo:
+        'Come gli ETF tracciano i loro indici: Fisica (acquista le azioni effettive) vs Sintetica (usa derivati).',
+      useOfProfitTitle: 'Utilizzo dei Proventi',
+      useOfProfitInfo:
+        'Ad accumulazione (reinveste i dividendi automaticamente) vs A distribuzione (paga i dividendi a te).',
+    },
+    deepDiveTab: {
+      title: 'Analisi Dettagliata Partecipazioni',
+      description:
+        'Cerca asset specifici (es. "NVIDIA", "Apple", "TSLA") tra tutti i tuoi ETF analizzati per scoprire la tua vera esposizione aggregata.',
+      searchPlaceholder: 'Cerca per nome azienda o ticker...',
+      noHoldingsFound: 'Nessuna partecipazione trovata per',
+      tryDifferent: 'Prova con un nome azienda o simbolo ticker diverso.',
+      unknownTicker: 'Ticker Sconosciuto',
+      totalExposure: 'Esposizione Totale',
+      exposureBreakdown: 'Dettaglio Esposizione',
+      fundInternalWeight: 'Peso interno fondo',
+    },
+    savingsPlan: {
+      totalInvested: 'Totale Investito',
+      totalInterestEarned: 'Totale Interessi Maturati',
+      projectedFutureValue: 'Valore Futuro Stimato',
+      growthProjection: 'Proiezione di Crescita su',
+      years: 'Anni',
+      nextMonthBuyingPlan: 'Piano di Acquisto del Prossimo Mese',
+      allocateWeightMsg: 'Assegna dei pesi ai tuoi ETF per vedere il piano di acquisto dinamico.',
+      maintainTargetMsg:
+        'Per mantenere le tue allocazioni target precise, ecco esattamente come distribuire il tuo prossimo contributo di',
+      contribution: ':',
+      weight: 'Peso',
+      warningPortfolioWeight: 'Il peso totale del tuo portafoglio è attualmente',
+      warningPortfolioNormalized:
+        'invece del 100%. Gli importi mostrati sopra sono stati normalizzati matematicamente per corrispondere proporzionalmente al tuo contributo di',
+      planSettings: 'Impostazioni Piano',
+      initialInvestment: 'Investimento Iniziale',
+      monthlyContribution: 'Contributo Mensile',
+      duration: 'Durata',
+      expectedReturn: 'Rendimento Atteso (Annuo)',
+      historicalAverage: "Storicamente, l'S&P 500 ha una media del ~7-10% annuo.",
+      stopContributingAfter: 'Smetti di Contribuire Dopo',
+      freezeInvestments: 'Congela gli investimenti dopo',
+      months: 'mesi, mentre gli interessi continuano a capitalizzarsi.',
+      yearsShort: 'Anni',
+      monthsShort: 'Mesi',
+      year: 'Anno',
+      totalValue: 'Valore Totale',
+      investedCapital: 'Capitale Investito',
+    },
+    landing: {
+      unveil: 'Svela la tua vera',
+      exposure: 'Esposizione',
+      subtitle:
+        'Uno strumento potente, completamente client-side per analizzare a fondo i tuoi portafogli ETF personalizzati.',
+      launchSystem: 'Avvia Sistema',
+      multiIssuer: 'Multi-Emittente',
+      multiIssuerDesc:
+        'Analizza senza problemi i CSV ufficiali di iShares, Vanguard, Amundi e Lyxor senza formattazioni manuali.',
+      globalMapping: 'Mappatura Globale',
+      globalMappingDesc:
+        'Aggrega migliaia di partecipazioni sottostanti per vedere esattamente in quali paesi e settori si trova realmente il tuo denaro.',
+      serverless: 'Serverless',
+      serverlessDesc:
+        "I tuoi dati finanziari non lasciano mai il browser. Tutta l'analisi e la matematica vengono eseguite localmente in tempo reale.",
+    },
+    about: {
+      empowering: 'Potenziare gli',
+      investors: 'Investitori',
+      subtitle:
+        'Crediamo che comprendere la tua reale esposizione finanziaria non debba richiedere un costoso gestore patrimoniale. Questo strumento porta una trasparenza di livello istituzionale direttamente nel tuo browser.',
+      overlapProblem: 'Il Problema della Sovrapposizione',
+      overlapP1:
+        'Quando acquisti più Exchange Traded Funds (ETF) del mercato allargato, stai quasi certamente comprando le stesse aziende più e più volte senza rendertene conto.',
+      overlapP2:
+        "Un ETF standard sull'S&P 500 e un ETF sul Mondo Sviluppato contengono entrambi forti concentrazioni degli stessi giganti tecnologici. Abbiamo creato questo strumento per analizzare i file CSV grezzi delle partecipazioni dei principali emittenti (iShares, Vanguard, Amundi) e rivelare la tua vera esposizione sottostante in tutto il mondo.",
+      privacyFirst: 'La Privacy Prima di Tutto',
+      privacyP1Start:
+        'I dati finanziari sono profondamente personali. Abbiamo architettato questa applicazione per essere interamente',
+      privacyClientSide: 'client-side',
+      privacyP1End:
+        '. Si affida esclusivamente al tuo dispositivo locale per fare il lavoro pesante.',
+      privacyP2:
+        "Quando carichi i tuoi CSV, le aggregazioni matematiche e la mappatura dei dati avvengono direttamente all'interno del motore del tuo browser. Non ci sono database, nessun cookie di tracciamento e la struttura del tuo portafoglio rimane privata al 100% in ogni momento.",
+      futureRoadmap: 'Tabella di Marcia Futura',
+      roadmapDescStart:
+        "Stiamo lavorando attivamente all'integrazione di avanzate visualizzazioni 3D con",
+      threeJs: 'Three.js',
+      roadmapDescEnd:
+        ". Le prossime funzionalità includono un Globo di Esposizione Interattivo che mappa i tuoi investimenti in tutto il mondo e un grafo a rete della Costellazione delle Principali Partecipazioni, spingendo i confini dell'analisi finanziaria basata sul web.",
+    },
+    analyzer: {
+      parsingDefaults: 'Analisi dei Nodi Predefiniti...',
+      initializing: 'Inizializzazione Workspace...',
+    },
+    portfolioSliders: {
+      removeEtf: 'Rimuovi ETF',
+      noEtfsAdded: 'Nessun ETF aggiunto ancora.',
+      uploadCsvToStart: 'Carica un CSV per iniziare a costruire il tuo portafoglio.',
+      loadDefaultPortfolio: 'Carica Portafoglio Predefinito',
+      portfolioWeights: 'Pesi Portafoglio',
+      totalAllocation: 'Allocazione Totale',
+      exceeds100: 'Il tuo portafoglio supera il 100%. Riduci alcuni pesi.',
+      leftToAllocate: 'rimanenti da allocare.',
+      perfectlyAllocated: 'Perfettamente allocato.',
+      resetToDefault: 'Ripristina Portafoglio Predefinito',
+      resetWarning:
+        'Attenzione: Questo eliminerà permanentemente la configurazione attuale del portafoglio e la sostituirà con gli ETF di esempio predefiniti. Continuare?',
+      noteDeleteConfig: 'Nota: Questo eliminerà la tua configurazione attuale.',
+      youHave: 'Hai ',
+    },
+    charts: {
+      topHoldingsTitle: 'Prime 10 Partecipazioni',
+      topHoldingsInfo:
+        'Le 10 più grandi società individuali che possiedi in tutti i tuoi ETF attivi, aggregate in base al loro peso proporzionale.',
+      concentrationTitle: 'Concentrazione del Portafoglio (Prime 50 Partecipazioni)',
+      concentrationInfo:
+        'Una somma cumulativa delle tue prime 50 partecipazioni. Aiuta a identificare se il tuo portafoglio è sbilanciato in cima (es. le tue prime 5 azioni costituiscono il 30% del tuo patrimonio netto).',
+      distributionTitle: 'Distribuzione del Peso delle Partecipazioni',
+      distributionInfo:
+        'Raggruppa le azioni sottostanti in base alle loro dimensioni individuali. Determina se detieni alcune grandi posizioni rispetto a migliaia di minuscole posizioni frazionarie.',
+    },
+    threeDVisuals: {
+      regionsActive: 'Regioni Attive',
+      pauseRotation: 'Pausa Rotazione',
+      resumeRotation: 'Riprendi Rotazione',
+      legend: 'Legenda',
+      etfs: 'ETF',
+      overlappingHoldings: 'Partecipazioni Sovrapposte',
+      networkLegendDesc:
+        'Le linee attirano verso il centro le società sovrapposte. Linee più spesse e particelle più veloci indicano un peso di concentrazione maggiore.',
+    },
+  },
+};
+
+export type Dictionary = typeof dictionaries.en;

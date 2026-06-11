@@ -1,8 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight, BarChart3, Globe, Layers } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 export default function LandingPage() {
+  const { t } = useTranslation();
+
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-background text-foreground overflow-hidden relative flex flex-col justify-center items-center w-full">
       {/* Abstract Glowing Background */}
@@ -11,13 +16,13 @@ export default function LandingPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10 w-full flex flex-col items-center">
         <div className="text-center max-w-4xl mx-auto w-full">
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 text-foreground uppercase">
-            Unveil Your True{' '}
+            {t.landing.unveil}{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-500 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
-              Exposure
+              {t.landing.exposure}
             </span>
           </h1>
           <p className="text-lg md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto font-light tracking-wide">
-            A powerful, fully client-side tool to deeply analyze your custom ETF portfolios.
+            {t.landing.subtitle}
           </p>
           <div className="flex justify-center w-full">
             <Button
@@ -26,7 +31,7 @@ export default function LandingPage() {
               size="lg"
               className="px-12 py-8 text-lg font-bold uppercase tracking-widest shadow-lg"
             >
-              Launch System <ArrowRight className="w-6 h-6 ml-3" />
+              {t.landing.launchSystem} <ArrowRight className="w-6 h-6 ml-3" />
             </Button>
           </div>
         </div>
@@ -37,11 +42,10 @@ export default function LandingPage() {
               <Layers className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-bold mb-4 text-foreground uppercase tracking-wider">
-              Multi-Issuer
+              {t.landing.multiIssuer}
             </h3>
             <p className="text-muted-foreground leading-relaxed font-light">
-              Seamlessly parse official CSVs from iShares, Vanguard, Amundi, and Lyxor with zero
-              manual formatting.
+              {t.landing.multiIssuerDesc}
             </p>
           </div>
           <div className="bg-card/50 backdrop-blur-sm border border-border p-8 flex flex-col items-center text-center hover:border-primary/30 transition-colors rounded-xl shadow-lg">
@@ -49,11 +53,10 @@ export default function LandingPage() {
               <Globe className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-bold mb-4 text-foreground uppercase tracking-wider">
-              Global Mapping
+              {t.landing.globalMapping}
             </h3>
             <p className="text-muted-foreground leading-relaxed font-light">
-              Aggregate thousands of underlying holdings to see exactly which countries and sectors
-              your money is really in.
+              {t.landing.globalMappingDesc}
             </p>
           </div>
           <div className="bg-card/50 backdrop-blur-sm border border-border p-8 flex flex-col items-center text-center hover:border-primary/30 transition-colors rounded-xl shadow-lg">
@@ -61,11 +64,10 @@ export default function LandingPage() {
               <BarChart3 className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-xl font-bold mb-4 text-foreground uppercase tracking-wider">
-              Serverless
+              {t.landing.serverless}
             </h3>
             <p className="text-muted-foreground leading-relaxed font-light">
-              Your financial data never leaves your browser. All parsing and math are executed
-              locally in real-time.
+              {t.landing.serverlessDesc}
             </p>
           </div>
         </div>

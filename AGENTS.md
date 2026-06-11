@@ -25,3 +25,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 - **Agile Methodology:**
   - Incremental and modular development: start from the skeleton, implement the parsing logic, manage the global state, and finally connect the interactive charts.
+
+Use the pnpm package manager
+
+Use the scripts in package.json if applicable

@@ -3,6 +3,15 @@ import { render, screen, fireEvent, act } from '@testing-library/react';
 import { SavingsPlanCalculator } from '../components/SavingsPlanCalculator';
 import { EtfConfig } from '../lib/types';
 
+jest.mock('../lib/i18n/LanguageContext', () => ({
+  useTranslation: () => ({
+    language: 'en',
+    setLanguage: jest.fn(),
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    t: require('../lib/i18n/dictionaries').dictionaries.en,
+  }),
+}));
+
 describe('SavingsPlanCalculator Component', () => {
   const mockEtfs: EtfConfig[] = [
     {

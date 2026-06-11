@@ -252,7 +252,7 @@ export function generateNetworkData(etfs: EtfConfig[], limit: number = 100): Net
 
   // 1. Add all active ETFs as central nodes
   const activeEtfs = etfs.filter((e) => e.globalWeight > 0);
-  activeEtfs.forEach((etf, i) => {
+  activeEtfs.forEach((etf) => {
     nodes.push({
       id: etf.id,
       name: etf.name,

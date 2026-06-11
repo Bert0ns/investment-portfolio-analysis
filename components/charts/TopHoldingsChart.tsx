@@ -10,19 +10,19 @@ import {
 } from 'recharts';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { COLORS, ChartTitleWithInfo, CustomTooltip } from './Shared';
+import { useTranslation } from '../../lib/i18n/LanguageContext';
 
 interface TopHoldingsChartProps {
   data: { name: string; value: number }[];
 }
 
 export function TopHoldingsChart({ data }: TopHoldingsChartProps) {
+  const { t } = useTranslation();
+
   return (
     <Card className="lg:col-span-2">
       <CardHeader>
-        <ChartTitleWithInfo
-          title="Top 10 Holdings"
-          info="The 10 largest individual companies you own across all your active ETFs, aggregated by their proportional weight."
-        />
+        <ChartTitleWithInfo title={t.charts.topHoldingsTitle} info={t.charts.topHoldingsInfo} />
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 320, minWidth: 0 }}>

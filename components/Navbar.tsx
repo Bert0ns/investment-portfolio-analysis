@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, LayoutDashboard, Info, ExternalLink } from 'lucide-react';
@@ -10,8 +12,12 @@ import {
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 export default function Navbar() {
+  const { t } = useTranslation();
+
   return (
     <nav className="border-b border-border bg-background/80 backdrop-blur-xl sticky top-0 z-50 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
@@ -38,13 +44,13 @@ export default function Navbar() {
               href="/analyzer"
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest whitespace-nowrap"
             >
-              Dashboard
+              {t.navbar.dashboard}
             </Link>
             <Link
               href="/about"
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest"
             >
-              About
+              {t.navbar.about}
             </Link>
             <a
               href="https://github.com/Bert0ns/investment-portfolio-analysis"
@@ -52,13 +58,14 @@ export default function Navbar() {
               rel="noreferrer"
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest"
             >
-              GitHub
+              {t.navbar.github}
             </a>
           </div>
 
           {/* Right: Theme Switcher & Mobile Nav */}
           <div className="flex items-center gap-4 justify-end relative z-10">
-            <div className="hidden md:block">
+            <div className="hidden md:flex items-center gap-2">
+              <LanguageSwitcher />
               <ThemeSwitcher />
             </div>
 
@@ -71,7 +78,7 @@ export default function Navbar() {
                   side="right"
                   className="w-[300px] sm:w-[400px] bg-background/95 backdrop-blur-xl border-l-border flex flex-col h-full"
                 >
-                  <SheetTitle className="sr-only">Menu</SheetTitle>
+                  <SheetTitle className="sr-only">{t.navbar.menu}</SheetTitle>
                   <SheetDescription className="sr-only">Navigation menu</SheetDescription>
 
                   <div className="flex flex-col items-center justify-center gap-4 mb-8 border-b border-border pb-8 mt-10">
@@ -96,14 +103,14 @@ export default function Navbar() {
                       className="flex items-center gap-4 px-4 py-4 rounded-md border border-transparent text-base font-medium text-muted-foreground hover:bg-primary/10 hover:border-primary/30 hover:text-primary transition-all uppercase tracking-wider"
                     >
                       <LayoutDashboard className="h-5 w-5" />
-                      Dashboard
+                      {t.navbar.dashboard}
                     </Link>
                     <Link
                       href="/about"
                       className="flex items-center gap-4 px-4 py-4 rounded-md border border-transparent text-base font-medium text-muted-foreground hover:bg-primary/10 hover:border-primary/30 hover:text-primary transition-all uppercase tracking-wider"
                     >
                       <Info className="h-5 w-5" />
-                      About
+                      {t.navbar.about}
                     </Link>
                     <a
                       href="https://github.com/Bert0ns/investment-portfolio-analysis"
@@ -112,13 +119,17 @@ export default function Navbar() {
                       className="flex items-center gap-4 px-4 py-4 rounded-md border border-transparent text-base font-medium text-muted-foreground hover:bg-primary/10 hover:border-primary/30 hover:text-primary transition-all uppercase tracking-wider"
                     >
                       <ExternalLink className="h-5 w-5" />
-                      GitHub
+                      {t.navbar.github}
                     </a>
                   </div>
 
                   <div className="mt-auto border-t border-border pt-8 pb-4 flex flex-col items-center gap-4">
                     <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest">
-                      Theme
+                      {t.navbar.language}
+                    </span>
+                    <LanguageSwitcher />
+                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest mt-4">
+                      {t.navbar.theme}
                     </span>
                     <ThemeSwitcher />
                   </div>

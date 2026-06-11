@@ -7,6 +7,7 @@ import { Trash2, RotateCcw } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 import { Slider } from './ui/slider';
 import { Button } from './ui/button';
+import { useTranslation } from '../lib/i18n/LanguageContext';
 
 interface PortfolioSlidersProps {
   etfs: EtfConfig[];
@@ -25,6 +26,7 @@ function EtfSliderRow({
   onUpdateWeight: (id: string, weight: number) => void;
   onRemove: (id: string) => void;
 }) {
+  const { t } = useTranslation();
   const [localWeight, setLocalWeight] = React.useState(Math.round(etf.globalWeight || 0));
 
   // Sync from parent if it changes externally (e.g., Reset Defaults)
@@ -66,7 +68,7 @@ function EtfSliderRow({
             size="icon"
             onClick={() => onRemove(etf.id)}
             className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-            title="Remove ETF"
+            title={t.portfolioSliders.removeEtf}
           >
             <Trash2 size={16} />
           </Button>
@@ -93,17 +95,19 @@ export default function PortfolioSliders({
   onRemove,
   onReset,
 }: PortfolioSlidersProps) {
+  const { t } = useTranslation();
+
   if (etfs.length === 0) {
     return (
       <Card className="h-full flex flex-col items-center justify-center text-center min-h-75 border-dashed">
         <CardContent className="pt-6">
-          <p className="font-medium text-muted-foreground">No ETFs added yet.</p>
+          <p className="font-medium text-muted-foreground">{t.portfolioSliders.noEtfsAdded}</p>
           <p className="text-sm mt-1 text-muted-foreground/80">
-            Upload a CSV to start building your portfolio.
+            {t.portfolioSliders.uploadCsvToStart}
           </p>
           <Button onClick={onReset} variant="outline" className="mt-6 flex items-center gap-2">
             <RotateCcw size={16} />
-            Load Default Portfolio
+            {t.portfolioSliders.loadDefaultPortfolio}
           </Button>
         </CardContent>
       </Card>
@@ -116,7 +120,7 @@ export default function PortfolioSliders({
   return (
     <Card className="h-full flex flex-col min-h-75">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <CardTitle>Portfolio Weights</CardTitle>
+        <CardTitle>{t.portfolioSliders.portfolioWeights}</CardTitle>
       </CardHeader>
 
       <CardContent className="flex-1 flex flex-col pt-0 space-y-6">
@@ -134,7 +138,9 @@ export default function PortfolioSliders({
         {/* Total Weight Validation */}
         <div className="pt-6 mt-auto border-t">
           <div className="flex justify-between items-end mb-2">
-            <span className="text-sm font-medium text-muted-foreground">Total Allocation</span>
+            <span className="text-sm font-medium text-muted-foreground">
+              {t.portfolioSliders.totalAllocation}
+            </span>
             <span
               className={`text-2xl font-bold ${
                 isOverweight
@@ -158,9 +164,10 @@ export default function PortfolioSliders({
           </div>
 
           <div className="mt-2 text-xs text-center text-muted-foreground min-h-4">
-            {isOverweight && 'Your portfolio exceeds 100%. Please reduce some weights.'}
-            {isUnderweight && `You have ${(100 - totalWeight).toFixed(1)}% left to allocate.`}
-            {!isOverweight && !isUnderweight && 'Perfectly allocated.'}
+            {isOverweight && t.portfolioSliders.exceeds100}
+            {isUnderweight &&
+              `${t.portfolioSliders.youHave}${(100 - totalWeight).toFixed(1)}% ${t.portfolioSliders.leftToAllocate}`}
+            {!isOverweight && !isUnderweight && t.portfolioSliders.perfectlyAllocated}
           </div>
 
           <div className="mt-6">
@@ -168,20 +175,16 @@ export default function PortfolioSliders({
               variant="outline"
               className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/10 border-dashed"
               onClick={() => {
-                if (
-                  window.confirm(
-                    'Warning: This will permanently delete your current portfolio configuration and replace it with the default sample ETFs. Continue?'
-                  )
-                ) {
+                if (window.confirm(t.portfolioSliders.resetWarning)) {
                   onReset();
                 }
               }}
             >
               <RotateCcw size={14} className="mr-2" />
-              Reset to Default Portfolio
+              {t.portfolioSliders.resetToDefault}
             </Button>
             <p className="text-[10px] text-center text-muted-foreground mt-2 opacity-70">
-              Note: This will delete your current configuration.
+              {t.portfolioSliders.noteDeleteConfig}
             </p>
           </div>
         </div>
