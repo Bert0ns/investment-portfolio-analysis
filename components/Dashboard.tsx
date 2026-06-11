@@ -44,7 +44,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
     'Overview' | 'Deep Dive' | '3D Visuals' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'
   >('Overview');
 
-  const [active3DVisual, setActive3DVisual] = useState<'Globe' | 'Network'>('Network');
+  const [active3DVisual, setActive3DVisual] = useState<'Globe' | 'Network'>('Globe');
 
   const [networkLimit, setNetworkLimit] = useState<number[]>([100]);
   const [networkLivePhysics, setNetworkLivePhysics] = useState(false);
