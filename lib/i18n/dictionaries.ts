@@ -32,8 +32,11 @@ export const dictionaries = {
     },
     overviewTab: {
       weightedAvgTer: 'Weighted Avg TER',
+      weightedAvgTerDesc: 'The average cost of your portfolio, weighted by ETF allocation.',
       totalAssets: 'Total Assets Analyzed',
+      totalAssetsDesc: 'The total number of unique underlying companies or assets across all ETFs.',
       activeEtfs: 'Active ETFs',
+      activeEtfsDesc: 'The number of ETFs currently allocated with a weight > 0%.',
       tabOverview: 'Overview',
       tabDeepDive: 'Deep Dive',
       tabFundDetails: 'Fund Details',
@@ -266,8 +269,12 @@ export const dictionaries = {
     },
     overviewTab: {
       weightedAvgTer: 'TER Medio Ponderato',
+      weightedAvgTerDesc:
+        "Il costo medio del tuo portafoglio, ponderato per l'allocazione degli ETF.",
       totalAssets: 'Totale Asset Analizzati',
+      totalAssetsDesc: 'Il numero totale di società o asset unici sottostanti in tutti gli ETF.',
       activeEtfs: 'ETF Attivi',
+      activeEtfsDesc: 'Il numero di ETF attualmente allocati con un peso > 0%.',
       tabOverview: 'Panoramica',
       tabDeepDive: 'Analisi Dettagliata',
       tabFundDetails: 'Dettagli Fondo',

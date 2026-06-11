@@ -18,8 +18,6 @@ Here are several ideas to improve the mobile usability of your ETF Portfolio Ana
 - MobileImprovements:
   - Scroll Trapping Prevention: 3D canvases often "steal" touch gestures, making it hard to scroll past them on mobile.Ensure that touch  
     gestures on the 3D canvases require two fingers to rotate/pan, or add a dedicated "pan/scroll" area aroundthem.
-  - Fallback to 2D: 3D rendering can be heavy on battery and CPU for older phones. Consider defaulting to simple 2D charts(like a flat world  
-    map or standard pie charts) on mobile, with a button to "Launch 3DView".
   - Full-Screen Mode: Give users a button to expand the 3D visuals into a full-screen modal. This makes interaction mucheasier and prevents  
     accidental pagescrolling.
 
@@ -43,16 +41,7 @@ Here are several ideas to improve the mobile usability of your ETF Portfolio Ana
   - Floating Action Button (FAB): If there is a primary action (like "Upload CSV" or "Add ETF"), place a floating button inthe bottom right  
     corner so it's always accessible with athumb.
 
-### 5. Data Tables (Deep Dive & FundDetails)
-
-- Current State: The "Deep Dive" and "Fund Details" likely display tabular data.
-- Mobile Improvements:
-  - Card-Based Lists: Standard HTML tables are notoriously bad on mobile. Use CSS to transform table rows into stacked"Cards" on small screens.
-    For example, instead of a wide row with columns (Ticker, Name, Weight, Sector), stack them vertically inside a card foreach holding.
-  - Sticky Columns: If you must keep a table, make the first column (e.g., Ticker/Name) sticky so users don't lose context when scrolling  
-    horizontally.
-
-### 6. Typography & Reading Experience
+### 5. Typography & Reading Experience
 
 - Mobile Improvements:
   - Ensure the very large text on the landing page ( text-5xl ) doesn't cause awkward word breaks on narrow screens (likean iPhone SE). You  
