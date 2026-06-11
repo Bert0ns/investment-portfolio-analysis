@@ -94,12 +94,12 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
       </div>
 
       {/* Tabs Navigator */}
-      <div className="flex gap-1 overflow-x-auto whitespace-nowrap bg-muted/50 p-1.5 rounded-xl w-full max-w-full lg:max-w-fit shadow-sm scrollbar-thin">
+      <div className="flex gap-1 overflow-x-auto whitespace-nowrap bg-muted/50 p-1.5 rounded-xl w-full shadow-sm scrollbar-thin">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-5 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+            className={`flex-1 px-5 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
               activeTab === tab
                 ? 'bg-background text-foreground shadow-sm scale-100'
                 : 'text-muted-foreground hover:text-foreground hover:bg-muted/80 scale-95 hover:scale-100'
