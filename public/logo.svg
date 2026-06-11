@@ -1,35 +1,32 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background with modern dark aesthetic -->
-  <rect width="512" height="512" rx="112" fill="url(#bg-gradient)"/>
-  
-  <!-- Stylized Pie Chart / Donut Chart -->
-  <!-- Bottom-left slice -->
-  <path d="M256 384C185.308 384 128 326.692 128 256C128 206.19 156.467 163.036 198 141.6V220L256 256V384Z" fill="url(#slice-1-gradient)"/>
-  <!-- Right slice -->
-  <path d="M256 384V256L384 182C384 293.562 293.562 384 256 384Z" fill="url(#slice-2-gradient)"/>
-  <!-- Top slice (slightly pulled out) -->
-  <path d="M260 240L202 125.6C218.8 116.8 236.9 112 256 112C326.692 112 384 169.308 384 240H260Z" fill="url(#slice-3-gradient)"/>
-
-  <!-- Trend line overlay -->
-  <path d="M140 320L220 240L280 270L370 160" stroke="white" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="370" cy="160" r="16" fill="white"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="bg-gradient" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0f172a"/>
-      <stop offset="1" stop-color="#1e293b"/>
-    </linearGradient>
-    <linearGradient id="slice-1-gradient" x1="128" y1="384" x2="256" y2="141" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3b82f6"/>
-      <stop offset="1" stop-color="#1d4ed8"/>
-    </linearGradient>
-    <linearGradient id="slice-2-gradient" x1="256" y1="384" x2="384" y2="182" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#10b981"/>
-      <stop offset="1" stop-color="#047857"/>
-    </linearGradient>
-    <linearGradient id="slice-3-gradient" x1="202" y1="112" x2="384" y2="240" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#60a5fa"/>
-      <stop offset="1" stop-color="#3b82f6"/>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#3b82f6" />
     </linearGradient>
   </defs>
+  <rect width="100" height="100" fill="transparent" />
+  
+  <!-- Outer orbital ring -->
+  <circle cx="50" cy="50" r="38" fill="none" stroke="url(#neonGradient)" stroke-width="6" filter="url(#neonGlow)" />
+  
+  <!-- Inner tech nodes -->
+  <circle cx="50" cy="50" r="14" fill="#22d3ee" filter="url(#neonGlow)" />
+  <circle cx="22" cy="50" r="6" fill="#3b82f6" filter="url(#neonGlow)" />
+  <circle cx="78" cy="50" r="6" fill="#3b82f6" filter="url(#neonGlow)" />
+  <circle cx="50" cy="22" r="6" fill="#3b82f6" filter="url(#neonGlow)" />
+  <circle cx="50" cy="78" r="6" fill="#3b82f6" filter="url(#neonGlow)" />
+  
+  <!-- Connecting lines -->
+  <line x1="28" y1="50" x2="36" y2="50" stroke="url(#neonGradient)" stroke-width="4" filter="url(#neonGlow)" />
+  <line x1="64" y1="50" x2="72" y2="50" stroke="url(#neonGradient)" stroke-width="4" filter="url(#neonGlow)" />
+  <line x1="50" y1="28" x2="50" y2="36" stroke="url(#neonGradient)" stroke-width="4" filter="url(#neonGlow)" />
+  <line x1="50" y1="64" x2="50" y2="72" stroke="url(#neonGradient)" stroke-width="4" filter="url(#neonGlow)" />
 </svg>
