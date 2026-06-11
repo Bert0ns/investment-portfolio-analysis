@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6 py-20 md:py-28 text-center relative z-10 w-full flex flex-col items-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-widest uppercase mb-6 text-foreground drop-shadow-md">
             {t.about.empowering}{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-500 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
               {t.about.investors}
             </span>
           </h1>

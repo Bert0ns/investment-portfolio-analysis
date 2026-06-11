@@ -5,9 +5,42 @@ import { useTranslation } from '../lib/i18n/LanguageContext';
 
 export function useDashboardData(etfs: EtfConfig[]) {
   const { t } = useTranslation();
-  const geoData = useMemo(() => aggregateBy(etfs, 'country'), [etfs]);
-  const sectorData = useMemo(() => aggregateBy(etfs, 'sector').slice(0, 10), [etfs]);
-  const currencyData = useMemo(() => aggregateBy(etfs, 'currency').slice(0, 5), [etfs]);
+  // Process all holdings once for efficiency
+  const allHoldingsCache = useMemo(() => aggregateTopHoldings(etfs, 10000), [etfs]);
+
+  // Aggregate country, sector, currency in a single pass to avoid looping over holdings 3 times
+  const { geoData, sectorData, currencyData } = useMemo(() => {
+    const geoMap = new Map<string, number>();
+    const sectorMap = new Map<string, number>();
+    const currencyMap = new Map<string, number>();
+
+    etfs.forEach((etf) => {
+      if (etf.globalWeight <= 0) return;
+      etf.holdings.forEach((h) => {
+        const holdingWeight = (h.weight * etf.globalWeight) / 100;
+        if (holdingWeight <= 0) return;
+
+        const country = String(h.country || 'Unknown');
+        const sector = String(h.sector || 'Unknown');
+        const currency = String(h.currency || 'Unknown');
+
+        geoMap.set(country, (geoMap.get(country) || 0) + holdingWeight);
+        sectorMap.set(sector, (sectorMap.get(sector) || 0) + holdingWeight);
+        currencyMap.set(currency, (currencyMap.get(currency) || 0) + holdingWeight);
+      });
+    });
+
+    const formatData = (map: Map<string, number>) =>
+      Array.from(map.entries())
+        .map(([name, value]) => ({ name, value }))
+        .sort((a, b) => b.value - a.value);
+
+    return {
+      geoData: formatData(geoMap),
+      sectorData: formatData(sectorMap).slice(0, 10),
+      currencyData: formatData(currencyMap).slice(0, 5),
+    };
+  }, [etfs]);
 
   const etfAllocationData = useMemo(() => {
     return etfs
@@ -19,7 +52,7 @@ export function useDashboardData(etfs: EtfConfig[]) {
       .sort((a, b) => b.value - a.value);
   }, [etfs]);
 
-  const topHoldings = useMemo(() => aggregateTopHoldings(etfs, 10), [etfs]);
+  const topHoldings = useMemo(() => allHoldingsCache.slice(0, 10), [allHoldingsCache]);
   const avgTer = useMemo(() => calculateAverageTer(etfs), [etfs]);
 
   const aggregateEtfProperty = useCallback(
@@ -65,23 +98,22 @@ export function useDashboardData(etfs: EtfConfig[]) {
   );
 
   const concentrationData = useMemo(() => {
-    const allHoldings = aggregateTopHoldings(etfs, 50);
+    const top50 = allHoldingsCache.slice(0, 50);
     const result = [];
     let cumulative = 0;
-    for (let i = 0; i < allHoldings.length; i++) {
-      cumulative += allHoldings[i].value;
+    for (let i = 0; i < top50.length; i++) {
+      cumulative += top50[i].value;
       result.push({
         name: `${t.dashboard.top} ${i + 1}`,
         value: cumulative,
       });
     }
     return result;
-  }, [etfs, t.dashboard.top]);
+  }, [allHoldingsCache, t.dashboard.top]);
 
   const weightDistributionData = useMemo(() => {
-    const allHoldings = aggregateTopHoldings(etfs, 10000);
     const bins = { '> 1%': 0, '0.5% - 1%': 0, '0.1% - 0.5%': 0, '< 0.1%': 0 };
-    for (const h of allHoldings) {
+    for (const h of allHoldingsCache) {
       if (h.value >= 1) bins['> 1%'] += h.value;
       else if (h.value >= 0.5) bins['0.5% - 1%'] += h.value;
       else if (h.value >= 0.1) bins['0.1% - 0.5%'] += h.value;

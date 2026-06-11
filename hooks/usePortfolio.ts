@@ -3,6 +3,7 @@ import { EtfConfig, Issuer, ReplicationMethod, UseOfProfit, Domicile } from '../
 import { getCsvParser } from '../lib/parsers';
 import { toast } from 'sonner';
 import { getItem, setItem } from '../lib/indexeddb';
+import { generateId } from '../lib/utils';
 
 const STORAGE_KEY = 'etf_portfolio_data';
 
@@ -97,7 +98,7 @@ export function usePortfolio() {
 
           if (result.holdings.length > 0) {
             loadedEtfs.push({
-              id: crypto.randomUUID(),
+              id: generateId(),
               name: def.name,
               isin: def.isin,
               issuer: def.issuer,
@@ -154,7 +155,7 @@ export function usePortfolio() {
             const defaultMatch = DEFAULT_ETFS.find((d) => d.name === typedEtf.name);
             return {
               ...typedEtf,
-              id: typedEtf.id || crypto.randomUUID(),
+              id: typedEtf.id || generateId(),
               isin: typedEtf.isin || defaultMatch?.isin || '',
               replicationMethod:
                 typedEtf.replicationMethod || defaultMatch?.replicationMethod || 'Physical',

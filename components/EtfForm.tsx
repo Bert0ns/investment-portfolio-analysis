@@ -17,6 +17,7 @@ import { Button } from './ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { toast } from 'sonner';
 import { Plus } from 'lucide-react';
+import { generateId } from '../lib/utils';
 
 import { useTranslation } from '../lib/i18n/LanguageContext';
 
@@ -92,7 +93,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
       }
 
       const newEtf: EtfConfig = {
-        id: crypto.randomUUID(),
+        id: generateId(),
         name,
         isin,
         issuer,
