@@ -1,6 +1,7 @@
 import { renderHook, act, waitFor } from '@testing-library/react';
 import { usePortfolio } from '../hooks/usePortfolio';
 import { getItem } from '../lib/indexeddb';
+import { LanguageProvider } from '../lib/i18n/LanguageContext';
 
 jest.mock('../lib/indexeddb', () => ({
   getItem: jest.fn(),
@@ -44,7 +45,7 @@ describe('usePortfolio Hook', () => {
   });
 
   it('loads empty array if local storage is empty, then loads defaults if we call it', async () => {
-    const { result } = renderHook(() => usePortfolio());
+    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
 
     await waitFor(() => {
       expect(result.current.isLoaded).toBe(true);
@@ -57,7 +58,7 @@ describe('usePortfolio Hook', () => {
       { id: 'dummy', name: 'dummy', globalWeight: 0, holdings: [] },
     ]);
 
-    const { result } = renderHook(() => usePortfolio());
+    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
 
     await waitFor(() => {
       expect(result.current.isLoaded).toBe(true);
@@ -103,7 +104,7 @@ describe('usePortfolio Hook', () => {
       },
     ]);
 
-    const { result } = renderHook(() => usePortfolio());
+    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
 
     await waitFor(() => {
       expect(result.current.isLoaded).toBe(true);
@@ -137,7 +138,7 @@ describe('usePortfolio Hook', () => {
   });
 
   it('can remove an ETF', async () => {
-    const { result } = renderHook(() => usePortfolio());
+    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
 
     await waitFor(() => {
       expect(result.current.isLoaded).toBe(true);
