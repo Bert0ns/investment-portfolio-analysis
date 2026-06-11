@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { Sphere } from '@react-three/drei';
 import { Pillar } from './Pillar';
-import { BASE_COORDINATES, ALIASES } from './Coordinates';
+import { BASE_COORDINATES, ALIASES } from '../../../lib/utils/Coordinates';
 
 export function GlobeMesh({
   data,

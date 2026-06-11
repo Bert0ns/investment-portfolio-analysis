@@ -7,7 +7,7 @@ import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import { Play, Pause } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
 import { GlobeMesh } from './globe/GlobeMesh';
-import { BASE_COORDINATES, ALIASES } from './globe/Coordinates';
+import { BASE_COORDINATES, ALIASES } from '../../lib/utils/Coordinates';
 
 export function ExposureGlobe({ data }: { data: { name: string; value: number }[] }) {
   const [isRotating, setIsRotating] = useState(true);

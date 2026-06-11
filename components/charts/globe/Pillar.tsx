@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
 import { Html } from '@react-three/drei';
-import { getCoordinates } from './Coordinates';
+import { getCoordinates } from '../../../lib/utils/Coordinates';
 
 export function Pillar({
   name,

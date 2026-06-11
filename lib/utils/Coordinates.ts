@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import countryCoordsData from '../../../public/static/countries_coordinates.json';
-import countryAliasesData from '../../../public/static/country_aliases.json';
+import countryCoordsData from '@/public/static/countries_coordinates.json';
+import countryAliasesData from '@/public/static/country_aliases.json';
 
 export const BASE_COORDINATES = countryCoordsData as unknown as Record<string, [number, number]>;
 export const ALIASES = countryAliasesData as Record<string, string>;
