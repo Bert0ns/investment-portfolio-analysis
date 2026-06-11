@@ -87,7 +87,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
       }
 
       const newEtf: EtfConfig = {
-        id: Math.random().toString(36).substring(7),
+        id: crypto.randomUUID(),
         name,
         isin,
         issuer,

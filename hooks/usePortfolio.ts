@@ -97,7 +97,7 @@ export function usePortfolio() {
 
           if (result.holdings.length > 0) {
             loadedEtfs.push({
-              id: Math.random().toString(36).substring(7),
+              id: crypto.randomUUID(),
               name: def.name,
               isin: def.isin,
               issuer: def.issuer,

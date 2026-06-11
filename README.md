@@ -50,6 +50,21 @@ Make sure you have [Node.js](https://nodejs.org/) (v18+) and `pnpm` installed.
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to start building your portfolio.
 
+### 📱 Testing on Mobile
+
+If you want to test the responsive UI on your mobile device (especially useful if you are developing inside WSL), the easiest method is to use a local tunnel to bypass local network NAT issues and Next.js Hot Module Replacement CORS blocks:
+
+1. Ensure your Next.js server is running (`pnpm dev`).
+2. Open a new terminal tab and start a secure tunnel with a fixed subdomain:
+
+   ```bash
+   pnpm dlx localtunnel --port 3000 --subdomain berto-dev
+   ```
+
+3. Open your mobile browser and visit: `https://berto-dev.loca.lt`
+
+_(Note: `berto-dev.loca.lt` is pre-approved in `next.config.ts` to allow cross-origin HMR. If you change the subdomain, update `allowedDevOrigins` in the config!)_
+
 ---
 
 ## 📂 How to Use & Get ETF Data

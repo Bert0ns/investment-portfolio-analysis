@@ -5,45 +5,36 @@ export interface AggregationResult {
   value: number;
 }
 
+const SECTOR_MAPPINGS: { matchers: RegExp[]; result: string }[] = [
+  { matchers: [/^it$/, /tech/, /tecnologia/, /informatica/], result: 'Information Technology' },
+  { matchers: [/finanziari/, /financial/, /finance/], result: 'Financials' },
+  { matchers: [/industr/, /industrali/], result: 'Industrials' },
+  { matchers: [/health/, /sanità/, /sanita/, /cura/, /salute/], result: 'Healthcare' },
+  {
+    matchers: [/discrezionali/, /discretionary/, /cyclical/, /consumer services/],
+    result: 'Consumer Discretionary',
+  },
+  {
+    matchers: [/staples/, /beni di consumo/, /defensive/, /consumer goods/],
+    result: 'Consumer Staples',
+  },
+  { matchers: [/material/, /materie prime/], result: 'Materials' },
+  { matchers: [/energ/], result: 'Energy' },
+  { matchers: [/utilit/, /pubblica utilit\u00e0/], result: 'Utilities' },
+  { matchers: [/communication/, /telecom/, /comunicazion/], result: 'Communication Services' },
+  { matchers: [/real estate/, /immobiliare/, /property/], result: 'Real Estate' },
+];
+
 function normalizeSector(sector: string): string {
   if (!sector || sector === 'Unknown' || sector === 'N/A') return 'Unknown';
 
   const s = sector.trim().toLowerCase();
 
-  if (s === 'it' || s.includes('tech') || s.includes('tecnologia') || s.includes('informatica'))
-    return 'Information Technology';
-  if (s.includes('finanziari') || s.includes('financial') || s.includes('finance'))
-    return 'Financials';
-  if (s.includes('industr') || s.includes('industrali')) return 'Industrials';
-  if (
-    s.includes('health') ||
-    s.includes('sanità') ||
-    s.includes('sanita') ||
-    s.includes('cura') ||
-    s.includes('salute')
-  )
-    return 'Healthcare';
-  if (
-    s.includes('discrezionali') ||
-    s.includes('discretionary') ||
-    s.includes('cyclical') ||
-    s.includes('consumer services')
-  )
-    return 'Consumer Discretionary';
-  if (
-    s.includes('staples') ||
-    s.includes('beni di consumo') ||
-    s.includes('defensive') ||
-    s.includes('consumer goods')
-  )
-    return 'Consumer Staples';
-  if (s.includes('material') || s.includes('materie prime')) return 'Materials';
-  if (s.includes('energ')) return 'Energy';
-  if (s.includes('utilit') || s.includes('pubblica utilità')) return 'Utilities';
-  if (s.includes('communication') || s.includes('telecom') || s.includes('comunicazion'))
-    return 'Communication Services';
-  if (s.includes('real estate') || s.includes('immobiliare') || s.includes('property'))
-    return 'Real Estate';
+  for (const mapping of SECTOR_MAPPINGS) {
+    if (mapping.matchers.some((matcher) => matcher.test(s))) {
+      return mapping.result;
+    }
+  }
 
   // Return the original sector with title case as fallback
   return sector.charAt(0).toUpperCase() + sector.slice(1);

@@ -3,6 +3,7 @@ import { Search, Building, PieChart } from 'lucide-react';
 import { EtfConfig } from '../../lib/types';
 import { searchHoldings } from '../../lib/math';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
+import { useDebounce } from '../../hooks/useDebounce';
 
 interface DeepDiveTabProps {
   etfs: EtfConfig[];
@@ -10,10 +11,11 @@ interface DeepDiveTabProps {
 
 export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
   const [query, setQuery] = useState('');
+  const debouncedQuery = useDebounce(query, 300);
 
   const results = useMemo(() => {
-    return searchHoldings(etfs, query);
-  }, [etfs, query]);
+    return searchHoldings(etfs, debouncedQuery);
+  }, [etfs, debouncedQuery]);
 
   return (
     <div className="space-y-6">
