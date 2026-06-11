@@ -141,11 +141,22 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
         nodeLabel="name"
         nodeAutoColorBy="group"
         nodeColor={(node: any) => (node.group === 'etf' ? etfColor : holdingColor)}
-        nodeVal={(node: any) =>
-          node.group === 'etf'
-            ? Math.max(8, Math.sqrt(node.val) * 4)
-            : Math.max(2, Math.sqrt(node.val))
-        }
+        nodeVal={(node: any) => {
+          // We want the sphere's visual RADIUS to scale based on the percentage of the total portfolio (node.val).
+          // ForceGraph3D calculates its visual radius using the cube root of nodeVal ( R ∝ cbrt(nodeVal) ).
+          // To make the radius linearly proportional to the percentage, we must supply the cube of our desired radius.
+          const percentage = node.val || 0.1;
+
+          if (node.group === 'etf') {
+            // ETFs get a larger base radius
+            const targetRadius = Math.max(6, percentage * 0.3);
+            return Math.pow(targetRadius, 3);
+          } else {
+            // Holdings scale more aggressively with their percentage
+            const targetRadius = Math.max(1.5, percentage * 1.2);
+            return Math.pow(targetRadius, 3);
+          }
+        }}
         nodeOpacity={1}
         nodeResolution={isExtremeVolume ? 4 : isHighVolume ? 8 : 24}
         nodeThreeObject={
