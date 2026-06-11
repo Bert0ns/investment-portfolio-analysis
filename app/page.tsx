@@ -22,6 +22,7 @@ export default function LandingPage() {
           <div className="flex justify-center w-full">
             <Button
               render={<Link href="/analyzer" />}
+              nativeButton={false}
               size="lg"
               className="px-12 py-8 text-lg font-bold uppercase tracking-widest shadow-lg"
             >

@@ -28,7 +28,7 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="theme-cyberpunk"
-          themes={['theme-cyberpunk', 'theme-cartoon']}
+          themes={['theme-cyberpunk', 'theme-cartoon', 'theme-professional']}
           enableSystem={false}
           disableTransitionOnChange={false}
         >

@@ -24,7 +24,13 @@ export function ThemeSwitcher() {
   }
 
   const toggleTheme = () => {
-    setTheme(theme === 'theme-cyberpunk' ? 'theme-cartoon' : 'theme-cyberpunk');
+    if (theme === 'theme-cyberpunk') {
+      setTheme('theme-cartoon');
+    } else if (theme === 'theme-cartoon') {
+      setTheme('theme-professional');
+    } else {
+      setTheme('theme-cyberpunk');
+    }
   };
 
   return (
