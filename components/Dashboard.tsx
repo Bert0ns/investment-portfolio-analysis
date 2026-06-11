@@ -29,7 +29,7 @@ interface DashboardProps {
 
 export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
   const [activeTab, setActiveTab] = useState<
-    'Overview' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'
+    'Overview' | '3D Visuals' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'
   >('Overview');
 
   const {
@@ -60,12 +60,8 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
     );
   }
 
-  const tabs: Array<'Overview' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'> = [
-    'Overview',
-    'Fund Details',
-    'Risk Analysis',
-    'Savings Plan',
-  ];
+  const tabs: Array<'Overview' | '3D Visuals' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'> =
+    ['Overview', '3D Visuals', 'Fund Details', 'Risk Analysis', 'Savings Plan'];
 
   return (
     <div className="space-y-6 animate-in fade-in duration-500">
@@ -118,10 +114,6 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 animate-in slide-in-from-bottom-2 fade-in duration-500">
         {activeTab === 'Overview' && (
           <>
-            <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
-              <ExposureGlobe data={geoData} />
-            </div>
-
             <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
               <TopHoldingsChart data={topHoldings} />
             </div>
@@ -237,6 +229,12 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
         {activeTab === 'Savings Plan' && (
           <div className="lg:col-span-2 transition-transform duration-300 animate-in fade-in">
             <SavingsPlanCalculator etfs={etfs} totalWeight={totalWeight} />
+          </div>
+        )}
+
+        {activeTab === '3D Visuals' && (
+          <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300 animate-in fade-in">
+            <ExposureGlobe data={geoData} />
           </div>
         )}
       </div>
