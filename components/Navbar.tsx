@@ -58,7 +58,9 @@ export default function Navbar() {
 
           {/* Right: Theme Switcher & Mobile Nav */}
           <div className="flex items-center gap-4 justify-end relative z-10">
-            <ThemeSwitcher />
+            <div className="hidden md:block">
+              <ThemeSwitcher />
+            </div>
 
             <div className="md:hidden flex items-center">
               <Sheet>
@@ -67,7 +69,7 @@ export default function Navbar() {
                 </SheetTrigger>
                 <SheetContent
                   side="right"
-                  className="w-[300px] sm:w-[400px] bg-background/95 backdrop-blur-xl border-l-border"
+                  className="w-[300px] sm:w-[400px] bg-background/95 backdrop-blur-xl border-l-border flex flex-col h-full"
                 >
                   <SheetTitle className="sr-only">Menu</SheetTitle>
                   <SheetDescription className="sr-only">Navigation menu</SheetDescription>
@@ -112,6 +114,13 @@ export default function Navbar() {
                       <ExternalLink className="h-5 w-5" />
                       GitHub
                     </a>
+                  </div>
+
+                  <div className="mt-auto border-t border-border pt-8 pb-4 flex flex-col items-center gap-4">
+                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest">
+                      Theme
+                    </span>
+                    <ThemeSwitcher />
                   </div>
                 </SheetContent>
               </Sheet>

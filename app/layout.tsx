@@ -27,7 +27,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="theme-cyberpunk"
+          defaultTheme="theme-professional"
           themes={['theme-cyberpunk', 'theme-cartoon', 'theme-professional']}
           enableSystem={false}
           disableTransitionOnChange={false}

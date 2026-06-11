@@ -43,6 +43,34 @@
 }
 
 :root,
+.theme-professional {
+  /* Serious, Professional Light Theme */
+  --background: oklch(0.99 0 0); /* Pure clean white */
+  --foreground: oklch(0.2 0.02 240); /* Deep slate / navy */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.02 240);
+  --primary: oklch(0.35 0.05 250); /* Trustworthy Navy Blue */
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.92 0.01 240); /* Light slate */
+  --secondary-foreground: oklch(0.3 0.05 250);
+  --muted: oklch(0.96 0.01 240); /* Very light gray */
+  --muted-foreground: oklch(0.5 0.02 240);
+  --accent: oklch(0.92 0.01 240);
+  --accent-foreground: oklch(0.2 0.02 240);
+  --destructive: oklch(0.5 0.15 25); /* Professional muted red */
+  --border: oklch(0.85 0.01 240); /* Soft gray border */
+  --input: oklch(0.9 0.01 240);
+  --ring: oklch(0.35 0.05 250);
+  --chart-1: oklch(0.35 0.05 250); /* Navy Blue */
+  --chart-2: oklch(0.6 0.02 240); /* Cool gray */
+  --chart-3: oklch(0.4 0.1 160); /* Forest green */
+  --chart-4: oklch(0.6 0.15 70); /* Bronze/Gold */
+  --chart-5: oklch(0.5 0.08 280); /* Muted purple */
+  --radius: 0.3rem; /* Subtle rounded edges */
+}
+
 .theme-cyberpunk {
   /* Cyberpunk Dark Theme */
   --background: oklch(0.13 0 0);
@@ -97,34 +125,6 @@
   --chart-4: oklch(0.6 0.2 25);
   --chart-5: oklch(0.8 0.2 130); /* green */
   --radius: 1.5rem;
-}
-
-.theme-professional {
-  /* Serious, Professional Light Theme */
-  --background: oklch(0.99 0 0); /* Pure clean white */
-  --foreground: oklch(0.2 0.02 240); /* Deep slate / navy */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.02 240);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.02 240);
-  --primary: oklch(0.35 0.05 250); /* Trustworthy Navy Blue */
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.92 0.01 240); /* Light slate */
-  --secondary-foreground: oklch(0.3 0.05 250);
-  --muted: oklch(0.96 0.01 240); /* Very light gray */
-  --muted-foreground: oklch(0.5 0.02 240);
-  --accent: oklch(0.92 0.01 240);
-  --accent-foreground: oklch(0.2 0.02 240);
-  --destructive: oklch(0.5 0.15 25); /* Professional muted red */
-  --border: oklch(0.85 0.01 240); /* Soft gray border */
-  --input: oklch(0.9 0.01 240);
-  --ring: oklch(0.35 0.05 250);
-  --chart-1: oklch(0.35 0.05 250); /* Navy Blue */
-  --chart-2: oklch(0.6 0.02 240); /* Cool gray */
-  --chart-3: oklch(0.4 0.1 160); /* Forest green */
-  --chart-4: oklch(0.6 0.15 70); /* Bronze/Gold */
-  --chart-5: oklch(0.5 0.08 280); /* Muted purple */
-  --radius: 0.3rem; /* Subtle rounded edges */
 }
 
 @layer base {
