@@ -1,19 +1,19 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { ChartTitleWithInfo, CustomTooltip } from './Shared';
+import { useTranslation } from '../../lib/i18n/LanguageContext';
 
 interface DistributionChartProps {
   data: { name: string; value: number }[];
 }
 
 export function DistributionChart({ data }: DistributionChartProps) {
+  const { t } = useTranslation();
+
   return (
     <Card className="lg:col-span-2">
       <CardHeader>
-        <ChartTitleWithInfo
-          title="Holdings Weight Distribution"
-          info="Groups your underlying stocks by their individual size. Determines if you hold a few large positions vs thousands of tiny fractional positions."
-        />
+        <ChartTitleWithInfo title={t.charts.distributionTitle} info={t.charts.distributionInfo} />
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 256, minWidth: 0 }}>

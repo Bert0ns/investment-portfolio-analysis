@@ -34,12 +34,16 @@ const NetworkGraph = dynamic(
   }
 );
 
+import { useTranslation } from '../lib/i18n/LanguageContext';
+
 interface DashboardProps {
   etfs: EtfConfig[];
   totalWeight: number;
 }
 
 export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
+  const { t } = useTranslation();
+
   const [activeTab, setActiveTab] = useState<
     'Overview' | 'Deep Dive' | '3D Visuals' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'
   >('Overview');
@@ -81,8 +85,8 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
     return (
       <Card className="flex flex-col items-center justify-center text-center text-muted-foreground min-h-100 h-full border-dashed">
         <CardContent className="pt-6">
-          <h3 className="text-xl font-medium text-foreground mb-2">No Data to Display</h3>
-          <p>Add ETFs and allocate weight to see your portfolio analysis.</p>
+          <h3 className="text-xl font-medium text-foreground mb-2">{t.dashboard.emptyState}</h3>
+          <p>{t.dashboard.emptyStateDesc}</p>
         </CardContent>
       </Card>
     );
@@ -92,20 +96,41 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
     'Overview' | 'Deep Dive' | '3D Visuals' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'
   > = ['Overview', 'Fund Details', 'Risk Analysis', 'Deep Dive', '3D Visuals', 'Savings Plan'];
 
+  const renderTabName = (tab: string) => {
+    switch (tab) {
+      case 'Overview':
+        return t.overviewTab.tabOverview;
+      case 'Deep Dive':
+        return t.overviewTab.tabDeepDive;
+      case 'Fund Details':
+        return t.overviewTab.tabFundDetails;
+      case 'Risk Analysis':
+        return t.overviewTab.tabRiskAnalysis;
+      case 'Savings Plan':
+        return t.overviewTab.tabSavingsPlan;
+      case '3D Visuals':
+        return t.overviewTab.tab3DVisuals;
+      default:
+        return tab;
+    }
+  };
+
   return (
     <div className="space-y-6 animate-in fade-in duration-500">
       {/* KPI Row */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="hover:shadow-md transition-shadow">
           <CardContent className="pt-0 flex flex-col justify-center">
-            <h3 className="text-sm font-medium text-muted-foreground mb-1">Weighted Avg TER</h3>
+            <h3 className="text-sm font-medium text-muted-foreground mb-1">
+              {t.overviewTab.weightedAvgTer}
+            </h3>
             <p className="text-3xl font-bold text-foreground">{avgTer.toFixed(2)}%</p>
           </CardContent>
         </Card>
         <Card className="hover:shadow-md transition-shadow">
           <CardContent className="pt-0 flex flex-col justify-center">
             <h3 className="text-sm font-medium text-muted-foreground mb-1">
-              Total Assets Analyzed
+              {t.overviewTab.totalAssets}
             </h3>
             <p className="text-3xl font-bold text-foreground">
               {etfs.reduce((sum, etf) => sum + etf.holdings.length, 0).toLocaleString()}
@@ -114,7 +139,9 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
         </Card>
         <Card className="hover:shadow-md transition-shadow">
           <CardContent className="pt-0 flex flex-col justify-center">
-            <h3 className="text-sm font-medium text-muted-foreground mb-1">Active ETFs</h3>
+            <h3 className="text-sm font-medium text-muted-foreground mb-1">
+              {t.overviewTab.activeEtfs}
+            </h3>
             <p className="text-3xl font-bold text-foreground">
               {etfs.filter((e) => e.globalWeight > 0).length}
             </p>
@@ -134,7 +161,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
                 : 'text-muted-foreground hover:text-foreground hover:bg-muted/80 scale-95 hover:scale-100'
             }`}
           >
-            {tab}
+            {renderTabName(tab)}
           </button>
         ))}
       </div>
@@ -189,13 +216,13 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
                   onClick={() => setActive3DVisual('Globe')}
                   className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'Globe' ? 'bg-background shadow text-foreground' : 'text-muted-foreground'}`}
                 >
-                  Exposure Globe
+                  {t.overviewTab.exposureGlobe}
                 </button>
                 <button
                   onClick={() => setActive3DVisual('Network')}
                   className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'Network' ? 'bg-background shadow text-foreground' : 'text-muted-foreground'}`}
                 >
-                  Concentration Network
+                  {t.overviewTab.concentrationNetwork}
                 </button>
               </div>
             </div>
@@ -207,7 +234,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
                   <div className="flex-1 space-y-2">
                     <div className="flex justify-between items-center">
                       <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-                        Top Holdings Rendered
+                        {t.overviewTab.topHoldingsRendered}
                       </Label>
                       <span className="text-xs font-mono bg-primary/10 text-primary px-2 py-0.5 rounded-full">
                         {networkLimit[0] >= maxHoldings ? 'ALL' : networkLimit[0]}
@@ -226,7 +253,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
                   </div>
                   <div className="flex flex-col gap-2 min-w-37.5">
                     <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-                      Concentration Physics
+                      {t.overviewTab.concentrationPhysics}
                     </Label>
                     <div className="flex items-center space-x-2 mt-1">
                       <Switch
@@ -238,7 +265,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
                         htmlFor="physics-mode"
                         className="text-xs text-muted-foreground cursor-pointer font-medium"
                       >
-                        Live Physics Engine
+                        {t.overviewTab.livePhysics}
                       </Label>
                     </div>
                   </div>

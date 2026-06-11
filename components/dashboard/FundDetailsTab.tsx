@@ -1,6 +1,7 @@
 import React from 'react';
 import { PieChartCard } from '../charts/PieChartCard';
 import { EtfBarChartCard } from '../charts/EtfBarChartCard';
+import { useTranslation } from '../../lib/i18n/LanguageContext';
 
 type ChartData = { name: string; value: number }[];
 
@@ -17,12 +18,14 @@ export function FundDetailsTab({
   fundSizeData,
   fundAgeData,
 }: FundDetailsTabProps) {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title="Provider Allocation"
-          info="A breakdown of the financial institutions that manage your ETFs (e.g., Vanguard, iShares)."
+          title={t.fundDetailsTab.providerAllocationTitle}
+          info={t.fundDetailsTab.providerAllocationInfo}
           data={providerData}
           colorOffset={2}
         />
@@ -30,8 +33,8 @@ export function FundDetailsTab({
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title="Fund Domicile"
-          info="The legal jurisdiction where your ETFs are registered (important for taxation)."
+          title={t.fundDetailsTab.fundDomicileTitle}
+          info={t.fundDetailsTab.fundDomicileInfo}
           data={domicileData}
           colorOffset={1}
         />
@@ -39,20 +42,20 @@ export function FundDetailsTab({
 
       <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
         <EtfBarChartCard
-          title="Fund Size"
-          info="Total Assets Under Management (AUM) for each ETF in your portfolio (in millions)."
+          title={t.fundDetailsTab.fundSizeTitle}
+          info={t.fundDetailsTab.fundSizeInfo}
           data={fundSizeData}
-          unit="$M"
+          unit={t.fundDetailsTab.millionsUnit}
           colorOffset={5}
         />
       </div>
 
       <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
         <EtfBarChartCard
-          title="Fund Age"
-          info="The number of years since each ETF was launched."
+          title={t.fundDetailsTab.fundAgeTitle}
+          info={t.fundDetailsTab.fundAgeInfo}
           data={fundAgeData}
-          unit="Years"
+          unit={t.fundDetailsTab.yearsUnit}
           colorOffset={7}
         />
       </div>

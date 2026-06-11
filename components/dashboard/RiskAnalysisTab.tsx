@@ -2,6 +2,7 @@ import React from 'react';
 import { ConcentrationChart } from '../charts/ConcentrationChart';
 import { DistributionChart } from '../charts/DistributionChart';
 import { PieChartCard } from '../charts/PieChartCard';
+import { useTranslation } from '../../lib/i18n/LanguageContext';
 
 type ChartData = { name: string; value: number }[];
 
@@ -18,6 +19,8 @@ export function RiskAnalysisTab({
   replicationData,
   profitData,
 }: RiskAnalysisTabProps) {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
@@ -30,8 +33,8 @@ export function RiskAnalysisTab({
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title="Replication Method"
-          info="How the ETFs track their indices: Physical (buying actual stocks) vs Synthetic (using derivatives)."
+          title={t.riskAnalysisTab.replicationMethodTitle}
+          info={t.riskAnalysisTab.replicationMethodInfo}
           data={replicationData}
           colorOffset={8}
         />
@@ -39,8 +42,8 @@ export function RiskAnalysisTab({
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title="Use of Profit"
-          info="Accumulating (reinvests dividends automatically) vs Distributing (pays dividends out to you)."
+          title={t.riskAnalysisTab.useOfProfitTitle}
+          info={t.riskAnalysisTab.useOfProfitInfo}
           data={profitData}
           colorOffset={3}
         />

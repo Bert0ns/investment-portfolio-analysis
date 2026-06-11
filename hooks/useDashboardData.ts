@@ -1,8 +1,10 @@
 import { useMemo, useCallback } from 'react';
 import { EtfConfig } from '../lib/types';
 import { aggregateBy, aggregateTopHoldings, calculateAverageTer } from '../lib/math';
+import { useTranslation } from '../lib/i18n/LanguageContext';
 
 export function useDashboardData(etfs: EtfConfig[]) {
+  const { t } = useTranslation();
   const geoData = useMemo(() => aggregateBy(etfs, 'country'), [etfs]);
   const sectorData = useMemo(() => aggregateBy(etfs, 'sector').slice(0, 10), [etfs]);
   const currencyData = useMemo(() => aggregateBy(etfs, 'currency').slice(0, 5), [etfs]);
@@ -25,7 +27,7 @@ export function useDashboardData(etfs: EtfConfig[]) {
       const map = new Map<string, number>();
       for (const etf of etfs) {
         if (etf.globalWeight > 0) {
-          const val = String(etf[property] || 'Unknown');
+          const val = String(etf[property] || t.dashboard.unknown);
           map.set(val, (map.get(val) || 0) + etf.globalWeight);
         }
       }
@@ -33,7 +35,7 @@ export function useDashboardData(etfs: EtfConfig[]) {
         .map(([name, value]) => ({ name, value }))
         .sort((a, b) => b.value - a.value);
     },
-    [etfs]
+    [etfs, t.dashboard.unknown]
   );
 
   const providerData = useMemo(() => aggregateEtfProperty('issuer'), [aggregateEtfProperty]);
@@ -69,12 +71,12 @@ export function useDashboardData(etfs: EtfConfig[]) {
     for (let i = 0; i < allHoldings.length; i++) {
       cumulative += allHoldings[i].value;
       result.push({
-        name: `Top ${i + 1}`,
+        name: `${t.dashboard.top} ${i + 1}`,
         value: cumulative,
       });
     }
     return result;
-  }, [etfs]);
+  }, [etfs, t.dashboard.top]);
 
   const weightDistributionData = useMemo(() => {
     const allHoldings = aggregateTopHoldings(etfs, 10000);

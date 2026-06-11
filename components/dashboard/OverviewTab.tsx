@@ -1,6 +1,7 @@
 import React from 'react';
 import { TopHoldingsChart } from '../charts/TopHoldingsChart';
 import { PieChartCard } from '../charts/PieChartCard';
+import { useTranslation } from '../../lib/i18n/LanguageContext';
 
 type ChartData = { name: string; value: number }[];
 
@@ -19,6 +20,8 @@ export function OverviewTab({
   geoData,
   currencyData,
 }: OverviewTabProps) {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
@@ -27,8 +30,8 @@ export function OverviewTab({
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title="ETF Allocation"
-          info="A macro-level breakdown of the weights you assigned to each individual ETF in your portfolio."
+          title={t.overviewTab.etfAllocationTitle}
+          info={t.overviewTab.etfAllocationInfo}
           data={etfAllocationData}
           colorOffset={6}
         />
@@ -36,24 +39,24 @@ export function OverviewTab({
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title="Sector Exposure"
-          info="The industry breakdown (e.g., Technology, Healthcare) of the underlying companies in your portfolio."
+          title={t.overviewTab.sectorExposureTitle}
+          info={t.overviewTab.sectorExposureInfo}
           data={sectorData}
         />
       </div>
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title="Geographic Exposure"
-          info="A breakdown of the physical country locations of the underlying companies in your portfolio."
+          title={t.overviewTab.geoExposureTitle}
+          info={t.overviewTab.geoExposureInfo}
           data={geoData.slice(0, 10)}
         />
       </div>
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title="Currency Exposure"
-          info="Your risk exposure to different foreign exchange currencies based on the trading currency of your underlying assets."
+          title={t.overviewTab.currencyExposureTitle}
+          info={t.overviewTab.currencyExposureInfo}
           data={currencyData}
           colorOffset={4}
         />

@@ -1,7 +1,11 @@
+'use client';
+
 import { ShieldCheck, Layers, Rocket } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 export default function AboutPage() {
+  const { t } = useTranslation();
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-background text-foreground overflow-hidden">
       {/* Hero Section */}
@@ -9,15 +13,13 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         <div className="max-w-4xl mx-auto px-6 py-20 md:py-28 text-center relative z-10 w-full flex flex-col items-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-widest uppercase mb-6 text-foreground drop-shadow-md">
-            Empowering{' '}
+            {t.about.empowering}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
-              Investors
+              {t.about.investors}
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
-            We believe that understanding your true financial exposure shouldn&apos;t require an
-            expensive wealth manager. This tool brings institutional-grade transparency directly to
-            your browser.
+            {t.about.subtitle}
           </p>
         </div>
       </div>
@@ -31,20 +33,12 @@ export default function AboutPage() {
                 <Layers className="w-8 h-8 text-primary drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
               </div>
               <CardTitle className="text-3xl font-black tracking-widest uppercase text-foreground">
-                The Overlap Problem
+                {t.about.overlapProblem}
               </CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground text-lg leading-relaxed space-y-6 font-light">
-              <p>
-                When you purchase multiple broad-market Exchange Traded Funds (ETFs), you are almost
-                certainly buying the same companies multiple times over without realizing it.
-              </p>
-              <p>
-                A standard S&P 500 ETF and a developed World ETF both contain heavy concentrations
-                of the exact same tech giants. We built this tool to parse the raw CSV holdings
-                files from major issuers (iShares, Vanguard, Amundi) and reveal your true underlying
-                exposure across the globe.
-              </p>
+              <p>{t.about.overlapP1}</p>
+              <p>{t.about.overlapP2}</p>
             </CardContent>
           </Card>
 
@@ -55,20 +49,16 @@ export default function AboutPage() {
                 <ShieldCheck className="w-8 h-8 text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]" />
               </div>
               <CardTitle className="text-3xl font-black tracking-widest uppercase text-foreground">
-                Privacy First
+                {t.about.privacyFirst}
               </CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground text-lg leading-relaxed space-y-6 font-light">
               <p>
-                Financial data is deeply personal. We architected this application to be entirely{' '}
-                <strong className="text-emerald-400">client-side</strong>. It relies exclusively on
-                your local device to do the heavy lifting.
+                {t.about.privacyP1Start}{' '}
+                <strong className="text-emerald-400">{t.about.privacyClientSide}</strong>
+                {t.about.privacyP1End}
               </p>
-              <p>
-                When you upload your CSVs, the mathematical aggregations and data mapping happen
-                right inside your browser engine. There are no databases, no tracking cookies, and
-                your portfolio structure remains 100% private at all times.
-              </p>
+              <p>{t.about.privacyP2}</p>
             </CardContent>
           </Card>
         </div>
@@ -84,16 +74,13 @@ export default function AboutPage() {
                 <Rocket className="w-8 h-8 text-primary drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
               </div>
               <CardTitle className="text-3xl md:text-4xl font-black tracking-widest uppercase text-foreground">
-                Future Roadmap
+                {t.about.futureRoadmap}
               </CardTitle>
             </CardHeader>
             <CardContent className="relative z-10 px-10 pb-10">
               <p className="text-muted-foreground text-xl leading-relaxed max-w-3xl font-light">
-                We are actively working on integrating advanced{' '}
-                <strong className="text-primary">Three.js</strong> 3D visualizations. Upcoming
-                features include an Interactive Exposure Globe mapping your investments worldwide
-                and a Top Holdings Constellation network graph, pushing the boundaries of web-based
-                financial analytics.
+                {t.about.roadmapDescStart}{' '}
+                <strong className="text-primary">{t.about.threeJs}</strong> {t.about.roadmapDescEnd}
               </p>
             </CardContent>
           </Card>

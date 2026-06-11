@@ -43,7 +43,7 @@ export function ChartTitleWithInfo({ title, info }: { title: string; info: strin
               className="text-muted-foreground hover:text-foreground cursor-help transition-colors"
             />
           </TooltipTrigger>
-          <TooltipContent className="max-w-[250px] text-center leading-relaxed">
+          <TooltipContent className="max-w-62.5 text-center leading-relaxed">
             <p>{info}</p>
           </TooltipContent>
         </UITooltip>

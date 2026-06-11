@@ -4,8 +4,10 @@ import { usePortfolio } from '@/hooks/usePortfolio';
 import EtfForm from '@/components/EtfForm';
 import PortfolioSliders from '@/components/PortfolioSliders';
 import Dashboard from '@/components/Dashboard';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 export default function Analyzer() {
+  const { t } = useTranslation();
   const {
     etfs,
     isLoaded,
@@ -22,7 +24,7 @@ export default function Analyzer() {
       <div className="min-h-[calc(100vh-4rem)] bg-background flex flex-col items-center justify-center">
         <div className="w-16 h-16 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-6 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]"></div>
         <p className="text-primary font-bold tracking-widest uppercase animate-pulse">
-          {isLoadingDefaults ? 'Parsing Default Nodes...' : 'Initializing Workspace...'}
+          {isLoadingDefaults ? t.analyzer.parsingDefaults : t.analyzer.initializing}
         </p>
       </div>
     );

@@ -10,19 +10,19 @@ import {
 } from 'recharts';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { ChartTitleWithInfo, CustomTooltip } from './Shared';
+import { useTranslation } from '../../lib/i18n/LanguageContext';
 
 interface ConcentrationChartProps {
   data: { name: string; value: number }[];
 }
 
 export function ConcentrationChart({ data }: ConcentrationChartProps) {
+  const { t } = useTranslation();
+
   return (
     <Card className="lg:col-span-2">
       <CardHeader>
-        <ChartTitleWithInfo
-          title="Portfolio Concentration (Top 50 Holdings)"
-          info="A cumulative sum of your top 50 holdings. Helps identify if your portfolio is top-heavy (e.g., your top 5 stocks making up 30% of your net worth)."
-        />
+        <ChartTitleWithInfo title={t.charts.concentrationTitle} info={t.charts.concentrationInfo} />
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 256, minWidth: 0 }}>

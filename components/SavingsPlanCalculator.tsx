@@ -16,6 +16,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { TrendingUp, Wallet, PiggyBank } from 'lucide-react';
+import { useTranslation } from '../lib/i18n/LanguageContext';
 
 interface SavingsPlanCalculatorProps {
   etfs: EtfConfig[];
@@ -23,6 +24,7 @@ interface SavingsPlanCalculatorProps {
 }
 
 export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculatorProps) {
+  const { t } = useTranslation();
   const {
     initialInvestment,
     setInitialInvestment,
@@ -53,7 +55,9 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
         <Card className="bg-muted/10 border-border/50 hover:shadow-md transition-shadow">
           <CardContent className="pt-6 flex flex-col items-center text-center">
             <Wallet className="mb-2 text-blue-500" size={28} />
-            <h4 className="text-sm font-medium text-muted-foreground mb-1">Total Invested</h4>
+            <h4 className="text-sm font-medium text-muted-foreground mb-1">
+              {t.savingsPlan.totalInvested}
+            </h4>
             <p className="text-3xl font-bold text-foreground">{formatCurrency(finalInvested)}</p>
           </CardContent>
         </Card>
@@ -61,7 +65,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
           <CardContent className="pt-6 flex flex-col items-center text-center">
             <TrendingUp className="mb-2 text-emerald-600" size={28} />
             <h4 className="text-sm font-medium text-muted-foreground mb-1">
-              Total Interest Earned
+              {t.savingsPlan.totalInterestEarned}
             </h4>
             <p className="text-3xl font-bold text-emerald-600">
               {formatCurrency(finalTotalValue - finalInvested)}
@@ -74,7 +78,9 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
           </div>
           <CardContent className="pt-6 flex flex-col items-center text-center relative z-10">
             <PiggyBank className="mb-2 text-primary-foreground opacity-90" size={28} />
-            <h4 className="text-sm font-medium opacity-90 mb-1">Projected Future Value</h4>
+            <h4 className="text-sm font-medium opacity-90 mb-1">
+              {t.savingsPlan.projectedFutureValue}
+            </h4>
             <p className="text-3xl font-bold">{formatCurrency(finalTotalValue)}</p>
           </CardContent>
         </Card>
@@ -85,7 +91,9 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
         <div className="lg:col-span-2 space-y-6">
           <Card className="shadow-sm">
             <CardHeader className="pb-2">
-              <CardTitle>Growth Projection over {years} Years</CardTitle>
+              <CardTitle>
+                {t.savingsPlan.growthProjection} {years} {t.savingsPlan.years}
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <div style={{ width: '100%', height: 350, minWidth: 0 }}>
@@ -109,7 +117,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                     />
                     <XAxis
                       dataKey="year"
-                      tickFormatter={(val) => `Year ${val}`}
+                      tickFormatter={(val) => `${t.savingsPlan.year} ${val}`}
                       stroke="var(--muted-foreground)"
                       fontSize={12}
                       tickLine={false}
@@ -130,7 +138,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                       formatter={(
                         value: string | number | readonly (string | number)[] | undefined
                       ) => formatCurrency(Number(value) || 0)}
-                      labelFormatter={(label) => `Year ${label}`}
+                      labelFormatter={(label) => `${t.savingsPlan.year} ${label}`}
                       contentStyle={{
                         borderRadius: '12px',
                         border: '1px solid var(--border)',
@@ -140,7 +148,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                     <Area
                       type="monotone"
                       dataKey="value"
-                      name="Total Value"
+                      name={t.savingsPlan.totalValue}
                       stroke="#10b981"
                       fillOpacity={1}
                       fill="url(#colorValue)"
@@ -149,7 +157,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                     <Area
                       type="monotone"
                       dataKey="invested"
-                      name="Invested Capital"
+                      name={t.savingsPlan.investedCapital}
                       stroke="#3b82f6"
                       fillOpacity={1}
                       fill="url(#colorInvested)"
@@ -163,18 +171,19 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
 
           <Card className="shadow-sm">
             <CardHeader className="pb-2">
-              <CardTitle>Next Month&apos;s Buying Plan</CardTitle>
+              <CardTitle>{t.savingsPlan.nextMonthBuyingPlan}</CardTitle>
             </CardHeader>
             <CardContent>
               {totalWeight === 0 ? (
                 <div className="py-8 text-center text-muted-foreground bg-muted/20 rounded-lg border border-dashed">
-                  Allocate some weight to your ETFs to see the dynamic buying plan.
+                  {t.savingsPlan.allocateWeightMsg}
                 </div>
               ) : (
                 <div className="space-y-4">
                   <p className="text-sm text-muted-foreground mb-4">
-                    To maintain your precise target allocations, here is exactly how to distribute
-                    your next <strong>{formatCurrency(monthlyContribution)}</strong> contribution:
+                    {t.savingsPlan.maintainTargetMsg}{' '}
+                    <strong>{formatCurrency(monthlyContribution)}</strong>{' '}
+                    {t.savingsPlan.contribution}
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {activeEtfs.map((etf) => {
@@ -189,7 +198,8 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                               {etf.name}
                             </p>
                             <p className="text-xs text-muted-foreground font-medium bg-muted inline-block px-1.5 py-0.5 rounded">
-                              {((etf.globalWeight / totalWeight) * 100).toFixed(1)}% Weight
+                              {((etf.globalWeight / totalWeight) * 100).toFixed(1)}%{' '}
+                              {t.savingsPlan.weight}
                             </p>
                           </div>
                           <span className="text-lg font-bold text-primary ml-4 shrink-0">
@@ -203,10 +213,10 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                     <div className="mt-4 text-xs text-amber-700 bg-amber-50 dark:bg-amber-500/10 dark:text-amber-400 p-4 rounded-lg border border-amber-200 dark:border-amber-500/20 flex items-start gap-2">
                       <div className="shrink-0 mt-0.5">⚠️</div>
                       <p>
-                        Your total portfolio weight is currently{' '}
-                        <strong>{totalWeight.toFixed(1)}%</strong> instead of 100%. The monetary
-                        amounts shown above have been mathematically normalized to proportionally
-                        match your {formatCurrency(monthlyContribution)} contribution.
+                        {t.savingsPlan.warningPortfolioWeight}{' '}
+                        <strong>{totalWeight.toFixed(1)}%</strong>{' '}
+                        {t.savingsPlan.warningPortfolioNormalized}{' '}
+                        {formatCurrency(monthlyContribution)}.
                       </p>
                     </div>
                   )}
@@ -222,13 +232,15 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
             <CardHeader className="bg-muted/30 border-b pb-4 mb-4">
               <CardTitle className="flex items-center gap-2">
                 <Wallet size={18} className="text-primary" />
-                Plan Settings
+                {t.savingsPlan.planSettings}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-8">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-foreground">Initial Investment</label>
+                  <label className="text-sm font-medium text-foreground">
+                    {t.savingsPlan.initialInvestment}
+                  </label>
                   <div className="relative w-28">
                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm font-bold">
                       $
@@ -253,7 +265,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <label className="text-sm font-medium text-foreground">
-                    Monthly Contribution
+                    {t.savingsPlan.monthlyContribution}
                   </label>
                   <div className="relative w-28">
                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm font-bold">
@@ -278,7 +290,9 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
 
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-foreground">Duration</label>
+                  <label className="text-sm font-medium text-foreground">
+                    {t.savingsPlan.duration}
+                  </label>
                   <div className="relative w-24">
                     <Input
                       type="number"
@@ -287,7 +301,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                       className="h-8 pr-10 text-right font-bold text-primary bg-primary/10 border-primary/20 focus-visible:ring-primary/30"
                     />
                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground text-xs font-bold pointer-events-none">
-                      Yrs
+                      {t.savingsPlan.yearsShort}
                     </span>
                   </div>
                 </div>
@@ -303,7 +317,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <label className="text-sm font-medium text-foreground">
-                    Expected Return (Yearly)
+                    {t.savingsPlan.expectedReturn}
                   </label>
                   <div className="relative w-20">
                     <Input
@@ -325,14 +339,14 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                   className="py-1 [&_[role=slider]]:border-emerald-500 [&_.bg-primary]:bg-emerald-500"
                 />
                 <p className="text-[10px] text-muted-foreground mt-1">
-                  Historically, the S&P 500 averages ~7-10% annually.
+                  {t.savingsPlan.historicalAverage}
                 </p>
               </div>
 
               <div className="space-y-3 pt-4 border-t border-dashed">
                 <div className="flex justify-between items-center">
                   <label className="text-sm font-medium text-foreground">
-                    Stop Contributing After
+                    {t.savingsPlan.stopContributingAfter}
                   </label>
                   <div className="relative w-24">
                     <Input
@@ -342,7 +356,7 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                       className="h-8 pr-9 text-right font-bold text-blue-600 bg-blue-500/10 border-blue-500/20 focus-visible:ring-blue-500/30"
                     />
                     <span className="absolute right-2 top-1/2 -translate-y-1/2 text-blue-600 text-xs font-bold pointer-events-none">
-                      Mo
+                      {t.savingsPlan.monthsShort}
                     </span>
                   </div>
                 </div>
@@ -356,8 +370,9 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
                   className="py-1 [&_[role=slider]]:border-blue-500 [&_.bg-primary]:bg-blue-500"
                 />
                 <p className="text-[10px] text-muted-foreground mt-1">
-                  Freeze investments after {Math.floor(clampedStopMonths / 12)} years and{' '}
-                  {clampedStopMonths % 12} months, while interest continues to compound.
+                  {t.savingsPlan.freezeInvestments} {Math.floor(clampedStopMonths / 12)}{' '}
+                  {t.savingsPlan.years.toLowerCase()} {t.savingsPlan.duration ? 'e' : 'and'}{' '}
+                  {clampedStopMonths % 12} {t.savingsPlan.months}
                 </p>
               </div>
             </CardContent>

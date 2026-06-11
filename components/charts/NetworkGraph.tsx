@@ -6,6 +6,7 @@ import SpriteText from 'three-spritetext';
 import { useTheme } from 'next-themes';
 import { EtfConfig } from '../../lib/types';
 import { generateNetworkData } from '../../lib/math';
+import { useTranslation } from '../../lib/i18n/LanguageContext';
 
 interface NetworkGraphProps {
   etfs: EtfConfig[];
@@ -13,7 +14,30 @@ interface NetworkGraphProps {
   livePhysics: boolean;
 }
 
+interface NodeObj {
+  id?: string;
+  x?: number;
+  y?: number;
+  z?: number;
+  vx?: number;
+  vy?: number;
+  vz?: number;
+  name?: string;
+  group?: 'etf' | 'holding';
+  val?: number;
+  [key: string]: unknown;
+}
+
+interface LinkObj {
+  source?: string | NodeObj;
+  target?: string | NodeObj;
+  value?: number;
+  [key: string]: unknown;
+}
+
 export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
+  const { t } = useTranslation();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const fgRef = useRef<any>(null);
   const { resolvedTheme } = useTheme();
   const [dimensions, setDimensions] = useState({ width: 800, height: 450 });
@@ -27,11 +51,16 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
 
   const sharedHoldings = useMemo(() => {
     const etfMap: Record<string, Set<string>> = {};
-    rawData.links.forEach((l: any) => {
-      const targetId = typeof l.target === 'object' ? l.target.id : l.target;
-      const sourceId = typeof l.source === 'object' ? l.source.id : l.source;
-      if (!etfMap[targetId]) etfMap[targetId] = new Set();
-      etfMap[targetId].add(sourceId);
+    rawData.links.forEach((l) => {
+      const link = l as unknown as LinkObj;
+      const targetId =
+        typeof link.target === 'object' && link.target !== null ? link.target.id : link.target;
+      const sourceId =
+        typeof link.source === 'object' && link.source !== null ? link.source.id : link.source;
+      if (typeof targetId === 'string' && typeof sourceId === 'string') {
+        if (!etfMap[targetId]) etfMap[targetId] = new Set();
+        etfMap[targetId].add(sourceId);
+      }
     });
     return new Set(Object.keys(etfMap).filter((k) => etfMap[k].size > 1));
   }, [rawData.links]);
@@ -40,6 +69,7 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
 
   // Whenever the data changes (e.g. slider moves), the physics engine will wake up to calculate the new graph
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsSettling(true);
   }, [data]);
 
@@ -98,12 +128,16 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
 
           // Custom gravity force: pulls disconnected ETFs and flying nodes back to the dead center (0,0,0)
           fgRef.current.d3Force('gravity', (alpha: number) => {
-            data.nodes.forEach((node: any) => {
+            data.nodes.forEach((n) => {
+              const node = n as unknown as NodeObj;
               // ETFs get pulled strongly to the center, holdings get pulled gently
               const pullStrength = node.group === 'etf' ? 0.08 : 0.01;
-              node.vx -= (node.x || 0) * alpha * pullStrength;
-              node.vy -= (node.y || 0) * alpha * pullStrength;
-              node.vz -= (node.z || 0) * alpha * pullStrength;
+              if (node.vx !== undefined && node.x !== undefined)
+                node.vx -= node.x * alpha * pullStrength;
+              if (node.vy !== undefined && node.y !== undefined)
+                node.vy -= node.y * alpha * pullStrength;
+              if (node.vz !== undefined && node.z !== undefined)
+                node.vz -= node.z * alpha * pullStrength;
             });
           });
         } catch (e) {
@@ -117,7 +151,6 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
 
   // Set colors based on current theme
   const isDark = resolvedTheme === 'theme-cyberpunk';
-  const bgColor = isDark ? '#000000' : '#ffffff'; // Fallback if css var doesn't work well
 
   // Custom colors for nodes
   const etfColor = isDark ? '#22d3ee' : '#2563eb'; // Cyan vs Blue
@@ -146,14 +179,15 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
         enableNodeDrag={livePhysics}
         nodeLabel="name"
         nodeAutoColorBy="group"
-        nodeColor={(node: any) => (node.group === 'etf' ? etfColor : holdingColor)}
-        nodeVal={(node: any) => {
+        nodeColor={(node) => ((node as NodeObj).group === 'etf' ? etfColor : holdingColor)}
+        nodeVal={(node) => {
+          const n = node as NodeObj;
           // We want the sphere's visual RADIUS to scale based on the percentage of the total portfolio (node.val).
           // ForceGraph3D calculates its visual radius using the cube root of nodeVal ( R ∝ cbrt(nodeVal) ).
           // To make the radius linearly proportional to the percentage, we must supply the cube of our desired radius.
-          const percentage = node.val || 0.1;
+          const percentage = n.val || 0.1;
 
-          if (node.group === 'etf') {
+          if (n.group === 'etf') {
             // ETFs get a larger base radius
             const targetRadius = Math.max(6, percentage * 0.3);
             return Math.pow(targetRadius, 3);
@@ -179,18 +213,19 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
         }
         onEngineStop={() => setIsSettling(false)}
         nodeThreeObject={
-          ((node: any) => {
+          ((node: object) => {
+            const n = node as NodeObj;
             // Render labels only for ETFs or shared holdings
-            if (node.group === 'etf' || sharedHoldings.has(node.id)) {
-              const sprite = new SpriteText(node.name);
+            if (n.name && (n.group === 'etf' || (n.id && sharedHoldings.has(n.id)))) {
+              const sprite = new SpriteText(n.name);
               sprite.color = isDark ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.9)';
 
-              if (node.group === 'etf') {
+              if (n.group === 'etf') {
                 sprite.textHeight = 8;
                 sprite.fontWeight = 'bold';
                 sprite.position.y = 18; // Physically lift the text above the ETF sphere
               } else {
-                sprite.textHeight = Math.max(3.5, Math.sqrt(node.val) * 2.5);
+                sprite.textHeight = Math.max(3.5, Math.sqrt(n.val || 0) * 2.5);
                 sprite.fontWeight = 'normal';
                 sprite.position.y = 8; // Physically lift the text above the holding sphere
               }
@@ -203,52 +238,64 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
               return sprite;
             }
             return null; // Don't render permanent text for unshared nodes
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
           }) as any
         }
         nodeThreeObjectExtend={true}
-        linkVisibility={(link: any) => {
+        linkVisibility={(link) => {
+          const l = link as LinkObj;
           if (isExtremeVolume) {
-            const targetId = typeof link.target === 'object' ? link.target.id : link.target;
-            return sharedHoldings.has(targetId);
+            const targetId =
+              typeof l.target === 'object' && l.target !== null ? l.target.id : l.target;
+            return typeof targetId === 'string' && sharedHoldings.has(targetId);
           }
           return true;
         }}
-        linkWidth={(link: any) => Math.max(0.5, Math.sqrt(link.value) * 1.5)}
+        linkWidth={(link) => Math.max(0.5, Math.sqrt((link as LinkObj).value || 0) * 1.5)}
         linkColor={() => linkColor}
         linkOpacity={isExtremeVolume ? 1 : 0.4}
-        linkDirectionalParticles={(link: any) => {
+        linkDirectionalParticles={(link) => {
+          const l = link as LinkObj;
           if (isHighVolume) {
-            const targetId = typeof link.target === 'object' ? link.target.id : link.target;
-            return sharedHoldings.has(targetId) ? 2 : 0;
+            const targetId =
+              typeof l.target === 'object' && l.target !== null ? l.target.id : l.target;
+            return typeof targetId === 'string' && sharedHoldings.has(targetId) ? 2 : 0;
           }
           return 3;
         }}
-        linkDirectionalParticleWidth={(link: any) => Math.max(1.5, Math.sqrt(link.value))}
-        linkDirectionalParticleSpeed={(link: any) => link.value * 0.0005 + 0.005}
+        linkDirectionalParticleWidth={(link) =>
+          Math.max(1.5, Math.sqrt((link as LinkObj).value || 0))
+        }
+        linkDirectionalParticleSpeed={(link) => ((link as LinkObj).value || 0) * 0.0005 + 0.005}
         backgroundColor="rgba(0,0,0,0)" // Transparent to let tailwind bg show
         showNavInfo={false}
       />
       <div className="absolute top-4 left-4 pointer-events-none bg-background/90 backdrop-blur-md px-4 py-3 rounded-xl border border-border shadow-lg flex flex-col gap-3 min-w-70">
-        <p className="text-xs font-bold uppercase tracking-widest text-foreground">Legend</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-foreground">
+          {t.threeDVisuals.legend}
+        </p>
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full shrink-0"
               style={{ backgroundColor: etfColor, boxShadow: `0 0 8px ${etfColor}` }}
             />
-            <span className="text-xs text-muted-foreground font-medium">ETFs</span>
+            <span className="text-xs text-muted-foreground font-medium">
+              {t.threeDVisuals.etfs}
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="w-3 h-3 rounded-full shrink-0"
               style={{ backgroundColor: holdingColor, boxShadow: `0 0 8px ${holdingColor}` }}
             />
-            <span className="text-xs text-muted-foreground font-medium">Overlapping Holdings</span>
+            <span className="text-xs text-muted-foreground font-medium">
+              {t.threeDVisuals.overlappingHoldings}
+            </span>
           </div>
         </div>
         <p className="text-[10px] text-muted-foreground/80 max-w-62.5 leading-tight mt-1">
-          Lines pull overlapping companies towards the center. Thicker lines and faster particles
-          indicate heavier concentration weight.
+          {t.threeDVisuals.networkLegendDesc}
         </p>
       </div>
     </div>

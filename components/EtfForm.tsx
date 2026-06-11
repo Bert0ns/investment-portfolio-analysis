@@ -18,11 +18,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { toast } from 'sonner';
 import { Plus } from 'lucide-react';
 
+import { useTranslation } from '../lib/i18n/LanguageContext';
+
 interface EtfFormProps {
   onAddEtf: (etf: EtfConfig) => void;
 }
 
 export default function EtfForm({ onAddEtf }: EtfFormProps) {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [name, setName] = useState('');
   const [isin, setIsin] = useState('');
@@ -43,8 +46,8 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
     e.preventDefault();
 
     if (!name || !ter || !file || !fundSize || !fundAge) {
-      toast.error('Missing fields', {
-        description: 'Please fill all fields and upload a CSV file.',
+      toast.error(t.etfForm.missingFields, {
+        description: t.etfForm.missingFieldsDesc,
       });
       return;
     }
@@ -54,15 +57,15 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
     const ageNumber = parseFloat(fundAge);
 
     if (isNaN(terNumber) || terNumber < 0) {
-      toast.error('Invalid TER', { description: 'Please enter a valid TER.' });
+      toast.error(t.etfForm.invalidTer, { description: t.etfForm.invalidTer });
       return;
     }
     if (isNaN(sizeNumber) || sizeNumber < 0) {
-      toast.error('Invalid Fund Size', { description: 'Please enter a valid Fund Size.' });
+      toast.error(t.etfForm.invalidSize, { description: t.etfForm.invalidSize });
       return;
     }
     if (isNaN(ageNumber) || ageNumber < 0) {
-      toast.error('Invalid Fund Age', { description: 'Please enter a valid Fund Age.' });
+      toast.error(t.etfForm.invalidAge, { description: t.etfForm.invalidAge });
       return;
     }
 
@@ -73,14 +76,16 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
       const result = await parser.parse(file);
 
       if (result.errors.length > 0 && result.holdings.length === 0) {
-        toast.error('Parse Error', { description: `Failed to parse CSV: ${result.errors[0]}` });
+        toast.error(t.etfForm.parseError, {
+          description: `${t.etfForm.parseError}: ${result.errors[0]}`,
+        });
         setIsLoading(false);
         return;
       }
 
       if (result.holdings.length === 0) {
-        toast.error('Empty File', {
-          description: 'No valid holdings found in the CSV. Please check the file format.',
+        toast.error(t.etfForm.emptyFile, {
+          description: t.etfForm.emptyFileDesc,
         });
         setIsLoading(false);
         return;
@@ -112,7 +117,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
       setFile(null);
       setOpen(false); // Close dialog on success
 
-      toast.success('ETF Added', {
+      toast.success(t.etfForm.etfAdded, {
         description: `${name} has been successfully added to your portfolio.`,
       });
     } catch (err: unknown) {
@@ -131,19 +136,17 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
           <Button className="w-full flex items-center justify-center gap-2 py-6 text-base shadow-sm" />
         }
       >
-        <Plus size={20} /> Add New ETF
+        <Plus size={20} /> {t.etfForm.addEtf}
       </DialogTrigger>
       <DialogContent className="sm:max-w-106.25 max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Add New ETF</DialogTitle>
-          <DialogDescription>
-            Enter the ETF details and upload its holdings CSV to add it to your portfolio.
-          </DialogDescription>
+          <DialogTitle>{t.etfForm.addEtf}</DialogTitle>
+          <DialogDescription>{t.etfForm.enterDetails}</DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-2">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="etf-name">ETF Name / Ticker</Label>
+              <Label htmlFor="etf-name">{t.etfForm.name}</Label>
               <Input
                 id="etf-name"
                 type="text"
@@ -153,7 +156,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="etf-isin">ISIN Code</Label>
+              <Label htmlFor="etf-isin">{t.etfForm.isin}</Label>
               <Input
                 id="etf-isin"
                 type="text"
@@ -166,7 +169,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label>Provider</Label>
+              <Label>{t.etfForm.provider}</Label>
               <Select value={issuer} onValueChange={(val) => setIssuer(val as Issuer)}>
                 <SelectTrigger>
                   <SelectValue placeholder="Select Provider" />
@@ -180,7 +183,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
               </Select>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="ter">TER (%)</Label>
+              <Label htmlFor="ter">{t.etfForm.ter}</Label>
               <Input
                 id="ter"
                 type="number"
@@ -194,7 +197,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label>Replication Method</Label>
+              <Label>{t.etfForm.replication}</Label>
               <Select
                 value={replicationMethod}
                 onValueChange={(val) => setReplicationMethod(val as ReplicationMethod)}
@@ -210,7 +213,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
               </Select>
             </div>
             <div className="space-y-2">
-              <Label>Use of Profit</Label>
+              <Label>{t.etfForm.useOfProfit}</Label>
               <Select
                 value={useOfProfit}
                 onValueChange={(val) => setUseOfProfit(val as UseOfProfit)}
@@ -228,7 +231,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="fundSize">Fund Size ($M)</Label>
+              <Label htmlFor="fundSize">{t.etfForm.fundSize}</Label>
               <Input
                 id="fundSize"
                 type="number"
@@ -238,7 +241,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="fundAge">Fund Age (Years)</Label>
+              <Label htmlFor="fundAge">{t.etfForm.fundAge}</Label>
               <Input
                 id="fundAge"
                 type="number"
@@ -250,7 +253,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
           </div>
 
           <div className="space-y-2">
-            <Label>Domicile</Label>
+            <Label>{t.etfForm.domicile}</Label>
             <Select value={domicile} onValueChange={(val) => setDomicile(val as Domicile)}>
               <SelectTrigger>
                 <SelectValue />
@@ -265,17 +268,14 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="csv-file">Holdings CSV File</Label>
+            <Label htmlFor="csv-file">{t.etfForm.csvFile}</Label>
             <div className="bg-blue-50 dark:bg-blue-950/30 text-blue-800 dark:text-blue-300 p-3 rounded-lg text-xs leading-relaxed border border-blue-200 dark:border-blue-800/50 mb-2 mt-1 shadow-sm">
               <strong className="block mb-1 text-blue-900 dark:text-blue-200">
-                How to get the CSV file:
+                {t.etfForm.howToCsvTitle}
               </strong>
-              Go to the ETF issuer&apos;s official website (e.g., iShares, Vanguard, Amundi), search
-              for your ETF, and find the section containing the holdings/participations. Download
-              the list as a <strong>CSV (UTF-8)</strong>. <br />
+              {t.etfForm.howToCsvDesc} <strong>CSV (UTF-8)</strong>. <br />
               <span className="text-red-700 dark:text-red-400 font-semibold mt-1 block">
-                ⚠️ Do not edit or open the file in Excel before uploading! Just upload it directly
-                as downloaded.
+                {t.etfForm.csvWarning}
               </span>
             </div>
             <Input
@@ -288,7 +288,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
           </div>
 
           <Button type="submit" disabled={isLoading} className="w-full mt-6">
-            {isLoading ? 'Processing...' : 'Add ETF to Portfolio'}
+            {isLoading ? t.etfForm.processing : t.etfForm.addToPortfolio}
           </Button>
         </form>
       </DialogContent>
