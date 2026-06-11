@@ -18,7 +18,7 @@ const ExposureGlobe = dynamic(
   () => import('./charts/ExposureGlobe').then((mod) => mod.ExposureGlobe),
   {
     ssr: false,
-    loading: () => <div className="h-[450px] bg-card animate-pulse border border-white/10" />,
+    loading: () => <div className="h-[450px] bg-card animate-pulse border border-border" />,
   }
 );
 

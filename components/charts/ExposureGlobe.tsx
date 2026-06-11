@@ -20,7 +20,7 @@ export function ExposureGlobe({ data }: { data: { name: string; value: number }[
   ).size;
 
   return (
-    <Card className="p-0 hover:border-primary/50 transition-colors duration-500 border border-white/10 bg-card/40 backdrop-blur-md rounded-none overflow-hidden">
+    <Card className="p-0 hover:border-primary/50 transition-colors duration-500 border border-border bg-card/40 backdrop-blur-md overflow-hidden">
       <CardContent className="p-0">
         <div className="h-[450px] w-full relative bg-[#030712] overflow-hidden">
           <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>

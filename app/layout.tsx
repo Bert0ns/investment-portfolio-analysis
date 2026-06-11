@@ -15,19 +15,29 @@ export const metadata: Metadata = {
   description: 'Analyze and visualize your custom ETF portfolio.',
 };
 
+import { ThemeProvider } from '@/components/ThemeProvider';
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${inter.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
       <body>
-        <TooltipProvider>
-          <Navbar />
-          {children}
-          <Toaster />
-        </TooltipProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="theme-professional"
+          themes={['theme-cyberpunk', 'theme-cartoon', 'theme-professional']}
+          enableSystem={false}
+          disableTransitionOnChange={false}
+        >
+          <TooltipProvider>
+            <Navbar />
+            {children}
+            <Toaster />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -148,7 +148,7 @@ export default function PortfolioSliders({
             </span>
           </div>
 
-          <div className="h-2 w-full bg-secondary rounded-none overflow-hidden flex">
+          <div className="h-2 w-full bg-secondary rounded-full overflow-hidden flex">
             <div
               className={`h-full transition-all duration-300 ${
                 isOverweight ? 'bg-destructive' : isUnderweight ? 'bg-amber-400' : 'bg-emerald-500'
