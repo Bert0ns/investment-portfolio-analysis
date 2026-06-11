@@ -217,7 +217,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
               <PieChartCard
                 title="Geographic Exposure"
                 info="A breakdown of the physical country locations of the underlying companies in your portfolio."
-                data={geoData}
+                data={geoData.slice(0, 10)}
               />
             </div>
 
