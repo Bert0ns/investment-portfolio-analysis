@@ -1,5 +1,13 @@
+'use client';
+
+import { useState } from 'react';
 import { Card, CardTitle } from '../ui/card';
-import { Tooltip as UITooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
+import {
+  Tooltip as UITooltip,
+  TooltipContent,
+  TooltipTrigger,
+  TooltipProvider,
+} from '../ui/tooltip';
 import { Info } from 'lucide-react';
 
 export const COLORS = [
@@ -16,20 +24,30 @@ export const COLORS = [
 ];
 
 export function ChartTitleWithInfo({ title, info }: { title: string; info: string }) {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="flex items-center gap-2">
       <CardTitle>{title}</CardTitle>
-      <UITooltip>
-        <TooltipTrigger className="inline-flex outline-none focus:ring-2 focus:ring-ring rounded-full">
-          <Info
-            size={16}
-            className="text-muted-foreground hover:text-foreground cursor-help transition-colors"
-          />
-        </TooltipTrigger>
-        <TooltipContent className="max-w-[250px] text-center leading-relaxed">
-          <p>{info}</p>
-        </TooltipContent>
-      </UITooltip>
+      <TooltipProvider>
+        <UITooltip open={open} onOpenChange={setOpen}>
+          <TooltipTrigger
+            onClick={(e) => {
+              e.preventDefault();
+              setOpen(!open);
+            }}
+            className="inline-flex outline-none focus:ring-2 focus:ring-ring rounded-full p-1.5 -m-1.5"
+          >
+            <Info
+              size={16}
+              className="text-muted-foreground hover:text-foreground cursor-help transition-colors"
+            />
+          </TooltipTrigger>
+          <TooltipContent className="max-w-[250px] text-center leading-relaxed">
+            <p>{info}</p>
+          </TooltipContent>
+        </UITooltip>
+      </TooltipProvider>
     </div>
   );
 }
