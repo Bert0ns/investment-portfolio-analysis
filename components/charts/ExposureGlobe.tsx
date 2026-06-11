@@ -22,7 +22,7 @@ export function ExposureGlobe({ data }: { data: { name: string; value: number }[
   return (
     <Card className="p-0 hover:border-primary/50 transition-colors duration-500 border border-border bg-card/40 backdrop-blur-md overflow-hidden">
       <CardContent className="p-0">
-        <div className="h-[450px] w-full relative bg-[#030712] overflow-hidden">
+        <div className="h-112.5 w-full relative bg-[#030712] overflow-hidden">
           <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
             <ambientLight intensity={0.6} />
             <pointLight position={[10, 10, 10]} intensity={2.0} color="#ffffff" />

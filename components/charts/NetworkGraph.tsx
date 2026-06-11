@@ -17,6 +17,7 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
   const fgRef = useRef<any>(null);
   const { resolvedTheme } = useTheme();
   const [dimensions, setDimensions] = useState({ width: 800, height: 450 });
+  const [isSettling, setIsSettling] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const isExtremeVolume = limit[0] > 1000;
@@ -36,6 +37,11 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
   }, [rawData.links]);
 
   const data = rawData;
+
+  // Whenever the data changes (e.g. slider moves), the physics engine will wake up to calculate the new graph
+  useEffect(() => {
+    setIsSettling(true);
+  }, [data]);
 
   // Resize observer to make the 3D canvas responsive
   useEffect(() => {
@@ -129,7 +135,7 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
   return (
     <div
       ref={containerRef}
-      className="w-full h-[450px] relative rounded-xl overflow-hidden bg-background"
+      className="w-full h-112.5 relative rounded-xl overflow-hidden bg-background"
     >
       <ForceGraph3D
         ref={fgRef}
@@ -158,7 +164,20 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
           }
         }}
         nodeOpacity={1}
-        nodeResolution={isExtremeVolume ? 4 : isHighVolume ? 8 : 24}
+        nodeResolution={
+          livePhysics || isSettling
+            ? isExtremeVolume
+              ? 4
+              : isHighVolume
+                ? 8
+                : 16 // Performance mode (leaves CPU for physics)
+            : isExtremeVolume
+              ? 12
+              : isHighVolume
+                ? 24
+                : 32 // High Quality mode (perfect spheres)
+        }
+        onEngineStop={() => setIsSettling(false)}
         nodeThreeObject={
           ((node: any) => {
             // Render labels only for ETFs or shared holdings
@@ -209,7 +228,7 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
         backgroundColor="rgba(0,0,0,0)" // Transparent to let tailwind bg show
         showNavInfo={false}
       />
-      <div className="absolute top-4 left-4 pointer-events-none bg-background/90 backdrop-blur-md px-4 py-3 rounded-xl border border-border shadow-lg flex flex-col gap-3 min-w-[280px]">
+      <div className="absolute top-4 left-4 pointer-events-none bg-background/90 backdrop-blur-md px-4 py-3 rounded-xl border border-border shadow-lg flex flex-col gap-3 min-w-70">
         <p className="text-xs font-bold uppercase tracking-widest text-foreground">Legend</p>
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
@@ -227,7 +246,7 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
             <span className="text-xs text-muted-foreground font-medium">Overlapping Holdings</span>
           </div>
         </div>
-        <p className="text-[10px] text-muted-foreground/80 max-w-[250px] leading-tight mt-1">
+        <p className="text-[10px] text-muted-foreground/80 max-w-62.5 leading-tight mt-1">
           Lines pull overlapping companies towards the center. Thicker lines and faster particles
           indicate heavier concentration weight.
         </p>

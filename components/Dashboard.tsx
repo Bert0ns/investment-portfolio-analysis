@@ -22,7 +22,7 @@ const ExposureGlobe = dynamic(
   () => import('./charts/ExposureGlobe').then((mod) => mod.ExposureGlobe),
   {
     ssr: false,
-    loading: () => <div className="h-[450px] bg-card animate-pulse border border-border" />,
+    loading: () => <div className="h-112.5 bg-card animate-pulse border border-border" />,
   }
 );
 
@@ -30,7 +30,7 @@ const NetworkGraph = dynamic(
   () => import('./charts/NetworkGraph').then((mod) => mod.NetworkGraph),
   {
     ssr: false,
-    loading: () => <div className="h-[450px] bg-card animate-pulse border border-border" />,
+    loading: () => <div className="h-112.5 bg-card animate-pulse border border-border" />,
   }
 );
 
@@ -224,7 +224,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
                       className="py-2"
                     />
                   </div>
-                  <div className="flex flex-col gap-2 min-w-[150px]">
+                  <div className="flex flex-col gap-2 min-w-37.5">
                     <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
                       Concentration Physics
                     </Label>
