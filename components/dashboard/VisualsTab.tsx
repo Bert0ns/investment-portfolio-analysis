@@ -35,6 +35,7 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
   const [active3DVisual, setActive3DVisual] = useState<'Globe' | 'Network'>('Globe');
   const [networkLimit, setNetworkLimit] = useState<number[]>([100]);
   const [networkLivePhysics, setNetworkLivePhysics] = useState(false);
+  const [networkOverlapOnly, setNetworkOverlapOnly] = useState(false);
 
   const maxHoldings = useMemo(() => {
     const activeEtfs = etfs.filter((e) => e.globalWeight > 0);
@@ -85,7 +86,7 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
                   {t.overviewTab.topHoldingsRendered}
                 </Label>
                 <span className="text-xs font-mono bg-primary/10 text-primary px-2 py-0.5 rounded-full">
-                  {networkLimit[0] >= maxHoldings ? 'ALL' : networkLimit[0]}
+                  {networkLimit[0] >= maxHoldings ? t.threeDVisuals.all : networkLimit[0]}
                 </span>
               </div>
               <Slider
@@ -96,6 +97,24 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
                 step={10}
                 className="py-2"
               />
+            </div>
+            <div className="flex flex-col gap-2 min-w-[140px]">
+              <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
+                {t.threeDVisuals.displayMode}
+              </Label>
+              <div className="flex items-center space-x-2 mt-1">
+                <Switch
+                  id="overlap-mode"
+                  checked={networkOverlapOnly}
+                  onCheckedChange={setNetworkOverlapOnly}
+                />
+                <Label
+                  htmlFor="overlap-mode"
+                  className="text-xs text-muted-foreground cursor-pointer font-medium"
+                >
+                  {t.threeDVisuals.overlapOnly}
+                </Label>
+              </div>
             </div>
             <div className="flex flex-col gap-2 min-w-37.5">
               <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
@@ -116,7 +135,12 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
               </div>
             </div>
           </div>
-          <NetworkGraph etfs={etfs} limit={networkLimit} livePhysics={networkLivePhysics} />
+          <NetworkGraph
+            etfs={etfs}
+            limit={networkLimit}
+            livePhysics={networkLivePhysics}
+            overlapOnly={networkOverlapOnly}
+          />
         </div>
       )}
     </div>

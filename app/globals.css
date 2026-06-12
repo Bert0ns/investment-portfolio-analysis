@@ -241,3 +241,12 @@
     border-color: var(--border) !important;
   }
 }
+
+/* Remove default react-force-graph tooltip background to allow custom HTML tooltips */
+.scene-tooltip,
+.float-tooltip-kap {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}

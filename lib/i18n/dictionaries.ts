@@ -239,6 +239,11 @@ export const dictionaries = {
         'Lines pull overlapping companies towards the center. Thicker lines and faster particles indicate heavier concentration weight.',
       fullscreen: 'Fullscreen',
       exitFullscreen: 'Exit Fullscreen',
+      weightInPortfolio: 'Weight in portfolio:',
+      totalEtfWeight: 'Total ETF Weight:',
+      displayMode: 'Display Mode',
+      overlapOnly: 'Overlap Only',
+      all: 'ALL',
     },
   },
   it: {
@@ -485,6 +490,11 @@ export const dictionaries = {
         'Le linee attirano verso il centro le società sovrapposte. Linee più spesse e particelle più veloci indicano un peso di concentrazione maggiore.',
       fullscreen: 'Schermo Intero',
       exitFullscreen: 'Esci da Schermo Intero',
+      weightInPortfolio: 'Peso nel portafoglio:',
+      totalEtfWeight: 'Peso totale ETF:',
+      displayMode: 'Modalità di Visualizzazione',
+      overlapOnly: 'Solo Sovrapposizioni',
+      all: 'TUTTI',
     },
   },
 };

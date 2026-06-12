@@ -3,15 +3,18 @@
 import React, { useRef, useEffect, useState, useMemo } from 'react';
 import ForceGraph3D from 'react-force-graph-3d';
 import SpriteText from 'three-spritetext';
+import * as THREE from 'three';
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 import { useTheme } from 'next-themes';
-import { EtfConfig } from '../../lib/types';
-import { generateNetworkData } from '../../lib/math';
-import { useTranslation } from '../../lib/i18n/LanguageContext';
+import { EtfConfig } from '@/lib/types';
+import { generateNetworkData } from '@/lib/math';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 interface NetworkGraphProps {
   etfs: EtfConfig[];
   limit: number[];
   livePhysics: boolean;
+  overlapOnly?: boolean;
 }
 
 interface NodeObj {
@@ -35,17 +38,34 @@ interface LinkObj {
   [key: string]: unknown;
 }
 
-export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
+// Helper to reliably extract the ID from a link's source or target,
+// as ForceGraph3D mutates them from strings into object references
+const getLinkId = (node: string | NodeObj | undefined): string | undefined =>
+  typeof node === 'object' && node !== null ? node.id : (node as string | undefined);
+
+export function NetworkGraph({ etfs, limit, livePhysics, overlapOnly }: NetworkGraphProps) {
   const { t } = useTranslation();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const fgRef = useRef<any>(null);
   const { resolvedTheme } = useTheme();
   const [dimensions, setDimensions] = useState({ width: 800, height: 450 });
   const [isSettling, setIsSettling] = useState(true);
+  const [hoverNode, setHoverNode] = useState<NodeObj | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const isExtremeVolume = limit[0] > 1000;
   const isHighVolume = limit[0] > 300;
+
+  // Set colors based on current theme early so effects can use them
+  const isCyberpunk = resolvedTheme === 'theme-cyberpunk';
+  const isCartoon = resolvedTheme === 'theme-cartoon';
+  const isProfessional = resolvedTheme === 'theme-professional';
+
+  const isDark = isCyberpunk;
+
+  let bgColor = '#09090b'; // Cyberpunk dark
+  if (isCartoon) bgColor = '#fdf6e3'; // Cartoon warm cream
+  if (isProfessional) bgColor = '#fcfcfc'; // Professional clean white
 
   const rawData = useMemo(() => generateNetworkData(etfs, limit[0]), [etfs, limit]);
 
@@ -53,11 +73,9 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
     const etfMap: Record<string, Set<string>> = {};
     rawData.links.forEach((l) => {
       const link = l as unknown as LinkObj;
-      const targetId =
-        typeof link.target === 'object' && link.target !== null ? link.target.id : link.target;
-      const sourceId =
-        typeof link.source === 'object' && link.source !== null ? link.source.id : link.source;
-      if (typeof targetId === 'string' && typeof sourceId === 'string') {
+      const targetId = getLinkId(link.target);
+      const sourceId = getLinkId(link.source);
+      if (targetId && sourceId) {
         if (!etfMap[targetId]) etfMap[targetId] = new Set();
         etfMap[targetId].add(sourceId);
       }
@@ -65,7 +83,36 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
     return new Set(Object.keys(etfMap).filter((k) => etfMap[k].size > 1));
   }, [rawData.links]);
 
-  const data = rawData;
+  const data = useMemo(() => {
+    if (!overlapOnly) return rawData;
+    const filteredNodes = rawData.nodes.filter((n) => {
+      const node = n as NodeObj;
+      return node.group === 'etf' || (node.id && sharedHoldings.has(node.id));
+    });
+    const nodeIds = new Set(filteredNodes.map((n) => (n as NodeObj).id));
+    const filteredLinks = rawData.links.filter((l) => {
+      const link = l as LinkObj;
+      const sourceId = getLinkId(link.source);
+      const targetId = getLinkId(link.target);
+      return sourceId && targetId && nodeIds.has(sourceId) && nodeIds.has(targetId);
+    });
+    return { nodes: filteredNodes, links: filteredLinks };
+  }, [rawData, overlapOnly, sharedHoldings]);
+
+  const neighbors = useMemo(() => {
+    const map = new Map<string, Set<string>>();
+    data.nodes.forEach((n) => map.set((n as NodeObj).id!, new Set()));
+    data.links.forEach((l) => {
+      const link = l as LinkObj;
+      const sourceId = getLinkId(link.source);
+      const targetId = getLinkId(link.target);
+      if (sourceId && targetId) {
+        map.get(sourceId)?.add(targetId);
+        map.get(targetId)?.add(sourceId);
+      }
+    });
+    return map;
+  }, [data]);
 
   // Whenever the data changes (e.g. slider moves), the physics engine will wake up to calculate the new graph
   useEffect(() => {
@@ -108,7 +155,7 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
     }
   }, [livePhysics]);
 
-  // Tweak physics engine dynamically based on node count
+  // Tweak physics engine dynamically based on node count and display mode
   useEffect(() => {
     // Delay tweaks slightly to ensure internal d3ForceLayout is fully instantiated
     const timer = setTimeout(() => {
@@ -119,19 +166,31 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
           if (centerForce) centerForce.strength(0);
 
           // Balance magnetic repulsion so holdings form a cloud but don't explode
+          // If overlapOnly is active, there are fewer nodes, so we need way more repulsion to prevent collapse
           const chargeForce = fgRef.current.d3Force('charge');
-          if (chargeForce) chargeForce.strength(isExtremeVolume ? -40 : isHighVolume ? -60 : -100);
+          if (chargeForce)
+            chargeForce.strength(
+              overlapOnly ? -300 : isExtremeVolume ? -40 : isHighVolume ? -60 : -100
+            );
 
           // Give the springs enough distance so holdings don't clump directly inside the ETF sphere
           const linkForce = fgRef.current.d3Force('link');
-          if (linkForce) linkForce.distance(isExtremeVolume ? 50 : isHighVolume ? 70 : 90);
+          if (linkForce)
+            linkForce.distance(overlapOnly ? 150 : isExtremeVolume ? 50 : isHighVolume ? 70 : 90);
 
           // Custom gravity force: pulls disconnected ETFs and flying nodes back to the dead center (0,0,0)
           fgRef.current.d3Force('gravity', (alpha: number) => {
             data.nodes.forEach((n) => {
               const node = n as unknown as NodeObj;
               // ETFs get pulled strongly to the center, holdings get pulled gently
-              const pullStrength = node.group === 'etf' ? 0.08 : 0.01;
+              // When overlapOnly is active, reduce gravity to let the graph breathe
+              const pullStrength = overlapOnly
+                ? node.group === 'etf'
+                  ? 0.02
+                  : 0.005
+                : node.group === 'etf'
+                  ? 0.08
+                  : 0.01;
               if (node.vx !== undefined && node.x !== undefined)
                 node.vx -= node.x * alpha * pullStrength;
               if (node.vy !== undefined && node.y !== undefined)
@@ -147,28 +206,110 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [data, isHighVolume, isExtremeVolume]);
+  }, [data, isHighVolume, isExtremeVolume, overlapOnly]);
 
-  // Set colors based on current theme
-  const isDark = resolvedTheme === 'theme-cyberpunk';
+  // Apply Bloom Post-Processing Effect safely
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let bloomPass: any = null;
+    const currentFg = fgRef.current;
+
+    // Slight delay to ensure the WebGL renderer and composer are fully initialized
+    const timer = setTimeout(() => {
+      if (currentFg) {
+        try {
+          const composer = currentFg.postProcessingComposer();
+          if (composer) {
+            // Check if it already has a bloom pass (handles Hot-Reloads safely)
+            const hasBloom = composer.passes.some(
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              (p: any) => p.constructor.name === 'UnrealBloomPass'
+            );
+
+            // Only apply Bloom in Dark themes!
+            if (isDark && !hasBloom) {
+              bloomPass = new UnrealBloomPass(
+                new THREE.Vector2(window.innerWidth, window.innerHeight),
+                0.02, // Extremely faint halo
+                0.4, // Uniform radius
+                0.2 // Low threshold
+              );
+              composer.addPass(bloomPass);
+            }
+          }
+        } catch {
+          // ignore
+        }
+      }
+    }, 200);
+
+    return () => {
+      clearTimeout(timer);
+      if (bloomPass) {
+        if (currentFg) {
+          try {
+            const composer = currentFg.postProcessingComposer();
+            if (composer) {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              composer.passes = composer.passes.filter((p: any) => p !== bloomPass);
+            }
+          } catch {
+            // ignore
+          }
+        }
+        // Dispose memory asynchronously to prevent crashing the active render loop during unmount
+        setTimeout(() => {
+          try {
+            if (typeof bloomPass.dispose === 'function') bloomPass.dispose();
+          } catch {
+            // ignore
+          }
+        }, 500);
+      }
+    };
+  }, [resolvedTheme, isDark]);
+
+  // Apply even lighting so spheres bloom on all sides
+  useEffect(() => {
+    let ambientLight: THREE.AmbientLight | null = null;
+    const currentFg = fgRef.current;
+
+    const timer = setTimeout(() => {
+      if (currentFg) {
+        const scene = currentFg.scene();
+        // Add strong ambient light so the Lambert material is illuminated evenly.
+        ambientLight = new THREE.AmbientLight(0xffffff, 2.5);
+        scene.add(ambientLight);
+      }
+    }, 200);
+
+    return () => {
+      clearTimeout(timer);
+      if (currentFg && ambientLight) {
+        currentFg.scene().remove(ambientLight);
+      }
+    };
+  }, []);
 
   // Custom colors for nodes
-  const etfColor = isDark ? '#22d3ee' : '#2563eb'; // Cyan vs Blue
-  const holdingColor = isDark ? '#f472b6' : '#db2777'; // Pink
-  const linkColor = isExtremeVolume
+  // In Light themes, we use vibrant colors (instead of black/dark) so they emit enough light to bloom in WebGL,
+  // while still being dark enough to be visible against the white CSS background.
+  const etfColor = isDark ? '#22d3ee' : '#3b82f6'; // Cyan vs Blue
+  const holdingColor = isDark ? '#f472b6' : '#ec4899'; // Pink-400 vs Pink-500
+  const defaultLinkColor = isExtremeVolume
     ? isDark
       ? '#333333'
-      : '#e5e7eb' // Solid colors remove expensive GPU alpha blending
+      : '#94a3b8' // Slate-400 (bright enough to bloom, dark enough for white bg)
     : isDark
       ? 'rgba(255, 255, 255, 0.4)'
-      : 'rgba(0, 0, 0, 0.4)';
+      : 'rgba(99, 102, 241, 0.4)'; // Indigo-500 links instead of black!
 
   if (!data || data.nodes.length === 0) return null;
 
   return (
     <div
       ref={containerRef}
-      className="w-full h-[600px] relative rounded-xl overflow-hidden bg-background"
+      className="w-full h-150 relative rounded-xl overflow-hidden bg-background"
     >
       <ForceGraph3D
         ref={fgRef}
@@ -177,9 +318,32 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
         graphData={data}
         cooldownTicks={livePhysics ? Infinity : 100}
         enableNodeDrag={livePhysics}
-        nodeLabel="name"
+        onNodeHover={(node) => setHoverNode((node as NodeObj) || null)}
+        nodeLabel={(node) => {
+          const n = node as NodeObj;
+          let html = `<div style="background: rgba(0,0,0,0.8); padding: 8px; border-radius: 8px; color: white; font-family: sans-serif; pointer-events: none;">`;
+          html += `<div style="font-weight: bold; margin-bottom: 4px;">${n.name || n.id}</div>`;
+          if (n.group === 'holding' && n.val !== undefined) {
+            html += `<div style="font-size: 12px; opacity: 0.8;">${t.threeDVisuals.weightInPortfolio} <strong style="color: #f472b6;">${n.val.toFixed(2)}%</strong></div>`;
+          }
+          if (n.group === 'etf' && n.val !== undefined) {
+            html += `<div style="font-size: 12px; opacity: 0.8;">${t.threeDVisuals.totalEtfWeight} <strong style="color: #22d3ee;">${n.val.toFixed(2)}%</strong></div>`;
+          }
+          html += `</div>`;
+          return html;
+        }}
         nodeAutoColorBy="group"
-        nodeColor={(node) => ((node as NodeObj).group === 'etf' ? etfColor : holdingColor)}
+        nodeColor={(node) => {
+          const n = node as NodeObj;
+          const isHovered = hoverNode === n;
+          const isNeighbor = hoverNode && n.id && neighbors.get(hoverNode.id!)?.has(n.id!);
+          const color = n.group === 'etf' ? etfColor : holdingColor;
+
+          if (hoverNode && !isHovered && !isNeighbor) {
+            return isDark ? 'rgba(50,50,50,0.3)' : 'rgba(200,200,200,0.3)';
+          }
+          return color;
+        }}
         nodeVal={(node) => {
           const n = node as NodeObj;
           // We want the sphere's visual RADIUS to scale based on the percentage of the total portfolio (node.val).
@@ -215,8 +379,16 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
         nodeThreeObject={
           ((node: object) => {
             const n = node as NodeObj;
+
+            // Hover logic: hide unrelated labels
+            const isHovered = hoverNode === n;
+            const isNeighbor = hoverNode && n.id && neighbors.get(hoverNode.id!)?.has(n.id!);
+            if (hoverNode && !isHovered && !isNeighbor) return null;
+
             // Render labels only for ETFs or shared holdings
             if (n.name && (n.group === 'etf' || (n.id && sharedHoldings.has(n.id)))) {
+              // LOD: we could check camera distance here if we wanted, but for now we'll
+              // just let the user hover to see rich tooltips, and keep sprites for major nodes.
               const sprite = new SpriteText(n.name);
               sprite.color = isDark ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.9)';
 
@@ -252,8 +424,20 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
           return true;
         }}
         linkWidth={(link) => Math.max(0.5, Math.sqrt((link as LinkObj).value || 0) * 1.5)}
-        linkColor={() => linkColor}
-        linkOpacity={isExtremeVolume ? 1 : 0.4}
+        linkColor={(link) => {
+          const l = link as LinkObj;
+          const sourceId = typeof l.source === 'object' ? (l.source as NodeObj).id : l.source;
+          const targetId = typeof l.target === 'object' ? (l.target as NodeObj).id : l.target;
+
+          if (hoverNode) {
+            if (sourceId === hoverNode.id || targetId === hoverNode.id) {
+              return isDark ? '#ffffff' : '#000000'; // High contrast for focused links
+            }
+            return 'rgba(0,0,0,0.02)'; // Fade out other links
+          }
+          return defaultLinkColor;
+        }}
+        linkOpacity={hoverNode ? 1 : isExtremeVolume ? 1 : 0.4}
         linkDirectionalParticles={(link) => {
           const l = link as LinkObj;
           if (isHighVolume) {
@@ -267,7 +451,7 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
           Math.max(1.5, Math.sqrt((link as LinkObj).value || 0))
         }
         linkDirectionalParticleSpeed={(link) => ((link as LinkObj).value || 0) * 0.0005 + 0.005}
-        backgroundColor="rgba(0,0,0,0)" // Transparent to let tailwind bg show
+        backgroundColor={bgColor} // Solid color derived exactly from the CSS theme
         showNavInfo={false}
       />
       <div className="absolute top-4 left-4 pointer-events-none bg-background/90 backdrop-blur-md px-4 py-3 rounded-xl border border-border shadow-lg flex flex-col gap-3 min-w-70">
