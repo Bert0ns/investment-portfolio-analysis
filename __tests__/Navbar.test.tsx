@@ -5,11 +5,16 @@ import { useTranslation } from '../lib/i18n/LanguageContext';
 // Mock dependencies
 jest.mock('next/link', () => ({
   __esModule: true,
-  default: ({ children, href }: any) => <a href={href}>{children}</a>,
+  default: ({ children, href }: { children: React.ReactNode; href: string }) => (
+    <a href={href}>{children}</a>
+  ),
 }));
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: any) => <img {...props} />,
+  // eslint-disable-next-line @next/next/no-img-element
+  default: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    <img alt={props.alt || 'mocked image'} {...props} />
+  ),
 }));
 jest.mock('../components/ThemeSwitcher', () => ({
   ThemeSwitcher: () => <div data-testid="theme-switcher" />,

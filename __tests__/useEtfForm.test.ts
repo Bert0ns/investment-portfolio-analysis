@@ -1,3 +1,4 @@
+import React from 'react';
 import { renderHook, act } from '@testing-library/react';
 import { useEtfForm } from '../hooks/useEtfForm';
 import { toast } from 'sonner';
@@ -74,7 +75,9 @@ describe('useEtfForm', () => {
     const { result } = renderHook(() => useEtfForm(mockOnAddEtf));
 
     await act(async () => {
-      await result.current.actions.handleSubmit({ preventDefault: jest.fn() } as any);
+      await result.current.actions.handleSubmit({
+        preventDefault: jest.fn(),
+      } as unknown as React.FormEvent<HTMLFormElement>);
     });
 
     expect(toast.error).toHaveBeenCalledWith('missingFields', expect.any(Object));
@@ -93,7 +96,9 @@ describe('useEtfForm', () => {
     });
 
     await act(async () => {
-      await result.current.actions.handleSubmit({ preventDefault: jest.fn() } as any);
+      await result.current.actions.handleSubmit({
+        preventDefault: jest.fn(),
+      } as unknown as React.FormEvent<HTMLFormElement>);
     });
 
     expect(toast.error).toHaveBeenCalledWith('invalidTer', expect.any(Object));
@@ -116,7 +121,9 @@ describe('useEtfForm', () => {
     });
 
     await act(async () => {
-      await result.current.actions.handleSubmit({ preventDefault: jest.fn() } as any);
+      await result.current.actions.handleSubmit({
+        preventDefault: jest.fn(),
+      } as unknown as React.FormEvent<HTMLFormElement>);
     });
 
     expect(toast.error).toHaveBeenCalledWith(
@@ -154,7 +161,9 @@ describe('useEtfForm', () => {
     });
 
     await act(async () => {
-      await result.current.actions.handleSubmit({ preventDefault: jest.fn() } as any);
+      await result.current.actions.handleSubmit({
+        preventDefault: jest.fn(),
+      } as unknown as React.FormEvent<HTMLFormElement>);
     });
 
     expect(mockOnAddEtf).toHaveBeenCalledWith(

@@ -2,6 +2,7 @@ import { renderHook, act, waitFor } from '@testing-library/react';
 import { usePortfolio } from '../hooks/usePortfolio';
 import { getItem } from '../lib/indexeddb';
 import { LanguageProvider } from '../lib/i18n/LanguageContext';
+import { toast } from 'sonner';
 
 jest.mock('../lib/indexeddb', () => ({
   getItem: jest.fn(),
@@ -193,8 +194,6 @@ describe('usePortfolio Hook', () => {
   it('shows error toast when storage throws an error', async () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     (getItem as jest.Mock).mockRejectedValue(new Error('IndexedDB Error'));
-
-    const { toast } = require('sonner');
 
     const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
 
