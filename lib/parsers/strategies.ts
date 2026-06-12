@@ -93,7 +93,7 @@ const PARSER_CONFIGS: Record<string, ParserConfig> = {
       weight: ['Ponderazione (%)', 'Weight (%)', 'Peso (%)'],
       sector: ['Settore', 'Sector'],
       country: ['Area Geografica', 'Location', 'Paese'],
-      currency: ['Valuta di mercato', 'Currency', 'Valuta'],
+      currency: ['Valuta di mercato', 'Currency', 'Valuta', 'Exchange'],
     },
   },
   Vanguard: {

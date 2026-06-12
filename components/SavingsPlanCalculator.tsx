@@ -3,9 +3,8 @@
 import React from 'react';
 import { EtfConfig } from '../lib/types';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
-import { Slider } from './ui/slider';
-import { Input } from './ui/input';
 import { useSavingsPlan } from '../hooks/useSavingsPlan';
+import { SettingsSlider } from './SettingsSlider';
 import {
   AreaChart,
   Area,
@@ -236,145 +235,81 @@ export function SavingsPlanCalculator({ etfs, totalWeight }: SavingsPlanCalculat
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-8">
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-foreground">
-                    {t.savingsPlan.initialInvestment}
-                  </label>
-                  <div className="relative w-28">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm font-bold">
-                      $
-                    </span>
-                    <Input
-                      type="number"
-                      value={initialInvestment}
-                      onChange={(e) => setInitialInvestment(Number(e.target.value) || 0)}
-                      className="h-8 pl-6 pr-2 text-right font-bold text-primary bg-primary/10 border-primary/20 focus-visible:ring-primary/30"
-                    />
-                  </div>
-                </div>
-                <Slider
-                  value={[initialInvestment]}
-                  max={100000}
-                  step={1000}
-                  onValueChange={(val) => setInitialInvestment(Array.isArray(val) ? val[0] : val)}
-                  className="py-1"
-                />
-              </div>
+              <SettingsSlider
+                label={t.savingsPlan.initialInvestment}
+                value={initialInvestment}
+                onChange={setInitialInvestment}
+                max={100000}
+                step={1000}
+                prefix={
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm font-bold">
+                    $
+                  </span>
+                }
+              />
 
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-foreground">
-                    {t.savingsPlan.monthlyContribution}
-                  </label>
-                  <div className="relative w-28">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm font-bold">
-                      $
-                    </span>
-                    <Input
-                      type="number"
-                      value={monthlyContribution}
-                      onChange={(e) => setMonthlyContribution(Number(e.target.value) || 0)}
-                      className="h-8 pl-6 pr-2 text-right font-bold text-primary bg-primary/10 border-primary/20 focus-visible:ring-primary/30"
-                    />
-                  </div>
-                </div>
-                <Slider
-                  value={[monthlyContribution]}
-                  max={5000}
-                  step={50}
-                  onValueChange={(val) => setMonthlyContribution(Array.isArray(val) ? val[0] : val)}
-                  className="py-1"
-                />
-              </div>
+              <SettingsSlider
+                label={t.savingsPlan.monthlyContribution}
+                value={monthlyContribution}
+                onChange={setMonthlyContribution}
+                max={5000}
+                step={50}
+                prefix={
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm font-bold">
+                    $
+                  </span>
+                }
+              />
 
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-foreground">
-                    {t.savingsPlan.duration}
-                  </label>
-                  <div className="relative w-24">
-                    <Input
-                      type="number"
-                      value={years}
-                      onChange={(e) => setYears(Number(e.target.value) || 0)}
-                      className="h-8 pr-10 text-right font-bold text-primary bg-primary/10 border-primary/20 focus-visible:ring-primary/30"
-                    />
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground text-xs font-bold pointer-events-none">
-                      {t.savingsPlan.yearsShort}
-                    </span>
-                  </div>
-                </div>
-                <Slider
-                  value={[years]}
-                  max={40}
-                  step={1}
-                  onValueChange={(val) => setYears(Array.isArray(val) ? val[0] : val)}
-                  className="py-1"
-                />
-              </div>
+              <SettingsSlider
+                label={t.savingsPlan.duration}
+                value={years}
+                onChange={setYears}
+                max={40}
+                step={1}
+                inputWidth="w-24"
+                inputClassName="h-8 pr-10 text-right font-bold text-primary bg-primary/10 border-primary/20 focus-visible:ring-primary/30"
+                suffix={
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground text-xs font-bold pointer-events-none">
+                    {t.savingsPlan.yearsShort}
+                  </span>
+                }
+              />
 
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-foreground">
-                    {t.savingsPlan.expectedReturn}
-                  </label>
-                  <div className="relative w-20">
-                    <Input
-                      type="number"
-                      value={expectedReturn}
-                      onChange={(e) => setExpectedReturn(Number(e.target.value) || 0)}
-                      className="h-8 pr-6 text-right font-bold text-emerald-600 bg-emerald-500/10 border-emerald-500/20 focus-visible:ring-emerald-500/30"
-                    />
-                    <span className="absolute right-2 top-1/2 -translate-y-1/2 text-emerald-600 text-xs font-bold pointer-events-none">
-                      %
-                    </span>
-                  </div>
-                </div>
-                <Slider
-                  value={[expectedReturn]}
-                  max={15}
-                  step={0.5}
-                  onValueChange={(val) => setExpectedReturn(Array.isArray(val) ? val[0] : val)}
-                  className="py-1 [&_[role=slider]]:border-emerald-500 [&_.bg-primary]:bg-emerald-500"
-                />
-                <p className="text-[10px] text-muted-foreground mt-1">
-                  {t.savingsPlan.historicalAverage}
-                </p>
-              </div>
+              <SettingsSlider
+                label={t.savingsPlan.expectedReturn}
+                value={expectedReturn}
+                onChange={setExpectedReturn}
+                max={15}
+                step={0.5}
+                inputWidth="w-20"
+                inputClassName="h-8 pr-6 text-right font-bold text-emerald-600 bg-emerald-500/10 border-emerald-500/20 focus-visible:ring-emerald-500/30"
+                sliderClassName="py-1 [&_[role=slider]]:border-emerald-500 [&_.bg-primary]:bg-emerald-500"
+                suffix={
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 text-emerald-600 text-xs font-bold pointer-events-none">
+                    %
+                  </span>
+                }
+                description={t.savingsPlan.historicalAverage}
+              />
 
-              <div className="space-y-3 pt-4 border-t border-dashed">
-                <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-foreground">
-                    {t.savingsPlan.stopContributingAfter}
-                  </label>
-                  <div className="relative w-24">
-                    <Input
-                      type="number"
-                      value={clampedStopMonths}
-                      onChange={(e) => setStopAccumulatingMonths(Number(e.target.value) || 0)}
-                      className="h-8 pr-9 text-right font-bold text-blue-600 bg-blue-500/10 border-blue-500/20 focus-visible:ring-blue-500/30"
-                    />
-                    <span className="absolute right-2 top-1/2 -translate-y-1/2 text-blue-600 text-xs font-bold pointer-events-none">
-                      {t.savingsPlan.monthsShort}
-                    </span>
-                  </div>
-                </div>
-                <Slider
-                  value={[clampedStopMonths]}
-                  max={years * 12}
-                  step={1}
-                  onValueChange={(val) =>
-                    setStopAccumulatingMonths(Array.isArray(val) ? val[0] : val)
-                  }
-                  className="py-1 [&_[role=slider]]:border-blue-500 [&_.bg-primary]:bg-blue-500"
-                />
-                <p className="text-[10px] text-muted-foreground mt-1">
-                  {t.savingsPlan.freezeInvestments} {Math.floor(clampedStopMonths / 12)}{' '}
-                  {t.savingsPlan.years.toLowerCase()} {t.savingsPlan.duration ? 'e' : 'and'}{' '}
-                  {clampedStopMonths % 12} {t.savingsPlan.months}
-                </p>
-              </div>
+              <SettingsSlider
+                label={t.savingsPlan.stopContributingAfter}
+                value={clampedStopMonths}
+                onChange={setStopAccumulatingMonths}
+                max={years * 12}
+                step={1}
+                wrapperClassName="space-y-3 pt-4 border-t border-dashed"
+                inputWidth="w-24"
+                inputClassName="h-8 pr-9 text-right font-bold text-blue-600 bg-blue-500/10 border-blue-500/20 focus-visible:ring-blue-500/30"
+                sliderClassName="py-1 [&_[role=slider]]:border-blue-500 [&_.bg-primary]:bg-blue-500"
+                suffix={
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 text-blue-600 text-xs font-bold pointer-events-none">
+                    {t.savingsPlan.monthsShort}
+                  </span>
+                }
+                description={`${t.savingsPlan.freezeInvestments} ${Math.floor(clampedStopMonths / 12)} ${t.savingsPlan.years.toLowerCase()} ${t.savingsPlan.duration ? 'e' : 'and'} ${clampedStopMonths % 12} ${t.savingsPlan.months}`}
+              />
             </CardContent>
           </Card>
         </div>

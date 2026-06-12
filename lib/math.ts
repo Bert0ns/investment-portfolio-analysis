@@ -188,38 +188,27 @@ export function searchHoldings(etfs: EtfConfig[], query: string): HoldingSearchR
       const matchTicker =
         holding.ticker !== 'N/A' && holding.ticker.toLowerCase().includes(lowerQuery);
 
-      if (matchName || matchTicker) {
-        // Decide the grouping key: Prefer Ticker if valid, otherwise fallback to Name
-        const key = holding.ticker !== 'N/A' ? holding.ticker : holding.name;
+      if (!matchName && !matchTicker) continue;
 
-        if (!resultsMap.has(key)) {
-          resultsMap.set(key, {
-            ticker: holding.ticker,
-            name: holding.name,
-            totalWeight: 0,
-            breakdown: [],
-          });
-        }
+      const key = holding.ticker !== 'N/A' ? holding.ticker : holding.name;
 
-        const result = resultsMap.get(key)!;
-        const contribution = holding.weight * globalMultiplier;
-
-        result.totalWeight += contribution;
-
-        // Find if this ETF is already in the breakdown
-        const existingBreakdown = result.breakdown.find((b) => b.etfId === etf.id);
-        if (existingBreakdown) {
-          existingBreakdown.contribution += contribution;
-          existingBreakdown.internalWeight += holding.weight;
-        } else {
-          result.breakdown.push({
-            etfId: etf.id,
-            etfName: etf.name,
-            contribution: contribution,
-            internalWeight: holding.weight,
-          });
-        }
+      let result = resultsMap.get(key);
+      if (!result) {
+        result = { ticker: holding.ticker, name: holding.name, totalWeight: 0, breakdown: [] };
+        resultsMap.set(key, result);
       }
+
+      const contribution = holding.weight * globalMultiplier;
+      result.totalWeight += contribution;
+
+      let breakdown = result.breakdown.find((b) => b.etfId === etf.id);
+      if (!breakdown) {
+        breakdown = { etfId: etf.id, etfName: etf.name, contribution: 0, internalWeight: 0 };
+        result.breakdown.push(breakdown);
+      }
+
+      breakdown.contribution += contribution;
+      breakdown.internalWeight += holding.weight;
     }
   }
 

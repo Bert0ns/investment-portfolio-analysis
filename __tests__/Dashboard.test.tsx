@@ -1,14 +1,14 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Dashboard from '../components/Dashboard';
-import { EtfConfig } from '../lib/types';
+import Dashboard from '@/components/Dashboard';
+import { EtfConfig } from '@/lib/types';
 
-jest.mock('../lib/i18n/LanguageContext', () => ({
+jest.mock('@/lib/i18n/LanguageContext', () => ({
   useTranslation: () => ({
     language: 'en',
     setLanguage: jest.fn(),
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    t: require('../lib/i18n/dictionaries').dictionaries.en,
+    t: require('@/lib/i18n/dictionaries').dictionaries.en,
   }),
 }));
 

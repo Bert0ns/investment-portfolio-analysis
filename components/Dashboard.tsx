@@ -59,27 +59,23 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
     );
   }
 
-  const tabs: Array<
-    'Overview' | 'Deep Dive' | '3D Visuals' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'
-  > = ['Overview', 'Fund Details', 'Risk Analysis', 'Deep Dive', '3D Visuals', 'Savings Plan'];
+  const tabs = [
+    'Overview',
+    'Fund Details',
+    'Risk Analysis',
+    'Deep Dive',
+    '3D Visuals',
+    'Savings Plan',
+  ] as const;
+  type TabType = (typeof tabs)[number];
 
-  const renderTabName = (tab: string) => {
-    switch (tab) {
-      case 'Overview':
-        return t.overviewTab.tabOverview;
-      case 'Deep Dive':
-        return t.overviewTab.tabDeepDive;
-      case 'Fund Details':
-        return t.overviewTab.tabFundDetails;
-      case 'Risk Analysis':
-        return t.overviewTab.tabRiskAnalysis;
-      case 'Savings Plan':
-        return t.overviewTab.tabSavingsPlan;
-      case '3D Visuals':
-        return t.overviewTab.tab3DVisuals;
-      default:
-        return tab;
-    }
+  const tabNames: Record<TabType, string> = {
+    Overview: t.overviewTab.tabOverview,
+    'Deep Dive': t.overviewTab.tabDeepDive,
+    'Fund Details': t.overviewTab.tabFundDetails,
+    'Risk Analysis': t.overviewTab.tabRiskAnalysis,
+    'Savings Plan': t.overviewTab.tabSavingsPlan,
+    '3D Visuals': t.overviewTab.tab3DVisuals,
   };
 
   return (
@@ -132,7 +128,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
           <SelectContent>
             {tabs.map((tab) => (
               <SelectItem key={tab} value={tab} className="text-base py-3">
-                {renderTabName(tab)}
+                {tabNames[tab]}
               </SelectItem>
             ))}
           </SelectContent>
@@ -149,7 +145,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
                 : 'text-muted-foreground hover:text-foreground hover:bg-muted/80 scale-95 hover:scale-100'
             }`}
           >
-            {renderTabName(tab)}
+            {tabNames[tab]}
           </button>
         ))}
       </div>
