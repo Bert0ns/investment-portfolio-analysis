@@ -19,6 +19,96 @@ interface PortfolioSlidersProps {
   onAddEtf: (etf: EtfConfig) => void;
 }
 
+function EmptyPortfolioState({
+  onAddEtf,
+  onReset,
+}: {
+  onAddEtf: (etf: EtfConfig) => void;
+  onReset: () => void;
+}) {
+  const { t } = useTranslation();
+  return (
+    <Card className="flex-1 w-full flex flex-col items-center justify-center text-center min-h-75 border-dashed">
+      <CardContent className="pt-6">
+        <p className="font-medium text-muted-foreground">{t.portfolioSliders.noEtfsAdded}</p>
+        <p className="text-sm mt-1 text-muted-foreground/80 mb-6">
+          {t.portfolioSliders.uploadCsvToStart}
+        </p>
+        <EtfForm onAddEtf={onAddEtf} />
+        <Button
+          onClick={onReset}
+          variant="outline"
+          className="w-full mt-3 flex items-center justify-center gap-2"
+        >
+          <RotateCcw size={16} />
+          {t.portfolioSliders.loadDefaultPortfolio}
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
+
+function WeightValidation({ totalWeight, onReset }: { totalWeight: number; onReset: () => void }) {
+  const { t } = useTranslation();
+  const isOverweight = totalWeight > 100;
+  const isUnderweight = totalWeight < 100;
+
+  return (
+    <div className="pt-0 border-t">
+      <div className="flex justify-between items-end mb-0">
+        <span className="text-sm font-medium text-muted-foreground">
+          {t.portfolioSliders.totalAllocation}
+        </span>
+        <span
+          className={`text-2xl font-bold ${
+            isOverweight
+              ? 'text-destructive'
+              : isUnderweight
+                ? 'text-amber-500'
+                : 'text-emerald-600'
+          }`}
+        >
+          {totalWeight.toFixed(1)}%
+        </span>
+      </div>
+
+      <div className="h-2 w-full bg-secondary rounded-full overflow-hidden flex">
+        <div
+          className={`h-full transition-all duration-300 ${
+            isOverweight ? 'bg-destructive' : isUnderweight ? 'bg-amber-400' : 'bg-emerald-500'
+          }`}
+          style={{ width: `${Math.min(totalWeight, 100)}%` }}
+        />
+      </div>
+
+      <div className="mt-2 text-xs text-center text-muted-foreground min-h-4">
+        {isOverweight && t.portfolioSliders.exceeds100}
+        {isUnderweight &&
+          `${t.portfolioSliders.youHave}${(100 - totalWeight).toFixed(1)}% ${t.portfolioSliders.leftToAllocate}`}
+        {!isOverweight && !isUnderweight && t.portfolioSliders.perfectlyAllocated}
+      </div>
+
+      <div className="mt-2">
+        <Button
+          variant="outline"
+          className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/10 border-dashed"
+          onClick={() => {
+            if (window.confirm(t.portfolioSliders.resetWarning)) {
+              onReset();
+            }
+          }}
+        >
+          <RotateCcw size={14} className="mr-2" />
+          {t.portfolioSliders.resetToDefault}
+        </Button>
+        <p className="text-[10px] text-center text-muted-foreground mt-2 opacity-70">
+          {t.portfolioSliders.noteDeleteConfig}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function EtfSliderRow({
   etf,
   onUpdateWeight,
@@ -98,32 +188,9 @@ export default function PortfolioSliders({
   onReset,
   onAddEtf,
 }: PortfolioSlidersProps) {
-  const { t } = useTranslation();
-
   if (etfs.length === 0) {
-    return (
-      <Card className="flex-1 w-full flex flex-col items-center justify-center text-center min-h-75 border-dashed">
-        <CardContent className="pt-6">
-          <p className="font-medium text-muted-foreground">{t.portfolioSliders.noEtfsAdded}</p>
-          <p className="text-sm mt-1 text-muted-foreground/80 mb-6">
-            {t.portfolioSliders.uploadCsvToStart}
-          </p>
-          <EtfForm onAddEtf={onAddEtf} />
-          <Button
-            onClick={onReset}
-            variant="outline"
-            className="w-full mt-3 flex items-center justify-center gap-2"
-          >
-            <RotateCcw size={16} />
-            {t.portfolioSliders.loadDefaultPortfolio}
-          </Button>
-        </CardContent>
-      </Card>
-    );
+    return <EmptyPortfolioState onAddEtf={onAddEtf} onReset={onReset} />;
   }
-
-  const isOverweight = totalWeight > 100;
-  const isUnderweight = totalWeight < 100;
 
   return (
     <Card className="flex-1 w-full flex flex-col min-h-0">
@@ -142,59 +209,7 @@ export default function PortfolioSliders({
           ))}
         </div>
 
-        {/* Total Weight Validation */}
-        <div className="pt-0 border-t">
-          <div className="flex justify-between items-end mb-0">
-            <span className="text-sm font-medium text-muted-foreground">
-              {t.portfolioSliders.totalAllocation}
-            </span>
-            <span
-              className={`text-2xl font-bold ${
-                isOverweight
-                  ? 'text-destructive'
-                  : isUnderweight
-                    ? 'text-amber-500'
-                    : 'text-emerald-600'
-              }`}
-            >
-              {totalWeight.toFixed(1)}%
-            </span>
-          </div>
-
-          <div className="h-2 w-full bg-secondary rounded-full overflow-hidden flex">
-            <div
-              className={`h-full transition-all duration-300 ${
-                isOverweight ? 'bg-destructive' : isUnderweight ? 'bg-amber-400' : 'bg-emerald-500'
-              }`}
-              style={{ width: `${Math.min(totalWeight, 100)}%` }}
-            />
-          </div>
-
-          <div className="mt-2 text-xs text-center text-muted-foreground min-h-4">
-            {isOverweight && t.portfolioSliders.exceeds100}
-            {isUnderweight &&
-              `${t.portfolioSliders.youHave}${(100 - totalWeight).toFixed(1)}% ${t.portfolioSliders.leftToAllocate}`}
-            {!isOverweight && !isUnderweight && t.portfolioSliders.perfectlyAllocated}
-          </div>
-
-          <div className="mt-2">
-            <Button
-              variant="outline"
-              className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/10 border-dashed"
-              onClick={() => {
-                if (window.confirm(t.portfolioSliders.resetWarning)) {
-                  onReset();
-                }
-              }}
-            >
-              <RotateCcw size={14} className="mr-2" />
-              {t.portfolioSliders.resetToDefault}
-            </Button>
-            <p className="text-[10px] text-center text-muted-foreground mt-2 opacity-70">
-              {t.portfolioSliders.noteDeleteConfig}
-            </p>
-          </div>
-        </div>
+        <WeightValidation totalWeight={totalWeight} onReset={onReset} />
       </CardContent>
     </Card>
   );
