@@ -4,13 +4,14 @@ import { useTranslation } from '../../lib/i18n/LanguageContext';
 import { Label } from '../ui/label';
 import { Slider } from '../ui/slider';
 import { Switch } from '../ui/switch';
+import { Maximize2, Minimize2 } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
 const ExposureGlobe = dynamic(
   () => import('../charts/ExposureGlobe').then((mod) => mod.ExposureGlobe),
   {
     ssr: false,
-    loading: () => <div className="h-112.5 bg-card animate-pulse border border-border" />,
+    loading: () => <div className="h-[600px] bg-card animate-pulse border border-border" />,
   }
 );
 
@@ -18,16 +19,18 @@ const NetworkGraph = dynamic(
   () => import('../charts/NetworkGraph').then((mod) => mod.NetworkGraph),
   {
     ssr: false,
-    loading: () => <div className="h-112.5 bg-card animate-pulse border border-border" />,
+    loading: () => <div className="h-[600px] bg-card animate-pulse border border-border" />,
   }
 );
 
 interface VisualsTabProps {
   etfs: EtfConfig[];
   geoData: { name: string; value: number }[];
+  isFullscreen?: boolean;
+  onToggleFullscreen?: () => void;
 }
 
-export function VisualsTab({ etfs, geoData }: VisualsTabProps) {
+export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: VisualsTabProps) {
   const { t } = useTranslation();
   const [active3DVisual, setActive3DVisual] = useState<'Globe' | 'Network'>('Globe');
   const [networkLimit, setNetworkLimit] = useState<number[]>([100]);
@@ -46,7 +49,7 @@ export function VisualsTab({ etfs, geoData }: VisualsTabProps) {
 
   return (
     <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300 animate-in fade-in bg-card border border-border rounded-xl p-4 shadow-sm">
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-end mb-4 gap-3">
         <div className="bg-muted p-1 rounded-lg inline-flex">
           <button
             onClick={() => setActive3DVisual('Globe')}
@@ -61,6 +64,15 @@ export function VisualsTab({ etfs, geoData }: VisualsTabProps) {
             {t.overviewTab.concentrationNetwork}
           </button>
         </div>
+        {onToggleFullscreen && (
+          <button
+            onClick={onToggleFullscreen}
+            className="p-2 bg-muted/50 hover:bg-primary/10 text-muted-foreground hover:text-primary rounded-lg transition-colors border border-border hover:border-primary/30 flex items-center justify-center"
+            title={isFullscreen ? t.threeDVisuals.exitFullscreen : t.threeDVisuals.fullscreen}
+          >
+            {isFullscreen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
+          </button>
+        )}
       </div>
       {active3DVisual === 'Globe' ? (
         <ExposureGlobe data={geoData} />

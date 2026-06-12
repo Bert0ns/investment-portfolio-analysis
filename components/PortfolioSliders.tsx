@@ -4,10 +4,11 @@ import React from 'react';
 import { EtfConfig } from '../lib/types';
 import { Trash2, RotateCcw } from 'lucide-react';
 
-import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
+import { Card, CardContent } from './ui/card';
 import { Slider } from './ui/slider';
 import { Button } from './ui/button';
 import { useTranslation } from '../lib/i18n/LanguageContext';
+import EtfForm from './EtfForm';
 
 interface PortfolioSlidersProps {
   etfs: EtfConfig[];
@@ -15,6 +16,7 @@ interface PortfolioSlidersProps {
   onUpdateWeight: (id: string, weight: number) => void;
   onRemove: (id: string) => void;
   onReset: () => void;
+  onAddEtf: (etf: EtfConfig) => void;
 }
 
 function EtfSliderRow({
@@ -94,18 +96,24 @@ export default function PortfolioSliders({
   onUpdateWeight,
   onRemove,
   onReset,
+  onAddEtf,
 }: PortfolioSlidersProps) {
   const { t } = useTranslation();
 
   if (etfs.length === 0) {
     return (
-      <Card className="h-full flex flex-col items-center justify-center text-center min-h-75 border-dashed">
+      <Card className="flex-1 w-full flex flex-col items-center justify-center text-center min-h-75 border-dashed">
         <CardContent className="pt-6">
           <p className="font-medium text-muted-foreground">{t.portfolioSliders.noEtfsAdded}</p>
-          <p className="text-sm mt-1 text-muted-foreground/80">
+          <p className="text-sm mt-1 text-muted-foreground/80 mb-6">
             {t.portfolioSliders.uploadCsvToStart}
           </p>
-          <Button onClick={onReset} variant="outline" className="mt-6 flex items-center gap-2">
+          <EtfForm onAddEtf={onAddEtf} />
+          <Button
+            onClick={onReset}
+            variant="outline"
+            className="w-full mt-3 flex items-center justify-center gap-2"
+          >
             <RotateCcw size={16} />
             {t.portfolioSliders.loadDefaultPortfolio}
           </Button>
@@ -118,13 +126,12 @@ export default function PortfolioSliders({
   const isUnderweight = totalWeight < 100;
 
   return (
-    <Card className="h-full flex flex-col min-h-75">
-      <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <CardTitle>{t.portfolioSliders.portfolioWeights}</CardTitle>
-      </CardHeader>
-
-      <CardContent className="flex-1 flex flex-col pt-0 space-y-6">
-        <div className="flex-1 space-y-6 pr-2">
+    <Card className="flex-1 w-full flex flex-col min-h-0">
+      <CardContent className="flex-1 flex flex-col pt-0 space-y-6 min-h-0">
+        <div className="pt-0">
+          <EtfForm onAddEtf={onAddEtf} />
+        </div>
+        <div className="flex-1 overflow-y-auto space-y-6 pr-4 pb-4 scrollbar-thin scrollbar-thumb-primary/20">
           {etfs.map((etf) => (
             <EtfSliderRow
               key={etf.id}
@@ -136,8 +143,8 @@ export default function PortfolioSliders({
         </div>
 
         {/* Total Weight Validation */}
-        <div className="pt-6 mt-auto border-t">
-          <div className="flex justify-between items-end mb-2">
+        <div className="pt-0 border-t">
+          <div className="flex justify-between items-end mb-0">
             <span className="text-sm font-medium text-muted-foreground">
               {t.portfolioSliders.totalAllocation}
             </span>
@@ -170,7 +177,7 @@ export default function PortfolioSliders({
             {!isOverweight && !isUnderweight && t.portfolioSliders.perfectlyAllocated}
           </div>
 
-          <div className="mt-6">
+          <div className="mt-2">
             <Button
               variant="outline"
               className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/10 border-dashed"

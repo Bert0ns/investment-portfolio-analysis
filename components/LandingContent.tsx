@@ -15,7 +15,7 @@ export default function LandingContent() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10 w-full flex flex-col items-center">
         <div className="text-center max-w-4xl mx-auto w-full">
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 text-foreground uppercase">
+          <h1 className="text-4xl md:text-7xl font-black tracking-tighter mb-8 text-foreground uppercase">
             {t.landing.unveil}{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-500 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
               {t.landing.exposure}

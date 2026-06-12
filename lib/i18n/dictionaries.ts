@@ -32,8 +32,11 @@ export const dictionaries = {
     },
     overviewTab: {
       weightedAvgTer: 'Weighted Avg TER',
+      weightedAvgTerDesc: 'The average cost of your portfolio, weighted by ETF allocation.',
       totalAssets: 'Total Assets Analyzed',
+      totalAssetsDesc: 'The total number of unique underlying companies or assets across all ETFs.',
       activeEtfs: 'Active ETFs',
+      activeEtfsDesc: 'The number of ETFs currently allocated with a weight > 0%.',
       tabOverview: 'Overview',
       tabDeepDive: 'Deep Dive',
       tabFundDetails: 'Fund Details',
@@ -195,6 +198,8 @@ export const dictionaries = {
     analyzer: {
       parsingDefaults: 'Parsing Default Nodes...',
       initializing: 'Initializing Workspace...',
+      hidePortfolioSetup: 'Hide Portfolio Setup',
+      managePortfolio: 'Manage Portfolio',
     },
     portfolioSliders: {
       removeEtf: 'Remove ETF',
@@ -232,6 +237,8 @@ export const dictionaries = {
       overlappingHoldings: 'Overlapping Holdings',
       networkLegendDesc:
         'Lines pull overlapping companies towards the center. Thicker lines and faster particles indicate heavier concentration weight.',
+      fullscreen: 'Fullscreen',
+      exitFullscreen: 'Exit Fullscreen',
     },
   },
   it: {
@@ -266,8 +273,12 @@ export const dictionaries = {
     },
     overviewTab: {
       weightedAvgTer: 'TER Medio Ponderato',
+      weightedAvgTerDesc:
+        "Il costo medio del tuo portafoglio, ponderato per l'allocazione degli ETF.",
       totalAssets: 'Totale Asset Analizzati',
+      totalAssetsDesc: 'Il numero totale di società o asset unici sottostanti in tutti gli ETF.',
       activeEtfs: 'ETF Attivi',
+      activeEtfsDesc: 'Il numero di ETF attualmente allocati con un peso > 0%.',
       tabOverview: 'Panoramica',
       tabDeepDive: 'Analisi Dettagliata',
       tabFundDetails: 'Dettagli Fondo',
@@ -433,6 +444,8 @@ export const dictionaries = {
     analyzer: {
       parsingDefaults: 'Analisi dei Nodi Predefiniti...',
       initializing: 'Inizializzazione Workspace...',
+      hidePortfolioSetup: 'Nascondi Setup Portafoglio',
+      managePortfolio: 'Gestisci Portafoglio',
     },
     portfolioSliders: {
       removeEtf: 'Rimuovi ETF',
@@ -470,6 +483,8 @@ export const dictionaries = {
       overlappingHoldings: 'Partecipazioni Sovrapposte',
       networkLegendDesc:
         'Le linee attirano verso il centro le società sovrapposte. Linee più spesse e particelle più veloci indicano un peso di concentrazione maggiore.',
+      fullscreen: 'Schermo Intero',
+      exitFullscreen: 'Esci da Schermo Intero',
     },
   },
 };

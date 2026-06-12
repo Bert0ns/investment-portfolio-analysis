@@ -184,7 +184,7 @@ export function usePortfolio() {
     };
 
     loadInitialData();
-  }, [loadDefaults]);
+  }, [loadDefaults, t]);
 
   // Save to indexedDB whenever etfs change
   useEffect(() => {

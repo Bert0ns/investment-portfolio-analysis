@@ -1,6 +1,6 @@
 import { useMemo, useCallback } from 'react';
 import { EtfConfig } from '../lib/types';
-import { aggregateBy, aggregateTopHoldings, calculateAverageTer } from '../lib/math';
+import { aggregateTopHoldings, calculateAverageTer } from '../lib/math';
 import { useTranslation } from '../lib/i18n/LanguageContext';
 
 export function useDashboardData(etfs: EtfConfig[]) {
@@ -125,7 +125,7 @@ export function useDashboardData(etfs: EtfConfig[]) {
       { name: '0.1% - 0.5%', value: bins['0.1% - 0.5%'] },
       { name: '< 0.1%', value: bins['< 0.1%'] },
     ];
-  }, [etfs]);
+  }, [allHoldingsCache]);
 
   return {
     geoData,

@@ -168,7 +168,7 @@ export function NetworkGraph({ etfs, limit, livePhysics }: NetworkGraphProps) {
   return (
     <div
       ref={containerRef}
-      className="w-full h-112.5 relative rounded-xl overflow-hidden bg-background"
+      className="w-full h-[600px] relative rounded-xl overflow-hidden bg-background"
     >
       <ForceGraph3D
         ref={fgRef}

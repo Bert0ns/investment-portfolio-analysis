@@ -188,6 +188,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
               <Input
                 id="ter"
                 type="number"
+                inputMode="decimal"
                 step="0.01"
                 value={ter}
                 onChange={(e) => setTer(e.target.value)}
@@ -236,6 +237,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
               <Input
                 id="fundSize"
                 type="number"
+                inputMode="decimal"
                 value={fundSize}
                 onChange={(e) => setFundSize(e.target.value)}
                 placeholder="e.g., 5000"
@@ -246,6 +248,7 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
               <Input
                 id="fundAge"
                 type="number"
+                inputMode="decimal"
                 value={fundAge}
                 onChange={(e) => setFundAge(e.target.value)}
                 placeholder="e.g., 5"

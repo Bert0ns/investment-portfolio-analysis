@@ -1,13 +1,16 @@
 'use client';
 
 import { usePortfolio } from '@/hooks/usePortfolio';
-import EtfForm from '@/components/EtfForm';
+
 import PortfolioSliders from '@/components/PortfolioSliders';
 import Dashboard from '@/components/Dashboard';
+import { useState } from 'react';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function AnalyzerContent() {
   const { t } = useTranslation();
+  const [isSlidersOpen, setIsSlidersOpen] = useState(true);
   const {
     etfs,
     isLoaded,
@@ -31,24 +34,40 @@ export default function AnalyzerContent() {
   }
 
   return (
-    <main className="min-h-[calc(100vh-4rem)] bg-background p-6 md:p-10 font-sans text-foreground w-full">
-      <div className="max-w-7xl mx-auto space-y-8 w-full">
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
-          <div className="xl:col-span-1 relative">
-            <div className="xl:sticky xl:top-24 space-y-8 xl:max-h-[calc(100vh-6rem)] flex flex-col">
-              <EtfForm onAddEtf={addEtf} />
-              <div className="flex-1 xl:overflow-y-auto pr-2 pb-4 scrollbar-thin scrollbar-thumb-primary/20">
-                <PortfolioSliders
-                  etfs={etfs}
-                  totalWeight={totalWeight}
-                  onUpdateWeight={updateEtfWeight}
-                  onRemove={removeEtf}
-                  onReset={loadDefaults}
-                />
-              </div>
+    <main className="min-h-[calc(100vh-4rem)] bg-background p-2 md:p-4 font-sans text-foreground w-full">
+      <div className="mx-auto ">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 transition-all duration-500 ease-in-out">
+          <div
+            className={`transition-all duration-500 ease-in-out ${isSlidersOpen ? 'xl:col-span-4' : 'xl:col-span-12'}`}
+          >
+            <div className={'flex flex-col'}>
+              <button
+                onClick={() => setIsSlidersOpen(!isSlidersOpen)}
+                className="shrink-0 flex items-center justify-between w-full mb-0 py-3 px-4 text-sm font-semibold text-foreground bg-muted/30 border border-border rounded-xl hover:bg-muted/60 transition-colors cursor-pointer"
+              >
+                <span>
+                  {isSlidersOpen ? t.analyzer.hidePortfolioSetup : t.analyzer.managePortfolio}
+                </span>
+                {isSlidersOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+              </button>
+
+              {isSlidersOpen && (
+                <div className="flex-1 min-h-0 mt-2 flex flex-col animate-in fade-in slide-in-from-top-4 duration-500">
+                  <PortfolioSliders
+                    etfs={etfs}
+                    totalWeight={totalWeight}
+                    onUpdateWeight={updateEtfWeight}
+                    onRemove={removeEtf}
+                    onReset={loadDefaults}
+                    onAddEtf={addEtf}
+                  />
+                </div>
+              )}
             </div>
           </div>
-          <div className="xl:col-span-2">
+          <div
+            className={`transition-all duration-500 ease-in-out ${isSlidersOpen ? 'xl:col-span-8' : 'xl:col-span-12'}`}
+          >
             <Dashboard etfs={etfs} totalWeight={totalWeight} />
           </div>
         </div>
