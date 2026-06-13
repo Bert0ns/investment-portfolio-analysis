@@ -8,6 +8,7 @@ import {
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
 import { Globe } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export function LanguageSwitcher() {
   const { language, setLanguage, t } = useTranslation();
@@ -15,10 +16,17 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
-        aria-label="Toggle language"
+        render={
+          <Button
+            variant="outline"
+            size="icon"
+            className="w-9 h-9 border-primary/50 hover:bg-primary/20 text-primary"
+            title={t.navbar.language}
+          />
+        }
       >
-        <Globe className="h-5 w-5" />
+        <Globe className="h-4 w-4" />
+        <span className="sr-only">{t.navbar.language}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem

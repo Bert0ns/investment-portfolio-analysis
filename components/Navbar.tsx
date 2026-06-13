@@ -18,6 +18,8 @@ import { useTranslation } from '@/lib/i18n/LanguageContext';
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -73,20 +75,24 @@ export default function Navbar() {
           {/* Right: Theme Switcher & Mobile Nav */}
           <div className="flex items-center gap-4 justify-end relative z-10">
             <div className="hidden md:flex items-center gap-2">
-              <a
-                href="https://github.com/Bert0ns/investment-portfolio-analysis"
-                target="_blank"
-                rel="noreferrer"
-                className={buttonVariants({
-                  variant: 'outline',
-                  size: 'icon',
-                  className: 'w-9 h-9 border-primary/50 hover:bg-primary/20 text-primary',
-                })}
+              <Button
+                render={
+                  <a
+                    href="https://github.com/Bert0ns/investment-portfolio-analysis"
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                }
+                // @ts-expect-error base-ui props
+                nativeButton={false}
+                variant="outline"
+                size="icon"
+                className="w-9 h-9 border-primary/50 hover:bg-primary/20 text-primary"
                 title={t.navbar.github}
               >
                 <GithubIcon className="h-4 w-4" />
                 <span className="sr-only">{t.navbar.github}</span>
-              </a>
+              </Button>
               <LanguageSwitcher />
               <ThemeSwitcher />
             </div>
