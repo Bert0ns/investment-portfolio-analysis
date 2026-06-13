@@ -173,6 +173,11 @@ export const dictionaries = {
       serverless: 'Serverless',
       serverlessDesc:
         'Your financial data never leaves your browser. All parsing and math are executed locally in real-time.',
+      badge: 'Real-time Portfolio Analytics',
+      statIssuers: 'Issuers',
+      statHoldings: 'Holdings',
+      statClientSide: 'Client-side',
+      statVisualization: 'Visualization',
     },
     about: {
       empowering: 'Empowering',
@@ -425,6 +430,11 @@ export const dictionaries = {
       serverless: 'Serverless',
       serverlessDesc:
         "I tuoi dati finanziari non lasciano mai il browser. Tutta l'analisi e la matematica vengono eseguite localmente in tempo reale.",
+      badge: 'Analisi di Portafoglio in Tempo Reale',
+      statIssuers: 'Emittenti',
+      statHoldings: 'Partecipazioni',
+      statClientSide: 'Lato Client',
+      statVisualization: 'Visualizzazione',
     },
     about: {
       empowering: 'Potenziare gli',
