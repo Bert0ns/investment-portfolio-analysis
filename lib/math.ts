@@ -25,7 +25,7 @@ const SECTOR_MAPPINGS: { matchers: RegExp[]; result: string }[] = [
   { matchers: [/real estate/, /immobiliare/, /property/], result: 'Real Estate' },
 ];
 
-function normalizeSector(sector: string): string {
+export function normalizeSector(sector: string): string {
   if (!sector || sector === 'Unknown' || sector === 'N/A') return 'Unknown';
 
   const s = sector.trim().toLowerCase();

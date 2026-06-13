@@ -25,6 +25,11 @@ const NetworkGraph = dynamic(
   }
 );
 
+const Cityscape = dynamic(() => import('../charts/Cityscape').then((mod) => mod.Cityscape), {
+  ssr: false,
+  loading: () => <div className="h-[600px] bg-card animate-pulse border border-border" />,
+});
+
 interface VisualsTabProps {
   etfs: EtfConfig[];
   geoData: { name: string; value: number }[];
@@ -34,7 +39,7 @@ interface VisualsTabProps {
 
 export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: VisualsTabProps) {
   const { t } = useTranslation();
-  const [active3DVisual, setActive3DVisual] = useState<'Globe' | 'Network'>('Globe');
+  const [active3DVisual, setActive3DVisual] = useState<'Globe' | 'Network' | 'City'>('City');
 
   // Globe controls state
   const [globeRotating, setGlobeRotating] = useState(true);
@@ -71,6 +76,12 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
             className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'Network' ? 'bg-background shadow text-foreground' : 'text-muted-foreground'}`}
           >
             {t.overviewTab.concentrationNetwork}
+          </button>
+          <button
+            onClick={() => setActive3DVisual('City')}
+            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'City' ? 'bg-background shadow text-foreground' : 'text-muted-foreground'}`}
+          >
+            Treemap City
           </button>
         </div>
         {onToggleFullscreen && (
@@ -132,7 +143,7 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
           </div>
           <ExposureGlobe ref={globeRef} data={geoData} isRotating={globeRotating} />
         </div>
-      ) : (
+      ) : active3DVisual === 'Network' ? (
         <div className="flex flex-col gap-4">
           <div className="flex flex-col md:flex-row justify-between gap-6 p-4 bg-muted/30 rounded-lg border border-border">
             <div className="flex-1 space-y-2">
@@ -197,7 +208,35 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
             overlapOnly={networkOverlapOnly}
           />
         </div>
-      )}
+      ) : active3DVisual === 'City' ? (
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col md:flex-row justify-between gap-6 p-4 bg-muted/30 rounded-lg border border-border items-center">
+            <div className="flex flex-col gap-2 min-w-[140px]">
+              <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
+                3D Treemap City
+              </Label>
+              <span className="text-sm font-medium text-amber-500">
+                {etfs.reduce(
+                  (acc, etf) => acc + (etf.globalWeight > 0 ? etf.holdings.length : 0),
+                  0
+                )}{' '}
+                Holdings Rendered
+              </span>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setGlobeRotating(!globeRotating)}
+                className="flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium bg-background hover:bg-muted text-foreground rounded-lg transition-colors border border-border"
+              >
+                {globeRotating ? <Pause size={14} /> : <Play size={14} />}
+                {globeRotating ? t.threeDVisuals.pauseRotation : t.threeDVisuals.resumeRotation}
+              </button>
+            </div>
+          </div>
+          <Cityscape etfs={etfs} isRotating={globeRotating} />
+        </div>
+      ) : null}
     </div>
   );
 }
