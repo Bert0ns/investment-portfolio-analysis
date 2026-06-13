@@ -83,7 +83,6 @@ export default function Navbar() {
                     rel="noreferrer"
                   />
                 }
-                // @ts-expect-error base-ui props
                 nativeButton={false}
                 variant="outline"
                 size="icon"
