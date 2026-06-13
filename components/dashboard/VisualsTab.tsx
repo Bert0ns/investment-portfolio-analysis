@@ -1,11 +1,13 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { EtfConfig } from '../../lib/types';
 import { useTranslation } from '../../lib/i18n/LanguageContext';
 import { Label } from '../ui/label';
 import { Slider } from '../ui/slider';
 import { Switch } from '../ui/switch';
-import { Maximize2, Minimize2 } from 'lucide-react';
+import { Maximize2, Minimize2, Play, Pause, ZoomIn, ZoomOut } from 'lucide-react';
 import dynamic from 'next/dynamic';
+import { BASE_COORDINATES, ALIASES } from '../../lib/utils/Coordinates';
+import type { ExposureGlobeRef } from '../charts/ExposureGlobe';
 
 const ExposureGlobe = dynamic(
   () => import('../charts/ExposureGlobe').then((mod) => mod.ExposureGlobe),
@@ -33,6 +35,12 @@ interface VisualsTabProps {
 export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: VisualsTabProps) {
   const { t } = useTranslation();
   const [active3DVisual, setActive3DVisual] = useState<'Globe' | 'Network'>('Globe');
+
+  // Globe controls state
+  const [globeRotating, setGlobeRotating] = useState(true);
+  const globeRef = useRef<ExposureGlobeRef>(null);
+
+  // Network Graph controls state
   const [networkLimit, setNetworkLimit] = useState<number[]>([100]);
   const [networkLivePhysics, setNetworkLivePhysics] = useState(false);
   const [networkOverlapOnly, setNetworkOverlapOnly] = useState(false);
@@ -76,7 +84,54 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
         )}
       </div>
       {active3DVisual === 'Globe' ? (
-        <ExposureGlobe data={geoData} />
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col md:flex-row justify-between gap-6 p-4 bg-muted/30 rounded-lg border border-border items-center">
+            <div className="flex flex-col gap-2 min-w-[140px]">
+              <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
+                {t.threeDVisuals.regionsActive}
+              </Label>
+              <span className="text-sm font-medium text-amber-500">
+                {
+                  new Set(
+                    geoData
+                      .map((d) => ALIASES[d.name.trim()] || d.name.trim())
+                      .filter(
+                        (name) =>
+                          name !== 'Unknown' && name !== 'Unione Europea' && BASE_COORDINATES[name]
+                      )
+                  ).size
+                }
+              </span>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setGlobeRotating(!globeRotating)}
+                className="flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium bg-background hover:bg-muted text-foreground rounded-lg transition-colors border border-border"
+              >
+                {globeRotating ? <Pause size={14} /> : <Play size={14} />}
+                {globeRotating ? t.threeDVisuals.pauseRotation : t.threeDVisuals.resumeRotation}
+              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => globeRef.current?.zoomIn()}
+                  className="flex justify-center items-center p-2 bg-background hover:bg-muted text-foreground rounded-lg transition-colors border border-border"
+                  title="Zoom In"
+                >
+                  <ZoomIn size={16} />
+                </button>
+                <button
+                  onClick={() => globeRef.current?.zoomOut()}
+                  className="flex justify-center items-center p-2 bg-background hover:bg-muted text-foreground rounded-lg transition-colors border border-border"
+                  title="Zoom Out"
+                >
+                  <ZoomOut size={16} />
+                </button>
+              </div>
+            </div>
+          </div>
+          <ExposureGlobe ref={globeRef} data={geoData} isRotating={globeRotating} />
+        </div>
       ) : (
         <div className="flex flex-col gap-4">
           <div className="flex flex-col md:flex-row justify-between gap-6 p-4 bg-muted/30 rounded-lg border border-border">
