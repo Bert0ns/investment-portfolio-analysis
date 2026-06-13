@@ -1,32 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
     <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22d3ee" />
-      <stop offset="100%" stop-color="#3b82f6" />
+    <filter id="glowSubtle" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b100ff" />
+      <stop offset="100%" stop-color="#7000ff" />
     </linearGradient>
   </defs>
   <rect width="100" height="100" fill="transparent" />
-  
-  <!-- Outer orbital ring -->
-  <circle cx="50" cy="50" r="38" fill="none" stroke="url(#neonGradient)" stroke-width="6" filter="url(#neonGlow)" />
-  
-  <!-- Inner tech nodes -->
-  <circle cx="50" cy="50" r="14" fill="#22d3ee" filter="url(#neonGlow)" />
-  <circle cx="22" cy="50" r="6" fill="#3b82f6" filter="url(#neonGlow)" />
-  <circle cx="78" cy="50" r="6" fill="#3b82f6" filter="url(#neonGlow)" />
-  <circle cx="50" cy="22" r="6" fill="#3b82f6" filter="url(#neonGlow)" />
-  <circle cx="50" cy="78" r="6" fill="#3b82f6" filter="url(#neonGlow)" />
-  
-  <!-- Connecting lines -->
-  <line x1="28" y1="50" x2="36" y2="50" stroke="url(#neonGradient)" stroke-width="4" filter="url(#neonGlow)" />
-  <line x1="64" y1="50" x2="72" y2="50" stroke="url(#neonGradient)" stroke-width="4" filter="url(#neonGlow)" />
-  <line x1="50" y1="28" x2="50" y2="36" stroke="url(#neonGradient)" stroke-width="4" filter="url(#neonGlow)" />
-  <line x1="50" y1="64" x2="50" y2="72" stroke="url(#neonGradient)" stroke-width="4" filter="url(#neonGlow)" />
+
+  <g transform="translate(50,50) scale(0.9) translate(-50,-50)">
+    <!-- Outer hexagon (faint) -->
+    <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="url(#purpleGradient)" stroke-width="1.5" filter="url(#glowSubtle)" opacity="0.7"/>
+    
+    <!-- Outer thick hexagon -->
+    <polygon points="50,12 83,31 83,69 50,88 17,69 17,31" fill="none" stroke="url(#cyanGradient)" stroke-width="3" filter="url(#neonGlow)"/>
+
+    <!-- Inner 3D lines -->
+    <path d="M17,31 L50,50 L83,31 M50,50 L50,88" fill="none" stroke="url(#cyanGradient)" stroke-width="3" filter="url(#neonGlow)"/>
+    
+    <!-- Additional futuristic accents (small lines) -->
+    <line x1="50" y1="5" x2="50" y2="12" stroke="#fff" stroke-width="2" filter="url(#glowSubtle)" opacity="0.8"/>
+    <line x1="89" y1="27.5" x2="83" y2="31" stroke="#fff" stroke-width="2" filter="url(#glowSubtle)" opacity="0.8"/>
+    <line x1="89" y1="72.5" x2="83" y2="69" stroke="#fff" stroke-width="2" filter="url(#glowSubtle)" opacity="0.8"/>
+    <line x1="50" y1="95" x2="50" y2="88" stroke="#fff" stroke-width="2" filter="url(#glowSubtle)" opacity="0.8"/>
+    <line x1="11" y1="72.5" x2="17" y2="69" stroke="#fff" stroke-width="2" filter="url(#glowSubtle)" opacity="0.8"/>
+    <line x1="11" y1="27.5" x2="17" y2="31" stroke="#fff" stroke-width="2" filter="url(#glowSubtle)" opacity="0.8"/>
+
+    <!-- Floating core -->
+    <polygon points="50,38 60,44 60,56 50,62 40,56 40,44" fill="url(#purpleGradient)" filter="url(#neonGlow)"/>
+    
+    <!-- Data point glowing nodes -->
+    <circle cx="50" cy="12" r="2.5" fill="#fff" filter="url(#glowSubtle)" />
+    <circle cx="83" cy="31" r="2.5" fill="#fff" filter="url(#glowSubtle)" />
+    <circle cx="83" cy="69" r="2.5" fill="#fff" filter="url(#glowSubtle)" />
+    <circle cx="50" cy="88" r="2.5" fill="#fff" filter="url(#glowSubtle)" />
+    <circle cx="17" cy="69" r="2.5" fill="#fff" filter="url(#glowSubtle)" />
+    <circle cx="17" cy="31" r="2.5" fill="#fff" filter="url(#glowSubtle)" />
+    
+    <!-- Center bright node -->
+    <circle cx="50" cy="50" r="3" fill="#fff" filter="url(#neonGlow)" />
+  </g>
 </svg>
