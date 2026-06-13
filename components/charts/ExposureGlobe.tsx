@@ -1,18 +1,43 @@
 'use client';
 
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useRef, forwardRef, useImperativeHandle } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
-import { Play, Pause } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 import { GlobeMesh } from './globe/GlobeMesh';
 import { BASE_COORDINATES, ALIASES } from '../../lib/utils/Coordinates';
-import { useTranslation } from '../../lib/i18n/LanguageContext';
 
-export function ExposureGlobe({ data }: { data: { name: string; value: number }[] }) {
-  const { t } = useTranslation();
-  const [isRotating, setIsRotating] = useState(true);
+export interface ExposureGlobeRef {
+  zoomIn: () => void;
+  zoomOut: () => void;
+}
+
+export const ExposureGlobe = forwardRef<
+  ExposureGlobeRef,
+  { data: { name: string; value: number }[]; isRotating: boolean }
+>(({ data, isRotating }, ref) => {
+  const controlsRef = useRef<any>(null);
+
+  useImperativeHandle(ref, () => ({
+    zoomIn: () => handleZoom('in'),
+    zoomOut: () => handleZoom('out'),
+  }));
+
+  const handleZoom = (direction: 'in' | 'out') => {
+    if (controlsRef.current && controlsRef.current.object) {
+      const camera = controlsRef.current.object;
+      const target = controlsRef.current.target;
+      const currentDistance = camera.position.distanceTo(target);
+      const factor = direction === 'in' ? 0.8 : 1.25;
+      const newDistance = Math.max(
+        controlsRef.current.minDistance || 3,
+        Math.min(controlsRef.current.maxDistance || 12, currentDistance * factor)
+      );
+      camera.position.lerp(target, 1 - newDistance / currentDistance);
+      controlsRef.current.update();
+    }
+  };
 
   // Calculate true number of mapped unique regions
   const uniqueRegionsCount = new Set(
@@ -49,30 +74,21 @@ export function ExposureGlobe({ data }: { data: { name: string; value: number }[
               speed={1.5}
             />
             <OrbitControls
-              enableZoom={false}
+              ref={controlsRef}
+              enableZoom={true}
+              minDistance={3}
+              maxDistance={12}
               enablePan={false}
               autoRotate={isRotating}
               autoRotateSpeed={0.5}
               maxPolarAngle={Math.PI / 1.5}
-              minPolarAngle={Math.PI / 3}
+              minPolarAngle={Math.PI / 4}
             />
           </Canvas>
-
-          {/* Overlay UI */}
-          <div className="absolute bottom-6 left-6 pointer-events-none flex flex-col gap-3">
-            <p className="text-[10px] text-amber-400 font-mono bg-black/40 px-3 py-1.5 border border-amber-500/30 backdrop-blur-md uppercase tracking-widest shadow-[0_0_10px_rgba(245,158,11,0.1)] rounded-sm w-max">
-              {uniqueRegionsCount} {t.threeDVisuals.regionsActive}
-            </p>
-            <button
-              onClick={() => setIsRotating(!isRotating)}
-              className="pointer-events-auto text-[10px] text-cyan-400 font-mono bg-black/40 px-3 py-1.5 border border-cyan-500/30 backdrop-blur-md uppercase tracking-widest hover:bg-cyan-900/40 transition-colors shadow-[0_0_10px_rgba(34,211,238,0.1)] rounded-sm flex items-center justify-center w-max gap-2"
-            >
-              {isRotating ? <Pause size={12} /> : <Play size={12} />}
-              {isRotating ? t.threeDVisuals.pauseRotation : t.threeDVisuals.resumeRotation}
-            </button>
-          </div>
         </div>
       </CardContent>
     </Card>
   );
-}
+});
+
+ExposureGlobe.displayName = 'ExposureGlobe';
