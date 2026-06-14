@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { EtfConfig } from '@/lib/types';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 import { Label } from '@/components/ui/label';
@@ -41,20 +42,36 @@ interface VisualsTabProps {
   geoData: { name: string; value: number }[];
   isFullscreen?: boolean;
   onToggleFullscreen?: () => void;
+  isActive?: boolean;
 }
 
-export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: VisualsTabProps) {
+export function VisualsTab({
+  etfs,
+  geoData,
+  isFullscreen,
+  onToggleFullscreen,
+  isActive = true,
+}: VisualsTabProps) {
   const { t } = useTranslation();
-  const [active3DVisual, setActive3DVisual] = useState<'Globe' | 'Network' | 'City'>('Globe');
+  const [active3DVisual, setActive3DVisual] = useLocalStorage<'Globe' | 'Network' | 'City'>(
+    'visuals_active',
+    'Globe'
+  );
 
   // Globe controls state
-  const [globeRotating, setGlobeRotating] = useState(true);
+  const [globeRotating, setGlobeRotating] = useLocalStorage('visuals_globe_rotating', true);
   const globeRef = useRef<ExposureGlobeRef>(null);
 
   // Network Graph controls state
-  const [networkLimit, setNetworkLimit] = useState<number[]>([100]);
-  const [networkLivePhysics, setNetworkLivePhysics] = useState(false);
-  const [networkOverlapOnly, setNetworkOverlapOnly] = useState(false);
+  const [networkLimit, setNetworkLimit] = useLocalStorage<number[]>('visuals_network_limit', [100]);
+  const [networkLivePhysics, setNetworkLivePhysics] = useLocalStorage(
+    'visuals_network_physics',
+    false
+  );
+  const [networkOverlapOnly, setNetworkOverlapOnly] = useLocalStorage(
+    'visuals_network_overlap',
+    false
+  );
 
   const maxHoldings = useMemo(() => {
     const activeEtfs = etfs.filter((e) => e.globalWeight > 0);
@@ -147,7 +164,7 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
               </div>
             </div>
           </div>
-          <ExposureGlobe ref={globeRef} data={geoData} isRotating={globeRotating} />
+          {isActive && <ExposureGlobe ref={globeRef} data={geoData} isRotating={globeRotating} />}
         </div>
       ) : active3DVisual === 'Network' ? (
         <div className="flex flex-col gap-4">
@@ -207,12 +224,14 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
               </div>
             </div>
           </div>
-          <NetworkGraph
-            etfs={etfs}
-            limit={networkLimit}
-            livePhysics={networkLivePhysics}
-            overlapOnly={networkOverlapOnly}
-          />
+          {isActive && (
+            <NetworkGraph
+              etfs={etfs}
+              limit={networkLimit}
+              livePhysics={networkLivePhysics}
+              overlapOnly={networkOverlapOnly}
+            />
+          )}
         </div>
       ) : active3DVisual === 'City' ? (
         <div className="flex flex-col gap-4">
@@ -240,7 +259,7 @@ export function VisualsTab({ etfs, geoData, isFullscreen, onToggleFullscreen }: 
               </button>
             </div>
           </div>
-          <Cityscape etfs={etfs} isRotating={globeRotating} />
+          {isActive && <Cityscape etfs={etfs} isRotating={globeRotating} />}
         </div>
       ) : null}
     </div>
