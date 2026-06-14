@@ -130,14 +130,11 @@ This project is open-source and available under the [MIT License](LICENSE).
 6. **Radar Chart**
 7. **Voronoi Treemap**: Instead of boring rectangular treemaps, Voronoi treemaps use organic, cell-like shapes. It looks like viewing plant cells under a microscope,  
    where the largest "cells" are your biggest holdings. It looks incredibly premium, especially with our cyberpunk/dark mode styling
-8. Geographic "X-Ray" Search
-
-A dedicated section on the dashboard where users can query their exact geographic exposure.
-
-• Search by Country/Region: A user types "Japan". The tool instantly scans all 5,000+ underlying holdings across all their ETFs.
-• Contribution Breakdown: It tells the user: "You have 6.5% total exposure to Japan. This comes from: 4% via iShares Core MSCI World, 2% via  
- Vanguard Emerging Markets, and 0.5% via Amundi Asia."
-• Company Drill-Down: Underneath the country stats, it lists the actual Japanese companies they own indirectly (e.g., Toyota, Sony) and their  
- exact weights in the total portfolio.
-• Interactive Global Map: We could add an interactive SVG world map. Hovering over or clicking a country (like Brazil or India) acts as a quick-  
- filter, immediately sliding out a panel with the exact ETFs supplying that exposure.
+8. **Geographic "X-Ray" Search**: A dedicated section on the dashboard where users can query their exact geographic exposure.
+   - Search by Country/Region: A user types "Japan". The tool instantly scans all 5,000+ underlying holdings across all their ETFs.
+   - Contribution Breakdown: It tells the user: "You have 6.5% total exposure to Japan. This comes from: 4% via iShares Core MSCI World, 2% via  
+     Vanguard Emerging Markets, and 0.5% via Amundi Asia."
+   - Company Drill-Down: Underneath the country stats, it lists the actual Japanese companies they own indirectly (e.g., Toyota, Sony) and their  
+     exact weights in the total portfolio.
+   - Interactive Global Map: We could add an interactive SVG world map. Hovering over or clicking a country (like Brazil or India) acts as a quick-  
+     filter, immediately sliding out a panel with the exact ETFs supplying that exposure.

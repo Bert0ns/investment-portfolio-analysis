@@ -19,6 +19,10 @@ describe('useDashboardData', () => {
           'Information Technology': 'Information Technology',
           Unknown: 'Unknown',
         },
+        countries: {
+          'United States': 'United States',
+          Unknown: 'Unknown',
+        },
         etfProperties: {
           Physical: 'Physical',
           Synthetic: 'Synthetic',

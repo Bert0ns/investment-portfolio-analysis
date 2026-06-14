@@ -41,6 +41,11 @@ describe('EtfForm Component', () => {
       sectors: {
         Other: 'Other',
       },
+      countries: {
+        'United States': 'United States',
+        Unknown: 'Unknown',
+        Other: 'Other',
+      },
     };
 
     (useTranslation as jest.Mock).mockReturnValue({
@@ -59,6 +64,7 @@ describe('EtfForm Component', () => {
         fundAge: '',
         useOfProfit: 'Accumulating',
         domicile: 'Ireland',
+        file: null as File | null,
         isLoading: false,
       },
       actions: {
