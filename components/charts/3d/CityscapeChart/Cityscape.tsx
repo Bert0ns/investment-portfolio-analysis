@@ -1,11 +1,9 @@
 'use client';
 
-import React, { useMemo, useState, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Stars, Html } from '@react-three/drei';
+import React, { useMemo, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Stars } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
-import { useSpring, a } from '@react-spring/three';
-import * as THREE from 'three';
 import { EtfConfig } from '@/lib/types';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTheme } from 'next-themes';

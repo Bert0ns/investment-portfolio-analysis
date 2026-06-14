@@ -6,7 +6,6 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import { Card, CardContent } from '@/components/ui/card';
 import { GlobeMesh } from '@/components/charts/3d/GlobeExpusureChart/GlobeMesh';
-import { BASE_COORDINATES, ALIASES } from '@/lib/utils/Coordinates';
 
 export interface ExposureGlobeRef {
   zoomIn: () => void;
@@ -17,6 +16,7 @@ export const ExposureGlobe = forwardRef<
   ExposureGlobeRef,
   { data: { name: string; value: number }[]; isRotating: boolean }
 >(({ data, isRotating }, ref) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const controlsRef = useRef<any>(null);
 
   useImperativeHandle(ref, () => ({
@@ -38,13 +38,6 @@ export const ExposureGlobe = forwardRef<
       controlsRef.current.update();
     }
   };
-
-  // Calculate true number of mapped unique regions
-  const uniqueRegionsCount = new Set(
-    data
-      .map((d) => ALIASES[d.name.trim()] || d.name.trim())
-      .filter((name) => name !== 'Unknown' && name !== 'Unione Europea' && BASE_COORDINATES[name])
-  ).size;
 
   return (
     <Card className="p-0 hover:border-primary/50 transition-colors duration-500 border border-border bg-card/40 backdrop-blur-md overflow-hidden">
