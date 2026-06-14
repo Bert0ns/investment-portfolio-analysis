@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { useMemo, useState, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Stars, Text } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import { useSpring, a } from '@react-spring/three';
@@ -221,66 +221,133 @@ function AnimatedDistrictPad({
   );
 }
 
-function AnimatedBuilding({
-  b,
-  isHovered,
-  onPointerOver,
-  onPointerOut,
+const tempObject = new THREE.Object3D();
+const tempColor = new THREE.Color();
+
+function FastBuildings({
+  buildings,
+  hoveredBuilding,
+  setHoveredBuilding,
 }: {
-  b: PlacedBuilding;
-  isHovered: boolean;
-  onPointerOver: (e: any) => void;
-  onPointerOut: (e: any) => void;
+  buildings: PlacedBuilding[];
+  hoveredBuilding: PlacedBuilding | null;
+  setHoveredBuilding: (b: PlacedBuilding | null) => void;
 }) {
-  const { posX, posY, sizeXY, depth, emissiveIntensity } = useSpring({
-    posX: b.x,
-    posY: b.y,
-    sizeXY: b.size,
-    depth: b.depth,
-    emissiveIntensity: isHovered ? 1.0 : 0.3,
-    config: { mass: 1, tension: 120, friction: 14 },
+  const count = buildings.length;
+
+  const skyRef = useRef<THREE.InstancedMesh>(null);
+  const wireRef = useRef<THREE.InstancedMesh>(null);
+  const plazaRef = useRef<THREE.InstancedMesh>(null);
+
+  // Preserve animation state across renders and re-ordering
+  const animStates = useRef<
+    Map<string, { x: number; y: number; size: number; depth: number; emissive: number }>
+  >(new Map());
+
+  useFrame((state, delta) => {
+    // Framerate-independent lerp factor (similar to a spring)
+    const factor = 1 - Math.exp(-15 * delta);
+    let needsUpdate = false;
+
+    buildings.forEach((b, i) => {
+      let curr = animStates.current.get(b.name);
+      if (!curr) {
+        curr = { x: b.x, y: b.y, size: b.size, depth: b.depth, emissive: 0.3 };
+        animStates.current.set(b.name, curr);
+      }
+
+      const isHovered = hoveredBuilding?.name === b.name;
+      const targetEmissive = isHovered ? 1.0 : 0.3;
+
+      curr.x = THREE.MathUtils.lerp(curr.x, b.x, factor);
+      curr.y = THREE.MathUtils.lerp(curr.y, b.y, factor);
+      curr.size = THREE.MathUtils.lerp(curr.size, b.size, factor);
+      curr.depth = THREE.MathUtils.lerp(curr.depth, b.depth, factor);
+      curr.emissive = THREE.MathUtils.lerp(curr.emissive, targetEmissive, factor);
+
+      // --- Skyscraper ---
+      if (skyRef.current) {
+        tempObject.position.set(curr.x, curr.y, curr.depth / 2);
+        tempObject.scale.set(curr.size, curr.size, curr.depth);
+        tempObject.updateMatrix();
+        skyRef.current.setMatrixAt(i, tempObject.matrix);
+
+        // Emissive color tint
+        tempColor.set(b.color).multiplyScalar(curr.emissive);
+        skyRef.current.setColorAt(i, tempColor);
+      }
+
+      // --- Wireframe ---
+      if (wireRef.current) {
+        tempObject.position.set(curr.x, curr.y, curr.depth / 2);
+        tempObject.scale.set(curr.size + 0.01, curr.size + 0.01, curr.depth + 0.01);
+        tempObject.updateMatrix();
+        wireRef.current.setMatrixAt(i, tempObject.matrix);
+        wireRef.current.setColorAt(i, tempColor.set(b.color));
+      }
+
+      // --- Plaza Foundation ---
+      if (plazaRef.current) {
+        tempObject.position.set(curr.x, curr.y, 0.05);
+        tempObject.scale.set(curr.size + 0.3, curr.size + 0.3, 1);
+        tempObject.updateMatrix();
+        plazaRef.current.setMatrixAt(i, tempObject.matrix);
+        plazaRef.current.setColorAt(i, tempColor.set(b.color));
+      }
+
+      needsUpdate = true;
+    });
+
+    if (needsUpdate) {
+      if (skyRef.current) {
+        skyRef.current.instanceMatrix.needsUpdate = true;
+        if (skyRef.current.instanceColor) skyRef.current.instanceColor.needsUpdate = true;
+      }
+      if (wireRef.current) {
+        wireRef.current.instanceMatrix.needsUpdate = true;
+        if (wireRef.current.instanceColor) wireRef.current.instanceColor.needsUpdate = true;
+      }
+      if (plazaRef.current) {
+        plazaRef.current.instanceMatrix.needsUpdate = true;
+        if (plazaRef.current.instanceColor) plazaRef.current.instanceColor.needsUpdate = true;
+      }
+    }
   });
 
+  const handlePointerOver = (e: any) => {
+    e.stopPropagation();
+    if (e.instanceId !== undefined) {
+      setHoveredBuilding(buildings[e.instanceId]);
+    }
+  };
+
+  const handlePointerOut = (e: any) => {
+    e.stopPropagation();
+    setHoveredBuilding(null);
+  };
+
   return (
-    <a.group position-x={posX} position-y={posY} position-z={0}>
-      <a.mesh
-        position={[0, 0, 0.05]}
-        scale-x={sizeXY.to((s) => s + 0.3)}
-        scale-y={sizeXY.to((s) => s + 0.3)}
-        scale-z={1}
-      >
+    <group>
+      <instancedMesh ref={plazaRef} args={[null as any, null as any, count]}>
         <planeGeometry args={[1, 1]} />
-        <meshBasicMaterial color={b.color} opacity={0.08} transparent depthWrite={false} />
-      </a.mesh>
+        <meshBasicMaterial opacity={0.08} transparent depthWrite={false} />
+      </instancedMesh>
 
-      <a.mesh
-        position-z={depth.to((d) => d / 2)}
-        scale-x={sizeXY}
-        scale-y={sizeXY}
-        scale-z={depth}
-        onPointerOver={onPointerOver}
-        onPointerOut={onPointerOut}
+      <instancedMesh
+        ref={skyRef}
+        args={[null as any, null as any, count]}
+        onPointerOver={handlePointerOver}
+        onPointerOut={handlePointerOut}
       >
         <boxGeometry args={[1, 1, 1]} />
-        <a.meshStandardMaterial
-          color={b.color}
-          emissive={b.color}
-          emissiveIntensity={emissiveIntensity}
-          metalness={0.9}
-          roughness={0.1}
-        />
-      </a.mesh>
+        <meshStandardMaterial metalness={0.9} roughness={0.1} />
+      </instancedMesh>
 
-      <a.mesh
-        position-z={depth.to((d) => d / 2)}
-        scale-x={sizeXY.to((s) => s + 0.01)}
-        scale-y={sizeXY.to((s) => s + 0.01)}
-        scale-z={depth.to((d) => d + 0.01)}
-      >
+      <instancedMesh ref={wireRef} args={[null as any, null as any, count]}>
         <boxGeometry args={[1, 1, 1]} />
-        <meshBasicMaterial color={b.color} wireframe transparent opacity={0.4} />
-      </a.mesh>
-    </a.group>
+        <meshBasicMaterial wireframe transparent opacity={0.4} />
+      </instancedMesh>
+    </group>
   );
 }
 
@@ -353,25 +420,11 @@ export function Cityscape({ etfs, isRotating }: CityscapeProps) {
                 <AnimatedDistrictPad key={`pad-${i}-${plane.name}`} plane={plane} />
               ))}
 
-              {cityData.buildings.map((b, i) => {
-                const isHovered = hoveredBuilding?.name === b.name;
-
-                return (
-                  <AnimatedBuilding
-                    key={`${b.sector}-${b.name}`}
-                    b={b}
-                    isHovered={isHovered}
-                    onPointerOver={(e) => {
-                      e.stopPropagation();
-                      setHoveredBuilding(b);
-                    }}
-                    onPointerOut={(e) => {
-                      e.stopPropagation();
-                      setHoveredBuilding(null);
-                    }}
-                  />
-                );
-              })}
+              <FastBuildings
+                buildings={cityData.buildings}
+                hoveredBuilding={hoveredBuilding}
+                setHoveredBuilding={setHoveredBuilding}
+              />
             </group>
 
             <OrbitControls
