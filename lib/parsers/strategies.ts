@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import { CsvParserStrategy, Holding, ParseResult } from '../types';
+import { CsvParserStrategy, Holding, ParseResult } from '@/lib/types';
 
 // Helper to read file as text
 function readFile(file: File): Promise<string> {

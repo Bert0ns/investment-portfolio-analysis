@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Card, CardTitle } from '../ui/card';
+import { Card, CardTitle } from '@/components/ui/card';
 import {
   Tooltip as UITooltip,
   TooltipContent,

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Input } from './ui/input';
-import { Slider } from './ui/slider';
+import { Input } from '@/components/ui/input';
+import { Slider } from '@/components/ui/slider';
 
 export interface SettingsSliderProps {
   label: string;

@@ -1,4 +1,4 @@
-import { cn, generateId } from '../lib/utils';
+import { cn, generateId } from '@/lib/utils';
 
 describe('Utils', () => {
   describe('cn', () => {

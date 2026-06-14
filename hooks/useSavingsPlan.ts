@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { calculateSavingsPlanProjection, SavingsPlanResult } from '../lib/math';
+import { calculateSavingsPlanProjection, SavingsPlanResult } from '@/lib/math';
 
 export function useSavingsPlan() {
   const [initialInvestment, setInitialInvestment] = useState(0);

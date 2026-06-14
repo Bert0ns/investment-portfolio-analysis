@@ -1,7 +1,7 @@
 import React from 'react';
-import { PieChartCard } from '../charts/PieChartCard';
-import { EtfBarChartCard } from '../charts/EtfBarChartCard';
-import { useTranslation } from '../../lib/i18n/LanguageContext';
+import { PieChartCard } from '@/components/charts/PieChartCard';
+import { EtfBarChartCard } from '@/components/charts/EtfBarChartCard';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 type ChartData = { name: string; value: number }[];
 

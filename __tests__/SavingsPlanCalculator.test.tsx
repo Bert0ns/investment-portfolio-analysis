@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent, act } from '@testing-library/react';
-import { SavingsPlanCalculator } from '../components/SavingsPlanCalculator';
-import { EtfConfig } from '../lib/types';
+import { SavingsPlanCalculator } from '@/components/SavingsPlanCalculator';
+import { EtfConfig } from '@/lib/types';
 
 jest.mock('../lib/i18n/LanguageContext', () => ({
   useTranslation: () => ({

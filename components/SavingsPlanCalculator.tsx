@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { EtfConfig } from '../lib/types';
-import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
-import { useSavingsPlan } from '../hooks/useSavingsPlan';
-import { SettingsSlider } from './SettingsSlider';
+import { EtfConfig } from '@/lib/types';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { useSavingsPlan } from '@/hooks/useSavingsPlan';
+import { SettingsSlider } from '@/components/SettingsSlider';
 import {
   AreaChart,
   Area,
@@ -15,7 +15,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { TrendingUp, Wallet, PiggyBank } from 'lucide-react';
-import { useTranslation } from '../lib/i18n/LanguageContext';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 interface SavingsPlanCalculatorProps {
   etfs: EtfConfig[];

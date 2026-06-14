@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
-import { EtfConfig, Issuer, ReplicationMethod, UseOfProfit, Domicile } from '../lib/types';
-import { getCsvParser } from '../lib/parsers';
+import { EtfConfig, Issuer, ReplicationMethod, UseOfProfit, Domicile } from '@/lib/types';
+import { getCsvParser } from '@/lib/parsers';
 import { toast } from 'sonner';
-import { getItem, setItem } from '../lib/indexeddb';
-import { generateId } from '../lib/utils';
-import { useTranslation } from '../lib/i18n/LanguageContext';
+import { getItem, setItem } from '@/lib/indexeddb';
+import { generateId } from '@/lib/utils';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 const STORAGE_KEY = 'etf_portfolio_data';
 

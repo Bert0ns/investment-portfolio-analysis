@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { Search, Building, PieChart } from 'lucide-react';
-import { EtfConfig } from '../../lib/types';
-import { searchHoldings } from '../../lib/math';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
-import { useDebounce } from '../../hooks/useDebounce';
-import { useTranslation } from '../../lib/i18n/LanguageContext';
+import { EtfConfig } from '@/lib/types';
+import { searchHoldings } from '@/lib/math';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { useDebounce } from '@/hooks/useDebounce';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 interface DeepDiveTabProps {
   etfs: EtfConfig[];

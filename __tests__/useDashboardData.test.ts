@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react';
-import { useDashboardData } from '../hooks/useDashboardData';
-import { EtfConfig } from '../lib/types';
-import { useTranslation } from '../lib/i18n/LanguageContext';
+import { useDashboardData } from '@/hooks/useDashboardData';
+import { EtfConfig } from '@/lib/types';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 jest.mock('../lib/i18n/LanguageContext', () => ({
   useTranslation: jest.fn(),

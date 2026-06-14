@@ -1,7 +1,7 @@
 import { useMemo, useCallback } from 'react';
-import { EtfConfig } from '../lib/types';
-import { aggregateTopHoldings, calculateAverageTer } from '../lib/math';
-import { useTranslation } from '../lib/i18n/LanguageContext';
+import { EtfConfig } from '@/lib/types';
+import { aggregateTopHoldings, calculateAverageTer } from '@/lib/math';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 export function useDashboardData(etfs: EtfConfig[]) {
   const { t } = useTranslation();

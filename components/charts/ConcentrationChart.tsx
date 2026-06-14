@@ -8,9 +8,9 @@ import {
   ResponsiveContainer,
   Legend,
 } from 'recharts';
-import { Card, CardContent, CardHeader } from '../ui/card';
-import { ChartTitleWithInfo, CustomTooltip } from './Shared';
-import { useTranslation } from '../../lib/i18n/LanguageContext';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { ChartTitleWithInfo, CustomTooltip } from '@/components/charts/Shared';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 interface ConcentrationChartProps {
   data: { name: string; value: number }[];

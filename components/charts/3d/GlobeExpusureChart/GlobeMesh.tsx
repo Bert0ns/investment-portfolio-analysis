@@ -4,8 +4,8 @@ import React, { useRef } from 'react';
 import * as THREE from 'three';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { Sphere } from '@react-three/drei';
-import { Pillar } from './Pillar';
-import { BASE_COORDINATES, ALIASES } from '../../../lib/utils/Coordinates';
+import { Pillar } from '@/components/charts/3d/GlobeExpusureChart/Pillar';
+import { BASE_COORDINATES, ALIASES } from '@/lib/utils/Coordinates';
 
 export function GlobeMesh({
   data,

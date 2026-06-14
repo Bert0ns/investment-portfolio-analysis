@@ -4,9 +4,9 @@ import React, { Suspense, useRef, forwardRef, useImperativeHandle } from 'react'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
-import { Card, CardContent } from '../ui/card';
-import { GlobeMesh } from './globe/GlobeMesh';
-import { BASE_COORDINATES, ALIASES } from '../../lib/utils/Coordinates';
+import { Card, CardContent } from '@/components/ui/card';
+import { GlobeMesh } from '@/components/charts/3d/GlobeExpusureChart/GlobeMesh';
+import { BASE_COORDINATES, ALIASES } from '@/lib/utils/Coordinates';
 
 export interface ExposureGlobeRef {
   zoomIn: () => void;

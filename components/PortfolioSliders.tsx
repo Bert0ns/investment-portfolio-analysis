@@ -1,15 +1,15 @@
 'use client';
 
 import React from 'react';
-import { EtfConfig } from '../lib/types';
+import { EtfConfig } from '@/lib/types';
 import { Trash2, RotateCcw } from 'lucide-react';
 
-import { Card, CardContent } from './ui/card';
-import { Slider } from './ui/slider';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { useTranslation } from '../lib/i18n/LanguageContext';
-import EtfForm from './EtfForm';
+import { Card, CardContent } from '@/components/ui/card';
+import { Slider } from '@/components/ui/slider';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
+import EtfForm from '@/components/EtfForm';
 
 interface PortfolioSlidersProps {
   etfs: EtfConfig[];

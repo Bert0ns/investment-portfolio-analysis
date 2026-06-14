@@ -1,4 +1,4 @@
-import { EtfConfig } from './types';
+import { EtfConfig } from '@/lib/types';
 
 export interface AggregationResult {
   name: string;

@@ -1,34 +1,40 @@
 import React, { useState, useMemo, useRef } from 'react';
-import { EtfConfig } from '../../lib/types';
-import { useTranslation } from '../../lib/i18n/LanguageContext';
-import { Label } from '../ui/label';
-import { Slider } from '../ui/slider';
-import { Switch } from '../ui/switch';
+import { EtfConfig } from '@/lib/types';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
+import { Label } from '@/components/ui/label';
+import { Slider } from '@/components/ui/slider';
+import { Switch } from '@/components/ui/switch';
 import { Maximize2, Minimize2, Play, Pause, ZoomIn, ZoomOut } from 'lucide-react';
 import dynamic from 'next/dynamic';
-import { BASE_COORDINATES, ALIASES } from '../../lib/utils/Coordinates';
-import type { ExposureGlobeRef } from '../charts/ExposureGlobe';
+import { BASE_COORDINATES, ALIASES } from '@/lib/utils/Coordinates';
+import type { ExposureGlobeRef } from '@/components/charts/3d/GlobeExpusureChart/ExposureGlobe';
 
 const ExposureGlobe = dynamic(
-  () => import('../charts/ExposureGlobe').then((mod) => mod.ExposureGlobe),
+  () =>
+    import('@/components/charts/3d/GlobeExpusureChart/ExposureGlobe').then(
+      (mod) => mod.ExposureGlobe
+    ),
   {
     ssr: false,
-    loading: () => <div className="h-[600px] bg-card animate-pulse border border-border" />,
+    loading: () => <div className="h-150 bg-card animate-pulse border border-border" />,
   }
 );
 
 const NetworkGraph = dynamic(
-  () => import('../charts/NetworkGraph').then((mod) => mod.NetworkGraph),
+  () => import('@/components/charts/3d/NetworkGraph').then((mod) => mod.NetworkGraph),
   {
     ssr: false,
-    loading: () => <div className="h-[600px] bg-card animate-pulse border border-border" />,
+    loading: () => <div className="h-150 bg-card animate-pulse border border-border" />,
   }
 );
 
-const Cityscape = dynamic(() => import('../charts/Cityscape').then((mod) => mod.Cityscape), {
-  ssr: false,
-  loading: () => <div className="h-[600px] bg-card animate-pulse border border-border" />,
-});
+const Cityscape = dynamic(
+  () => import('@/components/charts/3d/CityscapeChart/Cityscape').then((mod) => mod.Cityscape),
+  {
+    ssr: false,
+    loading: () => <div className="h-150 bg-card animate-pulse border border-border" />,
+  }
+);
 
 interface VisualsTabProps {
   etfs: EtfConfig[];

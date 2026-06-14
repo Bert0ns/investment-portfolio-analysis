@@ -1,6 +1,6 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { Card, CardContent, CardHeader } from '../ui/card';
-import { COLORS, ChartTitleWithInfo, CustomTooltip } from './Shared';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { COLORS, ChartTitleWithInfo, CustomTooltip } from '@/components/charts/Shared';
 
 interface PieChartCardProps {
   title: string;

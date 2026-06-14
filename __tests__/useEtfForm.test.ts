@@ -1,9 +1,9 @@
 import React from 'react';
 import { renderHook, act } from '@testing-library/react';
-import { useEtfForm } from '../hooks/useEtfForm';
+import { useEtfForm } from '@/hooks/useEtfForm';
 import { toast } from 'sonner';
-import { getCsvParser } from '../lib/parsers';
-import { useTranslation } from '../lib/i18n/LanguageContext';
+import { getCsvParser } from '@/lib/parsers';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 // Mocks
 jest.mock('sonner', () => ({

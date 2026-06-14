@@ -1,5 +1,5 @@
-import { Issuer, CsvParserStrategy } from '../types';
-import { ISharesParser, VanguardParser, AmundiParser, LyxorParser } from './strategies';
+import { Issuer, CsvParserStrategy } from '@/lib/types';
+import { ISharesParser, VanguardParser, AmundiParser, LyxorParser } from '@/lib/parsers/strategies';
 
 export function getCsvParser(issuer: Issuer): CsvParserStrategy {
   switch (issuer) {

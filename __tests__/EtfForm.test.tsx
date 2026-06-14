@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import EtfForm from '../components/EtfForm';
-import { useEtfForm } from '../hooks/useEtfForm';
-import { useTranslation } from '../lib/i18n/LanguageContext';
+import EtfForm from '@/components/EtfForm';
+import { useEtfForm } from '@/hooks/useEtfForm';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 jest.mock('../hooks/useEtfForm');
 jest.mock('../lib/i18n/LanguageContext', () => ({

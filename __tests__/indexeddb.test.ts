@@ -1,4 +1,4 @@
-import { setItem, getItem, removeItem } from '../lib/indexeddb';
+import { setItem, getItem, removeItem } from '@/lib/indexeddb';
 
 describe('indexeddb', () => {
   describe('Client-side (window is defined)', () => {

@@ -1,23 +1,29 @@
 'use client';
 
 import React, { useState } from 'react';
-import { EtfConfig } from '../lib/types';
-import { useDashboardData } from '../hooks/useDashboardData';
-import { Card, CardContent } from './ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+import { EtfConfig } from '@/lib/types';
+import { useDashboardData } from '@/hooks/useDashboardData';
+import { Card, CardContent } from '@/components/ui/card';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 // Extracted Tab Components
-import { OverviewTab } from './dashboard/OverviewTab';
-import { FundDetailsTab } from './dashboard/FundDetailsTab';
-import { RiskAnalysisTab } from './dashboard/RiskAnalysisTab';
-import { DeepDiveTab } from './dashboard/DeepDiveTab';
+import { OverviewTab } from '@/components/dashboard/OverviewTab';
+import { FundDetailsTab } from '@/components/dashboard/FundDetailsTab';
+import { RiskAnalysisTab } from '@/components/dashboard/RiskAnalysisTab';
+import { DeepDiveTab } from '@/components/dashboard/DeepDiveTab';
 
 // Other features
-import { SavingsPlanCalculator } from './SavingsPlanCalculator';
+import { SavingsPlanCalculator } from '@/components/SavingsPlanCalculator';
 
-import { VisualsTab } from './dashboard/VisualsTab';
+import { VisualsTab } from '@/components/dashboard/VisualsTab';
 
-import { useTranslation } from '../lib/i18n/LanguageContext';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 interface DashboardProps {
   etfs: EtfConfig[];

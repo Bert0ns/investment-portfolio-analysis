@@ -5,7 +5,7 @@ import {
   searchHoldings,
   generateNetworkData,
 } from '../lib/math';
-import { EtfConfig } from '../lib/types';
+import { EtfConfig } from '@/lib/types';
 
 describe('Math Utilities', () => {
   const mockEtfs: EtfConfig[] = [

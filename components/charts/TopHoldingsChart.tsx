@@ -8,9 +8,9 @@ import {
   ResponsiveContainer,
   Cell,
 } from 'recharts';
-import { Card, CardContent, CardHeader } from '../ui/card';
-import { COLORS, ChartTitleWithInfo, CustomTooltip } from './Shared';
-import { useTranslation } from '../../lib/i18n/LanguageContext';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { COLORS, ChartTitleWithInfo, CustomTooltip } from '@/components/charts/Shared';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 interface TopHoldingsChartProps {
   data: { name: string; value: number }[];

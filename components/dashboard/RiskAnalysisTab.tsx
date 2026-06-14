@@ -1,7 +1,7 @@
 import React from 'react';
-import { ConcentrationChart } from '../charts/ConcentrationChart';
-import { DistributionChart } from '../charts/DistributionChart';
-import { useTranslation } from '../../lib/i18n/LanguageContext';
+import { ConcentrationChart } from '@/components/charts/ConcentrationChart';
+import { DistributionChart } from '@/components/charts/DistributionChart';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 type ChartData = { name: string; value: number }[];
 

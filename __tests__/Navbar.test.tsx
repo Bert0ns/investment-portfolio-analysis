@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import Navbar from '../components/Navbar';
-import { useTranslation } from '../lib/i18n/LanguageContext';
+import Navbar from '@/components/Navbar';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 // Mock dependencies
 jest.mock('next/link', () => ({

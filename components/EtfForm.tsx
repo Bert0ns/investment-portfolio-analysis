@@ -1,6 +1,6 @@
 'use client';
 
-import { Issuer, EtfConfig, ReplicationMethod, UseOfProfit, Domicile } from '../lib/types';
+import { Issuer, EtfConfig, ReplicationMethod, UseOfProfit, Domicile } from '@/lib/types';
 import {
   Dialog,
   DialogContent,
@@ -9,12 +9,18 @@ import {
   DialogTitle,
   DialogTrigger,
 } from './ui/dialog';
-import { Input } from './ui/input';
-import { Label } from './ui/label';
-import { Button } from './ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { Plus } from 'lucide-react';
-import { useEtfForm } from '../hooks/useEtfForm';
+import { useEtfForm } from '@/hooks/useEtfForm';
 
 interface EtfFormProps {
   onAddEtf: (etf: EtfConfig) => void;

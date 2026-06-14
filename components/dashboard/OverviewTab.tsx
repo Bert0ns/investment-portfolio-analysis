@@ -1,7 +1,7 @@
 import React from 'react';
-import { TopHoldingsChart } from '../charts/TopHoldingsChart';
-import { PieChartCard } from '../charts/PieChartCard';
-import { useTranslation } from '../../lib/i18n/LanguageContext';
+import { TopHoldingsChart } from '@/components/charts/TopHoldingsChart';
+import { PieChartCard } from '@/components/charts/PieChartCard';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 type ChartData = { name: string; value: number }[];
 

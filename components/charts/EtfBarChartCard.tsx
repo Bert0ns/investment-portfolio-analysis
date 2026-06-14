@@ -8,8 +8,8 @@ import {
   ResponsiveContainer,
   Cell,
 } from 'recharts';
-import { Card, CardContent, CardHeader } from '../ui/card';
-import { COLORS, ChartTitleWithInfo } from './Shared';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { COLORS, ChartTitleWithInfo } from '@/components/charts/Shared';
 
 type ChartData = { name: string; value: number };
 
