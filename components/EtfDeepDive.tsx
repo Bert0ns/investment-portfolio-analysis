@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
 import { TopHoldingsChart } from '@/components/charts/TopHoldingsChart';
 import { PieChartCard } from '@/components/charts/PieChartCard';
+import { HoldingsTable } from '@/components/HoldingsTable';
 
 function DeepDiveData({ etf }: { etf: EtfConfig }) {
   const { t } = useTranslation();
@@ -50,7 +51,10 @@ function DeepDiveData({ etf }: { etf: EtfConfig }) {
           >
             {t.etfForm.replication}
           </div>
-          <div className="font-semibold text-primary">{etf.replicationMethod}</div>
+          <div className="font-semibold text-primary">
+            {t.etfProperties[etf.replicationMethod as keyof typeof t.etfProperties] ||
+              etf.replicationMethod}
+          </div>
         </div>
         <div className="bg-muted/30 p-3 rounded-md border border-border">
           <div
@@ -59,7 +63,9 @@ function DeepDiveData({ etf }: { etf: EtfConfig }) {
           >
             {t.etfForm.useOfProfit}
           </div>
-          <div className="font-semibold text-primary">{etf.useOfProfit}</div>
+          <div className="font-semibold text-primary">
+            {t.etfProperties[etf.useOfProfit as keyof typeof t.etfProperties] || etf.useOfProfit}
+          </div>
         </div>
       </div>
 
@@ -83,6 +89,8 @@ function DeepDiveData({ etf }: { etf: EtfConfig }) {
           />
         </div>
       </div>
+
+      <HoldingsTable holdings={etf.holdings} />
     </div>
   );
 }
@@ -104,7 +112,7 @@ export function EtfDeepDive({ etf }: { etf: EtfConfig }) {
       >
         <Search size={16} />
       </SheetTrigger>
-      <SheetContent className="w-full !max-w-full sm:!max-w-2xl lg:!max-w-3xl xl:!max-w-4xl p-4 sm:p-6 overflow-y-auto bg-background/95 backdrop-blur-xl border-l-border">
+      <SheetContent className="!w-full !max-w-full sm:!max-w-2xl lg:!max-w-3xl xl:!max-w-4xl p-4 sm:p-6 overflow-y-auto bg-background/95 backdrop-blur-xl border-l-border">
         <SheetHeader className="mb-2 mt-4 sm:mt-0 text-left">
           <SheetTitle className="text-xl sm:text-2xl font-black tracking-widest uppercase flex items-center gap-3">
             <Search className="h-6 w-6 text-primary drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
