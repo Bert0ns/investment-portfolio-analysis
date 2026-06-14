@@ -13,6 +13,10 @@ jest.mock('../lib/i18n/LanguageContext', () => ({
 }));
 
 describe('SavingsPlanCalculator Component', () => {
+  beforeEach(() => {
+    window.localStorage.clear();
+  });
+
   const mockEtfs: EtfConfig[] = [
     {
       id: '1',

@@ -36,3 +36,23 @@ jest.mock('recharts', () => {
       ),
   };
 });
+
+// Mock the Slider component to prevent @base-ui/react from triggering async act(...) warnings during tests
+jest.mock('@/components/ui/slider', () => {
+  return {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    Slider: ({ value, defaultValue, onValueChange, min, max, ...props }: any) => {
+      const val = value !== undefined ? value[0] : defaultValue !== undefined ? defaultValue[0] : 0;
+      return React.createElement('input', {
+        type: 'range',
+        'data-testid': 'mock-slider',
+        min: min,
+        max: max,
+        value: val,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        onChange: (e: any) => onValueChange?.([Number(e.target.value)]),
+        ...props,
+      });
+    },
+  };
+});
