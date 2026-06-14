@@ -291,6 +291,53 @@ export function NetworkGraph({ etfs, limit, livePhysics, overlapOnly }: NetworkG
     };
   }, []);
 
+  // Camera Persistence for Network Graph
+  useEffect(() => {
+    // Slight delay to ensure ForceGraph3D is fully mounted
+    const timer = setTimeout(() => {
+      try {
+        const stored = window.localStorage.getItem('camera_network_graph');
+        if (stored && fgRef.current) {
+          const parsed = JSON.parse(stored);
+          if (parsed && typeof parsed.x === 'number') {
+            // Animate smoothly to saved position over 2000ms
+            fgRef.current.cameraPosition(parsed, undefined, 2000);
+          }
+        }
+      } catch (e) {
+        console.warn('Could not restore camera position for camera_network_graph', e);
+      }
+    }, 100);
+
+    const savePosition = () => {
+      try {
+        if (fgRef.current) {
+          const pos = fgRef.current.cameraPosition();
+          window.localStorage.setItem('camera_network_graph', JSON.stringify(pos));
+        }
+      } catch {
+        // ignore
+      }
+    };
+
+    const interval = setInterval(savePosition, 1000);
+    window.addEventListener('beforeunload', savePosition);
+
+    const handleClear = () => {
+      window.localStorage.removeItem('camera_network_graph');
+    };
+
+    window.addEventListener('clear_ui_state', handleClear);
+
+    return () => {
+      clearTimeout(timer);
+      savePosition();
+      clearInterval(interval);
+      window.removeEventListener('beforeunload', savePosition);
+      window.removeEventListener('clear_ui_state', handleClear);
+    };
+  }, []);
+
   // Custom colors for nodes
   // In Light themes, we use vibrant colors (instead of black/dark) so they emit enough light to bloom in WebGL,
   // while still being dark enough to be visible against the white CSS background.

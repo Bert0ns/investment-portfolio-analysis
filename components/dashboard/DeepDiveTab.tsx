@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { Search, Building, PieChart } from 'lucide-react';
 import { EtfConfig } from '@/lib/types';
 import { searchHoldings } from '@/lib/math';
@@ -12,7 +13,7 @@ interface DeepDiveTabProps {
 
 export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
   const { t } = useTranslation();
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useLocalStorage('deepdive_query', '');
   const debouncedQuery = useDebounce(query, 300);
 
   const results = useMemo(() => {

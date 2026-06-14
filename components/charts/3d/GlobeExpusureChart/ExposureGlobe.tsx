@@ -6,6 +6,7 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import { Card, CardContent } from '@/components/ui/card';
 import { GlobeMesh } from '@/components/charts/3d/GlobeExpusureChart/GlobeMesh';
+import { CameraPersistence } from '@/components/charts/3d/CameraPersistence';
 
 export interface ExposureGlobeRef {
   zoomIn: () => void;
@@ -44,6 +45,7 @@ export const ExposureGlobe = forwardRef<
       <CardContent className="p-0">
         <div className="h-150 w-full relative bg-[#030712] overflow-hidden">
           <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
+            <CameraPersistence storageKey="camera_exposure_globe" />
             <ambientLight intensity={0.6} />
             <pointLight position={[10, 10, 10]} intensity={2.0} color="#ffffff" />
             <pointLight position={[-10, -10, -10]} intensity={0.5} color="#3b82f6" />

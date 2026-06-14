@@ -8,6 +8,7 @@ import { EtfConfig } from '@/lib/types';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTheme } from 'next-themes';
 import { useDebounce } from '@/hooks/useDebounce';
+import { CameraPersistence } from '@/components/charts/3d/CameraPersistence';
 
 interface CityscapeProps {
   etfs: EtfConfig[];
@@ -41,6 +42,7 @@ export function Cityscape({ etfs, isRotating }: CityscapeProps) {
       <CardContent className="p-0">
         <div className="h-150 w-full relative bg-[#030712] overflow-hidden">
           <Canvas camera={{ position: [0, 50, 70], fov: 45 }}>
+            <CameraPersistence storageKey="camera_cityscape" />
             <ambientLight intensity={0.4} />
             <directionalLight position={[10, 20, 10]} intensity={1.5} color="#ffffff" />
             <pointLight position={[-10, 5, -10]} intensity={0.8} color="#22d3ee" />

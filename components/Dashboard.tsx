@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { EtfConfig } from '@/lib/types';
 import { useDashboardData } from '@/hooks/useDashboardData';
 import { Card, CardContent } from '@/components/ui/card';
@@ -33,9 +34,9 @@ interface DashboardProps {
 export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
   const { t } = useTranslation();
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [activeTab, setActiveTab] = useState<
+  const [activeTab, setActiveTab] = useLocalStorage<
     'Overview' | 'Deep Dive' | '3D Visuals' | 'Fund Details' | 'Risk Analysis' | 'Savings Plan'
-  >('Overview');
+  >('dashboard_active_tab', 'Overview');
 
   const {
     geoData,
@@ -168,11 +169,11 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
           />
         )}
 
-        {activeTab === 'Deep Dive' && (
-          <div className="lg:col-span-2 animate-in fade-in duration-300">
-            <DeepDiveTab etfs={etfs} />
-          </div>
-        )}
+        <div
+          className={`lg:col-span-2 ${activeTab === 'Deep Dive' ? 'animate-in fade-in duration-300' : 'hidden'}`}
+        >
+          <DeepDiveTab etfs={etfs} />
+        </div>
 
         {activeTab === 'Fund Details' && (
           <FundDetailsTab
@@ -192,24 +193,23 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
           />
         )}
 
-        {activeTab === 'Savings Plan' && (
-          <div className="lg:col-span-2 transition-transform duration-300 animate-in fade-in">
-            <SavingsPlanCalculator etfs={etfs} totalWeight={totalWeight} />
-          </div>
-        )}
+        <div
+          className={`lg:col-span-2 transition-transform duration-300 ${activeTab === 'Savings Plan' ? 'animate-in fade-in' : 'hidden'}`}
+        >
+          <SavingsPlanCalculator etfs={etfs} totalWeight={totalWeight} />
+        </div>
 
-        {activeTab === '3D Visuals' && (
-          <div
-            className={`${isFullscreen ? 'fixed inset-0 z-50 p-4 bg-background' : 'lg:col-span-2'}`}
-          >
-            <VisualsTab
-              etfs={etfs}
-              geoData={geoData}
-              isFullscreen={isFullscreen}
-              onToggleFullscreen={() => setIsFullscreen(!isFullscreen)}
-            />
-          </div>
-        )}
+        <div
+          className={`${isFullscreen ? 'fixed inset-0 z-50 p-4 bg-background' : 'lg:col-span-2'} ${activeTab === '3D Visuals' ? '' : 'hidden'}`}
+        >
+          <VisualsTab
+            etfs={etfs}
+            geoData={geoData}
+            isFullscreen={isFullscreen}
+            onToggleFullscreen={() => setIsFullscreen(!isFullscreen)}
+            isActive={activeTab === '3D Visuals'}
+          />
+        </div>
       </div>
     </div>
   );

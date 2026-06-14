@@ -122,6 +122,29 @@ export function usePortfolio() {
         }
       }
       setEtfs(loadedEtfs);
+
+      // Clear all UI state explicitly (components are unmounted during loading, so events won't work)
+      if (typeof window !== 'undefined') {
+        const keysToRemove = [
+          'dashboard_active_tab',
+          'visuals_active',
+          'visuals_globe_rotating',
+          'visuals_network_limit',
+          'visuals_network_physics',
+          'visuals_network_overlap',
+          'deepdive_query',
+          'savings_initial',
+          'savings_monthly',
+          'savings_years',
+          'savings_return',
+          'savings_stop',
+          'camera_exposure_globe',
+          'camera_cityscape',
+          'camera_network_graph',
+        ];
+        keysToRemove.forEach((k) => window.localStorage.removeItem(k));
+      }
+
       toast.success(t.notifications.defaultsLoaded, {
         description: t.notifications.defaultsLoadedDesc,
       });

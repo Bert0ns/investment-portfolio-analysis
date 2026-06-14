@@ -1,12 +1,13 @@
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
+import { useLocalStorage } from './useLocalStorage';
 import { calculateSavingsPlanProjection, SavingsPlanResult } from '@/lib/math';
 
 export function useSavingsPlan() {
-  const [initialInvestment, setInitialInvestment] = useState(0);
-  const [monthlyContribution, setMonthlyContribution] = useState(833);
-  const [years, setYears] = useState(10);
-  const [expectedReturn, setExpectedReturn] = useState(6);
-  const [stopAccumulatingMonths, setStopAccumulatingMonths] = useState(6);
+  const [initialInvestment, setInitialInvestment] = useLocalStorage('savings_initial', 0);
+  const [monthlyContribution, setMonthlyContribution] = useLocalStorage('savings_monthly', 833);
+  const [years, setYears] = useLocalStorage('savings_years', 10);
+  const [expectedReturn, setExpectedReturn] = useLocalStorage('savings_return', 6);
+  const [stopAccumulatingMonths, setStopAccumulatingMonths] = useLocalStorage('savings_stop', 6);
 
   const clampedStopMonths = Math.min(stopAccumulatingMonths, years * 12);
 
