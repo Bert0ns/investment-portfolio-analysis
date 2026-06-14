@@ -199,6 +199,17 @@ export const dictionaries = {
       serverless: 'Serverless',
       serverlessDesc:
         'Your financial data never leaves your browser. All parsing and math are executed locally in real-time.',
+      realtimeAnalytics: 'Real-time Analytics',
+      realtimeAnalyticsDesc:
+        'Experience instant recalculations and dynamic visualizations without any server delays.',
+      privacyFirst: 'Privacy First',
+      privacyFirstDesc:
+        'All your portfolio data stays securely on your device. Zero tracking, zero server uploads.',
+      immersive3D: 'Immersive 3D',
+      immersive3DDesc:
+        'Explore your portfolio through revolutionary 3D network graphs and interactive cityscapes.',
+      nextGen: 'Next-Gen Portfolio Analytics',
+      viewSource: 'View Source',
     },
     about: {
       empowering: 'Empowering',
@@ -478,7 +489,18 @@ export const dictionaries = {
         'Aggrega migliaia di partecipazioni sottostanti per vedere esattamente in quali paesi e settori si trova realmente il tuo denaro.',
       serverless: 'Serverless',
       serverlessDesc:
-        "I tuoi dati finanziari non lasciano mai il browser. Tutta l'analisi e la matematica vengono eseguite localmente in tempo reale.",
+        'I tuoi dati finanziari non lasciano mai il tuo browser. Tutti i calcoli avvengono localmente in tempo reale.',
+      realtimeAnalytics: 'Analisi in Tempo Reale',
+      realtimeAnalyticsDesc:
+        'Sperimenta ricalcoli istantanei e visualizzazioni dinamiche senza alcun ritardo dovuto al server.',
+      privacyFirst: 'Privacy Prima di Tutto',
+      privacyFirstDesc:
+        'Tutti i dati del tuo portafoglio rimangono in modo sicuro sul tuo dispositivo. Nessun tracciamento, nessun caricamento su server.',
+      immersive3D: '3D Immersivo',
+      immersive3DDesc:
+        'Esplora il tuo portafoglio attraverso grafi di rete 3D rivoluzionari e paesaggi urbani interattivi.',
+      nextGen: 'Analisi di Portafoglio Next-Gen',
+      viewSource: 'Vedi il Codice',
     },
     about: {
       empowering: 'Potenziare gli',
