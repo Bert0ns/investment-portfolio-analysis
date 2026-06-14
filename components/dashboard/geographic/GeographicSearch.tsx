@@ -32,7 +32,7 @@ export function GeographicSearch({ etfs }: GeographicSearchProps) {
 
   return (
     <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <Card className="border-border shadow-md overflow-hidden bg-gradient-to-b from-card to-muted/10">
+      <Card className="border-border shadow-md overflow-hidden bg-linear-to-b from-card to-muted/10">
         <CardContent className="p-0 flex flex-col">
           <GeographicMap mapData={mapData} onCountryClick={setQuery} />
           <GeographicResults query={query} setQuery={setQuery} results={results} />

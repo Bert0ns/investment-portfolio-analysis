@@ -5,7 +5,7 @@ import { EtfConfig } from '@/lib/types';
 import { searchHoldings } from '@/lib/math';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { GeographicSearch } from '@/components/dashboard/GeographicSearch';
+import { GeographicSearch } from './geographic/GeographicSearch';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 

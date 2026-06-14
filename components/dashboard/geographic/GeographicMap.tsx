@@ -3,6 +3,11 @@ import { Globe, ZoomIn, ZoomOut, Maximize } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import WorldMap from 'react-svg-worldmap';
 
+const INITIAL_SCALE = 1.8;
+const MIN_SCALE = 1.5;
+const MAX_SCALE = 4;
+
+const WHEEL_STEP = 0.001;
 interface GeographicMapProps {
   mapData: { country: string; value: number }[];
   onCountryClick: (countryName: string) => void;
@@ -20,7 +25,12 @@ export function GeographicMap({ mapData, onCountryClick }: GeographicMapProps) {
         </h3>
       </div>
       <div className="w-full pointer-events-auto px-2 md:px-8 flex justify-center [&_figure]:w-full [&_svg]:w-full [&_svg]:h-auto">
-        <TransformWrapper initialScale={2.8} minScale={1.8} maxScale={4} wheel={{ step: 0.001 }}>
+        <TransformWrapper
+          initialScale={INITIAL_SCALE}
+          minScale={MIN_SCALE}
+          maxScale={MAX_SCALE}
+          wheel={{ step: WHEEL_STEP }}
+        >
           {({ zoomIn, zoomOut, resetTransform }) => (
             <div className="relative w-full flex flex-col items-center">
               <div className="absolute top-0 right-4 z-20 flex flex-col gap-2 bg-background/80 backdrop-blur-sm p-1.5 rounded-lg border border-border shadow-sm">
