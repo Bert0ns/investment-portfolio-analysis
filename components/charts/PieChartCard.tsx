@@ -16,13 +16,13 @@ export function PieChartCard({ title, info, data, colorOffset = 0 }: PieChartCar
         <ChartTitleWithInfo title={title} info={info} />
       </CardHeader>
       <CardContent>
-        <div style={{ width: '100%', height: 256, minWidth: 0 }}>
+        <div style={{ width: '100%', height: 360, minWidth: 0 }}>
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
                 data={data}
                 cx="50%"
-                cy="50%"
+                cy="42%"
                 innerRadius={70}
                 outerRadius={90}
                 paddingAngle={2}

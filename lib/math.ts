@@ -48,6 +48,52 @@ export function normalizeSector(sector: string): string {
   return sector.charAt(0).toUpperCase() + sector.slice(1);
 }
 
+const COUNTRY_MAPPINGS: { matchers: RegExp[]; result: string }[] = [
+  {
+    matchers: [/stati uniti/, /stati uniti d'america/, /united states/i, /^us$/, /^usa$/],
+    result: 'United States',
+  },
+  { matchers: [/giappone/, /japan/i], result: 'Japan' },
+  {
+    matchers: [/regno unito/, /united kingdom/i, /uk/i, /gran bretagna/],
+    result: 'United Kingdom',
+  },
+  { matchers: [/francia/, /france/i], result: 'France' },
+  { matchers: [/germania/, /germany/i], result: 'Germany' },
+  { matchers: [/svizzera/, /switzerland/i], result: 'Switzerland' },
+  { matchers: [/canada/i], result: 'Canada' },
+  { matchers: [/australia/i], result: 'Australia' },
+  { matchers: [/paesi bassi/, /netherlands/i, /holland/], result: 'Netherlands' },
+  { matchers: [/svezia/, /sweden/i], result: 'Sweden' },
+  { matchers: [/danimarca/, /denmark/i], result: 'Denmark' },
+  { matchers: [/spagna/, /spain/i], result: 'Spain' },
+  { matchers: [/italia/, /italy/i], result: 'Italy' },
+  { matchers: [/hong kong/i], result: 'Hong Kong' },
+  { matchers: [/cina/, /china/i], result: 'China' },
+  { matchers: [/taiwan/i], result: 'Taiwan' },
+  { matchers: [/corea del sud/, /south korea/i], result: 'South Korea' },
+  { matchers: [/india/i], result: 'India' },
+  { matchers: [/brasile/, /brazil/i], result: 'Brazil' },
+  { matchers: [/messico/, /mexico/i], result: 'Mexico' },
+  { matchers: [/sudafrica/, /south africa/i], result: 'South Africa' },
+  { matchers: [/irlanda/, /ireland/i], result: 'Ireland' },
+];
+
+export function normalizeCountry(country: string): string {
+  if (!country || country === 'Unknown' || country === 'N/A' || country === '-') return 'Unknown';
+
+  const c = country.trim().toLowerCase();
+
+  for (const mapping of COUNTRY_MAPPINGS) {
+    if (mapping.matchers.some((matcher) => matcher.test(c))) {
+      return mapping.result;
+    }
+  }
+
+  // Fallback: Title Case
+  return country.charAt(0).toUpperCase() + country.slice(1);
+}
+
 export function aggregateBy(
   etfs: EtfConfig[],
   key: 'sector' | 'country' | 'currency'

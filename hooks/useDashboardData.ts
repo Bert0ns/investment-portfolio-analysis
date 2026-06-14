@@ -1,6 +1,11 @@
 import { useMemo, useCallback } from 'react';
 import { EtfConfig } from '@/lib/types';
-import { aggregateTopHoldings, calculateAverageTer, normalizeSector } from '@/lib/math';
+import {
+  aggregateTopHoldings,
+  calculateAverageTer,
+  normalizeSector,
+  normalizeCountry,
+} from '@/lib/math';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 export function useDashboardData(etfs: EtfConfig[]) {
@@ -20,7 +25,7 @@ export function useDashboardData(etfs: EtfConfig[]) {
         const holdingWeight = (h.weight * etf.globalWeight) / 100;
         if (holdingWeight <= 0) return;
 
-        const country = String(h.country || 'Unknown');
+        const country = normalizeCountry(String(h.country || 'Unknown'));
         const sector = normalizeSector(String(h.sector || 'Unknown'));
         const currency = String(h.currency || 'Unknown');
 
@@ -49,7 +54,11 @@ export function useDashboardData(etfs: EtfConfig[]) {
     };
 
     return {
-      geoData: formatData(geoMap),
+      geoData: formatData(
+        geoMap,
+        (name) => t.countries[name as keyof typeof t.countries] || name,
+        15 // top 15 countries
+      ),
       sectorData: formatData(
         sectorMap,
         (name) => t.sectors[name as keyof typeof t.sectors] || name,

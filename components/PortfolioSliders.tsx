@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 import EtfForm from '@/components/EtfForm';
+import { EtfDeepDive } from '@/components/EtfDeepDive';
 
 interface PortfolioSlidersProps {
   etfs: EtfConfig[];
@@ -156,7 +157,7 @@ function EtfSliderRow({
             {etf.issuer} • TER: {etf.ter}%
           </p>
         </div>
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-1 sm:space-x-2">
           <div className="flex items-center">
             <Input
               type="number"
@@ -171,15 +172,16 @@ function EtfSliderRow({
                   setLocalWeight(Math.max(0, Math.min(100, Number(val))));
                 }
               }}
-              className="w-[4.5rem] h-8 text-right font-semibold text-sm pr-2"
+              className="w-[4rem] sm:w-[4.5rem] h-8 text-right font-semibold text-sm pr-1 sm:pr-2"
             />
             <span className="font-semibold text-sm ml-1">%</span>
           </div>
+          <EtfDeepDive etf={etf} />
           <Button
             variant="ghost"
             size="icon"
             onClick={() => onRemove(etf.id)}
-            className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+            className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10 shrink-0"
             title={t.portfolioSliders.removeEtf}
           >
             <Trash2 size={16} />

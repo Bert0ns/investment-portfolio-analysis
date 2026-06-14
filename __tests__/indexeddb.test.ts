@@ -79,7 +79,7 @@ describe('indexeddb', () => {
 
     it('sets an item successfully', async () => {
       const promise = setItem('testKey', 'testValue');
-      mockOpenRequest.onsuccess();
+      mockOpenRequest.onsuccess?.();
       await promise;
 
       expect(window.indexedDB.open).toHaveBeenCalledWith('EtfPortfolioDB', 1);
@@ -96,14 +96,14 @@ describe('indexeddb', () => {
       });
 
       const promise = setItem('testKey', 'testValue');
-      mockOpenRequest.onsuccess();
+      mockOpenRequest.onsuccess?.();
 
       await expect(promise).rejects.toThrow('Put failed');
     });
 
     it('gets an existing item successfully', async () => {
       const promise = getItem('exists');
-      mockOpenRequest.onsuccess();
+      mockOpenRequest.onsuccess?.();
       const result = await promise;
 
       expect(mockDb.transaction).toHaveBeenCalledWith('etf_store', 'readonly');
@@ -113,7 +113,7 @@ describe('indexeddb', () => {
 
     it('gets a non-existing item as null', async () => {
       const promise = getItem('missing');
-      mockOpenRequest.onsuccess();
+      mockOpenRequest.onsuccess?.();
       const result = await promise;
 
       expect(result).toBeNull();
@@ -128,14 +128,14 @@ describe('indexeddb', () => {
       });
 
       const promise = getItem('exists');
-      mockOpenRequest.onsuccess();
+      mockOpenRequest.onsuccess?.();
 
       await expect(promise).rejects.toThrow('Get failed');
     });
 
     it('removes an item successfully', async () => {
       const promise = removeItem('testKey');
-      mockOpenRequest.onsuccess();
+      mockOpenRequest.onsuccess?.();
       await promise;
 
       expect(mockDb.transaction).toHaveBeenCalledWith('etf_store', 'readwrite');
@@ -151,7 +151,7 @@ describe('indexeddb', () => {
       });
 
       const promise = removeItem('testKey');
-      mockOpenRequest.onsuccess();
+      mockOpenRequest.onsuccess?.();
 
       await expect(promise).rejects.toThrow('Delete failed');
     });
@@ -159,7 +159,7 @@ describe('indexeddb', () => {
     it('handles open database error', async () => {
       mockOpenRequest.error = new Error('DB Open Error');
       const promise = setItem('testKey', 'testValue');
-      mockOpenRequest.onerror();
+      mockOpenRequest.onerror?.();
 
       await expect(promise).rejects.toThrow('DB Open Error');
     });
@@ -170,11 +170,13 @@ describe('indexeddb', () => {
       const promise = setItem('testKey', 'testValue');
 
       // Simulate upgradeneeded event
-      mockOpenRequest.onupgradeneeded({ target: { result: mockDb } });
+      mockOpenRequest.onupgradeneeded?.({
+        target: { result: mockDb },
+      } as unknown as IDBVersionChangeEvent);
       expect(mockDb.createObjectStore).toHaveBeenCalledWith('etf_store');
 
       // Complete open request
-      mockOpenRequest.onsuccess();
+      mockOpenRequest.onsuccess?.();
       await promise;
     });
   });
