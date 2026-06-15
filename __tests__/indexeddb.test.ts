@@ -17,16 +17,28 @@ describe('indexeddb', () => {
       error?: Error;
     };
 
+    const createSuccessReq = () => {
+      const req: { onsuccess: (() => void) | null; onerror: (() => void) | null } = {
+        onsuccess: null,
+        onerror: null,
+      };
+      setTimeout(() => req.onsuccess && req.onsuccess(), 0);
+      return req;
+    };
+
+    const createErrorReq = (errorMsg: string) => {
+      const req: { onsuccess: (() => void) | null; onerror: (() => void) | null; error?: Error } = {
+        onsuccess: null,
+        onerror: null,
+        error: new Error(errorMsg),
+      };
+      setTimeout(() => req.onerror && req.onerror(), 0);
+      return req;
+    };
+
     beforeEach(() => {
       mockStore = {
-        put: jest.fn().mockImplementation(() => {
-          const req: { onsuccess: (() => void) | null; onerror: (() => void) | null } = {
-            onsuccess: null,
-            onerror: null,
-          };
-          setTimeout(() => req.onsuccess && req.onsuccess(), 0);
-          return req;
-        }),
+        put: jest.fn().mockImplementation(createSuccessReq),
         get: jest.fn().mockImplementation((key) => {
           const req: {
             onsuccess: (() => void) | null;
@@ -36,14 +48,7 @@ describe('indexeddb', () => {
           setTimeout(() => req.onsuccess && req.onsuccess(), 0);
           return req;
         }),
-        delete: jest.fn().mockImplementation(() => {
-          const req: { onsuccess: (() => void) | null; onerror: (() => void) | null } = {
-            onsuccess: null,
-            onerror: null,
-          };
-          setTimeout(() => req.onsuccess && req.onsuccess(), 0);
-          return req;
-        }),
+        delete: jest.fn().mockImplementation(createSuccessReq),
       };
 
       mockTransaction = {
@@ -88,12 +93,7 @@ describe('indexeddb', () => {
     });
 
     it('handles setItem error', async () => {
-      mockStore.put.mockImplementation(() => {
-        const req: { onsuccess: (() => void) | null; onerror: (() => void) | null; error?: Error } =
-          { onsuccess: null, onerror: null, error: new Error('Put failed') };
-        setTimeout(() => req.onerror && req.onerror(), 0);
-        return req;
-      });
+      mockStore.put.mockImplementation(() => createErrorReq('Put failed'));
 
       const promise = setItem('testKey', 'testValue');
       mockOpenRequest.onsuccess?.();
@@ -120,12 +120,7 @@ describe('indexeddb', () => {
     });
 
     it('gets an item and handles error', async () => {
-      mockStore.get.mockImplementation(() => {
-        const req: { onsuccess: (() => void) | null; onerror: (() => void) | null; error?: Error } =
-          { onsuccess: null, onerror: null, error: new Error('Get failed') };
-        setTimeout(() => req.onerror && req.onerror(), 0);
-        return req;
-      });
+      mockStore.get.mockImplementation(() => createErrorReq('Get failed'));
 
       const promise = getItem('exists');
       mockOpenRequest.onsuccess?.();
@@ -143,12 +138,7 @@ describe('indexeddb', () => {
     });
 
     it('removes an item and handles error', async () => {
-      mockStore.delete.mockImplementation(() => {
-        const req: { onsuccess: (() => void) | null; onerror: (() => void) | null; error?: Error } =
-          { onsuccess: null, onerror: null, error: new Error('Delete failed') };
-        setTimeout(() => req.onerror && req.onerror(), 0);
-        return req;
-      });
+      mockStore.delete.mockImplementation(() => createErrorReq('Delete failed'));
 
       const promise = removeItem('testKey');
       mockOpenRequest.onsuccess?.();

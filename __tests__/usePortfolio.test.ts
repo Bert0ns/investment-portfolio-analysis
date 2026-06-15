@@ -71,12 +71,16 @@ describe('usePortfolio Hook', () => {
     (getItem as jest.Mock).mockResolvedValue(null);
   });
 
-  it('loads empty array if local storage is empty, then loads defaults if we call it', async () => {
-    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
-
+  const renderAndAwaitLoad = async () => {
+    const hook = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
     await waitFor(() => {
-      expect(result.current.isLoaded).toBe(true);
+      expect(hook.result.current.isLoaded).toBe(true);
     });
+    return hook.result;
+  };
+
+  it('loads empty array if local storage is empty, then loads defaults if we call it', async () => {
+    await renderAndAwaitLoad();
   });
 
   it('can add an ETF and updates local storage', async () => {
@@ -85,11 +89,7 @@ describe('usePortfolio Hook', () => {
       { id: 'dummy', name: 'dummy', globalWeight: 0, holdings: [] },
     ]);
 
-    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
-
-    await waitFor(() => {
-      expect(result.current.isLoaded).toBe(true);
-    });
+    const result = await renderAndAwaitLoad();
 
     // We can't use waitForNextUpdate in modern RTL easily without imports,
     // so we just rely on the fact that the hook handles it.
@@ -118,11 +118,7 @@ describe('usePortfolio Hook', () => {
       },
     ]);
 
-    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
-
-    await waitFor(() => {
-      expect(result.current.isLoaded).toBe(true);
-    });
+    const result = await renderAndAwaitLoad();
 
     // Wait for the effect that loads from local storage to run
     // Wait, the hook sets state synchronously if we could, but it uses useEffect.
@@ -139,11 +135,7 @@ describe('usePortfolio Hook', () => {
   });
 
   it('can remove an ETF', async () => {
-    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
-
-    await waitFor(() => {
-      expect(result.current.isLoaded).toBe(true);
-    });
+    const result = await renderAndAwaitLoad();
 
     act(() => {
       result.current.addEtf(
@@ -164,11 +156,7 @@ describe('usePortfolio Hook', () => {
     (getItem as jest.Mock).mockResolvedValue(null);
     window.localStorage.setItem('etf_portfolio_data', 'invalid-json');
 
-    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
-
-    await waitFor(() => {
-      expect(result.current.isLoaded).toBe(true);
-    });
+    await renderAndAwaitLoad();
 
     expect(window.localStorage.getItem('etf_portfolio_data')).toBe('invalid-json');
   });
@@ -177,11 +165,7 @@ describe('usePortfolio Hook', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     (getItem as jest.Mock).mockRejectedValue(new Error('IndexedDB Error'));
 
-    const { result } = renderHook(() => usePortfolio(), { wrapper: LanguageProvider });
-
-    await waitFor(() => {
-      expect(result.current.isLoaded).toBe(true);
-    });
+    await renderAndAwaitLoad();
 
     expect(toast.error).toHaveBeenCalled();
     consoleSpy.mockRestore();

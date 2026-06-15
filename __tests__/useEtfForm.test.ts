@@ -61,6 +61,24 @@ describe('useEtfForm', () => {
     });
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const submitForm = async (result: any) => {
+    await act(async () => {
+      await result.current.actions.handleSubmit({
+        preventDefault: jest.fn(),
+      } as unknown as React.FormEvent<HTMLFormElement>);
+    });
+  };
+
+  const renderFillAndSubmit = async () => {
+    const { result } = renderHook(() => useEtfForm(mockOnAddEtf));
+    await act(async () => {
+      fillForm(result);
+    });
+    await submitForm(result);
+    return result;
+  };
+
   it('initializes with default state', () => {
     const { result } = renderHook(() => useEtfForm(mockOnAddEtf));
     expect(result.current.state.open).toBe(false);
@@ -83,11 +101,7 @@ describe('useEtfForm', () => {
   it('shows error if required fields are missing', async () => {
     const { result } = renderHook(() => useEtfForm(mockOnAddEtf));
 
-    await act(async () => {
-      await result.current.actions.handleSubmit({
-        preventDefault: jest.fn(),
-      } as unknown as React.FormEvent<HTMLFormElement>);
-    });
+    await submitForm(result);
 
     expect(toast.error).toHaveBeenCalledWith('missingFields', expect.any(Object));
     expect(mockOnAddEtf).not.toHaveBeenCalled();
@@ -101,11 +115,7 @@ describe('useEtfForm', () => {
       result.current.actions.setTer('invalid'); // Override to invalid TER
     });
 
-    await act(async () => {
-      await result.current.actions.handleSubmit({
-        preventDefault: jest.fn(),
-      } as unknown as React.FormEvent<HTMLFormElement>);
-    });
+    await submitForm(result);
 
     expect(toast.error).toHaveBeenCalledWith('invalidTer', expect.any(Object));
   });
@@ -116,17 +126,7 @@ describe('useEtfForm', () => {
       errors: ['Invalid CSV format'],
     });
 
-    const { result } = renderHook(() => useEtfForm(mockOnAddEtf));
-
-    await act(async () => {
-      fillForm(result);
-    });
-
-    await act(async () => {
-      await result.current.actions.handleSubmit({
-        preventDefault: jest.fn(),
-      } as unknown as React.FormEvent<HTMLFormElement>);
-    });
+    await renderFillAndSubmit();
 
     expect(toast.error).toHaveBeenCalledWith(
       'parseError',
@@ -158,11 +158,7 @@ describe('useEtfForm', () => {
       result.current.actions.setIsin('US123456');
     });
 
-    await act(async () => {
-      await result.current.actions.handleSubmit({
-        preventDefault: jest.fn(),
-      } as unknown as React.FormEvent<HTMLFormElement>);
-    });
+    await submitForm(result);
 
     expect(mockOnAddEtf).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -194,17 +190,7 @@ describe('useEtfForm', () => {
       errors: ['Some random warning'],
     });
 
-    const { result } = renderHook(() => useEtfForm(mockOnAddEtf));
-
-    await act(async () => {
-      fillForm(result);
-    });
-
-    await act(async () => {
-      await result.current.actions.handleSubmit({
-        preventDefault: jest.fn(),
-      } as unknown as React.FormEvent<HTMLFormElement>);
-    });
+    await renderFillAndSubmit();
 
     expect(toast.warning).toHaveBeenCalledWith(
       'parsedWithWarnings',
@@ -218,17 +204,7 @@ describe('useEtfForm', () => {
   it('handles unexpected exceptions', async () => {
     mockParse.mockRejectedValueOnce(new Error('Unexpected disaster'));
 
-    const { result } = renderHook(() => useEtfForm(mockOnAddEtf));
-
-    await act(async () => {
-      fillForm(result);
-    });
-
-    await act(async () => {
-      await result.current.actions.handleSubmit({
-        preventDefault: jest.fn(),
-      } as unknown as React.FormEvent<HTMLFormElement>);
-    });
+    await renderFillAndSubmit();
 
     expect(toast.error).toHaveBeenCalledWith(
       'Error',
@@ -246,11 +222,7 @@ describe('useEtfForm', () => {
       result.current.actions.setFundSize('-10'); // Invalid fund size
     });
 
-    await act(async () => {
-      await result.current.actions.handleSubmit({
-        preventDefault: jest.fn(),
-      } as unknown as React.FormEvent<HTMLFormElement>);
-    });
+    await submitForm(result);
 
     expect(toast.error).toHaveBeenCalledWith('invalidSize', expect.any(Object));
   });
@@ -263,11 +235,7 @@ describe('useEtfForm', () => {
       result.current.actions.setFundAge('-1'); // Invalid fund age
     });
 
-    await act(async () => {
-      await result.current.actions.handleSubmit({
-        preventDefault: jest.fn(),
-      } as unknown as React.FormEvent<HTMLFormElement>);
-    });
+    await submitForm(result);
 
     expect(toast.error).toHaveBeenCalledWith('invalidAge', expect.any(Object));
   });
@@ -278,17 +246,7 @@ describe('useEtfForm', () => {
       errors: [], // No errors, but no holdings either
     });
 
-    const { result } = renderHook(() => useEtfForm(mockOnAddEtf));
-
-    await act(async () => {
-      fillForm(result);
-    });
-
-    await act(async () => {
-      await result.current.actions.handleSubmit({
-        preventDefault: jest.fn(),
-      } as unknown as React.FormEvent<HTMLFormElement>);
-    });
+    await renderFillAndSubmit();
 
     expect(toast.error).toHaveBeenCalledWith(
       'emptyFile',

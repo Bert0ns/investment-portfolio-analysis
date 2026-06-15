@@ -24,6 +24,19 @@ describe('CSV Parsing Strategies', () => {
     });
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const expectAppleHolding = (result: any, expectedSector: string, expectedCountry: string) => {
+    expect(result.holdings.length).toBe(1);
+    expect(result.holdings[0]).toEqual({
+      ticker: 'AAPL',
+      name: 'Apple Inc.',
+      weight: 5.5,
+      sector: expectedSector,
+      country: expectedCountry,
+      currency: 'USD',
+    });
+  };
+
   describe('ISharesParser', () => {
     it('parses correct columns', async () => {
       const csvContent = `"Ticker","Name","Weight (%)","Sector","Location","Exchange"\n"AAPL","Apple Inc.","5.50","Information Technology","United States","USD"\n`;
@@ -33,15 +46,7 @@ describe('CSV Parsing Strategies', () => {
       const result = await parser.parse(file);
 
       expect(result.errors.length).toBe(0);
-      expect(result.holdings.length).toBe(1);
-      expect(result.holdings[0]).toEqual({
-        ticker: 'AAPL',
-        name: 'Apple Inc.',
-        weight: 5.5,
-        sector: 'Information Technology',
-        country: 'United States',
-        currency: 'USD',
-      });
+      expectAppleHolding(result, 'Information Technology', 'United States');
     });
   });
 
@@ -53,15 +58,7 @@ describe('CSV Parsing Strategies', () => {
       const parser = new VanguardParser();
       const result = await parser.parse(file);
 
-      expect(result.holdings.length).toBe(1);
-      expect(result.holdings[0]).toEqual({
-        ticker: 'AAPL',
-        name: 'Apple Inc.',
-        weight: 5.5,
-        sector: 'Technology',
-        country: 'USA',
-        currency: 'USD',
-      });
+      expectAppleHolding(result, 'Technology', 'USA');
     });
   });
 
@@ -73,15 +70,7 @@ describe('CSV Parsing Strategies', () => {
       const parser = new AmundiParser();
       const result = await parser.parse(file);
 
-      expect(result.holdings.length).toBe(1);
-      expect(result.holdings[0]).toEqual({
-        ticker: 'AAPL',
-        name: 'Apple Inc.',
-        weight: 5.5,
-        sector: 'IT',
-        country: 'US',
-        currency: 'USD',
-      });
+      expectAppleHolding(result, 'IT', 'US');
     });
   });
 
@@ -93,33 +82,26 @@ describe('CSV Parsing Strategies', () => {
       const parser = new LyxorParser();
       const result = await parser.parse(file);
 
-      expect(result.holdings.length).toBe(1);
-      expect(result.holdings[0]).toEqual({
-        ticker: 'AAPL',
-        name: 'Apple Inc.',
-        weight: 5.5,
-        sector: 'Tech',
-        country: 'US',
-        currency: 'USD',
-      });
+      expectAppleHolding(result, 'Tech', 'US');
     });
   });
 
   describe('Edge Cases and Number Parsing', () => {
-    it('handles European number formatting (e.g., 1.234,56)', async () => {
-      const csvContent = `Ticker,Name,Weight (%),Sector,Location,Exchange\nAAPL,Apple Inc.,"1.234,56",IT,US,USD\n`;
+    const runParsingNumberTest = async (csvContent: string) => {
       file = new File([csvContent], 'ishares.csv', { type: 'text/csv' });
       const parser = new ISharesParser();
       const result = await parser.parse(file);
       expect(result.holdings[0].weight).toBe(1234.56);
+    };
+
+    it('handles European number formatting (e.g., 1.234,56)', async () => {
+      const csvContent = `Ticker,Name,Weight (%),Sector,Location,Exchange\nAAPL,Apple Inc.,"1.234,56",IT,US,USD\n`;
+      await runParsingNumberTest(csvContent);
     });
 
     it('handles US number formatting with commas (e.g., 1,234.56)', async () => {
       const csvContent = `Ticker,Name,Weight (%),Sector,Location,Exchange\nAAPL,Apple Inc.,"1,234.56",IT,US,USD\n`;
-      file = new File([csvContent], 'ishares.csv', { type: 'text/csv' });
-      const parser = new ISharesParser();
-      const result = await parser.parse(file);
-      expect(result.holdings[0].weight).toBe(1234.56);
+      await runParsingNumberTest(csvContent);
     });
 
     it('handles whitespace and percentage signs in numbers', async () => {
