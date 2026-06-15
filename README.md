@@ -11,8 +11,11 @@ A powerful, **100% client-side** web application designed to help retail investo
 ## ✨ Features
 
 - **🌍 Interactive 3D Visuals**: Explore your geographic exposure on a fully interactive, auto-rotating 3D globe powered by Three.js and React Three Fiber, featuring dynamic exposure pillars and bloom effects.
+- **🗺️ Interactive 2D World Map**: A dynamic, zoomable SVG choropleth world map for geographic X-Ray. Click on any country to drill down into its aggregated weight and fund-by-fund breakdown, featuring sleek hover animations and dynamic opacities.
+- **🔍 X-Ray Deep Dive Search**: Inspect your exact exposure to individual companies or specific countries with sub-millisecond local search. See precisely which underlying ETFs contribute to that exposure and their internal weights.
 - **🎨 Cyberpunk Aesthetic**: A deeply immersive, sharp-cornered UI with glowing neon gradients, polished dark mode, and seamless micro-animations.
 - **📊 True Underlying Exposure**: Input multiple ETFs and instantly view aggregated Geographic, Sector, and Currency allocations as if your portfolio was a single giant fund.
+- **🌐 Localization & i18n**: Full internationalization support including precise translation mapping of country ISO codes to localized country names.
 - **🏦 Multi-Issuer Support**: Built-in CSV parsers for the world's leading asset managers: **iShares, Vanguard, Amundi, and Lyxor**.
 - **🎛️ Interactive Allocation**: Fluidly adjust your ETF weights using range sliders and watch your dashboard react and recompute instantaneously.
 - **📈 Savings Plan Calculator**: Advanced financial math engine to simulate a long-term Dollar-Cost Averaging (DCA) strategy. Configure expected returns, monthly contributions, and "stop accumulating" thresholds.
