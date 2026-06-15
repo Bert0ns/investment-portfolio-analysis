@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PieChart, MapPin, Building } from 'lucide-react';
 import { CountrySearchResult } from '@/lib/math';

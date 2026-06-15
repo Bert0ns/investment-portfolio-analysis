@@ -1,12 +1,10 @@
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import { Globe, ZoomIn, ZoomOut, Maximize } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import WorldMap from 'react-svg-worldmap';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
-
-const INITIAL_SCALE = 1.3;
-const MIN_SCALE = 1;
-const MAX_SCALE = 2.8;
+import { MapControls } from './MapControls';
+import { MAP_COLORS, MAP_CONFIG } from './mapConstants';
 
 interface GeographicMapProps {
   mapData: { country: string; value: number }[];
@@ -28,36 +26,14 @@ export function GeographicMap({ mapData, onCountryClick, selectedCountry }: Geog
       </div>
       <div className="w-full h-full pointer-events-auto px-2 md:px-8 flex justify-center items-center [&_figure]:w-full [&_svg]:w-full [&_svg]:h-auto">
         <TransformWrapper
-          initialScale={INITIAL_SCALE}
-          minScale={MIN_SCALE}
-          maxScale={MAX_SCALE}
+          initialScale={MAP_CONFIG.initialScale}
+          minScale={MAP_CONFIG.minScale}
+          maxScale={MAP_CONFIG.maxScale}
           wheel={{ wheelDisabled: true }}
         >
           {({ zoomIn, zoomOut, resetTransform }) => (
             <div className="relative w-full flex flex-col items-center">
-              <div className="absolute top-0 right-4 z-20 flex flex-col gap-2 bg-background/80 backdrop-blur-sm p-1.5 rounded-lg border border-border shadow-sm">
-                <button
-                  onClick={() => zoomIn()}
-                  className="p-1.5 hover:bg-muted rounded-md transition-colors"
-                  title="Zoom In"
-                >
-                  <ZoomIn className="w-4 h-4 text-foreground" />
-                </button>
-                <button
-                  onClick={() => zoomOut()}
-                  className="p-1.5 hover:bg-muted rounded-md transition-colors"
-                  title="Zoom Out"
-                >
-                  <ZoomOut className="w-4 h-4 text-foreground" />
-                </button>
-                <button
-                  onClick={() => resetTransform()}
-                  className="p-1.5 hover:bg-muted rounded-md transition-colors"
-                  title="Reset View"
-                >
-                  <Maximize className="w-4 h-4 text-foreground" />
-                </button>
-              </div>
+              <MapControls zoomIn={zoomIn} zoomOut={zoomOut} resetTransform={resetTransform} />
 
               <TransformComponent
                 wrapperStyle={{ width: '100%', height: '100%' }}
@@ -71,10 +47,14 @@ export function GeographicMap({ mapData, onCountryClick, selectedCountry }: Geog
               >
                 <div className="w-full flex justify-center items-center">
                   <WorldMap
-                    color="#3b82f6"
+                    color={MAP_COLORS.defaultFill}
                     backgroundColor="transparent"
-                    borderColor={resolvedTheme === 'theme-cyberpunk' ? '#d9e4ff' : '#0f172a'}
-                    strokeOpacity={0.9}
+                    borderColor={
+                      resolvedTheme === 'theme-cyberpunk'
+                        ? MAP_COLORS.darkThemeStroke
+                        : MAP_COLORS.lightThemeStroke
+                    }
+                    strokeOpacity={MAP_CONFIG.strokeOpacity}
                     valueSuffix="%"
                     size="responsive"
                     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -100,11 +80,14 @@ export function GeographicMap({ mapData, onCountryClick, selectedCountry }: Geog
                       if (Number.isNaN(opacityLevel)) opacityLevel = 0.8;
 
                       return {
-                        fill: isSelected ? '#f59e0b' : '#3b82f6',
+                        fill: isSelected ? MAP_COLORS.selectedFill : MAP_COLORS.defaultFill,
                         fillOpacity: isSelected ? 1 : opacityLevel,
-                        stroke: resolvedTheme === 'theme-cyberpunk' ? '#d9e4ff' : '#0f172a',
-                        strokeWidth: 1,
-                        strokeOpacity: 0.9,
+                        stroke:
+                          resolvedTheme === 'theme-cyberpunk'
+                            ? MAP_COLORS.darkThemeStroke
+                            : MAP_COLORS.lightThemeStroke,
+                        strokeWidth: MAP_CONFIG.strokeWidth,
+                        strokeOpacity: MAP_CONFIG.strokeOpacity,
                         cursor: 'pointer',
                       };
                     }}
