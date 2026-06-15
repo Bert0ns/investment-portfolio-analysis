@@ -13,6 +13,11 @@ export interface HoldingSearchResult {
   }[];
 }
 
+function initSearchQuery(query: string): string | null {
+  if (!query || query.trim() === '') return null;
+  return query.toLowerCase().trim();
+}
+
 function updateHoldingBreakdown(
   companiesList: HoldingSearchResult[],
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -55,9 +60,8 @@ function iterateHoldings(
 }
 
 export function searchHoldings(etfs: EtfConfig[], query: string): HoldingSearchResult[] {
-  if (!query || query.trim() === '') return [];
-
-  const lowerQuery = query.toLowerCase().trim();
+  const lowerQuery = initSearchQuery(query);
+  if (!lowerQuery) return [];
   const resultsMap = new Map<string, HoldingSearchResult>();
 
   iterateHoldings(etfs, (etf, holding, globalMultiplier) => {
@@ -93,9 +97,8 @@ export interface CountrySearchResult {
 }
 
 export function searchByCountry(etfs: EtfConfig[], query: string): CountrySearchResult[] {
-  if (!query || query.trim() === '') return [];
-
-  const lowerQuery = query.toLowerCase().trim();
+  const lowerQuery = initSearchQuery(query);
+  if (!lowerQuery) return [];
   const resultsMap = new Map<string, CountrySearchResult>();
 
   iterateHoldings(etfs, (etf, holding, globalMultiplier) => {

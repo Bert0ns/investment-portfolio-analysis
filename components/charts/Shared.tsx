@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Card, CardTitle } from '@/components/ui/card';
+import { Card, CardTitle, CardHeader, CardContent } from '@/components/ui/card';
 import {
   Tooltip as UITooltip,
   TooltipContent,
@@ -79,3 +79,24 @@ export const CustomTooltip = ({
   }
   return null;
 };
+
+export function ChartContainer({
+  title,
+  info,
+  children,
+}: {
+  title: string;
+  info: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <CardHeader>
+        <ChartTitleWithInfo title={title} info={info} />
+      </CardHeader>
+      <CardContent>
+        <div style={{ width: '100%', height: 256, minWidth: 0 }}>{children}</div>
+      </CardContent>
+    </>
+  );
+}

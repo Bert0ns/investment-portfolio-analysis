@@ -6,6 +6,13 @@ export interface AggregationResult {
   value: number;
 }
 
+function sortAndMap(map: Map<string, number>, limit?: number): AggregationResult[] {
+  const result = Array.from(map.entries())
+    .map(([name, value]) => ({ name, value }))
+    .sort((a, b) => b.value - a.value);
+  return limit !== undefined ? result.slice(0, limit) : result;
+}
+
 export function aggregateBy(
   etfs: EtfConfig[],
   key: 'sector' | 'country' | 'currency'
@@ -29,10 +36,7 @@ export function aggregateBy(
     }
   }
 
-  // Convert map to array and sort by value descending
-  return Array.from(map.entries())
-    .map(([name, value]) => ({ name, value }))
-    .sort((a, b) => b.value - a.value);
+  return sortAndMap(map);
 }
 
 export function aggregateTopHoldings(etfs: EtfConfig[], limit: number = 10): AggregationResult[] {
@@ -50,10 +54,7 @@ export function aggregateTopHoldings(etfs: EtfConfig[], limit: number = 10): Agg
     }
   }
 
-  return Array.from(map.entries())
-    .map(([name, value]) => ({ name, value }))
-    .sort((a, b) => b.value - a.value)
-    .slice(0, limit);
+  return sortAndMap(map, limit);
 }
 
 export function calculateAverageTer(etfs: EtfConfig[]): number {

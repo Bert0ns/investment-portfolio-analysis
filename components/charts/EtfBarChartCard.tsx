@@ -8,8 +8,8 @@ import {
   ResponsiveContainer,
   Cell,
 } from 'recharts';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { COLORS, ChartTitleWithInfo } from '@/components/charts/Shared';
+import { Card } from '@/components/ui/card';
+import { COLORS, ChartContainer } from '@/components/charts/Shared';
 
 type ChartData = { name: string; value: number };
 
@@ -55,46 +55,38 @@ export function EtfBarChartCard({
 }: EtfBarChartCardProps) {
   return (
     <Card>
-      <CardHeader>
-        <ChartTitleWithInfo title={title} info={info} />
-      </CardHeader>
-      <CardContent>
-        <div style={{ width: '100%', height: 256, minWidth: 0 }}>
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" />
-              <XAxis
-                dataKey="name"
-                stroke="var(--muted-foreground)"
-                fontSize={10}
-                tickLine={false}
-                axisLine={false}
-                tickFormatter={(val) => (val.length > 10 ? val.substring(0, 10) + '...' : val)}
-              />
-              <YAxis
-                type="number"
-                stroke="var(--muted-foreground)"
-                fontSize={12}
-                tickLine={false}
-                axisLine={false}
-                tickFormatter={(val) => `${val}`}
-              />
-              <Tooltip
-                content={(props) => <CustomTooltip {...props} unit={unit} />}
-                cursor={{ fill: 'var(--muted)' }}
-              />
-              <Bar dataKey="value" radius={[4, 4, 0, 0]} barSize={40}>
-                {data.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[(index + colorOffset) % COLORS.length]}
-                  />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      </CardContent>
+      <ChartContainer title={title} info={info}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" />
+            <XAxis
+              dataKey="name"
+              stroke="var(--muted-foreground)"
+              fontSize={10}
+              tickLine={false}
+              axisLine={false}
+              tickFormatter={(val) => (val.length > 10 ? val.substring(0, 10) + '...' : val)}
+            />
+            <YAxis
+              type="number"
+              stroke="var(--muted-foreground)"
+              fontSize={12}
+              tickLine={false}
+              axisLine={false}
+              tickFormatter={(val) => `${val}`}
+            />
+            <Tooltip
+              content={(props) => <CustomTooltip {...props} unit={unit} />}
+              cursor={{ fill: 'var(--muted)' }}
+            />
+            <Bar dataKey="value" radius={[4, 4, 0, 0]} barSize={40}>
+              {data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={COLORS[(index + colorOffset) % COLORS.length]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </ChartContainer>
     </Card>
   );
 }
