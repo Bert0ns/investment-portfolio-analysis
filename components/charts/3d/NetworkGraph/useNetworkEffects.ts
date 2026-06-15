@@ -82,8 +82,8 @@ export function usePhysicsTweaks(
   }, [data, isHighVolume, isExtremeVolume, overlapOnly, fgRef]);
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function useBloomEffect(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fgRef: React.MutableRefObject<any>,
   isDark: boolean,
   resolvedTheme: string | undefined
