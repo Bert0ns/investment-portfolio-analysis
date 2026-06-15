@@ -14,7 +14,7 @@ export function GeographicResults({ query, setQuery, results }: GeographicResult
   const { t } = useTranslation();
 
   return (
-    <div className="w-full p-6 flex flex-col min-h-[500px]">
+    <div className="w-full h-full p-6 flex flex-col bg-muted/5">
       <div className="relative mb-6">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
           <Search className="h-4 w-4 text-muted-foreground" />

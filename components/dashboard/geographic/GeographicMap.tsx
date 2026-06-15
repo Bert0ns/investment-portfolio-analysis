@@ -4,11 +4,10 @@ import { useTheme } from 'next-themes';
 import WorldMap from 'react-svg-worldmap';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 
-const INITIAL_SCALE = 1.8;
-const MIN_SCALE = 1.5;
-const MAX_SCALE = 4;
+const INITIAL_SCALE = 1.3;
+const MIN_SCALE = 1;
+const MAX_SCALE = 2.8;
 
-const WHEEL_STEP = 0.001;
 interface GeographicMapProps {
   mapData: { country: string; value: number }[];
   onCountryClick: (countryName: string) => void;
@@ -19,23 +18,23 @@ export function GeographicMap({ mapData, onCountryClick }: GeographicMapProps) {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full py-0 px-0 border-b border-border bg-muted/30 flex flex-col items-center justify-center min-h-[400px] relative overflow-hidden">
+    <div className="w-full h-full py-0 px-0 bg-muted/30 flex flex-col items-center justify-center relative overflow-hidden">
       <div className="absolute top-6 left-6 flex items-center gap-2 z-10 pl-6 lg:pl-0">
         <Globe className="w-5 h-5 text-primary" />
         <h3 className="font-bold tracking-widest text-sm text-primary uppercase">
           {t.deepDiveTab.globalExposure}
         </h3>
       </div>
-      <div className="w-full pointer-events-auto px-2 md:px-8 flex justify-center [&_figure]:w-full [&_svg]:w-full [&_svg]:h-auto">
+      <div className="w-full h-full pointer-events-auto px-2 md:px-8 flex justify-center items-center [&_figure]:w-full [&_svg]:w-full [&_svg]:h-auto">
         <TransformWrapper
           initialScale={INITIAL_SCALE}
           minScale={MIN_SCALE}
           maxScale={MAX_SCALE}
-          wheel={{ step: WHEEL_STEP }}
+          wheel={{ wheelDisabled: true }}
         >
           {({ zoomIn, zoomOut, resetTransform }) => (
             <div className="relative w-full flex flex-col items-center">
-              <div className="absolute top-0 right-4 z-20 flex flex-col gap-2 bg-background/80 backdrop-blur-sm p-1.5 rounded-lg border border-border shadow-sm">
+              <div className="absolute top-0 mt-2 right-4 z-20 flex flex-col gap-2 bg-background/80 backdrop-blur-sm p-1.5 rounded-lg border border-border shadow-sm">
                 <button
                   onClick={() => zoomIn()}
                   className="p-1.5 hover:bg-muted rounded-md transition-colors"
@@ -60,10 +59,10 @@ export function GeographicMap({ mapData, onCountryClick }: GeographicMapProps) {
               </div>
 
               <TransformComponent
-                wrapperStyle={{ width: '100%', minHeight: '450px' }}
+                wrapperStyle={{ width: '100%', height: '100%' }}
                 contentStyle={{
                   width: '100%',
-                  minHeight: '450px',
+                  height: '100%',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',

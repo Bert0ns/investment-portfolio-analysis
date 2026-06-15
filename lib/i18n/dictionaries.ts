@@ -183,7 +183,8 @@ export const dictionaries = {
       geographicTab: 'Geographic X-Ray',
       companyTab: 'Company X-Ray',
       globalExposure: 'Global Exposure',
-      mapInstruction: 'Click any highlighted country to filter. Scroll/pinch to zoom, drag to pan.',
+      mapInstruction:
+        'Click any highlighted country to filter. Hold Ctrl/Cmd + scroll to zoom, drag to pan.',
       searchCountryPlaceholder: 'Search country (e.g. Japan, United States)...',
       noExposureFound: 'No exposure found in',
       typeCountryInstruction: 'Type a country or click the map',
@@ -510,7 +511,7 @@ export const dictionaries = {
       companyTab: 'Raggi X Aziendali',
       globalExposure: 'Esposizione Globale',
       mapInstruction:
-        'Clicca su un paese per filtrare. Scorri/pizzica per zoomare, trascina per spostarti.',
+        'Clicca su un paese per filtrare. Tieni premuto Ctrl/Cmd + scorri per zoomare, trascina per spostarti.',
       searchCountryPlaceholder: 'Cerca nazione (es. Giappone, Stati Uniti)...',
       noExposureFound: 'Nessuna esposizione trovata in',
       typeCountryInstruction: 'Digita una nazione o clicca sulla mappa',
