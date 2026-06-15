@@ -3,7 +3,7 @@
 import { usePortfolio } from '@/hooks/usePortfolio';
 
 import PortfolioSliders from '@/components/PortfolioSliders';
-import Dashboard from '@/components/Dashboard';
+import Dashboard from '@/components/dashboard';
 import { useState } from 'react';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 import { ChevronDown, ChevronUp } from 'lucide-react';

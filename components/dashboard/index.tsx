@@ -96,6 +96,7 @@ export default function Dashboard({ etfs, totalWeight }: DashboardProps) {
           <RiskAnalysisTab
             concentrationData={concentrationData}
             weightDistributionData={weightDistributionData}
+            etfs={etfs}
           />
         )}
 

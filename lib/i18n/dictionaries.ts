@@ -304,6 +304,19 @@ export const dictionaries = {
       distributionInfo:
         'Groups your underlying stocks by their individual size. Determines if you hold a few large positions vs thousands of tiny fractional positions.',
     },
+    diversification: {
+      analysisTitle: 'Diversification Analysis',
+      needTwoEtfs:
+        'Add at least two ETFs with non-zero weight to see overlap and uniqueness analysis.',
+      uniquenessTitle: 'Diversification Value (Uniqueness Score)',
+      uniquenessDesc:
+        "What percentage of this ETF's holdings exists nowhere else in your portfolio? High uniqueness means true diversification. Low uniqueness means you might be paying fees for redundant assets.",
+      uniqueSuffix: '% Unique',
+      matrixTitle: 'Holding Overlap Matrix',
+      matrixDesc:
+        'The percentage of identical stocks shared between each pair of ETFs. Darker red indicates higher redundancy.',
+      etfColumn: 'ETF',
+    },
     threeDVisuals: {
       regionsActive: 'Regions Active',
       treemapCity: '3D Treemap City',
@@ -633,6 +646,19 @@ export const dictionaries = {
       distributionTitle: 'Distribuzione del Peso delle Partecipazioni',
       distributionInfo:
         'Raggruppa le azioni sottostanti in base alle loro dimensioni individuali. Determina se detieni alcune grandi posizioni rispetto a migliaia di minuscole posizioni frazionarie.',
+    },
+    diversification: {
+      analysisTitle: 'Analisi di Diversificazione',
+      needTwoEtfs:
+        "Aggiungi almeno due ETF con peso maggiore di zero per vedere l'analisi delle sovrapposizioni e dell'unicità.",
+      uniquenessTitle: 'Valore di Diversificazione (Punteggio di Unicità)',
+      uniquenessDesc:
+        "Quale percentuale delle partecipazioni di questo ETF non esiste in nessun'altra parte del tuo portafoglio? Un'elevata unicità significa vera diversificazione. Una bassa unicità significa che potresti pagare commissioni per asset ridondanti.",
+      uniqueSuffix: '% Unico',
+      matrixTitle: 'Matrice di Sovrapposizione delle Partecipazioni',
+      matrixDesc:
+        'La percentuale di azioni identiche condivise tra ogni coppia di ETF. Il rosso più scuro indica una maggiore ridondanza.',
+      etfColumn: 'ETF',
     },
     threeDVisuals: {
       regionsActive: 'Regioni Attive',
