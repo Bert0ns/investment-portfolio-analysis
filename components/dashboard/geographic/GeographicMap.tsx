@@ -34,7 +34,7 @@ export function GeographicMap({ mapData, onCountryClick }: GeographicMapProps) {
         >
           {({ zoomIn, zoomOut, resetTransform }) => (
             <div className="relative w-full flex flex-col items-center">
-              <div className="absolute top-0 mt-2 right-4 z-20 flex flex-col gap-2 bg-background/80 backdrop-blur-sm p-1.5 rounded-lg border border-border shadow-sm">
+              <div className="absolute top-0 right-4 z-20 flex flex-col gap-2 bg-background/80 backdrop-blur-sm p-1.5 rounded-lg border border-border shadow-sm">
                 <button
                   onClick={() => zoomIn()}
                   className="p-1.5 hover:bg-muted rounded-md transition-colors"

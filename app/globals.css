@@ -250,3 +250,9 @@
   border: none !important;
   box-shadow: none !important;
 }
+
+/* Custom react-svg-worldmap hover styling */
+.worldmap__region--hover {
+  fill: var(--color-amber-500) !important;
+  fill-opacity: 1 !important;
+}
