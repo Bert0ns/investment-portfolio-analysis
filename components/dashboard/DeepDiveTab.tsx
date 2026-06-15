@@ -4,7 +4,7 @@ import { Search, Building, PieChart } from 'lucide-react';
 import { EtfConfig } from '@/lib/types';
 import { searchHoldings } from '@/lib/math';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
 import { GeographicSearch } from './geographic/GeographicSearch';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
@@ -22,19 +22,34 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
     return searchHoldings(etfs, debouncedQuery);
   }, [etfs, debouncedQuery]);
 
+  const [activeTab, setActiveTab] = useLocalStorage<'company' | 'geo'>(
+    'deepdive_tab_active',
+    'company'
+  );
+
   return (
     <div className="space-y-6">
-      <Tabs defaultValue="company" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 mb-6">
-          <TabsTrigger value="company">{t.deepDiveTab.companyTab}</TabsTrigger>
-          <TabsTrigger value="geo">{t.deepDiveTab.geographicTab}</TabsTrigger>
-        </TabsList>
+      <div className="flex justify-end mb-4 gap-3">
+        <div className="bg-muted p-1 rounded-lg inline-flex">
+          <button
+            onClick={() => setActiveTab('company')}
+            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${activeTab === 'company' ? 'bg-background shadow text-foreground' : 'text-muted-foreground'}`}
+          >
+            {t.deepDiveTab.companyTab}
+          </button>
+          <button
+            onClick={() => setActiveTab('geo')}
+            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${activeTab === 'geo' ? 'bg-background shadow text-foreground' : 'text-muted-foreground'}`}
+          >
+            {t.deepDiveTab.geographicTab}
+          </button>
+        </div>
+      </div>
 
-        <TabsContent value="geo" className="m-0">
-          <GeographicSearch etfs={etfs} />
-        </TabsContent>
-
-        <TabsContent value="company" className="m-0 space-y-6">
+      {activeTab === 'geo' ? (
+        <GeographicSearch etfs={etfs} />
+      ) : (
+        <>
           <Card className="border-border shadow-md">
             <CardHeader className="bg-muted/20 border-b border-border pb-6">
               <CardTitle className="text-2xl flex items-center gap-2">
@@ -130,8 +145,8 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
               ))}
             </div>
           )}
-        </TabsContent>
-      </Tabs>
+        </>
+      )}
     </div>
   );
 }
