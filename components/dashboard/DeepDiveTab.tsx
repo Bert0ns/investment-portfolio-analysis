@@ -26,8 +26,8 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
     <div className="space-y-6">
       <Tabs defaultValue="company" className="w-full">
         <TabsList className="grid w-full grid-cols-2 mb-6">
-          <TabsTrigger value="company">Company X-Ray</TabsTrigger>
-          <TabsTrigger value="geo">Geographic X-Ray</TabsTrigger>
+          <TabsTrigger value="company">{t.deepDiveTab.companyTab}</TabsTrigger>
+          <TabsTrigger value="geo">{t.deepDiveTab.geographicTab}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="geo" className="m-0">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, MapPin } from 'lucide-react';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 interface GeographicEmptyStateProps {
   query: string;
@@ -7,11 +8,15 @@ interface GeographicEmptyStateProps {
 }
 
 export function GeographicEmptyState({ query, hasResults }: GeographicEmptyStateProps) {
+  const { t } = useTranslation();
+
   if (query.length > 0 && !hasResults) {
     return (
       <div className="flex flex-col items-center justify-center h-full text-center text-muted-foreground opacity-60 mt-12">
         <MapPin className="w-12 h-12 mb-4" />
-        <p>No exposure found in &quot;{query}&quot;</p>
+        <p>
+          {t.deepDiveTab.noExposureFound} &quot;{query}&quot;
+        </p>
       </div>
     );
   }
@@ -20,7 +25,7 @@ export function GeographicEmptyState({ query, hasResults }: GeographicEmptyState
     return (
       <div className="flex flex-col items-center justify-center h-full text-center text-muted-foreground opacity-60 mt-12">
         <Search className="w-12 h-12 mb-4" />
-        <p>Type a country or click the map</p>
+        <p>{t.deepDiveTab.typeCountryInstruction}</p>
       </div>
     );
   }

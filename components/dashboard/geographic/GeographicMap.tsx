@@ -2,6 +2,7 @@ import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import { Globe, ZoomIn, ZoomOut, Maximize } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import WorldMap from 'react-svg-worldmap';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 const INITIAL_SCALE = 1.8;
 const MIN_SCALE = 1.5;
@@ -15,13 +16,14 @@ interface GeographicMapProps {
 
 export function GeographicMap({ mapData, onCountryClick }: GeographicMapProps) {
   const { resolvedTheme } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <div className="w-full py-0 px-0 border-b border-border bg-muted/30 flex flex-col items-center justify-center min-h-[400px] relative overflow-hidden">
       <div className="absolute top-6 left-6 flex items-center gap-2 z-10 pl-6 lg:pl-0">
         <Globe className="w-5 h-5 text-primary" />
         <h3 className="font-bold tracking-widest text-sm text-primary uppercase">
-          Global Exposure
+          {t.deepDiveTab.globalExposure}
         </h3>
       </div>
       <div className="w-full pointer-events-auto px-2 md:px-8 flex justify-center [&_figure]:w-full [&_svg]:w-full [&_svg]:h-auto">
@@ -88,7 +90,7 @@ export function GeographicMap({ mapData, onCountryClick }: GeographicMapProps) {
         </TransformWrapper>
       </div>
       <p className="text-xs text-muted-foreground absolute bottom-4 text-center w-full pointer-events-none">
-        Click any highlighted country to filter. Scroll/pinch to zoom, drag to pan.
+        {t.deepDiveTab.mapInstruction}
       </p>
     </div>
   );
