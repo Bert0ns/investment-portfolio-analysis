@@ -122,7 +122,12 @@ export default function LandingContent() {
               {t.landing.launchSystem} <ArrowRight className="w-6 h-6 ml-3" />
             </Button>
             <Button
-              render={<Link href="https://github.com" target="_blank" />}
+              render={
+                <Link
+                  href="https://github.com/Bert0ns/investment-portfolio-analysis"
+                  target="_blank"
+                />
+              }
               nativeButton={false}
               variant="outline"
               size="lg"
