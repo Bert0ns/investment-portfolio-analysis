@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Dashboard from '@/components/Dashboard';
+import Dashboard from '@/components/dashboard';
 import { EtfConfig } from '@/lib/types';
 
 jest.mock('@/lib/i18n/LanguageContext', () => ({
