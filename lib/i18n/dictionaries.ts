@@ -335,6 +335,12 @@ export const dictionaries = {
       displayMode: 'Display Mode',
       overlapOnly: 'Overlap Only',
       all: 'ALL',
+      terrainMap: 'Terrain Map',
+      topographicOverlap: 'Topographic Overlap',
+      topographicDesc:
+        'Mountains represent high holding overlap between ETFs. Flat plains indicate well-diversified combinations.',
+      analyzedEtfs: 'Analyzed ETFs',
+      needTwoEtfsTerrain: 'Add at least 2 ETFs to see the overlap terrain.',
     },
   },
   it: {
@@ -678,6 +684,12 @@ export const dictionaries = {
       displayMode: 'Modalità di Visualizzazione',
       overlapOnly: 'Solo Sovrapposizioni',
       all: 'TUTTI',
+      terrainMap: 'Mappa Topografica',
+      topographicOverlap: 'Sovrapposizione Topografica',
+      topographicDesc:
+        "Le montagne rappresentano un'alta sovrapposizione di partecipazioni tra gli ETF. Le pianure indicano combinazioni ben diversificate.",
+      analyzedEtfs: 'ETF Analizzati',
+      needTwoEtfsTerrain: 'Aggiungi almeno 2 ETF per vedere la mappa topografica.',
     },
   },
 };

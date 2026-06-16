@@ -31,3 +31,5 @@ Use the pnpm package manager
 Use the scripts in package.json if applicable
 
 prefer ui components from the shadcn ui library
+
+after doing a major change, check that nothing is broken with: `pnpm lint && pnpm typecheck && pnpm test`
