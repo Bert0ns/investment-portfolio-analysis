@@ -118,17 +118,24 @@ export function generateMoneyFlowData(etfs: EtfConfig[], topCompaniesCount: numb
   // This guarantees that as the user increases the slider, the chart physically
   // expands rather than squishing the nodes together, keeping spacing constant.
   const totalCompanies = topCompanies.size + 1; // +1 for "Other Companies"
-  // Allow at least 60 units of vertical extent per company, with a minimum of 1000
-  const dynamicHeight = Math.max(1000, totalCompanies * 70);
+
+  // We explicitly calculate the exact layout bounds to control the visual proportions!
+  // We want a massive gap between nodes: 400 D3 units
+  const paddingTarget = 400;
+  // We want the total node thickness (ky) to be small so the bases are shorter: 500 D3 units
+  const nodeThicknessTarget = 500;
+
+  const dynamicHeight = Math.max(1000, (totalCompanies - 1) * paddingTarget + nodeThicknessTarget);
 
   const sankeyGen = sankey<FlowNode, FlowLink>()
     .nodeId((d) => d.id)
     .nodeAlign(sankeyJustify) // Force stages: 0, 1, 2, 3
-    .nodeWidth(15)
-    .nodePadding(100) // Fixed constant gap between individual sectors/companies
+    .nodeWidth(100)
+    .nodePadding(paddingTarget)
+    // We massively expand the X-axis (from 1000 to 2500) to spread the 4 columns far apart!
     .extent([
       [0, 0],
-      [900, dynamicHeight],
+      [2500, dynamicHeight],
     ])
     .nodeSort((a, b) => {
       // Force "Other Companies" to always be at the very top

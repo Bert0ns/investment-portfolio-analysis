@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import * as THREE from 'three';
-import { Text } from '@react-three/drei';
+import { Text, Edges, Billboard } from '@react-three/drei';
 import { useSpring, animated } from '@react-spring/three';
 import { FlowNode, FlowLink } from '@/lib/math/moneyFlowLayout';
 
@@ -99,42 +99,47 @@ export function MoneyFlowComponents({
   const renderedNodes = nodes.map((node) => {
     const sx = ((node.x0 || 0) + (node.x1 || 0)) / 2;
     const sy = ((node.y0 || 0) + (node.y1 || 0)) / 2;
-    const width = ((node.x1 || 0) - (node.x0 || 0)) * scaleFactor;
     const depth = ((node.y1 || 0) - (node.y0 || 0)) * scaleFactor;
+
+    // Force the 3D block to be a thick wall on the X-axis (e.g. 8 units).
+    // The visual distance between columns is ~16 units, so a width of 8 prevents overlapping!
+    const towerWidth = 8;
 
     const x = sx * scaleFactor - 25;
     const z = sy * scaleFactor - 15;
     const y = getNodeElevation(node);
 
-    // Height of the block uses a square root scale based on its portfolio weight.
-    // This prevents massive aggregates like "Total Portfolio" or "Other Companies" (e.g. 100%)
-    // from visually crushing the tiny variations between individual companies (e.g. 0.1% vs 4%).
-    // 100% = ~15 units. 5% = ~3.3 units. 1% = 1.5 units. 0.1% = ~0.4 units.
-    const height = Math.max(0.1, Math.sqrt(node.value || 0) * 1.5);
+    // Height of the block uses a massive linear scale!
+    // This physically forces the blocks to expand vertically into the sky.
+    // Portfolio (100%) = 150 units tall. Apple (4%) = 6 units tall.
+    const height = Math.max(1, (node.value || 0) * 1.5);
 
     return (
       <group key={node.id} position={[x, y + height / 2, z]}>
-        <mesh>
-          <boxGeometry key={`${width}-${height}-${depth}`} args={[width, height, depth]} />
-          <meshPhysicalMaterial
-            color={COLORS[node.type as keyof typeof COLORS] || '#888'}
-            transparent
-            opacity={0.8}
-            roughness={0.2}
-            transmission={0.5}
-            thickness={1}
+        <mesh castShadow receiveShadow>
+          <boxGeometry
+            key={`${towerWidth}-${height}-${depth}`}
+            args={[towerWidth, height, depth]}
           />
+          <meshStandardMaterial
+            color={COLORS[node.type as keyof typeof COLORS] || '#888'}
+            roughness={0.8}
+            metalness={0.2}
+          />
+          <Edges scale={1.01} color="white" />
         </mesh>
-        <Text
-          position={[0, height / 2 + 0.5, 0]}
-          fontSize={0.8}
-          color="white"
-          anchorX="center"
-          anchorY="middle"
-          rotation={[-Math.PI / 4, 0, 0]}
-        >
-          {node.name}
-        </Text>
+        <Billboard position={[0, height / 2 + 3, 0]}>
+          <Text
+            fontSize={2.5}
+            color="white"
+            anchorX="center"
+            anchorY="middle"
+            outlineWidth={0.15}
+            outlineColor="#000000"
+          >
+            {node.name}
+          </Text>
+        </Billboard>
       </group>
     );
   });

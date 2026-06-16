@@ -58,13 +58,15 @@ export function MoneyFlow({
             }}
           />
 
-          {nodes.length > 0 && (
-            <MoneyFlowComponents
-              key={`moneyflow-${topHoldingsCount}`}
-              nodes={nodes}
-              links={links}
-            />
-          )}
+          <group scale={0.3} position={[-5, -10, 0]}>
+            {nodes.length > 0 && (
+              <MoneyFlowComponents
+                key={`moneyflow-${topHoldingsCount}`}
+                nodes={nodes}
+                links={links}
+              />
+            )}
+          </group>
         </Suspense>
       </Canvas>
     </div>
