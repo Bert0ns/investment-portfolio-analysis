@@ -45,7 +45,7 @@ export function DashboardTabsNav({ activeTab, setActiveTab }: DashboardTabsNavPr
           }}
         >
           <SelectTrigger className="w-full text-base py-6 bg-background border-primary/30 ring-1 ring-primary/20 font-medium shadow-sm text-foreground">
-            <SelectValue placeholder="Select tab" />
+            <SelectValue placeholder="Select tab">{tabNames[activeTab]}</SelectValue>
           </SelectTrigger>
           <SelectContent>
             {DASHBOARD_TABS.map((tab) => (
