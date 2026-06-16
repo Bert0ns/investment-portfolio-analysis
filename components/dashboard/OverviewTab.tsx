@@ -49,7 +49,7 @@ export function OverviewTab({
         <PieChartCard
           title={t.overviewTab.geoExposureTitle}
           info={t.overviewTab.geoExposureInfo}
-          data={geoData.slice(0, 10)}
+          data={geoData}
         />
       </div>
 

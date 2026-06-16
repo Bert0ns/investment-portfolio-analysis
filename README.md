@@ -122,6 +122,5 @@ This project is open-source and available under the [MIT License](LICENSE).
 ## 💡 Future Roadmap (Draft Ideas)
 
 1. **Historical Backtesting Chart:** Integration with historical price APIs to chart a simulated backtested growth curve for your exact portfolio configuration over the last 1-5 years.
-2. **Radar Chart**
-3. **Voronoi Treemap**: Instead of boring rectangular treemaps, Voronoi treemaps use organic, cell-like shapes. It looks like viewing plant cells under a microscope,  
+2. **Voronoi Treemap**: Instead of boring rectangular treemaps, Voronoi treemaps use organic, cell-like shapes. It looks like viewing plant cells under a microscope,  
    where the largest "cells" are your biggest holdings. It looks incredibly premium, especially with our cyberpunk/dark mode styling

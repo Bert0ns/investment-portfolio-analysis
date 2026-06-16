@@ -46,10 +46,14 @@ export function useHoldingsAggregation(etfs: EtfConfig[]) {
     };
 
     return {
+      fullGeoData: formatData(
+        geoMap,
+        (name) => t.countries[name as keyof typeof t.countries] || name
+      ),
       geoData: formatData(
         geoMap,
         (name) => t.countries[name as keyof typeof t.countries] || name,
-        15 // top 15 countries
+        15 // top 15 countries for pie charts
       ),
       sectorData: formatData(
         sectorMap,
