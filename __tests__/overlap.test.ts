@@ -10,19 +10,39 @@ describe('Overlap Math Engine', () => {
     id: 'etf1',
     name: 'S&P 500',
     isin: 'US0001',
-    provider: 'Vanguard',
+    issuer: 'Vanguard',
     ter: 0.07,
-    replication: 'Physical',
+    replicationMethod: 'Physical',
     useOfProfit: 'Accumulating',
     fundSize: 1000,
     fundAge: 10,
     domicile: 'US',
     holdings: [
-      { ticker: 'AAPL', name: 'Apple Inc.', weight: 6, sector: 'IT', country: 'US' },
-      { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 5, sector: 'IT', country: 'US' },
-      { ticker: 'AMZN', name: 'Amazon.com Inc.', weight: 3, sector: 'Consumer', country: 'US' },
+      {
+        ticker: 'AAPL',
+        name: 'Apple Inc.',
+        weight: 6,
+        sector: 'IT',
+        currency: 'USD',
+        country: 'US',
+      },
+      {
+        ticker: 'MSFT',
+        name: 'Microsoft Corp.',
+        weight: 5,
+        sector: 'IT',
+        currency: 'USD',
+        country: 'US',
+      },
+      {
+        ticker: 'AMZN',
+        name: 'Amazon.com Inc.',
+        weight: 3,
+        sector: 'Consumer',
+        currency: 'USD',
+        country: 'US',
+      },
     ],
-    weight: 50,
     globalWeight: 50,
   };
 
@@ -30,19 +50,39 @@ describe('Overlap Math Engine', () => {
     id: 'etf2',
     name: 'Nasdaq 100',
     isin: 'US0002',
-    provider: 'Invesco',
+    issuer: 'Amundi',
     ter: 0.2,
-    replication: 'Physical',
+    replicationMethod: 'Physical',
     useOfProfit: 'Accumulating',
     fundSize: 500,
     fundAge: 15,
     domicile: 'US',
     holdings: [
-      { ticker: 'AAPL', name: 'Apple Inc.', weight: 10, sector: 'IT', country: 'US' },
-      { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 8, sector: 'IT', country: 'US' },
-      { ticker: 'TSLA', name: 'Tesla Inc.', weight: 4, sector: 'Consumer', country: 'US' },
+      {
+        ticker: 'AAPL',
+        name: 'Apple Inc.',
+        weight: 10,
+        sector: 'IT',
+        currency: 'USD',
+        country: 'US',
+      },
+      {
+        ticker: 'MSFT',
+        name: 'Microsoft Corp.',
+        weight: 8,
+        sector: 'IT',
+        currency: 'USD',
+        country: 'US',
+      },
+      {
+        ticker: 'TSLA',
+        name: 'Tesla Inc.',
+        weight: 4,
+        sector: 'Consumer',
+        currency: 'USD',
+        country: 'US',
+      },
     ],
-    weight: 50,
     globalWeight: 50,
   };
 
@@ -50,20 +90,33 @@ describe('Overlap Math Engine', () => {
     id: 'etf3',
     name: 'Emerging Markets',
     isin: 'IE0003',
-    provider: 'iShares',
+    issuer: 'iShares',
     ter: 0.18,
-    replication: 'Physical',
+    replicationMethod: 'Physical',
     useOfProfit: 'Accumulating',
     fundSize: 200,
     fundAge: 8,
     domicile: 'Ireland',
     holdings: [
-      { ticker: 'TSM', name: 'TSMC', weight: 6, sector: 'IT', country: 'Taiwan' },
-      { ticker: 'TEN', name: 'Tencent', weight: 4, sector: 'Comm', country: 'China' },
+      { ticker: 'TSM', name: 'TSMC', weight: 6, sector: 'IT', currency: 'USD', country: 'Taiwan' },
+      {
+        ticker: 'TEN',
+        name: 'Tencent',
+        weight: 4,
+        sector: 'Comm',
+        currency: 'USD',
+        country: 'China',
+      },
       // Ticker 'N/A' case tests getHoldingKey fallback to name
-      { ticker: 'N/A', name: 'Samsung', weight: 3, sector: 'IT', country: 'South Korea' },
+      {
+        ticker: 'N/A',
+        name: 'Samsung',
+        weight: 3,
+        sector: 'IT',
+        currency: 'USD',
+        country: 'South Korea',
+      },
     ],
-    weight: 0, // Inactive but math engine doesn't filter active, the UI does
     globalWeight: 0,
   };
 
@@ -89,9 +142,30 @@ describe('Overlap Math Engine', () => {
         ...etf1,
         id: 'dup',
         holdings: [
-          { ticker: 'AAPL', name: 'Apple Inc.', weight: 4, sector: 'IT', country: 'US' },
-          { ticker: 'AAPL', name: 'Apple Inc.', weight: 2, sector: 'IT', country: 'US' },
-          { ticker: 'MSFT', name: 'Microsoft Corp.', weight: 5, sector: 'IT', country: 'US' },
+          {
+            ticker: 'AAPL',
+            name: 'Apple Inc.',
+            weight: 4,
+            sector: 'IT',
+            currency: 'USD',
+            country: 'US',
+          },
+          {
+            ticker: 'AAPL',
+            name: 'Apple Inc.',
+            weight: 2,
+            sector: 'IT',
+            currency: 'USD',
+            country: 'US',
+          },
+          {
+            ticker: 'MSFT',
+            name: 'Microsoft Corp.',
+            weight: 5,
+            sector: 'IT',
+            currency: 'USD',
+            country: 'US',
+          },
         ],
       };
       // Apple is effectively 6. Math.min(6, 10) = 6.
@@ -179,7 +253,14 @@ describe('Overlap Math Engine', () => {
         ...etf3,
         id: 'na1',
         holdings: [
-          { ticker: 'N/A', name: 'Samsung', weight: 3, sector: 'IT', country: 'South Korea' },
+          {
+            ticker: 'N/A',
+            name: 'Samsung',
+            weight: 3,
+            sector: 'IT',
+            currency: 'USD',
+            country: 'South Korea',
+          },
         ],
       };
 
@@ -187,7 +268,14 @@ describe('Overlap Math Engine', () => {
         ...etf3,
         id: 'na2',
         holdings: [
-          { ticker: 'N/A', name: 'Samsung', weight: 2, sector: 'IT', country: 'South Korea' },
+          {
+            ticker: 'N/A',
+            name: 'Samsung',
+            weight: 2,
+            sector: 'IT',
+            currency: 'USD',
+            country: 'South Korea',
+          },
         ],
       };
 

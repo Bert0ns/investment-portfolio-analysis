@@ -8,6 +8,7 @@ import { GlobeView } from './GlobeView';
 import { NetworkView } from './NetworkView';
 import { CityscapeView } from './CityscapeView';
 import { TerrainView } from './TerrainView';
+import { MoneyFlowView } from './MoneyFlowView';
 
 export interface VisualsTabProps {
   etfs: EtfConfig[];
@@ -26,7 +27,7 @@ export function VisualsTab({
 }: VisualsTabProps) {
   const { t } = useTranslation();
   const [active3DVisual, setActive3DVisual] = useLocalStorage<
-    'Globe' | 'Network' | 'City' | 'Terrain'
+    'Globe' | 'Network' | 'City' | 'Terrain' | 'MoneyFlow'
   >('visuals_active', 'Globe');
 
   // Globe & Cityscape controls state
@@ -71,6 +72,12 @@ export function VisualsTab({
           >
             {t.threeDVisuals.terrainMap}
           </button>
+          <button
+            onClick={() => setActive3DVisual('MoneyFlow')}
+            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'MoneyFlow' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+          >
+            {t.threeDVisuals.moneyFlow || 'MoneyFlow'}
+          </button>
         </div>
         {onToggleFullscreen && (
           <button
@@ -113,6 +120,14 @@ export function VisualsTab({
         />
       ) : active3DVisual === 'Terrain' ? (
         <TerrainView
+          etfs={etfs}
+          isActive={isActive}
+          globeRotating={globeRotating}
+          setGlobeRotating={setGlobeRotating}
+          t={t}
+        />
+      ) : active3DVisual === 'MoneyFlow' ? (
+        <MoneyFlowView
           etfs={etfs}
           isActive={isActive}
           globeRotating={globeRotating}

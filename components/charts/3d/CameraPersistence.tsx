@@ -12,7 +12,15 @@ export function CameraPersistence({ storageKey }: { storageKey: string }) {
       const stored = window.localStorage.getItem(storageKey);
       if (stored) {
         const parsed = JSON.parse(stored);
-        if (parsed && typeof parsed.x === 'number') {
+        if (
+          parsed &&
+          typeof parsed.x === 'number' &&
+          !isNaN(parsed.x) &&
+          typeof parsed.y === 'number' &&
+          !isNaN(parsed.y) &&
+          typeof parsed.z === 'number' &&
+          !isNaN(parsed.z)
+        ) {
           // Trigger smooth fly-in animation instead of instantaneous jump
           // eslint-disable-next-line react-hooks/set-state-in-effect
           setTargetPos(new THREE.Vector3(parsed.x, parsed.y, parsed.z));

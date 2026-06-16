@@ -339,8 +339,14 @@ export const dictionaries = {
       topographicOverlap: 'Topographic Overlap',
       topographicDesc:
         'Mountains represent high holding overlap between ETFs. Flat plains indicate well-diversified combinations.',
-      analyzedEtfs: 'Analyzed ETFs',
+      moneyFlow: 'Money Flow',
+      moneyFlowTitle: 'Capital Waterfall',
+      moneyFlowDescription: 'Analyze your structural overlap and fee drain.',
+      holdingsVolume: 'Data Volume',
+      needTwoEtfs: 'Add at least 2 ETFs to compare them.',
       needTwoEtfsTerrain: 'Add at least 2 ETFs to see the overlap terrain.',
+      needTwoEtfsMoneyFlow: 'Add at least 2 ETFs to see the money flow.',
+      analyzedEtfs: 'Analyzed ETFs',
     },
   },
   it: {
@@ -648,7 +654,7 @@ export const dictionaries = {
         'Le 10 più grandi società individuali che possiedi in tutti i tuoi ETF attivi, aggregate in base al loro peso proporzionale.',
       concentrationTitle: 'Concentrazione del Portafoglio (Prime 50 Partecipazioni)',
       concentrationInfo:
-        'Una somma cumulativa delle tue prime 50 partecipazioni. Aiuta a identificare se il tuo portafoglio è sbilanciato in cima (es. le tue prime 5 azioni costituiscono il 30% del tuo patrimonio netto).',
+        'A somma cumulativa delle tue prime 50 partecipazioni. Aiuta a identificare se il tuo portafoglio è sbilanciato in cima (es. le tue prime 5 azioni costituiscono il 30% del tuo patrimonio netto).',
       distributionTitle: 'Distribuzione del Peso delle Partecipazioni',
       distributionInfo:
         'Raggruppa le azioni sottostanti in base alle loro dimensioni individuali. Determina se detieni alcune grandi posizioni rispetto a migliaia di minuscole posizioni frazionarie.',
@@ -685,11 +691,17 @@ export const dictionaries = {
       overlapOnly: 'Solo Sovrapposizioni',
       all: 'TUTTI',
       terrainMap: 'Mappa Topografica',
+      moneyFlow: 'Flusso di Denaro',
+      moneyFlowTitle: 'Cascata di Capitali',
+      moneyFlowDescription: 'Analizza la sovrapposizione strutturale e i costi.',
+      holdingsVolume: 'Volume Dati',
+      needTwoEtfs: 'Aggiungi almeno 2 ETF per confrontarli.',
+      needTwoEtfsTerrain: 'Aggiungi almeno 2 ETF per vedere la mappa topografica.',
+      needTwoEtfsMoneyFlow: 'Aggiungi almeno 2 ETF per vedere il flusso di denaro.',
       topographicOverlap: 'Sovrapposizione Topografica',
       topographicDesc:
         "Le montagne rappresentano un'alta sovrapposizione di partecipazioni tra gli ETF. Le pianure indicano combinazioni ben diversificate.",
       analyzedEtfs: 'ETF Analizzati',
-      needTwoEtfsTerrain: 'Aggiungi almeno 2 ETF per vedere la mappa topografica.',
     },
   },
 };
