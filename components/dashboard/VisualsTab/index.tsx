@@ -46,35 +46,35 @@ export function VisualsTab({
 
   return (
     <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300 animate-in fade-in bg-card border border-border rounded-xl p-4 shadow-sm">
-      <div className="flex justify-end mb-4 gap-3 overflow-x-auto scrollbar-none pb-1">
-        <div className="bg-muted p-1 rounded-lg inline-flex shrink-0">
+      <div className="flex justify-start md:justify-end mb-4 gap-3 w-full flex-wrap sm:flex-nowrap">
+        <div className="bg-muted p-1 rounded-lg flex flex-wrap w-full sm:w-auto gap-1 sm:gap-0">
           <button
             onClick={() => setActive3DVisual('Globe')}
-            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'Globe' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'Globe' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
             {t.overviewTab.exposureGlobe}
           </button>
           <button
             onClick={() => setActive3DVisual('Network')}
-            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'Network' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'Network' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
             {t.overviewTab.concentrationNetwork}
           </button>
           <button
             onClick={() => setActive3DVisual('City')}
-            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'City' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'City' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
             {t.threeDVisuals.treemapCity}
           </button>
           <button
             onClick={() => setActive3DVisual('Terrain')}
-            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'Terrain' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'Terrain' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
             {t.threeDVisuals.terrainMap}
           </button>
           <button
             onClick={() => setActive3DVisual('MoneyFlow')}
-            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${active3DVisual === 'MoneyFlow' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+            className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'MoneyFlow' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
             {t.threeDVisuals.moneyFlow || 'MoneyFlow'}
           </button>
