@@ -160,6 +160,8 @@ export const dictionaries = {
       fundAgeInfo: 'The number of years since each ETF was launched.',
       yearsUnit: 'Years',
       millionsUnit: '$M',
+      terRadarTitle: 'TER Radar Comparison',
+      terRadarInfo: 'Visualize the Total Expense Ratio across your portfolio funds.',
     },
     riskAnalysisTab: {
       replicationMethodTitle: 'Replication Method',
@@ -168,6 +170,13 @@ export const dictionaries = {
       useOfProfitTitle: 'Use of Profit',
       useOfProfitInfo:
         'Accumulating (reinvests dividends automatically) vs Distributing (pays dividends out to you).',
+      etfMechanicsTitle: 'ETF Mechanics Profile',
+      etfMechanicsInfo: 'Compare the structural strengths of your top 5 funds (Normalized 0-100).',
+      axisCostEfficiency: 'Cost Efficiency',
+      axisDiversification: 'Diversification',
+      axisFundSize: 'Fund Size',
+      axisFundAge: 'Fund Age',
+      axisPortfolioWeight: 'Portfolio Weight',
     },
     deepDiveTab: {
       title: 'Holdings Deep Dive',
@@ -518,6 +527,8 @@ export const dictionaries = {
       fundAgeInfo: 'Il numero di anni dal lancio di ciascun ETF.',
       yearsUnit: 'Anni',
       millionsUnit: 'M$',
+      terRadarTitle: 'Confronto Radar TER',
+      terRadarInfo: 'Visualizza il Total Expense Ratio attraverso i fondi del tuo portafoglio.',
     },
     riskAnalysisTab: {
       replicationMethodTitle: 'Metodo di Replica',
@@ -526,6 +537,14 @@ export const dictionaries = {
       useOfProfitTitle: 'Utilizzo dei Proventi',
       useOfProfitInfo:
         'Ad accumulazione (reinveste i dividendi automaticamente) vs A distribuzione (paga i dividendi a te).',
+      etfMechanicsTitle: 'Profilo Meccanico ETF',
+      etfMechanicsInfo:
+        'Confronta i punti di forza strutturali dei tuoi top 5 fondi (Normalizzato 0-100).',
+      axisCostEfficiency: 'Efficienza dei Costi',
+      axisDiversification: 'Diversificazione',
+      axisFundSize: 'Dimensione Fondo',
+      axisFundAge: 'Età Fondo',
+      axisPortfolioWeight: 'Peso nel Portafoglio',
     },
     deepDiveTab: {
       title: 'Analisi Dettagliata Partecipazioni',

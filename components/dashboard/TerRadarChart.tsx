@@ -11,11 +11,15 @@ import {
   Tooltip,
 } from 'recharts';
 
+import { useTranslation } from '@/lib/i18n/LanguageContext';
+
 interface TerRadarChartProps {
   etfs: EtfConfig[];
 }
 
 export function TerRadarChart({ etfs }: TerRadarChartProps) {
+  const { t } = useTranslation();
+
   const data = useMemo(() => {
     return etfs.map((etf) => ({
       subject: etf.name.length > 15 ? etf.name.substring(0, 15) + '...' : etf.name,
@@ -32,10 +36,8 @@ export function TerRadarChart({ etfs }: TerRadarChartProps) {
   return (
     <Card className="h-full">
       <CardHeader>
-        <CardTitle>TER Comparison</CardTitle>
-        <CardDescription>
-          Visualize the Total Expense Ratio across your portfolio funds.
-        </CardDescription>
+        <CardTitle>{t.fundDetailsTab.terRadarTitle}</CardTitle>
+        <CardDescription>{t.fundDetailsTab.terRadarInfo}</CardDescription>
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 300, minWidth: 0 }}>

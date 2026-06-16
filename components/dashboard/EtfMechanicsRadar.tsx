@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend,
 } from 'recharts';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 interface EtfMechanicsRadarProps {
   etfs: EtfConfig[];
@@ -25,6 +26,8 @@ const COLORS = [
 ];
 
 export function EtfMechanicsRadar({ etfs }: EtfMechanicsRadarProps) {
+  const { t } = useTranslation();
+
   const data = useMemo(() => {
     // Only take the top 5 ETFs by global weight to avoid clutter
     const topEtfs = [...etfs].sort((a, b) => b.globalWeight - a.globalWeight).slice(0, 5);
@@ -38,11 +41,11 @@ export function EtfMechanicsRadar({ etfs }: EtfMechanicsRadarProps) {
 
     // Radar axes definition
     const axes = [
-      { name: 'Cost Efficiency', key: 'cost' },
-      { name: 'Diversification', key: 'diversification' },
-      { name: 'Fund Size', key: 'size' },
-      { name: 'Fund Age', key: 'age' },
-      { name: 'Portfolio Weight', key: 'weight' },
+      { name: t.riskAnalysisTab.axisCostEfficiency, key: 'cost' },
+      { name: t.riskAnalysisTab.axisDiversification, key: 'diversification' },
+      { name: t.riskAnalysisTab.axisFundSize, key: 'size' },
+      { name: t.riskAnalysisTab.axisFundAge, key: 'age' },
+      { name: t.riskAnalysisTab.axisPortfolioWeight, key: 'weight' },
     ];
 
     // Build the data array formatted for Recharts
@@ -76,7 +79,7 @@ export function EtfMechanicsRadar({ etfs }: EtfMechanicsRadarProps) {
 
       return axisData;
     });
-  }, [etfs]);
+  }, [etfs, t]);
 
   const topEtfs = useMemo(() => {
     return [...etfs].sort((a, b) => b.globalWeight - a.globalWeight).slice(0, 5);
@@ -87,10 +90,8 @@ export function EtfMechanicsRadar({ etfs }: EtfMechanicsRadarProps) {
   return (
     <Card className="h-full lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
       <CardHeader>
-        <CardTitle>ETF Mechanics Profile</CardTitle>
-        <CardDescription>
-          Compare the structural strengths of your top 5 funds (Normalized 0-100).
-        </CardDescription>
+        <CardTitle>{t.riskAnalysisTab.etfMechanicsTitle}</CardTitle>
+        <CardDescription>{t.riskAnalysisTab.etfMechanicsInfo}</CardDescription>
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 400, minWidth: 0 }}>
