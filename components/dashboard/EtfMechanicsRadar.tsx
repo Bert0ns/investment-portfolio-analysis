@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { EtfConfig } from '@/lib/types';
+import { calculateMechanicsData } from '@/lib/math/mechanics';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import {
   Radar,
@@ -28,62 +29,32 @@ const COLORS = [
 export function EtfMechanicsRadar({ etfs }: EtfMechanicsRadarProps) {
   const { t } = useTranslation();
 
-  const data = useMemo(() => {
-    // Only take the top 5 ETFs by global weight to avoid clutter
-    const topEtfs = [...etfs].sort((a, b) => b.globalWeight - a.globalWeight).slice(0, 5);
+  const { data, topEtfs } = useMemo(() => {
+    const { topEtfs: top, axesData } = calculateMechanicsData(etfs);
 
-    // Calculate maximums for relative scaling
-    const maxTer = Math.max(0.5, ...topEtfs.map((e) => e.ter));
-    const maxHoldings = Math.max(500, ...topEtfs.map((e) => e.holdings.length));
-    const maxAge = Math.max(10, ...topEtfs.map((e) => e.fundAge));
-    const maxSize = Math.max(5000, ...topEtfs.map((e) => e.fundSize));
-    const maxWeight = Math.max(20, ...topEtfs.map((e) => e.globalWeight));
+    if (top.length === 0) {
+      return { data: [], topEtfs: [] };
+    }
 
-    // Radar axes definition
-    const axes = [
-      { name: t.riskAnalysisTab.axisCostEfficiency, key: 'cost' },
-      { name: t.riskAnalysisTab.axisDiversification, key: 'diversification' },
-      { name: t.riskAnalysisTab.axisFundSize, key: 'size' },
-      { name: t.riskAnalysisTab.axisFundAge, key: 'age' },
-      { name: t.riskAnalysisTab.axisPortfolioWeight, key: 'weight' },
-    ];
+    const localizedAxes: Record<string, string> = {
+      cost: t.riskAnalysisTab.axisCostEfficiency,
+      diversification: t.riskAnalysisTab.axisDiversification,
+      size: t.riskAnalysisTab.axisFundSize,
+      age: t.riskAnalysisTab.axisFundAge,
+      weight: t.riskAnalysisTab.axisPortfolioWeight,
+    };
 
-    // Build the data array formatted for Recharts
-    // Each object represents an AXIS, and contains the value for each ETF
-    return axes.map((axis) => {
+    const formattedData = axesData.map((axis) => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const axisData: any = { subject: axis.name };
-
-      topEtfs.forEach((etf) => {
-        let score = 0;
-        switch (axis.key) {
-          case 'cost':
-            // Lower TER is better, invert the scale
-            score = Math.max(0, 100 - (etf.ter / maxTer) * 100);
-            break;
-          case 'diversification':
-            score = (etf.holdings.length / maxHoldings) * 100;
-            break;
-          case 'size':
-            score = (etf.fundSize / maxSize) * 100;
-            break;
-          case 'age':
-            score = (etf.fundAge / maxAge) * 100;
-            break;
-          case 'weight':
-            score = (etf.globalWeight / maxWeight) * 100;
-            break;
-        }
-        axisData[etf.name] = Math.round(score);
-      });
-
-      return axisData;
+      const axisFormatted: any = { subject: localizedAxes[axis.key] };
+      for (const [etfName, score] of Object.entries(axis.scores)) {
+        axisFormatted[etfName] = score;
+      }
+      return axisFormatted;
     });
-  }, [etfs, t]);
 
-  const topEtfs = useMemo(() => {
-    return [...etfs].sort((a, b) => b.globalWeight - a.globalWeight).slice(0, 5);
-  }, [etfs]);
+    return { data: formattedData, topEtfs: top };
+  }, [etfs, t]);
 
   if (etfs.length === 0) return null;
 
