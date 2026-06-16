@@ -1,0 +1,21 @@
+{
+  "title": "Analisi Dettagliata Partecipazioni",
+  "description": "Cerca asset specifici (es. \"NVIDIA\", \"Apple\", \"TSLA\") tra tutti i tuoi ETF analizzati per scoprire la tua vera esposizione aggregata.",
+  "searchPlaceholder": "Cerca per nome azienda o ticker...",
+  "noHoldingsFound": "Nessuna partecipazione trovata per",
+  "tryDifferent": "Prova con un nome azienda o simbolo ticker diverso.",
+  "unknownTicker": "Ticker Sconosciuto",
+  "totalExposure": "Esposizione Totale",
+  "exposureBreakdown": "Dettaglio Esposizione",
+  "fundInternalWeight": "Peso interno fondo",
+  "geographicTab": "Raggi X Geografici",
+  "companyTab": "Raggi X Aziendali",
+  "globalExposure": "Esposizione Globale",
+  "mapInstruction": "Clicca su un paese per filtrare. Tieni premuto Ctrl/Cmd + scorri per zoomare, trascina per spostarti.",
+  "searchCountryPlaceholder": "Cerca nazione (es. Giappone, Stati Uniti)...",
+  "noExposureFound": "Nessuna esposizione trovata in",
+  "typeCountryInstruction": "Digita una nazione o clicca sulla mappa",
+  "exposureSource": "Fonte di Esposizione (ETF)",
+  "topCompaniesIn": "Le migliori aziende in",
+  "moreCompanies": "altre aziende"
+}

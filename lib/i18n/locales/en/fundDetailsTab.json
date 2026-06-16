@@ -1,0 +1,14 @@
+{
+  "providerAllocationTitle": "Provider Allocation",
+  "providerAllocationInfo": "A breakdown of the financial institutions that manage your ETFs (e.g., Vanguard, iShares).",
+  "fundDomicileTitle": "Fund Domicile",
+  "fundDomicileInfo": "The legal jurisdiction where your ETFs are registered (important for taxation).",
+  "fundSizeTitle": "Fund Size",
+  "fundSizeInfo": "Total Assets Under Management (AUM) for each ETF in your portfolio (in millions).",
+  "fundAgeTitle": "Fund Age",
+  "fundAgeInfo": "The number of years since each ETF was launched.",
+  "yearsUnit": "Years",
+  "millionsUnit": "$M",
+  "terRadarTitle": "TER Radar Comparison",
+  "terRadarInfo": "Visualize the Total Expense Ratio across your portfolio funds."
+}

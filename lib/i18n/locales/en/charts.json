@@ -1,0 +1,8 @@
+{
+  "topHoldingsTitle": "Top 10 Holdings",
+  "topHoldingsInfo": "The 10 largest individual companies you own across all your active ETFs, aggregated by their proportional weight.",
+  "concentrationTitle": "Portfolio Concentration (Top 50 Holdings)",
+  "concentrationInfo": "A cumulative sum of your top 50 holdings. Helps identify if your portfolio is top-heavy (e.g., your top 5 stocks making up 30% of your net worth).",
+  "distributionTitle": "Holdings Weight Distribution",
+  "distributionInfo": "Groups your underlying stocks by their individual size. Determines if you hold a few large positions vs thousands of tiny fractional positions."
+}

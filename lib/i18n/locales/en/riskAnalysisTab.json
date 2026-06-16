@@ -1,0 +1,13 @@
+{
+  "replicationMethodTitle": "Replication Method",
+  "replicationMethodInfo": "How the ETFs track their indices: Physical (buying actual stocks) vs Synthetic (using derivatives).",
+  "useOfProfitTitle": "Use of Profit",
+  "useOfProfitInfo": "Accumulating (reinvests dividends automatically) vs Distributing (pays dividends out to you).",
+  "etfMechanicsTitle": "ETF Mechanics Profile",
+  "etfMechanicsInfo": "Compare the structural strengths of your top 5 funds (Normalized 0-100).",
+  "axisCostEfficiency": "Cost Efficiency",
+  "axisDiversification": "Diversification",
+  "axisFundSize": "Fund Size",
+  "axisFundAge": "Fund Age",
+  "axisPortfolioWeight": "Portfolio Weight"
+}

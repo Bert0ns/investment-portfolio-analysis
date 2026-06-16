@@ -1,0 +1,20 @@
+{
+  "unveil": "Unveil Your True",
+  "exposure": "Exposure",
+  "subtitle": "A powerful, fully client-side tool to deeply analyze your custom ETF portfolios.",
+  "launchSystem": "Launch System",
+  "multiIssuer": "Multi-Issuer",
+  "multiIssuerDesc": "Seamlessly parse official CSVs from iShares, Vanguard, Amundi, and Lyxor with zero manual formatting.",
+  "globalMapping": "Global Mapping",
+  "globalMappingDesc": "Aggregate thousands of underlying holdings to see exactly which countries and sectors your money is really in.",
+  "serverless": "Serverless",
+  "serverlessDesc": "Your financial data never leaves your browser. All parsing and math are executed locally in real-time.",
+  "realtimeAnalytics": "Real-time Analytics",
+  "realtimeAnalyticsDesc": "Experience instant recalculations and dynamic visualizations without any server delays.",
+  "privacyFirst": "Privacy First",
+  "privacyFirstDesc": "All your portfolio data stays securely on your device. Zero tracking, zero server uploads.",
+  "immersive3D": "Immersive 3D",
+  "immersive3DDesc": "Explore your portfolio through revolutionary 3D network graphs and interactive cityscapes.",
+  "nextGen": "Next-Gen Portfolio Analytics",
+  "viewSource": "View Source"
+}

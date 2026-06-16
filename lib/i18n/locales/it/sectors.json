@@ -1,0 +1,16 @@
+{
+  "Information Technology": "Informatica",
+  "Financials": "Finanza",
+  "Industrials": "Industriali",
+  "Healthcare": "Sanità",
+  "Consumer Discretionary": "Beni Voluttuari",
+  "Consumer Staples": "Beni di Prima Necessità",
+  "Materials": "Materie Prime",
+  "Energy": "Energia",
+  "Utilities": "Servizi di Pubblica Utilità",
+  "Communication Services": "Servizi di Comunicazione",
+  "Real Estate": "Immobiliare",
+  "Cash": "Liquidità",
+  "Unknown": "Sconosciuto",
+  "Other": "Altro"
+}

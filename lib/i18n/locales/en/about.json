@@ -1,0 +1,17 @@
+{
+  "empowering": "Empowering",
+  "investors": "Investors",
+  "subtitle": "We believe that understanding your true financial exposure shouldn't require an expensive wealth manager. This tool brings institutional-grade transparency directly to your browser.",
+  "overlapProblem": "The Overlap Problem",
+  "overlapP1": "When you purchase multiple broad-market Exchange Traded Funds (ETFs), you are almost certainly buying the same companies multiple times over without realizing it.",
+  "overlapP2": "A standard S&P 500 ETF and a developed World ETF both contain heavy concentrations of the exact same tech giants. We built this tool to parse the raw CSV holdings files from major issuers (iShares, Vanguard, Amundi) and reveal your true underlying exposure across the globe.",
+  "privacyFirst": "Privacy First",
+  "privacyP1Start": "Financial data is deeply personal. We architected this application to be entirely",
+  "privacyClientSide": "client-side",
+  "privacyP1End": ". It relies exclusively on your local device to do the heavy lifting.",
+  "privacyP2": "When you upload your CSVs, the mathematical aggregations and data mapping happen right inside your browser engine. There are no databases, no tracking cookies, and your portfolio structure remains 100% private at all times.",
+  "futureRoadmap": "Future Roadmap",
+  "roadmapDescStart": "We are actively working on integrating advanced",
+  "threeJs": "Three.js",
+  "roadmapDescEnd": "3D visualizations. Upcoming features include an Interactive Exposure Globe mapping your investments worldwide and a Top Holdings Constellation network graph, pushing the boundaries of web-based financial analytics."
+}

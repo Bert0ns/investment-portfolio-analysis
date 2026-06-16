@@ -1,0 +1,14 @@
+{
+  "providerAllocationTitle": "Allocazione Emittenti",
+  "providerAllocationInfo": "Una ripartizione delle istituzioni finanziarie che gestiscono i tuoi ETF (es. Vanguard, iShares).",
+  "fundDomicileTitle": "Domicilio Fondo",
+  "fundDomicileInfo": "La giurisdizione legale in cui sono registrati i tuoi ETF (importante per la tassazione).",
+  "fundSizeTitle": "Dimensione Fondo",
+  "fundSizeInfo": "Totale degli Asset Under Management (AUM) per ogni ETF nel portafoglio (in milioni).",
+  "fundAgeTitle": "Età Fondo",
+  "fundAgeInfo": "Il numero di anni dal lancio di ciascun ETF.",
+  "yearsUnit": "Anni",
+  "millionsUnit": "M$",
+  "terRadarTitle": "Confronto Radar TER",
+  "terRadarInfo": "Visualizza il Total Expense Ratio attraverso i fondi del tuo portafoglio."
+}

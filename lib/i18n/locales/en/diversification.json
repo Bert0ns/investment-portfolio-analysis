@@ -1,0 +1,10 @@
+{
+  "analysisTitle": "Diversification Analysis",
+  "needTwoEtfs": "Add at least two ETFs with non-zero weight to see overlap and uniqueness analysis.",
+  "uniquenessTitle": "Diversification Value (Uniqueness Score)",
+  "uniquenessDesc": "What percentage of this ETF's holdings exists nowhere else in your portfolio? High uniqueness means true diversification. Low uniqueness means you might be paying fees for redundant assets.",
+  "uniqueSuffix": "% Unique",
+  "matrixTitle": "Holding Overlap Matrix",
+  "matrixDesc": "The percentage of identical stocks shared between each pair of ETFs. Darker red indicates higher redundancy.",
+  "etfColumn": "ETF"
+}

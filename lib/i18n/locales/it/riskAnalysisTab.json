@@ -1,0 +1,13 @@
+{
+  "replicationMethodTitle": "Metodo di Replica",
+  "replicationMethodInfo": "Come gli ETF tracciano i loro indici: Fisica (acquista le azioni effettive) vs Sintetica (usa derivati).",
+  "useOfProfitTitle": "Utilizzo dei Proventi",
+  "useOfProfitInfo": "Ad accumulazione (reinveste i dividendi automaticamente) vs A distribuzione (paga i dividendi a te).",
+  "etfMechanicsTitle": "Profilo Meccanico ETF",
+  "etfMechanicsInfo": "Confronta i punti di forza strutturali dei tuoi top 5 fondi (Normalizzato 0-100).",
+  "axisCostEfficiency": "Efficienza dei Costi",
+  "axisDiversification": "Diversificazione",
+  "axisFundSize": "Dimensione Fondo",
+  "axisFundAge": "Età Fondo",
+  "axisPortfolioWeight": "Peso nel Portafoglio"
+}

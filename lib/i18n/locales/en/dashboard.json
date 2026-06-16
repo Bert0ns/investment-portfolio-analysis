@@ -1,0 +1,7 @@
+{
+  "title": "Dashboard",
+  "emptyState": "No active ETFs to display.",
+  "emptyStateDesc": "Add some ETFs and allocate weights to see your portfolio analysis.",
+  "unknown": "Unknown",
+  "top": "Top"
+}

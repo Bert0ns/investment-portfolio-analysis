@@ -1,0 +1,15 @@
+{
+  "removeEtf": "Remove ETF",
+  "noEtfsAdded": "No ETFs added yet.",
+  "uploadCsvToStart": "Upload a CSV to start building your portfolio.",
+  "loadDefaultPortfolio": "Load Default Portfolio",
+  "portfolioWeights": "Portfolio Weights",
+  "totalAllocation": "Total Allocation",
+  "exceeds100": "Your portfolio exceeds 100%. Please reduce some weights.",
+  "leftToAllocate": "left to allocate.",
+  "perfectlyAllocated": "Perfectly allocated.",
+  "resetToDefault": "Reset to Default Portfolio",
+  "resetWarning": "Warning: This will permanently delete your current portfolio configuration and replace it with the default sample ETFs. Continue?",
+  "noteDeleteConfig": "Note: This will delete your current configuration.",
+  "youHave": "You have "
+}

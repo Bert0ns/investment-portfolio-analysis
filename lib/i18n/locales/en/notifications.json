@@ -1,0 +1,8 @@
+{
+  "loadDefaultsFailed": "Failed to load default ETF",
+  "loadDefaultsFailedDesc": "could not be loaded.",
+  "defaultsLoaded": "Defaults Loaded",
+  "defaultsLoadedDesc": "The default sample portfolio has been loaded.",
+  "storageError": "Storage Error",
+  "storageErrorDesc": "Failed to restore portfolio from local storage."
+}

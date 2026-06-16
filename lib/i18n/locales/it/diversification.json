@@ -1,0 +1,10 @@
+{
+  "analysisTitle": "Analisi di Diversificazione",
+  "needTwoEtfs": "Aggiungi almeno due ETF con peso maggiore di zero per vedere l'analisi delle sovrapposizioni e dell'unicità.",
+  "uniquenessTitle": "Valore di Diversificazione (Punteggio di Unicità)",
+  "uniquenessDesc": "Quale percentuale delle partecipazioni di questo ETF non esiste in nessun'altra parte del tuo portafoglio? Un'elevata unicità significa vera diversificazione. Una bassa unicità significa che potresti pagare commissioni per asset ridondanti.",
+  "uniqueSuffix": "% Unico",
+  "matrixTitle": "Matrice di Sovrapposizione delle Partecipazioni",
+  "matrixDesc": "La percentuale di azioni identiche condivise tra ogni coppia di ETF. Il rosso più scuro indica una maggiore ridondanza.",
+  "etfColumn": "ETF"
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { PieChart } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { HoldingSearchResult } from '@/lib/math';
-import { Dictionary } from '@/lib/i18n/dictionaries';
+import { Dictionary } from '@/lib/i18n';
 
 interface CompanyResultCardProps {
   result: HoldingSearchResult;

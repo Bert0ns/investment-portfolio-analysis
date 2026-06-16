@@ -1,0 +1,7 @@
+{
+  "title": "Dashboard",
+  "emptyState": "Nessun ETF attivo da mostrare.",
+  "emptyStateDesc": "Aggiungi alcuni ETF e assegna i pesi per vedere l'analisi del tuo portafoglio.",
+  "unknown": "Sconosciuto",
+  "top": "Prime"
+}

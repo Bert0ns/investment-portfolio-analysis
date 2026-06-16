@@ -1,0 +1,15 @@
+{
+  "removeEtf": "Rimuovi ETF",
+  "noEtfsAdded": "Nessun ETF aggiunto ancora.",
+  "uploadCsvToStart": "Carica un CSV per iniziare a costruire il tuo portafoglio.",
+  "loadDefaultPortfolio": "Carica Portafoglio Predefinito",
+  "portfolioWeights": "Pesi Portafoglio",
+  "totalAllocation": "Allocazione Totale",
+  "exceeds100": "Il tuo portafoglio supera il 100%. Riduci alcuni pesi.",
+  "leftToAllocate": "rimanenti da allocare.",
+  "perfectlyAllocated": "Perfettamente allocato.",
+  "resetToDefault": "Ripristina Portafoglio Predefinito",
+  "resetWarning": "Attenzione: Questo eliminerà permanentemente la configurazione attuale del portafoglio e la sostituirà con gli ETF di esempio predefiniti. Continuare?",
+  "noteDeleteConfig": "Nota: Questo eliminerà la tua configurazione attuale.",
+  "youHave": "Hai "
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Holdings Deep Dive",
+  "description": "Search for specific assets (e.g., \"NVIDIA\", \"Apple\", \"TSLA\") across all your parsed ETFs to discover your true aggregate exposure.",
+  "searchPlaceholder": "Search by company name or ticker...",
+  "noHoldingsFound": "No holdings found matching",
+  "tryDifferent": "Try a different company name or ticker symbol.",
+  "unknownTicker": "Unknown Ticker",
+  "totalExposure": "Total Exposure",
+  "exposureBreakdown": "Exposure Breakdown",
+  "fundInternalWeight": "Fund internal weight",
+  "geographicTab": "Geographic X-Ray",
+  "companyTab": "Company X-Ray",
+  "globalExposure": "Global Exposure",
+  "mapInstruction": "Click any highlighted country to filter. Hold Ctrl/Cmd + scroll to zoom, drag to pan.",
+  "searchCountryPlaceholder": "Search country (e.g. Japan, United States)...",
+  "noExposureFound": "No exposure found in",
+  "typeCountryInstruction": "Type a country or click the map",
+  "exposureSource": "Exposure Source (ETFs)",
+  "topCompaniesIn": "Top Companies in",
+  "moreCompanies": "more companies"
+}

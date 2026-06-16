@@ -1,0 +1,8 @@
+{
+  "loadDefaultsFailed": "Impossibile caricare l'ETF predefinito",
+  "loadDefaultsFailedDesc": "non può essere caricato.",
+  "defaultsLoaded": "Predefiniti Caricati",
+  "defaultsLoadedDesc": "Il portafoglio di esempio predefinito è stato caricato.",
+  "storageError": "Errore di Archiviazione",
+  "storageErrorDesc": "Impossibile ripristinare il portafoglio dalla memoria locale."
+}

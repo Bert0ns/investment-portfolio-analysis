@@ -1,0 +1,17 @@
+{
+  "empowering": "Potenziare gli",
+  "investors": "Investitori",
+  "subtitle": "Crediamo che comprendere la tua reale esposizione finanziaria non debba richiedere un costoso gestore patrimoniale. Questo strumento porta una trasparenza di livello istituzionale direttamente nel tuo browser.",
+  "overlapProblem": "Il Problema della Sovrapposizione",
+  "overlapP1": "Quando acquisti più Exchange Traded Funds (ETF) del mercato allargato, stai quasi certamente comprando le stesse aziende più e più volte senza rendertene conto.",
+  "overlapP2": "Un ETF standard sull'S&P 500 e un ETF sul Mondo Sviluppato contengono entrambi forti concentrazioni degli stessi giganti tecnologici. Abbiamo creato questo strumento per analizzare i file CSV grezzi delle partecipazioni dei principali emittenti (iShares, Vanguard, Amundi) e rivelare la tua vera esposizione sottostante in tutto il mondo.",
+  "privacyFirst": "La Privacy Prima di Tutto",
+  "privacyP1Start": "I dati finanziari sono profondamente personali. Abbiamo architettato questa applicazione per essere interamente",
+  "privacyClientSide": "client-side",
+  "privacyP1End": ". Si affida esclusivamente al tuo dispositivo locale per fare il lavoro pesante.",
+  "privacyP2": "Quando carichi i tuoi CSV, le aggregazioni matematiche e la mappatura dei dati avvengono direttamente all'interno del motore del tuo browser. Non ci sono database, nessun cookie di tracciamento e la struttura del tuo portafoglio rimane privata al 100% in ogni momento.",
+  "futureRoadmap": "Tabella di Marcia Futura",
+  "roadmapDescStart": "Stiamo lavorando attivamente all'integrazione di avanzate visualizzazioni 3D con",
+  "threeJs": "Three.js",
+  "roadmapDescEnd": ". Le prossime funzionalità includono un Globo di Esposizione Interattivo che mappa i tuoi investimenti in tutto il mondo e un grafo a rete della Costellazione delle Principali Partecipazioni, spingendo i confini dell'analisi finanziaria basata sul web."
+}
