@@ -65,6 +65,7 @@ export function usePortfolioStorage(
           'visuals_network_limit',
           'visuals_network_physics',
           'visuals_network_overlap',
+          'visuals_moneyflow_limit',
           'deepdive_query',
           'savings_initial',
           'savings_monthly',
@@ -74,6 +75,7 @@ export function usePortfolioStorage(
           'camera_exposure_globe',
           'camera_cityscape',
           'camera_network_graph',
+          'camera_moneyflow_v2',
         ];
         keysToRemove.forEach((k) => window.localStorage.removeItem(k));
       }

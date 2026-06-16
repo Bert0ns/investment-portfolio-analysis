@@ -122,9 +122,6 @@ This project is open-source and available under the [MIT License](LICENSE).
 ## 💡 Future Roadmap (Draft Ideas)
 
 1. **Historical Backtesting Chart:** Integration with historical price APIs to chart a simulated backtested growth curve for your exact portfolio configuration over the last 1-5 years.
-2. **3DSankey "Money Flow" Diagram**: A stunning, flowing Sankey diagram that tracks how a single dollar is split. It starts as one large stream on the left ("Total Portfolio"), splits
-   into your ETFs, then flows into Sectors, and finally breaks off into individual top companies. It is the absolute best way to visualize exposure  
-   distribution.
-3. **Radar Chart**
-4. **Voronoi Treemap**: Instead of boring rectangular treemaps, Voronoi treemaps use organic, cell-like shapes. It looks like viewing plant cells under a microscope,  
+2. **Radar Chart**
+3. **Voronoi Treemap**: Instead of boring rectangular treemaps, Voronoi treemaps use organic, cell-like shapes. It looks like viewing plant cells under a microscope,  
    where the largest "cells" are your biggest holdings. It looks incredibly premium, especially with our cyberpunk/dark mode styling

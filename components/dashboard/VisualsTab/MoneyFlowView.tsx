@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import dynamic from 'next/dynamic';
 import { EtfConfig } from '@/lib/types';
 import { Slider } from '@/components/ui/slider';
@@ -58,7 +59,10 @@ export function MoneyFlowView({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   t: any;
 }) {
-  const [topHoldingsCount, setTopHoldingsCount] = useState([30]);
+  const [topHoldingsCount, setTopHoldingsCount] = useLocalStorage<number[]>(
+    'visuals_moneyflow_limit',
+    [30]
+  );
   const [ctrlPressed, setCtrlPressed] = useState(false);
 
   useEffect(() => {
@@ -85,25 +89,24 @@ export function MoneyFlowView({
       <div className="flex flex-col md:flex-row justify-between gap-6 p-4 bg-muted/30 rounded-lg border border-border items-center">
         <div className="flex flex-col gap-2 min-w-35">
           <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-            {t.threeDVisuals.moneyFlowTitle || 'Capital Waterfall'}
+            {t.threeDVisuals.moneyFlowTitle}
           </Label>
           <span className="text-sm font-medium text-amber-500">
-            {t.threeDVisuals.moneyFlowDescription ||
-              'Analyze your structural overlap and fee drain.'}
+            {t.threeDVisuals.moneyFlowDescription}
           </span>
           <span className="text-xs text-muted-foreground mt-1">
             <kbd className="px-1.5 py-0.5 bg-muted rounded border border-border text-foreground font-mono mr-1">
-              Left Click
+              {t.threeDVisuals.leftClick}
             </kbd>{' '}
-            Pan
+            {t.threeDVisuals.pan}
             <kbd className="px-1.5 py-0.5 bg-muted rounded border border-border text-foreground font-mono ml-3 mr-1">
-              Right Click
+              {t.threeDVisuals.rightClick}
             </kbd>{' '}
-            Rotate
+            {t.threeDVisuals.rotate}
             <kbd className="px-1.5 py-0.5 bg-muted rounded border border-border text-foreground font-mono ml-3 mr-1">
-              Ctrl + Scroll
+              {t.threeDVisuals.ctrlScroll}
             </kbd>{' '}
-            Zoom
+            {t.threeDVisuals.zoom}
           </span>
         </div>
 
@@ -111,7 +114,7 @@ export function MoneyFlowView({
           <div className="flex flex-col gap-2 flex-1 md:w-48">
             <div className="flex justify-between items-center">
               <Label className="text-xs text-muted-foreground">
-                {t.threeDVisuals.holdingsVolume || 'Data Volume'}
+                {t.threeDVisuals.holdingsVolume}
               </Label>
               <span className="text-xs font-mono">{topHoldingsCount[0]}</span>
             </div>
