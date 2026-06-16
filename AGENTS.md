@@ -1,3 +1,5 @@
+# Project: Capital Lens & Savings Plan Dashboard
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
@@ -6,30 +8,48 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 <!-- END:nextjs-agent-rules -->
 
-## Development Guidelines (AI Agent Directives)
+## Tech Stack
 
-- **SOLID Principles & Architectural Patterns:**
-  - **Single Responsibility / Open-Closed:** Use the **Strategy Pattern** for CSV parsing. Create a `CsvParserStrategy` interface/type and specific implementation functions (e.g., `parseVanguardCsv`, `parseISharesCsv`). Adding a new issuer must not require modifying the main parser.
-  - Maintain a clear separation between UI Components, state logic (Custom Hooks for portfolio/localStorage management), and business logic (Utility functions for mathematical aggregation).
+- Next.js 16.2.7 (App Router), React 19.2.4
+- TypeScript 5, Tailwind CSS 4
+- UI: Shadcn UI, Framer Motion, Lucide React
+- Visualizations: Three.js, React Three Fiber, Recharts, D3-Sankey, React-SVG-Worldmap
+- Parsing: PapaParse
 
-- **Clean Code:**
-  - Strict typing in TypeScript (avoid `any`).
-  - Explicit, self-documenting variable and function names in English.
-  - Elegant error handling (e.g., CSV files with missing columns) via non-blocking error messages on the UI (e.g., Toast notifications).
+## Commands
 
-- **Design & UI (Tailwind CSS):**
-  - Use shacnui as default
-  - Simple, modern, and minimalist aesthetics (Vercel/Radix UI inspiration).
-  - Use card containers with soft borders, soft shadows, ample whitespace (generous padding), and a sober color palette.
-  - Fully responsive layout (Grid/Flexbox).
+- Dev: `pnpm dev`
+- Build: `pnpm build`
+- Test: `pnpm test`
+- Lint: `pnpm lint`
+- Type check: `pnpm typecheck`
+- Format: `pnpm format`
+- _After major changes, always run: `pnpm lint && pnpm typecheck && pnpm test`_
 
-- **Agile Methodology:**
-  - Incremental and modular development: start from the skeleton, implement the parsing logic, manage the global state, and finally connect the interactive charts.
+## Boundaries & Constraints
 
-Use the pnpm package manager
+- **100% Client-Side:** No databases, no backend. All parsing and math are executed locally.
+- **Data Storage:** State is preserved securely in the browser's `localStorage` or `IndexedDB`.
+- **UI Aesthetics:** Cyberpunk aesthetic, immersive sharp-cornered UI with glowing neon gradients, dark mode, and micro-animations. Generous padding, sober color palette.
+- **SOLID Principles:** Use the Strategy Pattern for CSV parsing. Maintain clear separation between UI, state logic (Custom Hooks), and business logic (Utility/Math functions).
 
-Use the scripts in package.json if applicable
+## Code Conventions
 
-prefer ui components from the shadcn ui library
+- Strict typing in TypeScript (avoid `any`).
+- Explicit, self-documenting variable and function names in English.
+- Elegant error handling via non-blocking UI notifications (e.g., Sonner toasts).
+- Use `shadcn` components as defaults.
+- Functional components with hooks.
+- Incremental and modular development.
 
-after doing a major change, check that nothing is broken with: `pnpm lint && pnpm typecheck && pnpm test`
+## Project Map
+
+- `/app`: Next.js App Router structure and main layouts.
+- `/components`: Reusable Shadcn/Tailwind UI elements and feature widgets.
+- `/hooks`: Custom React hooks for isolated state logic (e.g., `useSavingsPlan`, `usePortfolio`).
+- `/lib`: Pure, isolated business logic, mathematics (`lib/math`), type definitions, and CSV parsing strategies (`lib/parsers`).
+- `/__tests__`: Unit tests ensuring zero regression.
+
+## Patterns
+
+- **CSV Ingestion:** Implement `CsvParserStrategy` for any new issuer, isolated in `/lib/parsers/`. Adding a new issuer MUST NOT require modifying the main parser logic.
