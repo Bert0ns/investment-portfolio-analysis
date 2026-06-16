@@ -13,13 +13,13 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         <div className="max-w-4xl mx-auto px-6 py-20 md:py-28 text-center relative z-10 w-full flex flex-col items-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-widest uppercase mb-6 text-foreground drop-shadow-md">
-            {t.about.empowering}{' '}
+            {t.pages.about.empowering}{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-500 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
-              {t.about.investors}
+              {t.pages.about.investors}
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
-            {t.about.subtitle}
+            {t.pages.about.subtitle}
           </p>
         </div>
       </div>
@@ -33,12 +33,12 @@ export default function AboutPage() {
                 <Layers className="w-8 h-8 text-primary drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
               </div>
               <CardTitle className="text-3xl font-black tracking-widest uppercase text-foreground">
-                {t.about.overlapProblem}
+                {t.pages.about.overlapProblem}
               </CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground text-lg leading-relaxed space-y-6 font-light">
-              <p>{t.about.overlapP1}</p>
-              <p>{t.about.overlapP2}</p>
+              <p>{t.pages.about.overlapP1}</p>
+              <p>{t.pages.about.overlapP2}</p>
             </CardContent>
           </Card>
 
@@ -49,16 +49,16 @@ export default function AboutPage() {
                 <ShieldCheck className="w-8 h-8 text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.5)]" />
               </div>
               <CardTitle className="text-3xl font-black tracking-widest uppercase text-foreground">
-                {t.about.privacyFirst}
+                {t.pages.about.privacyFirst}
               </CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground text-lg leading-relaxed space-y-6 font-light">
               <p>
-                {t.about.privacyP1Start}{' '}
-                <strong className="text-emerald-400">{t.about.privacyClientSide}</strong>
-                {t.about.privacyP1End}
+                {t.pages.about.privacyP1Start}{' '}
+                <strong className="text-emerald-400">{t.pages.about.privacyClientSide}</strong>
+                {t.pages.about.privacyP1End}
               </p>
-              <p>{t.about.privacyP2}</p>
+              <p>{t.pages.about.privacyP2}</p>
             </CardContent>
           </Card>
         </div>
@@ -74,13 +74,14 @@ export default function AboutPage() {
                 <Rocket className="w-8 h-8 text-primary drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
               </div>
               <CardTitle className="text-3xl md:text-4xl font-black tracking-widest uppercase text-foreground">
-                {t.about.futureRoadmap}
+                {t.pages.about.futureRoadmap}
               </CardTitle>
             </CardHeader>
             <CardContent className="relative z-10 px-10 pb-10">
               <p className="text-muted-foreground text-xl leading-relaxed max-w-3xl font-light">
-                {t.about.roadmapDescStart}{' '}
-                <strong className="text-primary">{t.about.threeJs}</strong> {t.about.roadmapDescEnd}
+                {t.pages.about.roadmapDescStart}{' '}
+                <strong className="text-primary">{t.pages.about.threeJs}</strong>{' '}
+                {t.pages.about.roadmapDescEnd}
               </p>
             </CardContent>
           </Card>

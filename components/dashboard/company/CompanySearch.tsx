@@ -27,9 +27,11 @@ export function CompanySearch({ etfs }: CompanySearchProps) {
         <CardHeader className="bg-muted/20 border-b border-border pb-6">
           <CardTitle className="text-2xl flex items-center gap-2">
             <Search className="w-6 h-6 text-primary" />
-            {t.deepDiveTab.title}
+            {t.pages.analyzer.dashboard.tabs.deepDiveTab.title}
           </CardTitle>
-          <CardDescription className="text-base mt-2">{t.deepDiveTab.description}</CardDescription>
+          <CardDescription className="text-base mt-2">
+            {t.pages.analyzer.dashboard.tabs.deepDiveTab.description}
+          </CardDescription>
         </CardHeader>
         <CardContent className="pt-6">
           <div className="relative max-w-2xl mx-auto">
@@ -38,7 +40,7 @@ export function CompanySearch({ etfs }: CompanySearchProps) {
             </div>
             <input
               type="text"
-              placeholder={t.deepDiveTab.searchPlaceholder}
+              placeholder={t.pages.analyzer.dashboard.tabs.deepDiveTab.searchPlaceholder}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-background border-2 border-border rounded-xl text-lg focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/20 transition-all shadow-sm"
@@ -52,9 +54,11 @@ export function CompanySearch({ etfs }: CompanySearchProps) {
           <CardContent className="flex flex-col items-center justify-center py-16 text-center text-muted-foreground">
             <Building className="w-12 h-12 mb-4 opacity-50" />
             <p className="text-lg">
-              {t.deepDiveTab.noHoldingsFound} &quot;{query}&quot;
+              {t.pages.analyzer.dashboard.tabs.deepDiveTab.noHoldingsFound} &quot;{query}&quot;
             </p>
-            <p className="text-sm mt-2">{t.deepDiveTab.tryDifferent}</p>
+            <p className="text-sm mt-2">
+              {t.pages.analyzer.dashboard.tabs.deepDiveTab.tryDifferent}
+            </p>
           </CardContent>
         </Card>
       )}

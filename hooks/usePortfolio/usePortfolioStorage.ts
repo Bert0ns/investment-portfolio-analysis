@@ -49,8 +49,8 @@ export function usePortfolioStorage(
           }
         } catch (err) {
           console.error(`Failed to load default ETF: ${def.name}`, err);
-          toast.error(t.notifications.loadDefaultsFailed, {
-            description: `${def.name} ${t.notifications.loadDefaultsFailedDesc}`,
+          toast.error(t.components.common.notifications.loadDefaultsFailed, {
+            description: `${def.name} ${t.components.common.notifications.loadDefaultsFailedDesc}`,
           });
         }
       }
@@ -80,8 +80,8 @@ export function usePortfolioStorage(
         keysToRemove.forEach((k) => window.localStorage.removeItem(k));
       }
 
-      toast.success(t.notifications.defaultsLoaded, {
-        description: t.notifications.defaultsLoadedDesc,
+      toast.success(t.components.common.notifications.defaultsLoaded, {
+        description: t.components.common.notifications.defaultsLoadedDesc,
       });
     } finally {
       setIsLoaded(true);
@@ -132,8 +132,8 @@ export function usePortfolioStorage(
         }
       } catch (e) {
         console.error('Failed to load portfolio from storage', e);
-        toast.error(t.notifications.storageError, {
-          description: t.notifications.storageErrorDesc,
+        toast.error(t.components.common.notifications.storageError, {
+          description: t.components.common.notifications.storageErrorDesc,
         });
       }
 

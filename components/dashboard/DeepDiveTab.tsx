@@ -26,13 +26,13 @@ export function DeepDiveTab({ etfs }: DeepDiveTabProps) {
             onClick={() => setActiveTab('company')}
             className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${activeTab === 'company' ? 'bg-background shadow text-foreground' : 'text-muted-foreground'}`}
           >
-            {t.deepDiveTab.companyTab}
+            {t.pages.analyzer.dashboard.tabs.deepDiveTab.companyTab}
           </button>
           <button
             onClick={() => setActiveTab('geo')}
             className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors ${activeTab === 'geo' ? 'bg-background shadow text-foreground' : 'text-muted-foreground'}`}
           >
-            {t.deepDiveTab.geographicTab}
+            {t.pages.analyzer.dashboard.tabs.deepDiveTab.geographicTab}
           </button>
         </div>
       </div>

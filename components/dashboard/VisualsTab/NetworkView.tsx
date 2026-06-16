@@ -52,10 +52,12 @@ export function NetworkView({
         <div className="flex-1 space-y-2">
           <div className="flex justify-between items-center">
             <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-              {t.overviewTab.topHoldingsRendered}
+              {t.pages.analyzer.dashboard.tabs.overviewTab.topHoldingsRendered}
             </Label>
             <span className="text-xs font-mono bg-primary/10 text-primary px-2 py-0.5 rounded-full">
-              {networkLimit[0] >= maxHoldings ? t.threeDVisuals.all : networkLimit[0]}
+              {networkLimit[0] >= maxHoldings
+                ? t.pages.analyzer.dashboard.tabs.threeDVisuals.all
+                : networkLimit[0]}
             </span>
           </div>
           <Slider
@@ -69,7 +71,7 @@ export function NetworkView({
         </div>
         <div className="flex flex-col gap-2 min-w-35">
           <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-            {t.threeDVisuals.displayMode}
+            {t.pages.analyzer.dashboard.tabs.threeDVisuals.displayMode}
           </Label>
           <div className="flex items-center space-x-2 mt-1">
             <Switch
@@ -81,13 +83,13 @@ export function NetworkView({
               htmlFor="overlap-mode"
               className="text-xs text-muted-foreground cursor-pointer font-medium"
             >
-              {t.threeDVisuals.overlapOnly}
+              {t.pages.analyzer.dashboard.tabs.threeDVisuals.overlapOnly}
             </Label>
           </div>
         </div>
         <div className="flex flex-col gap-2 min-w-37.5">
           <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-            {t.overviewTab.concentrationPhysics}
+            {t.pages.analyzer.dashboard.tabs.overviewTab.concentrationPhysics}
           </Label>
           <div className="flex items-center space-x-2 mt-1">
             <Switch
@@ -99,7 +101,7 @@ export function NetworkView({
               htmlFor="physics-mode"
               className="text-xs text-muted-foreground cursor-pointer font-medium"
             >
-              {t.overviewTab.livePhysics}
+              {t.pages.analyzer.dashboard.tabs.overviewTab.livePhysics}
             </Label>
           </div>
         </div>

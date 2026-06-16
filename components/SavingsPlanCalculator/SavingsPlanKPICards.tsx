@@ -19,7 +19,7 @@ export function SavingsPlanKPICards({
         <CardContent className="pt-6 flex flex-col items-center text-center">
           <Wallet className="mb-2 text-blue-500" size={28} />
           <h4 className="text-sm font-medium text-muted-foreground mb-1">
-            {t.savingsPlan.totalInvested}
+            {t.pages.analyzer.components.savingsPlan.totalInvested}
           </h4>
           <p className="text-3xl font-bold text-foreground">{formatCurrency(finalInvested)}</p>
         </CardContent>
@@ -28,7 +28,7 @@ export function SavingsPlanKPICards({
         <CardContent className="pt-6 flex flex-col items-center text-center">
           <TrendingUp className="mb-2 text-emerald-600" size={28} />
           <h4 className="text-sm font-medium text-muted-foreground mb-1">
-            {t.savingsPlan.totalInterestEarned}
+            {t.pages.analyzer.components.savingsPlan.totalInterestEarned}
           </h4>
           <p className="text-3xl font-bold text-emerald-600">
             {formatCurrency(finalTotalValue - finalInvested)}
@@ -42,7 +42,7 @@ export function SavingsPlanKPICards({
         <CardContent className="pt-6 flex flex-col items-center text-center relative z-10">
           <PiggyBank className="mb-2 text-primary-foreground opacity-90" size={28} />
           <h4 className="text-sm font-medium opacity-90 mb-1">
-            {t.savingsPlan.projectedFutureValue}
+            {t.pages.analyzer.components.savingsPlan.projectedFutureValue}
           </h4>
           <p className="text-3xl font-bold">{formatCurrency(finalTotalValue)}</p>
         </CardContent>

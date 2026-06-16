@@ -22,7 +22,10 @@ export function TopHoldingsChart({ data }: TopHoldingsChartProps) {
   return (
     <Card className="lg:col-span-2">
       <CardHeader>
-        <ChartTitleWithInfo title={t.charts.topHoldingsTitle} info={t.charts.topHoldingsInfo} />
+        <ChartTitleWithInfo
+          title={t.pages.analyzer.dashboard.widgets.charts.topHoldingsTitle}
+          info={t.pages.analyzer.dashboard.widgets.charts.topHoldingsInfo}
+        />
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 320, minWidth: 0 }}>

@@ -22,7 +22,10 @@ export function ConcentrationChart({ data }: ConcentrationChartProps) {
   return (
     <Card className="lg:col-span-2">
       <CardHeader>
-        <ChartTitleWithInfo title={t.charts.concentrationTitle} info={t.charts.concentrationInfo} />
+        <ChartTitleWithInfo
+          title={t.pages.analyzer.dashboard.widgets.charts.concentrationTitle}
+          info={t.pages.analyzer.dashboard.widgets.charts.concentrationInfo}
+        />
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 256, minWidth: 0 }}>

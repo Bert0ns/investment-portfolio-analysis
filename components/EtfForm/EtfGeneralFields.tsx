@@ -18,7 +18,7 @@ export function EtfGeneralFields({ hook }: { hook: EtfFormHook }) {
     <>
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="etf-name">{t.etfForm.name}</Label>
+          <Label htmlFor="etf-name">{t.pages.analyzer.components.etfForm.name}</Label>
           <Input
             id="etf-name"
             type="text"
@@ -28,7 +28,7 @@ export function EtfGeneralFields({ hook }: { hook: EtfFormHook }) {
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="etf-isin">{t.etfForm.isin}</Label>
+          <Label htmlFor="etf-isin">{t.pages.analyzer.components.etfForm.isin}</Label>
           <Input
             id="etf-isin"
             type="text"
@@ -41,7 +41,7 @@ export function EtfGeneralFields({ hook }: { hook: EtfFormHook }) {
 
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label>{t.etfForm.provider}</Label>
+          <Label>{t.pages.analyzer.components.etfForm.provider}</Label>
           <Select value={state.issuer} onValueChange={(val) => actions.setIssuer(val as Issuer)}>
             <SelectTrigger>
               <SelectValue placeholder="Select Provider" />
@@ -55,7 +55,7 @@ export function EtfGeneralFields({ hook }: { hook: EtfFormHook }) {
           </Select>
         </div>
         <div className="space-y-2">
-          <Label htmlFor="ter">{t.etfForm.ter}</Label>
+          <Label htmlFor="ter">{t.pages.analyzer.components.etfForm.ter}</Label>
           <Input
             id="ter"
             type="number"

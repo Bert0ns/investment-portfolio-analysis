@@ -26,7 +26,8 @@ export function SavingsPlanChart({
     <Card className="shadow-sm">
       <CardHeader className="pb-2">
         <CardTitle>
-          {t.savingsPlan.growthProjection} {years} {t.savingsPlan.years}
+          {t.pages.analyzer.components.savingsPlan.growthProjection} {years}{' '}
+          {t.pages.analyzer.components.savingsPlan.years}
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -51,7 +52,7 @@ export function SavingsPlanChart({
               />
               <XAxis
                 dataKey="year"
-                tickFormatter={(val) => `${t.savingsPlan.year} ${val}`}
+                tickFormatter={(val) => `${t.pages.analyzer.components.savingsPlan.year} ${val}`}
                 stroke="var(--muted-foreground)"
                 fontSize={12}
                 tickLine={false}
@@ -70,7 +71,9 @@ export function SavingsPlanChart({
                 formatter={(value: string | number | readonly (string | number)[] | undefined) =>
                   formatCurrency(Number(value) || 0)
                 }
-                labelFormatter={(label) => `${t.savingsPlan.year} ${label}`}
+                labelFormatter={(label) =>
+                  `${t.pages.analyzer.components.savingsPlan.year} ${label}`
+                }
                 contentStyle={{
                   borderRadius: '12px',
                   border: '1px solid var(--border)',
@@ -80,7 +83,7 @@ export function SavingsPlanChart({
               <Area
                 type="monotone"
                 dataKey="value"
-                name={t.savingsPlan.totalValue}
+                name={t.pages.analyzer.components.savingsPlan.totalValue}
                 stroke="#10b981"
                 fillOpacity={1}
                 fill="url(#colorValue)"
@@ -89,7 +92,7 @@ export function SavingsPlanChart({
               <Area
                 type="monotone"
                 dataKey="invested"
-                name={t.savingsPlan.investedCapital}
+                name={t.pages.analyzer.components.savingsPlan.investedCapital}
                 stroke="#3b82f6"
                 fillOpacity={1}
                 fill="url(#colorInvested)"

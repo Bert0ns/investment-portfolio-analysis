@@ -32,8 +32,8 @@ export function FundDetailsTab({
     <>
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title={t.fundDetailsTab.providerAllocationTitle}
-          info={t.fundDetailsTab.providerAllocationInfo}
+          title={t.pages.analyzer.dashboard.tabs.fundDetailsTab.providerAllocationTitle}
+          info={t.pages.analyzer.dashboard.tabs.fundDetailsTab.providerAllocationInfo}
           data={providerData}
           colorOffset={2}
         />
@@ -41,8 +41,8 @@ export function FundDetailsTab({
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title={t.fundDetailsTab.fundDomicileTitle}
-          info={t.fundDetailsTab.fundDomicileInfo}
+          title={t.pages.analyzer.dashboard.tabs.fundDetailsTab.fundDomicileTitle}
+          info={t.pages.analyzer.dashboard.tabs.fundDetailsTab.fundDomicileInfo}
           data={domicileData}
           colorOffset={1}
         />
@@ -50,28 +50,28 @@ export function FundDetailsTab({
 
       <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
         <EtfBarChartCard
-          title={t.fundDetailsTab.fundSizeTitle}
-          info={t.fundDetailsTab.fundSizeInfo}
+          title={t.pages.analyzer.dashboard.tabs.fundDetailsTab.fundSizeTitle}
+          info={t.pages.analyzer.dashboard.tabs.fundDetailsTab.fundSizeInfo}
           data={fundSizeData}
-          unit={t.fundDetailsTab.millionsUnit}
+          unit={t.pages.analyzer.dashboard.tabs.fundDetailsTab.millionsUnit}
           colorOffset={5}
         />
       </div>
 
       <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
         <EtfBarChartCard
-          title={t.fundDetailsTab.fundAgeTitle}
-          info={t.fundDetailsTab.fundAgeInfo}
+          title={t.pages.analyzer.dashboard.tabs.fundDetailsTab.fundAgeTitle}
+          info={t.pages.analyzer.dashboard.tabs.fundDetailsTab.fundAgeInfo}
           data={fundAgeData}
-          unit={t.fundDetailsTab.yearsUnit}
+          unit={t.pages.analyzer.dashboard.tabs.fundDetailsTab.yearsUnit}
           colorOffset={7}
         />
       </div>
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title={t.riskAnalysisTab.replicationMethodTitle}
-          info={t.riskAnalysisTab.replicationMethodInfo}
+          title={t.pages.analyzer.dashboard.tabs.riskAnalysisTab.replicationMethodTitle}
+          info={t.pages.analyzer.dashboard.tabs.riskAnalysisTab.replicationMethodInfo}
           data={replicationData}
           colorOffset={8}
         />
@@ -79,8 +79,8 @@ export function FundDetailsTab({
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title={t.riskAnalysisTab.useOfProfitTitle}
-          info={t.riskAnalysisTab.useOfProfitInfo}
+          title={t.pages.analyzer.dashboard.tabs.riskAnalysisTab.useOfProfitTitle}
+          info={t.pages.analyzer.dashboard.tabs.riskAnalysisTab.useOfProfitInfo}
           data={profitData}
           colorOffset={3}
         />

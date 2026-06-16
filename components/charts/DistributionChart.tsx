@@ -12,7 +12,10 @@ export function DistributionChart({ data }: DistributionChartProps) {
 
   return (
     <Card className="lg:col-span-2">
-      <ChartContainer title={t.charts.distributionTitle} info={t.charts.distributionInfo}>
+      <ChartContainer
+        title={t.pages.analyzer.dashboard.widgets.charts.distributionTitle}
+        info={t.pages.analyzer.dashboard.widgets.charts.distributionInfo}
+      >
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" />

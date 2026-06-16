@@ -21,7 +21,7 @@ export function GeographicResultCard({ res, translatedCountry }: GeographicResul
           </CardTitle>
           <div className="text-right">
             <span className="text-xs uppercase tracking-wider text-muted-foreground block mb-0.5">
-              {t.deepDiveTab.totalExposure}
+              {t.pages.analyzer.dashboard.tabs.deepDiveTab.totalExposure}
             </span>
             <span className="text-xl font-black text-primary">{res.totalWeight.toFixed(2)}%</span>
           </div>
@@ -31,7 +31,8 @@ export function GeographicResultCard({ res, translatedCountry }: GeographicResul
         {/* Supplying ETFs */}
         <div>
           <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3 flex items-center gap-1.5">
-            <PieChart className="w-3.5 h-3.5" /> {t.deepDiveTab.exposureSource}
+            <PieChart className="w-3.5 h-3.5" />{' '}
+            {t.pages.analyzer.dashboard.tabs.deepDiveTab.exposureSource}
           </h4>
           <div className="space-y-2">
             {res.etfBreakdown.map((b) => (
@@ -49,7 +50,8 @@ export function GeographicResultCard({ res, translatedCountry }: GeographicResul
         {/* Top Companies */}
         <div>
           <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3 flex items-center gap-1.5">
-            <Building className="w-3.5 h-3.5" /> {t.deepDiveTab.topCompaniesIn} {translatedCountry}
+            <Building className="w-3.5 h-3.5" />{' '}
+            {t.pages.analyzer.dashboard.tabs.deepDiveTab.topCompaniesIn} {translatedCountry}
           </h4>
           <div className="space-y-2">
             {res.companies.slice(0, 10).map((comp, idx) => (
@@ -69,7 +71,8 @@ export function GeographicResultCard({ res, translatedCountry }: GeographicResul
             ))}
             {res.companies.length > 10 && (
               <div className="text-xs text-center text-muted-foreground pt-2">
-                + {res.companies.length - 10} {t.deepDiveTab.moreCompanies}
+                + {res.companies.length - 10}{' '}
+                {t.pages.analyzer.dashboard.tabs.deepDiveTab.moreCompanies}
               </div>
             )}
           </div>

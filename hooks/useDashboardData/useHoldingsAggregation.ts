@@ -39,7 +39,7 @@ export function useHoldingsAggregation(etfs: EtfConfig[]) {
       if (limit && sorted.length > limit) {
         const top = sorted.slice(0, limit);
         const otherValue = sorted.slice(limit).reduce((acc, curr) => acc + curr.value, 0);
-        top.push({ name: t.sectors.Other, value: otherValue });
+        top.push({ name: t.data.sectors.Other, value: otherValue });
         return top;
       }
       return sorted;
@@ -48,16 +48,16 @@ export function useHoldingsAggregation(etfs: EtfConfig[]) {
     return {
       fullGeoData: formatData(
         geoMap,
-        (name) => t.countries[name as keyof typeof t.countries] || name
+        (name) => t.data.countries[name as keyof typeof t.data.countries] || name
       ),
       geoData: formatData(
         geoMap,
-        (name) => t.countries[name as keyof typeof t.countries] || name,
+        (name) => t.data.countries[name as keyof typeof t.data.countries] || name,
         15 // top 15 countries for pie charts
       ),
       sectorData: formatData(
         sectorMap,
-        (name) => t.sectors[name as keyof typeof t.sectors] || name,
+        (name) => t.data.sectors[name as keyof typeof t.data.sectors] || name,
         11 // Show top 11 GICS sectors + Cash, anything beyond groups to Other
       ),
       currencyData: formatData(currencyMap, undefined, 6),

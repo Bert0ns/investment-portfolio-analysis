@@ -27,12 +27,12 @@ export function DashboardTabsNav({ activeTab, setActiveTab }: DashboardTabsNavPr
   const { t } = useTranslation();
 
   const tabNames: Record<DashboardTabType, string> = {
-    Overview: t.overviewTab.tabOverview,
-    'Deep Dive': t.overviewTab.tabDeepDive,
-    'Fund Details': t.overviewTab.tabFundDetails,
-    'Risk Analysis': t.overviewTab.tabRiskAnalysis,
-    'Savings Plan': t.overviewTab.tabSavingsPlan,
-    '3D Visuals': t.overviewTab.tab3DVisuals,
+    Overview: t.pages.analyzer.dashboard.tabs.overviewTab.tabOverview,
+    'Deep Dive': t.pages.analyzer.dashboard.tabs.overviewTab.tabDeepDive,
+    'Fund Details': t.pages.analyzer.dashboard.tabs.overviewTab.tabFundDetails,
+    'Risk Analysis': t.pages.analyzer.dashboard.tabs.overviewTab.tabRiskAnalysis,
+    'Savings Plan': t.pages.analyzer.dashboard.tabs.overviewTab.tabSavingsPlan,
+    '3D Visuals': t.pages.analyzer.dashboard.tabs.overviewTab.tab3DVisuals,
   };
 
   return (

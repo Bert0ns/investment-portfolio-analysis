@@ -21,25 +21,25 @@ export function LanguageSwitcher() {
             variant="outline"
             size="icon"
             className="w-9 h-9 border-primary/50 hover:bg-primary/20 text-primary"
-            title={t.navbar.language}
+            title={t.components.common.navbar.language}
           />
         }
       >
         <Globe className="h-4 w-4" />
-        <span className="sr-only">{t.navbar.language}</span>
+        <span className="sr-only">{t.components.common.navbar.language}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem
           onClick={() => setLanguage('en')}
           className={language === 'en' ? 'bg-muted' : ''}
         >
-          {t.languageSwitcher.en}
+          {t.components.common.languageSwitcher.en}
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setLanguage('it')}
           className={language === 'it' ? 'bg-muted' : ''}
         >
-          {t.languageSwitcher.it}
+          {t.components.common.languageSwitcher.it}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

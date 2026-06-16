@@ -17,7 +17,7 @@ export function WeightValidation({
     <div className="pt-0 border-t">
       <div className="flex justify-between items-end mb-0">
         <span className="text-sm font-medium text-muted-foreground">
-          {t.portfolioSliders.totalAllocation}
+          {t.pages.analyzer.components.portfolioSliders.totalAllocation}
         </span>
         <span
           className={`text-2xl font-bold ${
@@ -42,10 +42,12 @@ export function WeightValidation({
       </div>
 
       <div className="mt-2 text-xs text-center text-muted-foreground min-h-4">
-        {isOverweight && t.portfolioSliders.exceeds100}
+        {isOverweight && t.pages.analyzer.components.portfolioSliders.exceeds100}
         {isUnderweight &&
-          `${t.portfolioSliders.youHave}${(100 - totalWeight).toFixed(1)}% ${t.portfolioSliders.leftToAllocate}`}
-        {!isOverweight && !isUnderweight && t.portfolioSliders.perfectlyAllocated}
+          `${t.pages.analyzer.components.portfolioSliders.youHave}${(100 - totalWeight).toFixed(1)}% ${t.pages.analyzer.components.portfolioSliders.leftToAllocate}`}
+        {!isOverweight &&
+          !isUnderweight &&
+          t.pages.analyzer.components.portfolioSliders.perfectlyAllocated}
       </div>
 
       <div className="mt-2">
@@ -53,16 +55,16 @@ export function WeightValidation({
           variant="outline"
           className="w-full text-muted-foreground hover:text-destructive hover:bg-destructive/10 border-dashed"
           onClick={() => {
-            if (window.confirm(t.portfolioSliders.resetWarning)) {
+            if (window.confirm(t.pages.analyzer.components.portfolioSliders.resetWarning)) {
               onReset();
             }
           }}
         >
           <RotateCcw size={14} className="mr-2" />
-          {t.portfolioSliders.resetToDefault}
+          {t.pages.analyzer.components.portfolioSliders.resetToDefault}
         </Button>
         <p className="text-[10px] text-center text-muted-foreground mt-2 opacity-70">
-          {t.portfolioSliders.noteDeleteConfig}
+          {t.pages.analyzer.components.portfolioSliders.noteDeleteConfig}
         </p>
       </div>
     </div>

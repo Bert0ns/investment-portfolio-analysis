@@ -16,6 +16,8 @@ export const RotationControls = ({
     className="flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium bg-background hover:bg-muted text-foreground rounded-lg transition-colors border border-border"
   >
     {isRotating ? <Pause size={14} /> : <Play size={14} />}
-    {isRotating ? t.threeDVisuals.pauseRotation : t.threeDVisuals.resumeRotation}
+    {isRotating
+      ? t.pages.analyzer.dashboard.tabs.threeDVisuals.pauseRotation
+      : t.pages.analyzer.dashboard.tabs.threeDVisuals.resumeRotation}
   </button>
 );

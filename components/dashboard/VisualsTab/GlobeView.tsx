@@ -38,7 +38,7 @@ export function GlobeView({
       <div className="flex flex-col md:flex-row justify-between gap-6 p-4 bg-muted/30 rounded-lg border border-border items-center">
         <div className="flex flex-col gap-2 min-w-35">
           <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-            {t.threeDVisuals.regionsActive}
+            {t.pages.analyzer.dashboard.tabs.threeDVisuals.regionsActive}
           </Label>
           <span className="text-sm font-medium text-amber-500">
             {

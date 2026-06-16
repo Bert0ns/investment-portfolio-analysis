@@ -18,12 +18,12 @@ export function usePortfolioConcentration(etfs: EtfConfig[]) {
     for (let i = 0; i < top50.length; i++) {
       cumulative += top50[i].value;
       result.push({
-        name: `${t.dashboard.top} ${i + 1}`,
+        name: `${t.pages.analyzer.dashboard.main.top} ${i + 1}`,
         value: cumulative,
       });
     }
     return result;
-  }, [allHoldingsCache, t.dashboard.top]);
+  }, [allHoldingsCache, t.pages.analyzer.dashboard.main.top]);
 
   const weightDistributionData = useMemo(() => {
     const bins = { '> 1%': 0, '0.5% - 1%': 0, '0.1% - 0.5%': 0, '< 0.1%': 0 };

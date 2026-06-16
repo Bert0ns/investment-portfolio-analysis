@@ -29,43 +29,43 @@ export default function LandingContent() {
   const features = [
     {
       icon: <Layers className="w-8 h-8 text-blue-500" />,
-      title: t.landing.multiIssuer,
-      desc: t.landing.multiIssuerDesc,
+      title: t.pages.landing.multiIssuer,
+      desc: t.pages.landing.multiIssuerDesc,
       gradient: 'from-blue-500/20 to-blue-500/5',
       border: 'hover:border-blue-500/50',
     },
     {
       icon: <Globe className="w-8 h-8 text-emerald-500" />,
-      title: t.landing.globalMapping,
-      desc: t.landing.globalMappingDesc,
+      title: t.pages.landing.globalMapping,
+      desc: t.pages.landing.globalMappingDesc,
       gradient: 'from-emerald-500/20 to-emerald-500/5',
       border: 'hover:border-emerald-500/50',
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-violet-500" />,
-      title: t.landing.serverless,
-      desc: t.landing.serverlessDesc,
+      title: t.pages.landing.serverless,
+      desc: t.pages.landing.serverlessDesc,
       gradient: 'from-violet-500/20 to-violet-500/5',
       border: 'hover:border-violet-500/50',
     },
     {
       icon: <Zap className="w-8 h-8 text-amber-500" />,
-      title: t.landing.realtimeAnalytics,
-      desc: t.landing.realtimeAnalyticsDesc,
+      title: t.pages.landing.realtimeAnalytics,
+      desc: t.pages.landing.realtimeAnalyticsDesc,
       gradient: 'from-amber-500/20 to-amber-500/5',
       border: 'hover:border-amber-500/50',
     },
     {
       icon: <Shield className="w-8 h-8 text-rose-500" />,
-      title: t.landing.privacyFirst,
-      desc: t.landing.privacyFirstDesc,
+      title: t.pages.landing.privacyFirst,
+      desc: t.pages.landing.privacyFirstDesc,
       gradient: 'from-rose-500/20 to-rose-500/5',
       border: 'hover:border-rose-500/50',
     },
     {
       icon: <Sparkles className="w-8 h-8 text-cyan-500" />,
-      title: t.landing.immersive3D,
-      desc: t.landing.immersive3DDesc,
+      title: t.pages.landing.immersive3D,
+      desc: t.pages.landing.immersive3DDesc,
       gradient: 'from-cyan-500/20 to-cyan-500/5',
       border: 'hover:border-cyan-500/50',
     },
@@ -88,7 +88,7 @@ export default function LandingContent() {
         >
           <motion.div variants={itemVariants} className="inline-block mb-4">
             <span className="px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-semibold uppercase tracking-widest shadow-[0_0_15px_rgba(34,211,238,0.2)]">
-              {t.landing.nextGen}
+              {t.pages.landing.nextGen}
             </span>
           </motion.div>
 
@@ -96,9 +96,9 @@ export default function LandingContent() {
             variants={itemVariants}
             className="text-5xl md:text-8xl font-black tracking-tighter mb-8 text-foreground uppercase leading-tight"
           >
-            {t.landing.unveil}{' '}
+            {t.pages.landing.unveil}{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-blue-500 to-violet-500 drop-shadow-[0_0_25px_rgba(34,211,238,0.4)]">
-              {t.landing.exposure}
+              {t.pages.landing.exposure}
             </span>
           </motion.h1>
 
@@ -106,7 +106,7 @@ export default function LandingContent() {
             variants={itemVariants}
             className="text-xl md:text-3xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
           >
-            {t.landing.subtitle}
+            {t.pages.landing.subtitle}
           </motion.p>
 
           <motion.div
@@ -119,7 +119,7 @@ export default function LandingContent() {
               size="lg"
               className="px-12 py-8 text-lg font-bold uppercase tracking-widest shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_45px_rgba(34,211,238,0.6)] transition-all duration-300 scale-100 hover:scale-105"
             >
-              {t.landing.launchSystem} <ArrowRight className="w-6 h-6 ml-3" />
+              {t.pages.landing.launchSystem} <ArrowRight className="w-6 h-6 ml-3" />
             </Button>
             <Button
               render={
@@ -133,7 +133,7 @@ export default function LandingContent() {
               size="lg"
               className="px-12 py-8 text-lg font-bold uppercase tracking-widest border-2 hover:bg-muted/50 transition-all duration-300 scale-100 hover:scale-105 backdrop-blur-sm"
             >
-              {t.landing.viewSource}
+              {t.pages.landing.viewSource}
             </Button>
           </motion.div>
         </motion.div>

@@ -21,7 +21,7 @@ export function GeographicMap({ mapData, onCountryClick, selectedCountry }: Geog
       <div className="absolute top-6 left-6 flex items-center gap-2 z-10 pl-6 lg:pl-0">
         <Globe className="w-5 h-5 text-primary" />
         <h3 className="font-bold tracking-widest text-sm text-primary uppercase">
-          {t.deepDiveTab.globalExposure}
+          {t.pages.analyzer.dashboard.tabs.deepDiveTab.globalExposure}
         </h3>
       </div>
       <div className="w-full h-full pointer-events-auto px-2 md:px-8 flex justify-center items-center [&_figure]:w-full [&_svg]:w-full [&_svg]:h-auto">
@@ -99,7 +99,7 @@ export function GeographicMap({ mapData, onCountryClick, selectedCountry }: Geog
         </TransformWrapper>
       </div>
       <p className="text-xs text-muted-foreground absolute bottom-4 text-center w-full pointer-events-none">
-        {t.deepDiveTab.mapInstruction}
+        {t.pages.analyzer.dashboard.tabs.deepDiveTab.mapInstruction}
       </p>
     </div>
   );

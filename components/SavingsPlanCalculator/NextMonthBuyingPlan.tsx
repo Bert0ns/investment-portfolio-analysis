@@ -20,18 +20,19 @@ export function NextMonthBuyingPlan({
   return (
     <Card className="shadow-sm">
       <CardHeader className="pb-2">
-        <CardTitle>{t.savingsPlan.nextMonthBuyingPlan}</CardTitle>
+        <CardTitle>{t.pages.analyzer.components.savingsPlan.nextMonthBuyingPlan}</CardTitle>
       </CardHeader>
       <CardContent>
         {totalWeight === 0 ? (
           <div className="py-8 text-center text-muted-foreground bg-muted/20 rounded-lg border border-dashed">
-            {t.savingsPlan.allocateWeightMsg}
+            {t.pages.analyzer.components.savingsPlan.allocateWeightMsg}
           </div>
         ) : (
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground mb-4">
-              {t.savingsPlan.maintainTargetMsg}{' '}
-              <strong>{formatCurrency(monthlyContribution)}</strong> {t.savingsPlan.contribution}
+              {t.pages.analyzer.components.savingsPlan.maintainTargetMsg}{' '}
+              <strong>{formatCurrency(monthlyContribution)}</strong>{' '}
+              {t.pages.analyzer.components.savingsPlan.contribution}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {activeEtfs.map((etf) => {
@@ -47,7 +48,7 @@ export function NextMonthBuyingPlan({
                       </p>
                       <p className="text-xs text-muted-foreground font-medium bg-muted inline-block px-1.5 py-0.5 rounded">
                         {((etf.globalWeight / totalWeight) * 100).toFixed(1)}%{' '}
-                        {t.savingsPlan.weight}
+                        {t.pages.analyzer.components.savingsPlan.weight}
                       </p>
                     </div>
                     <span className="text-lg font-bold text-primary ml-4 shrink-0">
@@ -61,8 +62,10 @@ export function NextMonthBuyingPlan({
               <div className="mt-4 text-xs text-amber-700 bg-amber-50 dark:bg-amber-500/10 dark:text-amber-400 p-4 rounded-lg border border-amber-200 dark:border-amber-500/20 flex items-start gap-2">
                 <div className="shrink-0 mt-0.5">⚠️</div>
                 <p>
-                  {t.savingsPlan.warningPortfolioWeight} <strong>{totalWeight.toFixed(1)}%</strong>{' '}
-                  {t.savingsPlan.warningPortfolioNormalized} {formatCurrency(monthlyContribution)}.
+                  {t.pages.analyzer.components.savingsPlan.warningPortfolioWeight}{' '}
+                  <strong>{totalWeight.toFixed(1)}%</strong>{' '}
+                  {t.pages.analyzer.components.savingsPlan.warningPortfolioNormalized}{' '}
+                  {formatCurrency(monthlyContribution)}.
                 </p>
               </div>
             )}

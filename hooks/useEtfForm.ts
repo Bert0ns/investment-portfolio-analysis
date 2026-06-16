@@ -35,8 +35,8 @@ export function useEtfForm(onAddEtf: (etf: EtfConfig) => void) {
     e.preventDefault();
 
     if (!name || !ter || !file || !fundSize || !fundAge) {
-      toast.error(t.etfForm.missingFields, {
-        description: t.etfForm.missingFieldsDesc,
+      toast.error(t.pages.analyzer.components.etfForm.missingFields, {
+        description: t.pages.analyzer.components.etfForm.missingFieldsDesc,
       });
       return;
     }
@@ -46,15 +46,21 @@ export function useEtfForm(onAddEtf: (etf: EtfConfig) => void) {
     const ageNumber = parseFloat(fundAge);
 
     if (isNaN(terNumber) || terNumber < 0) {
-      toast.error(t.etfForm.invalidTer, { description: t.etfForm.invalidTer });
+      toast.error(t.pages.analyzer.components.etfForm.invalidTer, {
+        description: t.pages.analyzer.components.etfForm.invalidTer,
+      });
       return;
     }
     if (isNaN(sizeNumber) || sizeNumber < 0) {
-      toast.error(t.etfForm.invalidSize, { description: t.etfForm.invalidSize });
+      toast.error(t.pages.analyzer.components.etfForm.invalidSize, {
+        description: t.pages.analyzer.components.etfForm.invalidSize,
+      });
       return;
     }
     if (isNaN(ageNumber) || ageNumber < 0) {
-      toast.error(t.etfForm.invalidAge, { description: t.etfForm.invalidAge });
+      toast.error(t.pages.analyzer.components.etfForm.invalidAge, {
+        description: t.pages.analyzer.components.etfForm.invalidAge,
+      });
       return;
     }
 
@@ -65,24 +71,24 @@ export function useEtfForm(onAddEtf: (etf: EtfConfig) => void) {
       const result = await parser.parse(file);
 
       if (result.errors.length > 0 && result.holdings.length === 0) {
-        toast.error(t.etfForm.parseError, {
-          description: `${t.etfForm.parseError}: ${result.errors[0]}`,
+        toast.error(t.pages.analyzer.components.etfForm.parseError, {
+          description: `${t.pages.analyzer.components.etfForm.parseError}: ${result.errors[0]}`,
         });
         setIsLoading(false);
         return;
       }
 
       if (result.holdings.length === 0) {
-        toast.error(t.etfForm.emptyFile, {
-          description: t.etfForm.emptyFileDesc,
+        toast.error(t.pages.analyzer.components.etfForm.emptyFile, {
+          description: t.pages.analyzer.components.etfForm.emptyFileDesc,
         });
         setIsLoading(false);
         return;
       }
 
       if (result.errors.length > 0) {
-        toast.warning(t.etfForm.parsedWithWarnings, {
-          description: `${t.etfForm.parsedWithWarningsDesc} ${result.errors.join('. ')}`,
+        toast.warning(t.pages.analyzer.components.etfForm.parsedWithWarnings, {
+          description: `${t.pages.analyzer.components.etfForm.parsedWithWarningsDesc} ${result.errors.join('. ')}`,
         });
       }
 
@@ -105,7 +111,7 @@ export function useEtfForm(onAddEtf: (etf: EtfConfig) => void) {
       resetForm();
       setOpen(false); // Close dialog on success
 
-      toast.success(t.etfForm.etfAdded, {
+      toast.success(t.pages.analyzer.components.etfForm.etfAdded, {
         description: `${name} has been successfully added to your portfolio.`,
       });
     } catch (err: unknown) {

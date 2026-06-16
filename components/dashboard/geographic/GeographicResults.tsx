@@ -21,7 +21,7 @@ export function GeographicResults({ query, setQuery, results }: GeographicResult
         </div>
         <input
           type="text"
-          placeholder={t.deepDiveTab.searchCountryPlaceholder}
+          placeholder={t.pages.analyzer.dashboard.tabs.deepDiveTab.searchCountryPlaceholder}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm"
@@ -33,7 +33,7 @@ export function GeographicResults({ query, setQuery, results }: GeographicResult
 
         {results.map((res) => {
           const translatedCountry =
-            t.countries[res.countryName as keyof typeof t.countries] || res.countryName;
+            t.data.countries[res.countryName as keyof typeof t.data.countries] || res.countryName;
 
           return (
             <GeographicResultCard

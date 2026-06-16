@@ -30,8 +30,8 @@ export function OverviewTab({
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title={t.overviewTab.etfAllocationTitle}
-          info={t.overviewTab.etfAllocationInfo}
+          title={t.pages.analyzer.dashboard.tabs.overviewTab.etfAllocationTitle}
+          info={t.pages.analyzer.dashboard.tabs.overviewTab.etfAllocationInfo}
           data={etfAllocationData}
           colorOffset={6}
         />
@@ -39,24 +39,24 @@ export function OverviewTab({
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title={t.overviewTab.sectorExposureTitle}
-          info={t.overviewTab.sectorExposureInfo}
+          title={t.pages.analyzer.dashboard.tabs.overviewTab.sectorExposureTitle}
+          info={t.pages.analyzer.dashboard.tabs.overviewTab.sectorExposureInfo}
           data={sectorData}
         />
       </div>
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title={t.overviewTab.geoExposureTitle}
-          info={t.overviewTab.geoExposureInfo}
+          title={t.pages.analyzer.dashboard.tabs.overviewTab.geoExposureTitle}
+          info={t.pages.analyzer.dashboard.tabs.overviewTab.geoExposureInfo}
           data={geoData}
         />
       </div>
 
       <div className="transition-transform hover:scale-[1.02] duration-300">
         <PieChartCard
-          title={t.overviewTab.currencyExposureTitle}
-          info={t.overviewTab.currencyExposureInfo}
+          title={t.pages.analyzer.dashboard.tabs.overviewTab.currencyExposureTitle}
+          info={t.pages.analyzer.dashboard.tabs.overviewTab.currencyExposureInfo}
           data={currencyData}
           colorOffset={4}
         />

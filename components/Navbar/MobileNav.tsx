@@ -30,7 +30,7 @@ export function MobileNav({ t }: { t: TranslationType }) {
           side="right"
           className="w-[300px] sm:w-[400px] bg-background/95 backdrop-blur-xl border-l-border flex flex-col h-full"
         >
-          <SheetTitle className="sr-only">{t.navbar.menu}</SheetTitle>
+          <SheetTitle className="sr-only">{t.components.common.navbar.menu}</SheetTitle>
           <SheetDescription className="sr-only">Navigation menu</SheetDescription>
 
           <Link
@@ -60,7 +60,7 @@ export function MobileNav({ t }: { t: TranslationType }) {
               className="flex items-center gap-4 px-4 py-4 rounded-md border border-transparent text-base font-medium text-muted-foreground hover:bg-primary/10 hover:border-primary/30 hover:text-primary transition-all uppercase tracking-wider"
             >
               <LayoutDashboard className="h-5 w-5" />
-              {t.navbar.dashboard}
+              {t.components.common.navbar.dashboard}
             </Link>
             <Link
               href="/about"
@@ -68,7 +68,7 @@ export function MobileNav({ t }: { t: TranslationType }) {
               className="flex items-center gap-4 px-4 py-4 rounded-md border border-transparent text-base font-medium text-muted-foreground hover:bg-primary/10 hover:border-primary/30 hover:text-primary transition-all uppercase tracking-wider"
             >
               <Info className="h-5 w-5" />
-              {t.navbar.about}
+              {t.components.common.navbar.about}
             </Link>
             <a
               href="https://github.com/Bert0ns/investment-portfolio-analysis"
@@ -78,17 +78,17 @@ export function MobileNav({ t }: { t: TranslationType }) {
               className="flex items-center gap-4 px-4 py-4 rounded-md border border-transparent text-base font-medium text-muted-foreground hover:bg-primary/10 hover:border-primary/30 hover:text-primary transition-all uppercase tracking-wider"
             >
               <GithubIcon className="h-5 w-5" />
-              {t.navbar.github}
+              {t.components.common.navbar.github}
             </a>
           </div>
 
           <div className="mt-auto border-t border-border pt-8 pb-4 flex flex-col items-center gap-4">
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest">
-              {t.navbar.language}
+              {t.components.common.navbar.language}
             </span>
             <LanguageSwitcher />
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest mt-4">
-              {t.navbar.theme}
+              {t.components.common.navbar.theme}
             </span>
             <ThemeSwitcher />
           </div>

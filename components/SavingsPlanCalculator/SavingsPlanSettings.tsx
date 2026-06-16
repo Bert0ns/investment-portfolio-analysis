@@ -34,12 +34,12 @@ export function SavingsPlanSettings({
       <CardHeader className="bg-muted/30 border-b pb-4 mb-4">
         <CardTitle className="flex items-center gap-2">
           <Wallet size={18} className="text-primary" />
-          {t.savingsPlan.planSettings}
+          {t.pages.analyzer.components.savingsPlan.planSettings}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-8">
         <SettingsSlider
-          label={t.savingsPlan.initialInvestment}
+          label={t.pages.analyzer.components.savingsPlan.initialInvestment}
           value={initialInvestment}
           onChange={setInitialInvestment}
           max={100000}
@@ -52,7 +52,7 @@ export function SavingsPlanSettings({
         />
 
         <SettingsSlider
-          label={t.savingsPlan.monthlyContribution}
+          label={t.pages.analyzer.components.savingsPlan.monthlyContribution}
           value={monthlyContribution}
           onChange={setMonthlyContribution}
           max={5000}
@@ -65,7 +65,7 @@ export function SavingsPlanSettings({
         />
 
         <SettingsSlider
-          label={t.savingsPlan.duration}
+          label={t.pages.analyzer.components.savingsPlan.duration}
           value={years}
           onChange={setYears}
           max={40}
@@ -74,13 +74,13 @@ export function SavingsPlanSettings({
           inputClassName="h-8 pr-10 text-right font-bold text-primary bg-primary/10 border-primary/20 focus-visible:ring-primary/30"
           suffix={
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground text-xs font-bold pointer-events-none">
-              {t.savingsPlan.yearsShort}
+              {t.pages.analyzer.components.savingsPlan.yearsShort}
             </span>
           }
         />
 
         <SettingsSlider
-          label={t.savingsPlan.expectedReturn}
+          label={t.pages.analyzer.components.savingsPlan.expectedReturn}
           value={expectedReturn}
           onChange={setExpectedReturn}
           max={15}
@@ -93,11 +93,11 @@ export function SavingsPlanSettings({
               %
             </span>
           }
-          description={t.savingsPlan.historicalAverage}
+          description={t.pages.analyzer.components.savingsPlan.historicalAverage}
         />
 
         <SettingsSlider
-          label={t.savingsPlan.stopContributingAfter}
+          label={t.pages.analyzer.components.savingsPlan.stopContributingAfter}
           value={clampedStopMonths}
           onChange={setStopAccumulatingMonths}
           max={years * 12}
@@ -108,10 +108,10 @@ export function SavingsPlanSettings({
           sliderClassName="py-1 [&_[role=slider]]:border-blue-500 [&_.bg-primary]:bg-blue-500"
           suffix={
             <span className="absolute right-2 top-1/2 -translate-y-1/2 text-blue-600 text-xs font-bold pointer-events-none">
-              {t.savingsPlan.monthsShort}
+              {t.pages.analyzer.components.savingsPlan.monthsShort}
             </span>
           }
-          description={`${t.savingsPlan.freezeInvestments} ${Math.floor(clampedStopMonths / 12)} ${t.savingsPlan.years.toLowerCase()} ${t.savingsPlan.duration ? 'e' : 'and'} ${clampedStopMonths % 12} ${t.savingsPlan.months}`}
+          description={`${t.pages.analyzer.components.savingsPlan.freezeInvestments} ${Math.floor(clampedStopMonths / 12)} ${t.pages.analyzer.components.savingsPlan.years.toLowerCase()} ${t.pages.analyzer.components.savingsPlan.duration ? 'e' : 'and'} ${clampedStopMonths % 12} ${t.pages.analyzer.components.savingsPlan.months}`}
         />
       </CardContent>
     </Card>

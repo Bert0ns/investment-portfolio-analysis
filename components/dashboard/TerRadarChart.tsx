@@ -36,8 +36,10 @@ export function TerRadarChart({ etfs }: TerRadarChartProps) {
   return (
     <Card className="h-full">
       <CardHeader>
-        <CardTitle>{t.fundDetailsTab.terRadarTitle}</CardTitle>
-        <CardDescription>{t.fundDetailsTab.terRadarInfo}</CardDescription>
+        <CardTitle>{t.pages.analyzer.dashboard.tabs.fundDetailsTab.terRadarTitle}</CardTitle>
+        <CardDescription>
+          {t.pages.analyzer.dashboard.tabs.fundDetailsTab.terRadarInfo}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 300, minWidth: 0 }}>

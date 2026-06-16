@@ -35,7 +35,7 @@ export function AnimatedDistrictPad({
             className="text-[10px] md:text-xs font-bold uppercase tracking-widest whitespace-nowrap drop-shadow-[0_2px_6px_rgba(0,0,0,1)]"
             style={{ color: plane.color }}
           >
-            {t.sectors[plane.name as keyof typeof t.sectors] || plane.name}
+            {t.data.sectors[plane.name as keyof typeof t.data.sectors] || plane.name}
           </div>
         </Html>
       </a.group>

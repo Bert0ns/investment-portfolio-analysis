@@ -78,7 +78,7 @@ export function EtfSliderRow({
             size="icon"
             onClick={() => onRemove(etf.id)}
             className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10 shrink-0"
-            title={t.portfolioSliders.removeEtf}
+            title={t.pages.analyzer.components.portfolioSliders.removeEtf}
           >
             <Trash2 size={16} />
           </Button>

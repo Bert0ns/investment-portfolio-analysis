@@ -31,11 +31,11 @@ export function CityscapeView({
       <div className="flex flex-col md:flex-row justify-between gap-6 p-4 bg-muted/30 rounded-lg border border-border items-center">
         <div className="flex flex-col gap-2 min-w-35">
           <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-            {t.threeDVisuals.treemapCity}
+            {t.pages.analyzer.dashboard.tabs.threeDVisuals.treemapCity}
           </Label>
           <span className="text-sm font-medium text-amber-500">
             {etfs.reduce((acc, etf) => acc + (etf.globalWeight > 0 ? etf.holdings.length : 0), 0)}{' '}
-            {t.threeDVisuals.holdingsRendered}
+            {t.pages.analyzer.dashboard.tabs.threeDVisuals.holdingsRendered}
           </span>
         </div>
 

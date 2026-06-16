@@ -23,13 +23,13 @@ export function useEtfProperties(etfs: EtfConfig[]) {
       const map = new Map<string, number>();
       for (const etf of etfs) {
         if (etf.globalWeight > 0) {
-          const val = String(etf[property] || t.dashboard.unknown);
+          const val = String(etf[property] || t.pages.analyzer.dashboard.main.unknown);
           map.set(val, (map.get(val) || 0) + etf.globalWeight);
         }
       }
       return Array.from(map.entries())
         .map(([name, value]) => ({
-          name: t.etfProperties[name as keyof typeof t.etfProperties] || name,
+          name: t.data.etfProperties[name as keyof typeof t.data.etfProperties] || name,
           value,
         }))
         .sort((a, b) => b.value - a.value);

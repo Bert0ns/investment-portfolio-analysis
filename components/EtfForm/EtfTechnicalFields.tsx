@@ -18,7 +18,7 @@ export function EtfTechnicalFields({ hook }: { hook: EtfFormHook }) {
     <>
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label>{t.etfForm.replication}</Label>
+          <Label>{t.pages.analyzer.components.etfForm.replication}</Label>
           <Select
             value={state.replicationMethod}
             onValueChange={(val) => actions.setReplicationMethod(val as ReplicationMethod)}
@@ -27,14 +27,14 @@ export function EtfTechnicalFields({ hook }: { hook: EtfFormHook }) {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="Physical">{t.etfProperties.Physical}</SelectItem>
-              <SelectItem value="Synthetic">{t.etfProperties.Synthetic}</SelectItem>
-              <SelectItem value="Optimized">{t.etfProperties.Optimized}</SelectItem>
+              <SelectItem value="Physical">{t.data.etfProperties.Physical}</SelectItem>
+              <SelectItem value="Synthetic">{t.data.etfProperties.Synthetic}</SelectItem>
+              <SelectItem value="Optimized">{t.data.etfProperties.Optimized}</SelectItem>
             </SelectContent>
           </Select>
         </div>
         <div className="space-y-2">
-          <Label>{t.etfForm.useOfProfit}</Label>
+          <Label>{t.pages.analyzer.components.etfForm.useOfProfit}</Label>
           <Select
             value={state.useOfProfit}
             onValueChange={(val) => actions.setUseOfProfit(val as UseOfProfit)}
@@ -43,8 +43,8 @@ export function EtfTechnicalFields({ hook }: { hook: EtfFormHook }) {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="Accumulating">{t.etfProperties.Accumulating}</SelectItem>
-              <SelectItem value="Distributing">{t.etfProperties.Distributing}</SelectItem>
+              <SelectItem value="Accumulating">{t.data.etfProperties.Accumulating}</SelectItem>
+              <SelectItem value="Distributing">{t.data.etfProperties.Distributing}</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -52,7 +52,7 @@ export function EtfTechnicalFields({ hook }: { hook: EtfFormHook }) {
 
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="fundSize">{t.etfForm.fundSize}</Label>
+          <Label htmlFor="fundSize">{t.pages.analyzer.components.etfForm.fundSize}</Label>
           <Input
             id="fundSize"
             type="number"
@@ -63,7 +63,7 @@ export function EtfTechnicalFields({ hook }: { hook: EtfFormHook }) {
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="fundAge">{t.etfForm.fundAge}</Label>
+          <Label htmlFor="fundAge">{t.pages.analyzer.components.etfForm.fundAge}</Label>
           <Input
             id="fundAge"
             type="number"
@@ -76,7 +76,7 @@ export function EtfTechnicalFields({ hook }: { hook: EtfFormHook }) {
       </div>
 
       <div className="space-y-2">
-        <Label>{t.etfForm.domicile}</Label>
+        <Label>{t.pages.analyzer.components.etfForm.domicile}</Label>
         <Select
           value={state.domicile}
           onValueChange={(val) => actions.setDomicile(val as Domicile)}
@@ -85,10 +85,10 @@ export function EtfTechnicalFields({ hook }: { hook: EtfFormHook }) {
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="Ireland">{t.etfProperties.Ireland}</SelectItem>
-            <SelectItem value="Luxembourg">{t.etfProperties.Luxembourg}</SelectItem>
-            <SelectItem value="US">{t.etfProperties.US}</SelectItem>
-            <SelectItem value="Other">{t.sectors.Other}</SelectItem>
+            <SelectItem value="Ireland">{t.data.etfProperties.Ireland}</SelectItem>
+            <SelectItem value="Luxembourg">{t.data.etfProperties.Luxembourg}</SelectItem>
+            <SelectItem value="US">{t.data.etfProperties.US}</SelectItem>
+            <SelectItem value="Other">{t.data.sectors.Other}</SelectItem>
           </SelectContent>
         </Select>
       </div>

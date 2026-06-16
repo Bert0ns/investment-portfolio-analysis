@@ -16,9 +16,11 @@ export function EmptyPortfolioState({
   return (
     <Card className="flex-1 w-full flex flex-col items-center justify-center text-center min-h-75 border-dashed">
       <CardContent className="pt-6">
-        <p className="font-medium text-muted-foreground">{t.portfolioSliders.noEtfsAdded}</p>
+        <p className="font-medium text-muted-foreground">
+          {t.pages.analyzer.components.portfolioSliders.noEtfsAdded}
+        </p>
         <p className="text-sm mt-1 text-muted-foreground/80 mb-6">
-          {t.portfolioSliders.uploadCsvToStart}
+          {t.pages.analyzer.components.portfolioSliders.uploadCsvToStart}
         </p>
         <EtfForm onAddEtf={onAddEtf} />
         <Button
@@ -27,7 +29,7 @@ export function EmptyPortfolioState({
           className="w-full mt-3 flex items-center justify-center gap-2"
         >
           <RotateCcw size={16} />
-          {t.portfolioSliders.loadDefaultPortfolio}
+          {t.pages.analyzer.components.portfolioSliders.loadDefaultPortfolio}
         </Button>
       </CardContent>
     </Card>

@@ -109,13 +109,15 @@ export function TerrainView({
         <div className="flex flex-col md:flex-row justify-between gap-6 p-4 bg-muted/30 rounded-lg border border-border items-center">
           <div className="flex flex-col gap-2 min-w-35">
             <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-              {t.threeDVisuals.analyzedEtfs}
+              {t.pages.analyzer.dashboard.tabs.threeDVisuals.analyzedEtfs}
             </Label>
             <span className="text-sm font-medium text-primary">{etfs.length}</span>
           </div>
         </div>
         <div className="w-full h-[500px] flex items-center justify-center bg-muted/20 rounded-xl border border-border">
-          <p className="text-muted-foreground">{t.threeDVisuals.needTwoEtfsTerrain}</p>
+          <p className="text-muted-foreground">
+            {t.pages.analyzer.dashboard.tabs.threeDVisuals.needTwoEtfsTerrain}
+          </p>
         </div>
       </div>
     );
@@ -127,7 +129,7 @@ export function TerrainView({
         <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
           <div className="flex flex-col gap-2 min-w-35 shrink-0">
             <Label className="text-xs font-bold uppercase tracking-widest text-foreground">
-              {t.threeDVisuals.analyzedEtfs}
+              {t.pages.analyzer.dashboard.tabs.threeDVisuals.analyzedEtfs}
             </Label>
             <span className="text-sm font-medium text-primary">{etfs.length}</span>
           </div>
@@ -136,10 +138,10 @@ export function TerrainView({
 
           <div className="flex flex-col gap-1 max-w-[400px]">
             <h3 className="text-sm font-semibold text-foreground">
-              {t.threeDVisuals.topographicOverlap}
+              {t.pages.analyzer.dashboard.tabs.threeDVisuals.topographicOverlap}
             </h3>
             <p className="text-muted-foreground text-xs leading-snug">
-              {t.threeDVisuals.topographicDesc}
+              {t.pages.analyzer.dashboard.tabs.threeDVisuals.topographicDesc}
             </p>
           </div>
         </div>

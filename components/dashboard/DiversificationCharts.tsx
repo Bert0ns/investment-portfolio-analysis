@@ -60,8 +60,12 @@ export function DiversificationCharts({ etfs }: DiversificationChartsProps) {
       <div className="lg:col-span-2">
         <Card>
           <CardHeader>
-            <CardTitle>{t.diversification.analysisTitle}</CardTitle>
-            <CardDescription>{t.diversification.needTwoEtfs}</CardDescription>
+            <CardTitle>
+              {t.pages.analyzer.dashboard.widgets.diversification.analysisTitle}
+            </CardTitle>
+            <CardDescription>
+              {t.pages.analyzer.dashboard.widgets.diversification.needTwoEtfs}
+            </CardDescription>
           </CardHeader>
         </Card>
       </div>
@@ -73,8 +77,12 @@ export function DiversificationCharts({ etfs }: DiversificationChartsProps) {
       {/* Uniqueness Score Card */}
       <Card>
         <CardHeader>
-          <CardTitle>{t.diversification.uniquenessTitle}</CardTitle>
-          <CardDescription>{t.diversification.uniquenessDesc}</CardDescription>
+          <CardTitle>
+            {t.pages.analyzer.dashboard.widgets.diversification.uniquenessTitle}
+          </CardTitle>
+          <CardDescription>
+            {t.pages.analyzer.dashboard.widgets.diversification.uniquenessDesc}
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div style={{ width: '100%', height: 256, minWidth: 0 }}>
@@ -117,7 +125,7 @@ export function DiversificationCharts({ etfs }: DiversificationChartsProps) {
                             style={{ color: getUniquenessColor(payload[0].value as number) }}
                           >
                             {(payload[0].value as number).toFixed(1)}{' '}
-                            {t.diversification.uniqueSuffix}
+                            {t.pages.analyzer.dashboard.widgets.diversification.uniqueSuffix}
                           </p>
                         </Card>
                       );
@@ -142,15 +150,17 @@ export function DiversificationCharts({ etfs }: DiversificationChartsProps) {
       {/* Correlation Matrix Card */}
       <Card>
         <CardHeader>
-          <CardTitle>{t.diversification.matrixTitle}</CardTitle>
-          <CardDescription>{t.diversification.matrixDesc}</CardDescription>
+          <CardTitle>{t.pages.analyzer.dashboard.widgets.diversification.matrixTitle}</CardTitle>
+          <CardDescription>
+            {t.pages.analyzer.dashboard.widgets.diversification.matrixDesc}
+          </CardDescription>
         </CardHeader>
         <CardContent className="overflow-x-auto">
           <table className="w-full text-sm text-center border-collapse">
             <thead>
               <tr>
                 <th className="p-3 text-left font-medium text-muted-foreground border-b border-r border-border">
-                  {t.diversification.etfColumn}
+                  {t.pages.analyzer.dashboard.widgets.diversification.etfColumn}
                 </th>
                 {activeEtfs.map((e) => (
                   <th

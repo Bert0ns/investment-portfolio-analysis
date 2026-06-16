@@ -37,11 +37,11 @@ export function EtfMechanicsRadar({ etfs }: EtfMechanicsRadarProps) {
     }
 
     const localizedAxes: Record<string, string> = {
-      cost: t.riskAnalysisTab.axisCostEfficiency,
-      diversification: t.riskAnalysisTab.axisDiversification,
-      size: t.riskAnalysisTab.axisFundSize,
-      age: t.riskAnalysisTab.axisFundAge,
-      weight: t.riskAnalysisTab.axisPortfolioWeight,
+      cost: t.pages.analyzer.dashboard.tabs.riskAnalysisTab.axisCostEfficiency,
+      diversification: t.pages.analyzer.dashboard.tabs.riskAnalysisTab.axisDiversification,
+      size: t.pages.analyzer.dashboard.tabs.riskAnalysisTab.axisFundSize,
+      age: t.pages.analyzer.dashboard.tabs.riskAnalysisTab.axisFundAge,
+      weight: t.pages.analyzer.dashboard.tabs.riskAnalysisTab.axisPortfolioWeight,
     };
 
     const formattedData = axesData.map((axis) => {
@@ -61,8 +61,10 @@ export function EtfMechanicsRadar({ etfs }: EtfMechanicsRadarProps) {
   return (
     <Card className="h-full lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
       <CardHeader>
-        <CardTitle>{t.riskAnalysisTab.etfMechanicsTitle}</CardTitle>
-        <CardDescription>{t.riskAnalysisTab.etfMechanicsInfo}</CardDescription>
+        <CardTitle>{t.pages.analyzer.dashboard.tabs.riskAnalysisTab.etfMechanicsTitle}</CardTitle>
+        <CardDescription>
+          {t.pages.analyzer.dashboard.tabs.riskAnalysisTab.etfMechanicsInfo}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 400, minWidth: 0 }}>

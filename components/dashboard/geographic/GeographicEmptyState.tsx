@@ -15,7 +15,7 @@ export function GeographicEmptyState({ query, hasResults }: GeographicEmptyState
       <div className="flex flex-col items-center justify-center h-full text-center text-muted-foreground opacity-60 mt-12">
         <MapPin className="w-12 h-12 mb-4" />
         <p>
-          {t.deepDiveTab.noExposureFound} &quot;{query}&quot;
+          {t.pages.analyzer.dashboard.tabs.deepDiveTab.noExposureFound} &quot;{query}&quot;
         </p>
       </div>
     );
@@ -25,7 +25,7 @@ export function GeographicEmptyState({ query, hasResults }: GeographicEmptyState
     return (
       <div className="flex flex-col items-center justify-center h-full text-center text-muted-foreground opacity-60 mt-12">
         <Search className="w-12 h-12 mb-4" />
-        <p>{t.deepDiveTab.typeCountryInstruction}</p>
+        <p>{t.pages.analyzer.dashboard.tabs.deepDiveTab.typeCountryInstruction}</p>
       </div>
     );
   }

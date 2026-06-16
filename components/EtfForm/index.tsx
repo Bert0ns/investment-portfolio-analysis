@@ -32,12 +32,12 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
           <Button className="w-full flex items-center justify-center gap-2 py-6 text-base shadow-sm" />
         }
       >
-        <Plus size={20} /> {t.etfForm.addEtf}
+        <Plus size={20} /> {t.pages.analyzer.components.etfForm.addEtf}
       </DialogTrigger>
       <DialogContent className="sm:max-w-106.25 max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>{t.etfForm.addEtf}</DialogTitle>
-          <DialogDescription>{t.etfForm.enterDetails}</DialogDescription>
+          <DialogTitle>{t.pages.analyzer.components.etfForm.addEtf}</DialogTitle>
+          <DialogDescription>{t.pages.analyzer.components.etfForm.enterDetails}</DialogDescription>
         </DialogHeader>
         <form onSubmit={actions.handleSubmit} className="space-y-4 mt-2">
           <EtfGeneralFields hook={hook} />
@@ -45,7 +45,9 @@ export default function EtfForm({ onAddEtf }: EtfFormProps) {
           <EtfCsvUpload hook={hook} />
 
           <Button type="submit" disabled={state.isLoading} className="w-full mt-6">
-            {state.isLoading ? t.etfForm.processing : t.etfForm.addToPortfolio}
+            {state.isLoading
+              ? t.pages.analyzer.components.etfForm.processing
+              : t.pages.analyzer.components.etfForm.addToPortfolio}
           </Button>
         </form>
       </DialogContent>

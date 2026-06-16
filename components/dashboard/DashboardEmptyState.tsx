@@ -6,8 +6,10 @@ export function DashboardEmptyState() {
   return (
     <Card className="flex flex-col items-center justify-center text-center text-muted-foreground min-h-100 h-full border-dashed">
       <CardContent className="pt-6">
-        <h3 className="text-xl font-medium text-foreground mb-2">{t.dashboard.emptyState}</h3>
-        <p>{t.dashboard.emptyStateDesc}</p>
+        <h3 className="text-xl font-medium text-foreground mb-2">
+          {t.pages.analyzer.dashboard.main.emptyState}
+        </h3>
+        <p>{t.pages.analyzer.dashboard.main.emptyStateDesc}</p>
       </CardContent>
     </Card>
   );

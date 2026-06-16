@@ -52,38 +52,42 @@ export function VisualsTab({
             onClick={() => setActive3DVisual('Globe')}
             className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'Globe' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
-            {t.overviewTab.exposureGlobe}
+            {t.pages.analyzer.dashboard.tabs.overviewTab.exposureGlobe}
           </button>
           <button
             onClick={() => setActive3DVisual('Network')}
             className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'Network' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
-            {t.overviewTab.concentrationNetwork}
+            {t.pages.analyzer.dashboard.tabs.overviewTab.concentrationNetwork}
           </button>
           <button
             onClick={() => setActive3DVisual('City')}
             className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'City' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
-            {t.threeDVisuals.treemapCity}
+            {t.pages.analyzer.dashboard.tabs.threeDVisuals.treemapCity}
           </button>
           <button
             onClick={() => setActive3DVisual('Terrain')}
             className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'Terrain' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
-            {t.threeDVisuals.terrainMap}
+            {t.pages.analyzer.dashboard.tabs.threeDVisuals.terrainMap}
           </button>
           <button
             onClick={() => setActive3DVisual('MoneyFlow')}
             className={`px-4 py-1.5 text-sm rounded-md font-medium transition-colors flex-1 sm:flex-none whitespace-nowrap ${active3DVisual === 'MoneyFlow' ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
           >
-            {t.threeDVisuals.moneyFlow || 'MoneyFlow'}
+            {t.pages.analyzer.dashboard.tabs.threeDVisuals.moneyFlow || 'MoneyFlow'}
           </button>
         </div>
         {onToggleFullscreen && (
           <button
             onClick={onToggleFullscreen}
             className="p-2 bg-muted/50 hover:bg-primary/10 text-muted-foreground hover:text-primary rounded-lg transition-colors border border-border hover:border-primary/30 flex items-center justify-center shrink-0"
-            title={isFullscreen ? t.threeDVisuals.exitFullscreen : t.threeDVisuals.fullscreen}
+            title={
+              isFullscreen
+                ? t.pages.analyzer.dashboard.tabs.threeDVisuals.exitFullscreen
+                : t.pages.analyzer.dashboard.tabs.threeDVisuals.fullscreen
+            }
           >
             {isFullscreen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
           </button>

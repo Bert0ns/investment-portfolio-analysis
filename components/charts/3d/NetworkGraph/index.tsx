@@ -82,10 +82,10 @@ export function NetworkGraph({ etfs, limit, livePhysics, overlapOnly }: NetworkG
           let html = `<div style="background: rgba(0,0,0,0.8); padding: 8px; border-radius: 8px; color: white; font-family: sans-serif; pointer-events: none;">`;
           html += `<div style="font-weight: bold; margin-bottom: 4px;">${n.name || n.id}</div>`;
           if (n.group === 'holding' && n.val !== undefined) {
-            html += `<div style="font-size: 12px; opacity: 0.8;">${t.threeDVisuals.weightInPortfolio} <strong style="color: #f472b6;">${n.val.toFixed(2)}%</strong></div>`;
+            html += `<div style="font-size: 12px; opacity: 0.8;">${t.pages.analyzer.dashboard.tabs.threeDVisuals.weightInPortfolio} <strong style="color: #f472b6;">${n.val.toFixed(2)}%</strong></div>`;
           }
           if (n.group === 'etf' && n.val !== undefined) {
-            html += `<div style="font-size: 12px; opacity: 0.8;">${t.threeDVisuals.totalEtfWeight} <strong style="color: #22d3ee;">${n.val.toFixed(2)}%</strong></div>`;
+            html += `<div style="font-size: 12px; opacity: 0.8;">${t.pages.analyzer.dashboard.tabs.threeDVisuals.totalEtfWeight} <strong style="color: #22d3ee;">${n.val.toFixed(2)}%</strong></div>`;
           }
           html += `</div>`;
           return html;

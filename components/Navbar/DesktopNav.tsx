@@ -14,13 +14,13 @@ export function DesktopLinks({ t }: { t: TranslationType }) {
         href="/analyzer"
         className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest whitespace-nowrap"
       >
-        {t.navbar.dashboard}
+        {t.components.common.navbar.dashboard}
       </Link>
       <Link
         href="/about"
         className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest"
       >
-        {t.navbar.about}
+        {t.components.common.navbar.about}
       </Link>
     </div>
   );
@@ -41,10 +41,10 @@ export function DesktopActions({ t }: { t: TranslationType }) {
         variant="outline"
         size="icon"
         className="w-9 h-9 border-primary/50 hover:bg-primary/20 text-primary"
-        title={t.navbar.github}
+        title={t.components.common.navbar.github}
       >
         <GithubIcon className="h-4 w-4" />
-        <span className="sr-only">{t.navbar.github}</span>
+        <span className="sr-only">{t.components.common.navbar.github}</span>
       </Button>
       <LanguageSwitcher />
       <ThemeSwitcher />

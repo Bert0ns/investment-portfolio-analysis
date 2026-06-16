@@ -53,7 +53,7 @@ export function HoldingsTable({ holdings }: HoldingsTableProps) {
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input
             type="text"
-            placeholder={t.deepDiveTab.searchPlaceholder}
+            placeholder={t.pages.analyzer.dashboard.tabs.deepDiveTab.searchPlaceholder}
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
@@ -79,18 +79,18 @@ export function HoldingsTable({ holdings }: HoldingsTableProps) {
             {currentHoldings.length === 0 ? (
               <TableRow>
                 <TableCell colSpan={5} className="h-24 text-center text-muted-foreground">
-                  {t.deepDiveTab.noHoldingsFound} &quot{search}&quot
+                  {t.pages.analyzer.dashboard.tabs.deepDiveTab.noHoldingsFound} &quot{search}&quot
                 </TableCell>
               </TableRow>
             ) : (
               currentHoldings.map((h, i) => {
                 const canonSector = normalizeSector(String(h.sector || 'Unknown'));
                 const translatedSector =
-                  t.sectors[canonSector as keyof typeof t.sectors] || canonSector;
+                  t.data.sectors[canonSector as keyof typeof t.data.sectors] || canonSector;
 
                 const canonCountry = normalizeCountry(String(h.country || 'Unknown'));
                 const translatedCountry =
-                  t.countries[canonCountry as keyof typeof t.countries] || canonCountry;
+                  t.data.countries[canonCountry as keyof typeof t.data.countries] || canonCountry;
 
                 return (
                   <TableRow key={`${h.ticker}-${i}`} className="hover:bg-muted/30">

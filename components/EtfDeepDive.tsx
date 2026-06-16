@@ -29,42 +29,43 @@ function DeepDiveData({ etf }: { etf: EtfConfig }) {
         <div className="bg-muted/30 p-3 rounded-md border border-border">
           <div
             className="text-xs text-muted-foreground uppercase tracking-widest mb-1 truncate"
-            title={t.etfForm.ter}
+            title={t.pages.analyzer.components.etfForm.ter}
           >
-            {t.etfForm.ter}
+            {t.pages.analyzer.components.etfForm.ter}
           </div>
           <div className="font-semibold text-primary">{etf.ter}%</div>
         </div>
         <div className="bg-muted/30 p-3 rounded-md border border-border">
           <div
             className="text-xs text-muted-foreground uppercase tracking-widest mb-1 truncate"
-            title={t.etfForm.fundSize}
+            title={t.pages.analyzer.components.etfForm.fundSize}
           >
-            {t.etfForm.fundSize}
+            {t.pages.analyzer.components.etfForm.fundSize}
           </div>
           <div className="font-semibold text-primary">${etf.fundSize}M</div>
         </div>
         <div className="bg-muted/30 p-3 rounded-md border border-border">
           <div
             className="text-xs text-muted-foreground uppercase tracking-widest mb-1 truncate"
-            title={t.etfForm.replication}
+            title={t.pages.analyzer.components.etfForm.replication}
           >
-            {t.etfForm.replication}
+            {t.pages.analyzer.components.etfForm.replication}
           </div>
           <div className="font-semibold text-primary">
-            {t.etfProperties[etf.replicationMethod as keyof typeof t.etfProperties] ||
+            {t.data.etfProperties[etf.replicationMethod as keyof typeof t.data.etfProperties] ||
               etf.replicationMethod}
           </div>
         </div>
         <div className="bg-muted/30 p-3 rounded-md border border-border">
           <div
             className="text-xs text-muted-foreground uppercase tracking-widest mb-1 truncate"
-            title={t.etfForm.useOfProfit}
+            title={t.pages.analyzer.components.etfForm.useOfProfit}
           >
-            {t.etfForm.useOfProfit}
+            {t.pages.analyzer.components.etfForm.useOfProfit}
           </div>
           <div className="font-semibold text-primary">
-            {t.etfProperties[etf.useOfProfit as keyof typeof t.etfProperties] || etf.useOfProfit}
+            {t.data.etfProperties[etf.useOfProfit as keyof typeof t.data.etfProperties] ||
+              etf.useOfProfit}
           </div>
         </div>
       </div>
@@ -76,15 +77,15 @@ function DeepDiveData({ etf }: { etf: EtfConfig }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="w-full">
           <PieChartCard
-            title={t.overviewTab.sectorExposureTitle}
-            info={t.overviewTab.sectorExposureInfo}
+            title={t.pages.analyzer.dashboard.tabs.overviewTab.sectorExposureTitle}
+            info={t.pages.analyzer.dashboard.tabs.overviewTab.sectorExposureInfo}
             data={isolatedData.sectorData}
           />
         </div>
         <div className="w-full">
           <PieChartCard
-            title={t.overviewTab.geoExposureTitle}
-            info={t.overviewTab.geoExposureInfo}
+            title={t.pages.analyzer.dashboard.tabs.overviewTab.geoExposureTitle}
+            info={t.pages.analyzer.dashboard.tabs.overviewTab.geoExposureInfo}
             data={isolatedData.geoData}
           />
         </div>
