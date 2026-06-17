@@ -8,9 +8,10 @@ import { getVoronoiCacheKey, getCachedVoronoi, setCachedVoronoi } from '@/lib/ma
 import { useDebounce } from '@/hooks/useDebounce';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { Loader2 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
+import { ChartTitleWithInfo } from '@/components/charts/Shared';
 
 interface VoronoiTreemapProps {
   etfs: EtfConfig[];
@@ -145,16 +146,12 @@ export function VoronoiTreemap({ etfs }: VoronoiTreemapProps) {
   };
 
   return (
-    <Card className="w-full relative overflow-hidden bg-background/50 backdrop-blur-sm border-primary/20">
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <div>
-          <CardTitle className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-purple-400">
-            {t.pages.analyzer.dashboard.tabs.fundDetailsTab.voronoiTitle}
-          </CardTitle>
-          <CardDescription>
-            {t.pages.analyzer.dashboard.tabs.fundDetailsTab.voronoiInfo}
-          </CardDescription>
-        </div>
+    <Card className="h-full">
+      <CardHeader className="flex flex-col md:flex-row md:items-center justify-between space-y-4 md:space-y-0 pb-2">
+        <ChartTitleWithInfo
+          title={t.pages.analyzer.dashboard.tabs.fundDetailsTab.voronoiTitle}
+          info={t.pages.analyzer.dashboard.tabs.fundDetailsTab.voronoiInfo}
+        />
         <div className="flex flex-col items-end gap-1 w-48">
           <span className="text-xs text-muted-foreground whitespace-nowrap">
             {t.pages.analyzer.dashboard.tabs.fundDetailsTab.voronoiNodesSliderLabel}:{' '}
