@@ -4,6 +4,7 @@ import { EtfBarChartCard } from '@/components/charts/EtfBarChartCard';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 import { EtfConfig } from '@/lib/types';
 import { TerRadarChart } from '@/components/dashboard/TerRadarChart';
+import { VoronoiTreemap } from '@/components/dashboard/VoronoiTreemap';
 
 type ChartData = { name: string; value: number }[];
 
@@ -88,6 +89,10 @@ export function FundDetailsTab({
 
       <div className="lg:col-span-2 transition-transform hover:scale-[1.01] duration-300">
         <TerRadarChart etfs={etfs} />
+      </div>
+
+      <div className="lg:col-span-2 mt-4">
+        <VoronoiTreemap etfs={etfs} />
       </div>
     </>
   );

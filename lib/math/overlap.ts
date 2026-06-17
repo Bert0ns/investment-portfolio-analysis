@@ -29,12 +29,7 @@ function buildWeightMap(etf: EtfConfig): Map<string, number> {
   return map;
 }
 
-export function calculatePairwiseOverlap(etf1: EtfConfig, etf2: EtfConfig): number {
-  if (etf1.id === etf2.id) return 100;
-
-  const map1 = buildWeightMap(etf1);
-  const map2 = buildWeightMap(etf2);
-
+function calculateOverlapFromMaps(map1: Map<string, number>, map2: Map<string, number>): number {
   let overlap = 0;
   for (const [key, weight1] of map1.entries()) {
     const weight2 = map2.get(key);
@@ -42,8 +37,16 @@ export function calculatePairwiseOverlap(etf1: EtfConfig, etf2: EtfConfig): numb
       overlap += Math.min(weight1, weight2);
     }
   }
-
   return overlap;
+}
+
+export function calculatePairwiseOverlap(etf1: EtfConfig, etf2: EtfConfig): number {
+  if (etf1.id === etf2.id) return 100;
+
+  const map1 = buildWeightMap(etf1);
+  const map2 = buildWeightMap(etf2);
+
+  return calculateOverlapFromMaps(map1, map2);
 }
 
 export function generateOverlapMatrix(etfs: EtfConfig[]): OverlapMatrixResult[] {
@@ -60,13 +63,7 @@ export function generateOverlapMatrix(etfs: EtfConfig[]): OverlapMatrixResult[] 
       const { etf: etf1, map: map1 } = etfMaps[i];
       const { etf: etf2, map: map2 } = etfMaps[j];
 
-      let overlap = 0;
-      for (const [key, weight1] of map1.entries()) {
-        const weight2 = map2.get(key);
-        if (weight2 !== undefined) {
-          overlap += Math.min(weight1, weight2);
-        }
-      }
+      const overlap = calculateOverlapFromMaps(map1, map2);
 
       results.push({
         etfId1: etf1.id,

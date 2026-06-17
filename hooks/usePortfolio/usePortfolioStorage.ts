@@ -66,7 +66,10 @@ export function usePortfolioStorage(
           'visuals_network_physics',
           'visuals_network_overlap',
           'visuals_moneyflow_limit',
+          'voronoi_max_nodes',
+          'deepdive_active_tab',
           'deepdive_query',
+          'geographic_query',
           'savings_initial',
           'savings_monthly',
           'savings_years',
@@ -142,7 +145,8 @@ export function usePortfolioStorage(
     };
 
     loadInitialData();
-  }, [loadDefaults, t, setEtfs]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Save to indexedDB whenever etfs change
   useEffect(() => {

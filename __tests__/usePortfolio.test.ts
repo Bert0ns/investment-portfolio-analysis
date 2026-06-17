@@ -143,6 +143,7 @@ describe('usePortfolio Hook', () => {
   });
 
   it('loadDefaults handles fetch failure gracefully', async () => {
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     (global.fetch as jest.Mock).mockImplementationOnce(() =>
       Promise.resolve({ ok: false, status: 404 })
     );
@@ -156,6 +157,8 @@ describe('usePortfolio Hook', () => {
     await waitFor(() => {
       expect(toast.error).toHaveBeenCalled();
     });
+
+    consoleSpy.mockRestore();
   });
 
   it('can update weight of an ETF', async () => {

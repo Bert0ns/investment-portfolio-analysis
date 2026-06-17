@@ -72,5 +72,3 @@ export function MoneyFlow({
     </div>
   );
 }
-
-export default MoneyFlow;

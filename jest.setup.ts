@@ -22,6 +22,31 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
 };
 
+// Mock Worker for VoronoiTreemap
+global.Worker = class Worker {
+  url: string;
+  onmessage: ((this: Worker, ev: MessageEvent) => unknown) | null = null;
+  constructor(stringUrl: string | URL) {
+    this.url = stringUrl.toString();
+  }
+  postMessage(msg: { cacheKey?: string; [key: string]: unknown }) {
+    if (this.onmessage) {
+      // Simulate an immediate successful response
+      this.onmessage(
+        new MessageEvent('message', {
+          data: { type: 'SUCCESS', polygons: [], cacheKey: msg.cacheKey },
+        })
+      );
+    }
+  }
+  terminate() {}
+  addEventListener() {}
+  removeEventListener() {}
+  dispatchEvent() {
+    return true;
+  }
+} as unknown as typeof Worker;
+
 import React from 'react';
 
 jest.mock('recharts', () => {

@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/select';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 
-export const DASHBOARD_TABS = [
+const DASHBOARD_TABS = [
   'Overview',
   'Fund Details',
   'Risk Analysis',

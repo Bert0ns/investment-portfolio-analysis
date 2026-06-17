@@ -151,5 +151,3 @@ export function MoneyFlowView({
     </div>
   );
 }
-
-export default MoneyFlowView;
