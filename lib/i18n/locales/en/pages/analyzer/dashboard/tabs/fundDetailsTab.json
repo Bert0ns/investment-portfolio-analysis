@@ -10,5 +10,11 @@
   "yearsUnit": "Years",
   "millionsUnit": "$M",
   "terRadarTitle": "TER Radar Comparison",
-  "terRadarInfo": "Visualize the Total Expense Ratio across your portfolio funds."
+  "terRadarInfo": "Visualize the Total Expense Ratio across your portfolio funds.",
+  "voronoiTitle": "Holdings Topography",
+  "voronoiInfo": "An organic representation of your largest positions.",
+  "voronoiTailName": "Other Holdings",
+  "voronoiTailTicker": "Various",
+  "voronoiTailSector": "Mixed",
+  "voronoiNodesSliderLabel": "Max Nodes Displayed"
 }

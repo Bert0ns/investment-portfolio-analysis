@@ -23,8 +23,16 @@ const config: Config = {
   moduleNameMapper: {
     // Handle module aliases
     '^@/(.*)$': '<rootDir>/$1',
+    '^d3-hierarchy$': '<rootDir>/__mocks__/d3-hierarchy.js',
+    '^d3-voronoi-treemap$': '<rootDir>/__mocks__/d3-voronoi-treemap.js',
   },
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-export default createJestConfig(config);
+export default async () => {
+  const nextJestConfig = await createJestConfig(config)();
+  return {
+    ...nextJestConfig,
+    transformIgnorePatterns: ['/node_modules/(?!(d3-hierarchy|d3-voronoi-treemap)/)'],
+  };
+};

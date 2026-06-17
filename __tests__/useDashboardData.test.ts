@@ -103,7 +103,7 @@ describe('useDashboardData', () => {
       },
     ];
 
-    const { result } = renderHook(() => useDashboardData(etfs, 100));
+    const { result } = renderHook(() => useDashboardData(etfs));
 
     // sector limit is 11, so 11 items + 1 "Other" = 12 items
     expect(result.current.sectorData.length).toBe(12);

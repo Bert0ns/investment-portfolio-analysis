@@ -10,5 +10,11 @@
   "yearsUnit": "Anni",
   "millionsUnit": "M$",
   "terRadarTitle": "Confronto Radar TER",
-  "terRadarInfo": "Visualizza il Total Expense Ratio attraverso i fondi del tuo portafoglio."
+  "terRadarInfo": "Visualizza il Total Expense Ratio attraverso i fondi del tuo portafoglio.",
+  "voronoiTitle": "Topografia delle Partecipazioni",
+  "voronoiInfo": "Una rappresentazione organica delle tue posizioni maggiori.",
+  "voronoiTailName": "Altre Partecipazioni",
+  "voronoiTailTicker": "Varie",
+  "voronoiTailSector": "Misto",
+  "voronoiNodesSliderLabel": "Nodi Massimi Visualizzati"
 }
