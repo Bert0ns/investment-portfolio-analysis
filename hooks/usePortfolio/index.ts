@@ -10,6 +10,7 @@ export function usePortfolio() {
 
   return {
     etfs,
+    setEtfs,
     isLoaded,
     isLoadingDefaults,
     totalWeight,

@@ -124,6 +124,6 @@ This project is open-source and available under the [MIT License](LICENSE).
 1. **New Broker/CSV Parser Strategies:** Expand the `CsvParserStrategy` to natively support raw transaction exports from major brokers (e.g., Interactive Brokers, Trading212, DEGIRO, Vanguard, Schwab) instead of just ETF fact sheets.
 2. **Historical Performance & Backtesting:** Integration with historical price APIs to chart a simulated backtested growth curve for your exact portfolio configuration over the last 1-5 years, calculating Max Drawdown and Sharpe ratios.
 3. **Monte Carlo Savings Simulation:** Enhance the Savings Plan Calculator with a Monte Carlo engine running 1,000+ randomized market scenarios to project wealth percentiles (10th, 50th, 90th).
-4. **Shareable Portfolios (Zero-Backend):** Serialize, compress (`lz-string`), and encode the user's ETF configuration directly into a URL hash to allow instant, serverless portfolio sharing with friends.
+4. **Shareable Portfolios (Zero-Backend):** Serialize, compress, and encode the user's ETF configuration directly into a URL hash to allow instant, serverless portfolio sharing with friends.
 5. **Advanced X-Ray Visualizations:** Add new views such as a Holdings Correlation Matrix (overlap heatmap) and a 12-month Dividend Projection Calendar.
 6. **PWA Offline Mode:** Implement a Next.js service worker so users can install the application to their devices and run fully offline, retaining all IndexedDB capabilities.
