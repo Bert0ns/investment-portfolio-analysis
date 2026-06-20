@@ -71,7 +71,7 @@ export function MobileNav({ t }: { t: TranslationType }) {
               {t.components.common.navbar.about}
             </Link>
             <a
-              href="https://github.com/Bert0ns/investment-portfolio-analysis"
+              href="https://github.com/Bert0ns/capital-lens"
               target="_blank"
               rel="noreferrer"
               onClick={() => setIsOpen(false)}

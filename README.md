@@ -35,8 +35,8 @@ Make sure you have [Node.js](https://nodejs.org/) (v18+) and `pnpm` installed.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Bert0ns/investment-portfolio-analysis.git
-   cd investment-portfolio-analysis
+   git clone https://github.com/Bert0ns/capital-lens.git
+   cd capital-lens
    ```
 
 2. **Install dependencies:**
