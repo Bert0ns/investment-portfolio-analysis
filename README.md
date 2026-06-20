@@ -20,7 +20,9 @@ A powerful, **100% client-side** web application designed to help retail investo
 - **🎛️ Interactive Allocation**: Fluidly adjust your ETF weights using range sliders and watch your dashboard react and recompute instantaneously.
 - **📈 Savings Plan Calculator**: Advanced financial math engine to simulate a long-term Dollar-Cost Averaging (DCA) strategy. Configure expected returns, monthly contributions, and "stop accumulating" thresholds.
 - **🛡️ Risk Analysis & KPI**: Track your Weighted Average TER (Total Expense Ratio), fund domiciles, replication methods (Physical vs. Synthetic), and use of profit.
-- **🔒 100% Privacy & Serverless**: No databases. No backend. No user data leaves your browser. All parsing and math are executed locally, and state is preserved securely in your browser's `localStorage`.
+- **🔒 100% Privacy & Serverless**: No databases. No backend. No user data leaves your browser. All parsing and math are executed locally, and state is preserved securely in your browser's `IndexedDB` and `localStorage`.
+- **📱 PWA & True Offline Mode**: Install Capital Lens directly to your home screen or desktop. Powered by advanced service worker caching, the app works flawlessly with zero network connection.
+- **🔗 Web Share Target API**: Share portfolio configuration files (`.csv` or `.lens`) directly from your mobile OS or other apps straight into Capital Lens without needing to open the app first.
 
 ---
 
@@ -124,4 +126,3 @@ This project is open-source and available under the [MIT License](LICENSE).
 1. **New Broker/CSV Parser Strategies:** Expand the `CsvParserStrategy` to natively support raw transaction exports from major brokers (e.g., Interactive Brokers, Trading212, DEGIRO, Vanguard, Schwab) instead of just ETF fact sheets.
 2. **Historical Performance & Backtesting:** Integration with historical price APIs to chart a simulated backtested growth curve for your exact portfolio configuration over the last 1-5 years, calculating Max Drawdown and Sharpe ratios.
 3. **Monte Carlo Savings Simulation:** Enhance the Savings Plan Calculator with a Monte Carlo engine running 1,000+ randomized market scenarios to project wealth percentiles (10th, 50th, 90th).
-4. **Advanced X-Ray Visualizations:** Add new views such as a Holdings Correlation Matrix (overlap heatmap) and a 12-month Dividend Projection Calendar.
