@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/lib/i18n/LanguageContext';
 
 export function InstallPwaButton({
   className,
@@ -11,6 +12,7 @@ export function InstallPwaButton({
   className?: string;
   variant?: 'outline' | 'default' | 'ghost' | 'secondary' | 'link' | 'destructive';
 }) {
+  const { t } = useTranslation();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
 
@@ -46,7 +48,9 @@ export function InstallPwaButton({
       }
     >
       <Download className="w-4 h-4" />
-      <span className="uppercase tracking-widest text-xs font-bold">Install App</span>
+      <span className="uppercase tracking-widest text-xs font-bold">
+        {t.components.common.navbar.installApp}
+      </span>
     </Button>
   );
 }
