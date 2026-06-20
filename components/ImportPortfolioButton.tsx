@@ -28,6 +28,13 @@ export function ImportPortfolioButton({ onImport }: ImportPortfolioButtonProps) 
     if (!files || files.length === 0) return;
 
     const file = files[0];
+    const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+    if (file.size > MAX_FILE_SIZE) {
+      toast.error(n.importFailed, { description: 'File size exceeds the 5MB limit.' });
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+
     try {
       let etfs: EtfConfig[] = [];
       if (file.name.endsWith('.lens')) {

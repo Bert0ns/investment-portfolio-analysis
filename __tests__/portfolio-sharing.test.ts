@@ -34,25 +34,29 @@ describe('Portfolio Sharing Logic', () => {
   const mockPortfolio: EtfConfig[] = [
     {
       id: 'etf1',
-      ticker: 'VWCE',
-      name: 'Vanguard FTSE All-World',
-      weight: 60,
+      name: 'VWCE',
+      globalWeight: 60,
       ter: 0.22,
-      expectedReturn: 7,
-      volatility: 15,
-      assetClass: 'Equity',
-      geography: 'Global',
+      issuer: 'Vanguard',
+      holdings: [],
+      replicationMethod: 'Physical',
+      fundSize: 1000,
+      fundAge: 5,
+      useOfProfit: 'Accumulating',
+      domicile: 'Ireland',
     },
     {
       id: 'etf2',
-      ticker: 'AGGH',
-      name: 'iShares Core Global Aggregate Bond',
-      weight: 40,
+      name: 'AGGH',
+      globalWeight: 40,
       ter: 0.1,
-      expectedReturn: 3,
-      volatility: 5,
-      assetClass: 'Bonds',
-      geography: 'Global',
+      issuer: 'iShares',
+      holdings: [],
+      replicationMethod: 'Physical',
+      fundSize: 2000,
+      fundAge: 10,
+      useOfProfit: 'Accumulating',
+      domicile: 'Ireland',
     },
   ];
 
@@ -72,7 +76,7 @@ describe('Portfolio Sharing Logic', () => {
       // 4. Assert correctness
       expect(importedPortfolio).toEqual(mockPortfolio);
       expect(importedPortfolio.length).toBe(2);
-      expect(importedPortfolio[0].ticker).toBe('VWCE');
+      expect(importedPortfolio[0].name).toBe('VWCE');
     });
 
     it('should throw an error for corrupted .lens files', async () => {
@@ -106,7 +110,7 @@ describe('Portfolio Sharing Logic', () => {
       // 4. Assert correctness
       expect(importedPortfolio).toEqual(mockPortfolio);
       expect(importedPortfolio.length).toBe(2);
-      expect(importedPortfolio[1].ticker).toBe('AGGH');
+      expect(importedPortfolio[1].name).toBe('AGGH');
     });
 
     it('should throw an error if PNG does not contain portfolio data', async () => {

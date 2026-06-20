@@ -5,14 +5,8 @@ import { EtfConfig } from '../types';
 // but we will assume png-chunks-extract works for now.
 // Since these might not have types immediately available if the install fails, we will dynamically import or use require if needed,
 // but standard ES imports are preferred. We'll use any for now for the chunk manipulators to avoid strict type errors.
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import extractChunks from 'png-chunks-extract';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import encodeChunks from 'png-chunks-encode';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import textChunk from 'png-chunk-text';
 
 const CURRENT_VERSION = 1;
@@ -21,6 +15,25 @@ const CHUNK_KEYWORD = 'lens-portfolio';
 export interface PortfolioPayload {
   version: number;
   data: EtfConfig[];
+}
+
+function isValidEtfConfig(item: unknown): item is EtfConfig {
+  if (typeof item !== 'object' || item === null) return false;
+  const e = item as Record<string, unknown>;
+  return (
+    typeof e.id === 'string' &&
+    typeof e.name === 'string' &&
+    typeof e.issuer === 'string' &&
+    typeof e.ter === 'number' &&
+    typeof e.globalWeight === 'number' &&
+    Array.isArray(e.holdings)
+  );
+}
+
+function validatePortfolioPayload(payload: unknown): payload is PortfolioPayload {
+  if (typeof payload !== 'object' || payload === null) return false;
+  const p = payload as Record<string, unknown>;
+  return typeof p.version === 'number' && Array.isArray(p.data) && p.data.every(isValidEtfConfig);
 }
 
 /**
@@ -42,7 +55,11 @@ function compressPortfolio(config: EtfConfig[]): Uint8Array {
 function decompressPortfolio(compressedData: Uint8Array): EtfConfig[] {
   try {
     const jsonString = pako.inflate(compressedData, { to: 'string' });
-    const payload = JSON.parse(jsonString) as PortfolioPayload;
+    const payload = JSON.parse(jsonString);
+
+    if (!validatePortfolioPayload(payload)) {
+      throw new Error('Invalid portfolio schema format.');
+    }
 
     // Here we can handle migrations based on payload.version in the future
     if (payload.version > CURRENT_VERSION) {
@@ -95,9 +112,13 @@ export function exportPortfolioToSmartPNG(config: EtfConfig[], pngDataUrl: strin
   const compressedData = compressPortfolio(config);
 
   // We need to encode the compressed binary data as base64 so it can fit in a standard tEXt chunk.
-  // Standard tEXt chunks expect latin1 strings, so we convert the uint8array to base64.
-  // We could also use zTXt for native compression but pako + base64 is extremely robust.
-  const base64Payload = btoa(String.fromCharCode.apply(null, Array.from(compressedData)));
+  // Standard tEXt chunks expect latin1 strings. We iterate explicitly to avoid RangeError limits on large portfolios.
+  let binaryString = '';
+  const len = compressedData.byteLength;
+  for (let i = 0; i < len; i++) {
+    binaryString += String.fromCharCode(compressedData[i]);
+  }
+  const base64Payload = btoa(binaryString);
 
   const pngBuffer = dataUrlToUint8Array(pngDataUrl);
   const chunks = extractChunks(pngBuffer);

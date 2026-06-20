@@ -23,6 +23,13 @@ export function GlobalDropzone({ children, onImport }: GlobalDropzoneProps) {
   const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
+    const handleDragEnter = (e: DragEvent) => {
+      e.preventDefault();
+      if (e.dataTransfer?.types.includes('Files')) {
+        setIsDragging(true);
+      }
+    };
+
     const handleDragOver = (e: DragEvent) => {
       e.preventDefault();
       if (e.dataTransfer?.types.includes('Files')) {
@@ -46,6 +53,12 @@ export function GlobalDropzone({ children, onImport }: GlobalDropzoneProps) {
       if (!files || files.length === 0) return;
 
       const file = files[0];
+
+      const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+      if (file.size > MAX_FILE_SIZE) {
+        toast.error(n.importFailed, { description: 'File size exceeds the 5MB limit.' });
+        return;
+      }
 
       try {
         let etfs: EtfConfig[] = [];
@@ -71,11 +84,13 @@ export function GlobalDropzone({ children, onImport }: GlobalDropzoneProps) {
       }
     };
 
+    window.addEventListener('dragenter', handleDragEnter);
     window.addEventListener('dragover', handleDragOver);
     window.addEventListener('dragleave', handleDragLeave);
     window.addEventListener('drop', handleDrop);
 
     return () => {
+      window.removeEventListener('dragenter', handleDragEnter);
       window.removeEventListener('dragover', handleDragOver);
       window.removeEventListener('dragleave', handleDragLeave);
       window.removeEventListener('drop', handleDrop);

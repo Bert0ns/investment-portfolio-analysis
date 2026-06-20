@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useMemo } from 'react';
 import { EtfConfig } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import {
@@ -30,16 +30,18 @@ export function SharePortfolioDialog({ etfs }: SharePortfolioDialogProps) {
   const [isExporting, setIsExporting] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const topSectors = Array.from(
-    etfs.reduce((acc, etf) => {
-      etf.holdings.forEach((h) => {
-        acc.set(h.sector, (acc.get(h.sector) || 0) + h.weight * (etf.globalWeight / 100));
-      });
-      return acc;
-    }, new Map<string, number>())
-  )
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 3);
+  const topSectors = useMemo(() => {
+    return Array.from(
+      etfs.reduce((acc, etf) => {
+        etf.holdings.forEach((h) => {
+          acc.set(h.sector, (acc.get(h.sector) || 0) + h.weight * (etf.globalWeight / 100));
+        });
+        return acc;
+      }, new Map<string, number>())
+    )
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3);
+  }, [etfs]);
 
   const handleExportPNG = async () => {
     if (!cardRef.current) return;
