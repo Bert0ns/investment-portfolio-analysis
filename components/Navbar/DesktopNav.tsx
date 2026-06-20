@@ -26,16 +26,15 @@ export function DesktopLinks({ t }: { t: TranslationType }) {
   );
 }
 
+import { InstallPwaButton } from '@/components/InstallPwaButton';
+
 export function DesktopActions({ t }: { t: TranslationType }) {
   return (
     <div className="hidden md:flex items-center gap-2">
+      <InstallPwaButton />
       <Button
         render={
-          <a
-            href="https://github.com/Bert0ns/capital-lens"
-            target="_blank"
-            rel="noreferrer"
-          />
+          <a href="https://github.com/Bert0ns/capital-lens" target="_blank" rel="noreferrer" />
         }
         nativeButton={false}
         variant="outline"

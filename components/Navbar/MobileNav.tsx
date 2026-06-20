@@ -15,6 +15,8 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { GithubIcon } from './GithubIcon';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 
+import { InstallPwaButton } from '@/components/InstallPwaButton';
+
 type TranslationType = ReturnType<typeof useTranslation>['t'];
 
 export function MobileNav({ t }: { t: TranslationType }) {
@@ -54,6 +56,7 @@ export function MobileNav({ t }: { t: TranslationType }) {
           </Link>
 
           <div className="flex flex-col gap-4">
+            <InstallPwaButton className="flex w-full items-center justify-center gap-4 px-4 py-4 rounded-md border border-primary/50 text-base font-bold text-primary hover:bg-primary/20 transition-all uppercase tracking-wider h-auto" />
             <Link
               href="/analyzer"
               onClick={() => setIsOpen(false)}

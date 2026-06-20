@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 import { motion, Variants } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import { InstallPwaButton } from '@/components/InstallPwaButton';
 
 const Landing3DBackground = dynamic(() => import('./Landing3DBackground'), { ssr: false });
 
@@ -124,12 +125,7 @@ export default function LandingContent() {
               {t.pages.landing.launchSystem} <ArrowRight className="w-6 h-6 ml-3" />
             </Button>
             <Button
-              render={
-                <Link
-                  href="https://github.com/Bert0ns/capital-lens"
-                  target="_blank"
-                />
-              }
+              render={<Link href="https://github.com/Bert0ns/capital-lens" target="_blank" />}
               nativeButton={false}
               variant="outline"
               size="lg"
@@ -137,6 +133,13 @@ export default function LandingContent() {
             >
               {t.pages.landing.viewSource}
             </Button>
+            <InstallPwaButton
+              variant="outline"
+              size="lg"
+              className="px-12 py-8 text-primary border-2 border-primary/50 hover:bg-primary/20 transition-all duration-300 scale-100 hover:scale-105 backdrop-blur-sm flex items-center justify-center gap-3 w-full sm:w-auto"
+              iconClassName="w-6 h-6"
+              textClassName="text-lg font-bold uppercase tracking-widest"
+            />
           </motion.div>
         </motion.div>
 

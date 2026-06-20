@@ -2,8 +2,9 @@ import { useState, useEffect, useCallback } from 'react';
 import { EtfConfig } from '@/lib/types';
 import { getCsvParser } from '@/lib/parsers';
 import { toast } from 'sonner';
-import { getItem, setItem } from '@/lib/indexeddb';
+import { getItem, setItem, removeItem } from '@/lib/indexeddb';
 import { generateId } from '@/lib/utils';
+import { importPortfolioFromFile } from '@/lib/utils/portfolio-sharing';
 import { useTranslation } from '@/lib/i18n/LanguageContext';
 import { DEFAULT_ETFS, STORAGE_KEY } from './constants';
 
@@ -107,6 +108,35 @@ export function usePortfolioStorage(
   // Load from indexedDB or fallback to local storage or defaults on mount
   useEffect(() => {
     const loadInitialData = async () => {
+      // Check for shared file from Web Share Target API first
+      try {
+        const sharedFile = await getItem<{ file: File; timestamp: number }>(
+          'shared_portfolio_file'
+        );
+        if (sharedFile && sharedFile.file) {
+          // Prevent loading an old stale file (older than 5 minutes)
+          if (Date.now() - sharedFile.timestamp < 300000) {
+            try {
+              const sharedEtfs = await importPortfolioFromFile(sharedFile.file);
+              if (sharedEtfs && sharedEtfs.length > 0) {
+                setEtfs(sharedEtfs);
+                setIsLoaded(true);
+                await removeItem('shared_portfolio_file');
+                toast.success(t.components.common.notifications.defaultsLoaded, {
+                  description: `Imported shared file: ${sharedFile.file.name}`,
+                });
+                return;
+              }
+            } catch (err) {
+              console.error('Failed to parse shared file:', err);
+            }
+          }
+          await removeItem('shared_portfolio_file');
+        }
+      } catch (e) {
+        console.error('Failed to read shared_portfolio_file', e);
+      }
+
       try {
         let parsed = await getItem<unknown[]>(STORAGE_KEY);
 

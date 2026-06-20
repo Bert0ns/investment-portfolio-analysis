@@ -2,11 +2,11 @@ import { DB_NAME, DB_VERSION, STORE_NAME } from './config';
 
 export function getDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
-    if (typeof window === 'undefined') {
-      return reject(new Error('IndexedDB is not available on the server'));
+    if (typeof indexedDB === 'undefined') {
+      return reject(new Error('IndexedDB is not available in this environment'));
     }
 
-    const request = window.indexedDB.open(DB_NAME, DB_VERSION);
+    const request = indexedDB.open(DB_NAME, DB_VERSION);
 
     request.onerror = () => reject(request.error);
     request.onsuccess = () => resolve(request.result);

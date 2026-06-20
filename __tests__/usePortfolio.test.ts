@@ -4,9 +4,15 @@ import { getItem } from '@/lib/indexeddb';
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import { toast } from 'sonner';
 import { getCsvParser } from '@/lib/parsers';
+import { importPortfolioFromFile } from '@/lib/utils/portfolio-sharing';
+import { removeItem } from '@/lib/indexeddb';
 
 jest.mock('../lib/parsers', () => ({
   getCsvParser: jest.fn(),
+}));
+
+jest.mock('../lib/utils/portfolio-sharing', () => ({
+  importPortfolioFromFile: jest.fn(),
 }));
 
 jest.mock('../lib/indexeddb', () => ({
@@ -222,5 +228,27 @@ describe('usePortfolio Hook', () => {
 
     expect(toast.error).toHaveBeenCalled();
     consoleSpy.mockRestore();
+  });
+
+  it('imports a shared portfolio from IndexedDB on mount', async () => {
+    const fakeFile = new File([''], 'shared.lens');
+    (getItem as jest.Mock).mockImplementation((key) => {
+      if (key === 'shared_portfolio_file') {
+        return Promise.resolve({ file: fakeFile, timestamp: Date.now() });
+      }
+      return Promise.resolve(null);
+    });
+
+    (importPortfolioFromFile as jest.Mock).mockResolvedValue([
+      { id: 'shared-123', name: 'Shared ETF', globalWeight: 100, holdings: [] },
+    ]);
+
+    const result = await renderAndAwaitLoad();
+
+    expect(importPortfolioFromFile).toHaveBeenCalledWith(fakeFile);
+    expect(result.current.etfs.length).toBe(1);
+    expect(result.current.etfs[0].name).toBe('Shared ETF');
+    expect(removeItem).toHaveBeenCalledWith('shared_portfolio_file');
+    expect(toast.success).toHaveBeenCalled();
   });
 });
