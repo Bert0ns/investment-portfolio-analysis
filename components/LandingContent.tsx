@@ -97,7 +97,7 @@ export default function LandingContent() {
 
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-8xl font-black tracking-tighter mb-8 text-foreground uppercase leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 md:mb-8 text-foreground uppercase leading-tight"
           >
             {t.pages.landing.unveil}{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-blue-500 to-violet-500 drop-shadow-[0_0_25px_rgba(34,211,238,0.4)]">
@@ -107,38 +107,38 @@ export default function LandingContent() {
 
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-3xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 md:mb-12 max-w-3xl mx-auto font-light tracking-wide leading-relaxed px-2 md:px-0"
           >
             {t.pages.landing.subtitle}
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row justify-center items-center gap-6 w-full"
+            className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-4 md:gap-6 w-full px-4 md:px-0"
           >
             <Button
               render={<Link href="/analyzer" />}
               nativeButton={false}
               size="lg"
-              className="px-12 py-8 text-lg font-bold uppercase tracking-widest shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_45px_rgba(34,211,238,0.6)] transition-all duration-300 scale-100 hover:scale-105"
+              className="w-full md:w-auto px-8 py-6 md:px-12 md:py-8 text-base md:text-lg font-bold uppercase tracking-widest shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_45px_rgba(34,211,238,0.6)] transition-all duration-300 hover:scale-105 flex items-center justify-center"
             >
-              {t.pages.landing.launchSystem} <ArrowRight className="w-6 h-6 ml-3" />
+              {t.pages.landing.launchSystem} <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-3" />
             </Button>
             <Button
               render={<Link href="https://github.com/Bert0ns/capital-lens" target="_blank" />}
               nativeButton={false}
               variant="outline"
               size="lg"
-              className="px-12 py-8 text-lg font-bold uppercase tracking-widest border-2 hover:bg-muted/50 transition-all duration-300 scale-100 hover:scale-105 backdrop-blur-sm"
+              className="w-full md:w-auto px-8 py-6 md:px-12 md:py-8 text-base md:text-lg font-bold uppercase tracking-widest border-2 hover:bg-muted/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm flex items-center justify-center"
             >
               {t.pages.landing.viewSource}
             </Button>
             <InstallPwaButton
               variant="outline"
               size="lg"
-              className="px-12 py-8 text-primary border-2 border-primary/50 hover:bg-primary/20 transition-all duration-300 scale-100 hover:scale-105 backdrop-blur-sm flex items-center justify-center gap-3 w-full sm:w-auto"
-              iconClassName="w-6 h-6"
-              textClassName="text-lg font-bold uppercase tracking-widest"
+              className="w-full md:w-auto px-8 py-6 md:px-12 md:py-8 text-primary border-2 border-primary/50 hover:bg-primary/20 transition-all duration-300 hover:scale-105 backdrop-blur-sm flex items-center justify-center gap-3"
+              iconClassName="w-5 h-5 md:w-6 md:h-6"
+              textClassName="text-base md:text-lg font-bold uppercase tracking-widest"
             />
           </motion.div>
         </motion.div>
