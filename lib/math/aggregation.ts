@@ -19,14 +19,14 @@ export function aggregateBy(
   const map = new Map<string, number>();
 
   for (const etf of etfs) {
-    // global weight is 0-100, we use it to scale
+    if (etf.globalWeight <= 0) continue;
     const globalMultiplier = etf.globalWeight / 100;
 
     for (const holding of etf.holdings) {
-      // holding.weight is also typically 0-100
       const actualWeight = holding.weight * globalMultiplier;
-      const groupingKey = holding[key] || 'Unknown';
+      if (actualWeight <= 0) continue;
 
+      const groupingKey = holding[key] || 'Unknown';
       map.set(groupingKey, (map.get(groupingKey) || 0) + actualWeight);
     }
   }

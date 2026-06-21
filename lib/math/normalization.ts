@@ -26,19 +26,25 @@ const SECTOR_MAPPINGS: { matchers: RegExp[]; result: string }[] = [
   { matchers: [/cash/, /liquid/, /contant/, /derivat/], result: 'Cash' },
 ];
 
+const sectorCache = new Map<string, string>();
+
 export function normalizeSector(sector: string): string {
   if (!sector || sector === 'Unknown' || sector === 'N/A') return 'Unknown';
 
   const s = sector.trim().toLowerCase();
+  if (sectorCache.has(s)) return sectorCache.get(s)!;
 
   for (const mapping of SECTOR_MAPPINGS) {
     if (mapping.matchers.some((matcher) => matcher.test(s))) {
+      sectorCache.set(s, mapping.result);
       return mapping.result;
     }
   }
 
   // Return the original sector with title case as fallback
-  return sector.charAt(0).toUpperCase() + sector.slice(1);
+  const fallback = sector.charAt(0).toUpperCase() + sector.slice(1);
+  sectorCache.set(s, fallback);
+  return fallback;
 }
 
 const COUNTRY_MAPPINGS: { matchers: RegExp[]; result: string }[] = [
@@ -98,23 +104,30 @@ const ISO_TO_COUNTRY: Record<string, string> = {
   ie: 'Ireland',
 };
 
+const countryCache = new Map<string, string>();
+
 export function normalizeCountry(country: string): string {
   if (!country || country === 'Unknown' || country === 'N/A' || country === '-') return 'Unknown';
 
   const c = country.trim().toLowerCase();
+  if (countryCache.has(c)) return countryCache.get(c)!;
 
   if (c.length === 2 && ISO_TO_COUNTRY[c]) {
+    countryCache.set(c, ISO_TO_COUNTRY[c]);
     return ISO_TO_COUNTRY[c];
   }
 
   for (const mapping of COUNTRY_MAPPINGS) {
     if (mapping.matchers.some((matcher) => matcher.test(c))) {
+      countryCache.set(c, mapping.result);
       return mapping.result;
     }
   }
 
   // Fallback: Title Case
-  return country.charAt(0).toUpperCase() + country.slice(1);
+  const fallback = country.charAt(0).toUpperCase() + country.slice(1);
+  countryCache.set(c, fallback);
+  return fallback;
 }
 
 const ISO_MAP: Record<string, string> = {
