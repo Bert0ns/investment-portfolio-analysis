@@ -134,6 +134,17 @@ const PARSER_CONFIGS: Record<string, ParserConfig> = {
       currency: ['Currency', 'Valuta'],
     },
   },
+  Xtrackers: {
+    headerKeywords: ['ISIN', 'Type of Security', 'Industry Classification'],
+    fields: {
+      ticker: ['ISIN'],
+      name: ['Name'],
+      weight: ['Weighting', 'Peso'],
+      sector: ['Industry Classification', 'Settore'],
+      country: ['Country', 'Paese'],
+      currency: ['Currency', 'Valuta'],
+    },
+  },
 };
 
 class GenericCsvParser implements CsvParserStrategy {
@@ -224,5 +235,11 @@ export class AmundiParser extends GenericCsvParser {
 export class LyxorParser extends GenericCsvParser {
   constructor() {
     super(PARSER_CONFIGS.Lyxor);
+  }
+}
+
+export class XtrackersParser extends GenericCsvParser {
+  constructor() {
+    super(PARSER_CONFIGS.Xtrackers);
   }
 }

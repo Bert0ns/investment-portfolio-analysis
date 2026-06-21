@@ -7,7 +7,7 @@ export interface Holding {
   currency: string;
 }
 
-export type Issuer = 'iShares' | 'Vanguard' | 'Amundi' | 'Lyxor';
+export type Issuer = 'iShares' | 'Vanguard' | 'Amundi' | 'Lyxor' | 'Xtrackers';
 export type ReplicationMethod = 'Physical' | 'Synthetic' | 'Optimized';
 export type UseOfProfit = 'Accumulating' | 'Distributing';
 export type Domicile = 'Ireland' | 'Luxembourg' | 'US' | 'Other';

@@ -51,6 +51,7 @@ export function EtfGeneralFields({ hook }: { hook: EtfFormHook }) {
               <SelectItem value="Vanguard">Vanguard</SelectItem>
               <SelectItem value="Amundi">Amundi</SelectItem>
               <SelectItem value="Lyxor">Lyxor</SelectItem>
+              <SelectItem value="Xtrackers">Xtrackers</SelectItem>
             </SelectContent>
           </Select>
         </div>

@@ -1,0 +1,1305 @@
+﻿Sebbene le informazioni contenute nel presente documento siano state ottenute da fonti ritenute affidabili, DWS non ne garantisce l’accuratezza, la completezza o l’equità e non deve essere invocata come tale. DWS non si assume alcuna responsabilità per errori, inesattezze o omissioni relativamente alle informazioni qui contenute, e non ha alcun obbligo di aggiornare, modificare o correggere le informazioni che dovessero risultare inesatte. DWS DECLINA ESPRESSAMENTE OGNI RESPONSABILITÀ PER EVENTUALI PERDITE O DANNI DIRETTI, INDIRETTI O DI ALTRA NATURA, IVI INCLUSO L’EVENTUALE LUCRO CESSANTE SUBITO DALL’INVESTITORE O DA TERZI E DERIVANTE DALL’AVER FATTO AFFIDAMENTO SUL PRESENTE DOCUMENTO, O PER LA SUA AFFIDABILITÀ, ACCURATEZZA, COMPLETEZZA O TEMPESTIVITÀ. Il presente documento è stato redatto esclusivamente a scopo informativo e non costituisce un’offerta, raccomandazione o sollecitazione a concludere transazioni.;;;;;;;;;;
+;;;;;;;;;;
+;Name;ISIN;Country;Currency;Exchange;Type of Security;Rating;Primary Listing;Industry Classification;Weighting
+1;NVIDIA CORP;US67066G1040;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;B1;NASDAQ Composite Index;Tecnologia dell'informazione;5,44%
+2;APPLE INC;US0378331005;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Aa1;NASDAQ Composite Index;Tecnologia dell'informazione;4,89%
+3;MICROSOFT CORP;US5949181045;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Aaa;NASDAQ Composite Index;Tecnologia dell'informazione;2,99%
+4;AMAZON COM INC;US0231351067;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Beni voluttuari;2,64%
+5;ALPHABET INC CLASS A;US02079K3059;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Aa2;NASDAQ Composite Index;Servizi di comunicazione;2,39%
+6;BROADCOM INC;US11135F1012;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;2,07%
+7;ALPHABET INC CLASS C;US02079K1079;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;1,90%
+8;MICRON TECHNOLOGY INC;US5951121038;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Ba3;NASDAQ Composite Index;Tecnologia dell'informazione;1,43%
+9;META PLATFORMS INC CLASS A;US30303M1027;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;1,42%
+10;TESLA INC;US88160R1014;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni voluttuari;1,26%
+11;ELI LILLY;US5324571083;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Sanità;0,99%
+12;ADVANCED MICRO DEVICES INC;US0079031078;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,98%
+13;JPMORGAN CHASE;US46625H1005;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Finanza;0,97%
+14;ASML HOLDING NV;NL0010273215;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;Baa2;Amsterdam Exchanges Index;Tecnologia dell'informazione;0,83%
+15;BERKSHIRE HATHAWAY INC CLASS B;US0846707026;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa2;S&P 500 Index;Finanza;0,76%
+16;INTEL CORPORATION CORP;US4581401001;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A1;NASDAQ Composite Index;Tecnologia dell'informazione;0,66%
+17;EXXON MOBIL CORP;US30231G1022;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa2;S&P 500 Index;Energia;0,64%
+18;VISA INC CLASS A;US92826C8394;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A1;S&P 500 Index;Finanza;0,61%
+19;JOHNSON & JOHNSON;US4781601046;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aaa;S&P 500 Index;Sanità;0,61%
+20;WALMART INC;US9311421039;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa2;S&P 500 Index;Beni di prima necessità;0,57%
+21;APPLIED MATERIAL INC;US0382221051;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,55%
+22;LAM RESEARCH CORP;US5128073062;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,54%
+23;CISCO SYSTEMS INC;US17275R1023;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A1;NASDAQ Composite Index;Tecnologia dell'informazione;0,53%
+24;CATERPILLAR INC;US1491231015;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Prodotti industriali;0,51%
+25;COSTCO WHOLESALE CORP;US22160K1051;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A1;NASDAQ Composite Index;Beni di prima necessità;0,47%
+26;MASTERCARD INC CLASS A;US57636Q1040;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Finanza;0,45%
+27;ABBVIE INC;US00287Y1091;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Sanità;0,43%
+28;BANK OF AMERICA CORP;US0605051046;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Finanza;0,43%
+29;GE AEROSPACE;US3696043013;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,42%
+30;UNITEDHEALTH GROUP INC;US91324P1021;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Sanità;0,41%
+31;PROCTER & GAMBLE;US7427181091;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa3;S&P 500 Index;Beni di prima necessità;0,39%
+32;KLA CORP;US4824801009;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Tecnologia dell'informazione;0,38%
+33;HOME DEPOT INC;US4370761029;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Beni voluttuari;0,37%
+34;HSBC HOLDINGS PLC;GB0005405286;Regno Unito;GBP;London Stock Exchange;Azionari;Aa3;FTSE 100 Index;Finanza;0,37%
+35;NETFLIX INC;US64110L1061;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Ba3;NASDAQ Composite Index;Servizi di comunicazione;0,36%
+36;GOLDMAN SACHS GROUP INC;US38141G1040;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Finanza;0,36%
+37;CHEVRON CORP;US1667641005;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa2;S&P 500 Index;Energia;0,36%
+38;ORACLE CORP;US68389X1054;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A1;S&P 500 Index;Tecnologia dell'informazione;0,36%
+39;COCA-COLA;US1912161007;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa3;S&P 500 Index;Beni di prima necessità;0,34%
+40;GE VERNOVA INC;US36828A1016;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,33%
+41;TEXAS INSTRUMENT INC;US8825081040;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,33%
+42;ROYAL BANK OF CANADA;CA7800871021;Canada;CAD;Toronto Stock Exchange;Azionari;Aa3;S&P/TSX COMPOSITE Index;Finanza;0,32%
+43;MERCK & CO INC;US58933Y1055;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Sanità;0,31%
+44;PALANTIR TECHNOLOGIES INC CLASS A;US69608A1088;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,31%
+45;ROCHE PS PAR AG;CH1499059983;Svizzera;CHF;-;Azionari;-;Swiss Market Index;Sanità;0,31%
+46;PHILIP MORRIS INTERNATIONAL INC;US7181721090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Beni di prima necessità;0,31%
+47;NOVARTIS AG;CH0012005267;Svizzera;CHF;Scoach Switzerland;Azionari;Aa3;Swiss Market Index;Sanità;0,30%
+48;MARVELL TECHNOLOGY INC;US5738741041;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,30%
+49;MORGAN STANLEY;US6174464486;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Finanza;0,30%
+50;ASTRAZENECA PLC;GB0009895292;Regno Unito;GBP;London Stock Exchange;Azionari;A2;FTSE 100 Index;Sanità;0,29%
+51;WESTERN DIGITAL CORP;US9581021055;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,29%
+52;NESTLE SA;CH0038863350;Svizzera;CHF;Scoach Switzerland;Azionari;Aa2;Swiss Market Index;Beni di prima necessità;0,28%
+53;WELLS FARGO;US9497461015;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Finanza;0,28%
+54;RTX CORP;US75513E1010;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,28%
+55;CITIGROUP INC;US1729674242;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Finanza;0,27%
+56;QUALCOMM INC;US7475251036;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A2;NASDAQ Composite Index;Tecnologia dell'informazione;0,27%
+57;LINDE PLC;IE000S9YS762;Irlanda;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Materiali;0,27%
+58;SIEMENS N AG;DE0007236101;Germania;EUR;XETRA;Azionari;Aa3;DAX Index;Prodotti industriali;0,26%
+59;SEAGATE TECHNOLOGY HOLDINGS PLC;IE00BKVD2N49;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,26%
+60;INTERNATIONAL BUSINESS MACHINES CO;US4592001014;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa3;S&P 500 Index;Tecnologia dell'informazione;0,26%
+61;PALO ALTO NETWORKS INC;US6974351057;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,26%
+62;BHP GROUP LTD;AU000000BHP4;Australia;AUD;Australian Stock Exchange;Azionari;A1;ASX All Ordinaries Index;Materiali;0,26%
+63;MITSUBISHI UFJ FINANCIAL GROUP INC;JP3902900004;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Finanza;0,25%
+64;SHELL PLC;GB00BP6MXD84;Paesi Bassi (Olanda);GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Energia;0,25%
+65;ANALOG DEVICES INC;US0326541051;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A3;NASDAQ Composite Index;Tecnologia dell'informazione;0,24%
+66;TOKYO ELECTRON LTD;JP3571400005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,24%
+67;AMPHENOL CORP CLASS A;US0320951017;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,23%
+68;MCDONALDS CORP;US5801351017;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Beni voluttuari;0,22%
+69;TORONTO DOMINION;CA8911605092;Canada;CAD;Toronto Stock Exchange;Azionari;Aa1;S&P/TSX COMPOSITE Index;Finanza;0,22%
+70;BANCO SANTANDER;ES0113900J37;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa1;IBEX 35 Index;Finanza;0,22%
+71;PEPSICO INC;US7134481081;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A1;NASDAQ Composite Index;Beni di prima necessità;0,22%
+72;COMMONWEALTH BANK OF AUSTRALIA;AU000000CBA7;Australia;AUD;Australian Stock Exchange;Azionari;Aa2;ASX All Ordinaries Index;Finanza;0,21%
+73;VERIZON COMMUNICATIONS INC;US92343V1044;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di comunicazione;0,21%
+74;KIOXIA HOLDINGS CORP;JP3236330001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,21%
+75;WALT DISNEY;US2546871060;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di comunicazione;0,21%
+76;SCHNEIDER ELECTRIC;FR0000121972;Francia;EUR;Euronext Paris;Azionari;A3;CAC 40 Index;Prodotti industriali;0,20%
+77;AMGEN INC;US0311621009;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Sanità;0,20%
+78;TJX INC;US8725401090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Beni voluttuari;0,20%
+79;ARISTA NETWORKS INC;US0404132054;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,20%
+80;NEXTERA ENERGY INC;US65339F1012;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di pubblica utilità;0,20%
+81;US DOLLAR;_CURRENCYUSD;Stati Uniti d'America;USD;-;Cash;-;-;sconosciuta;0,20%
+82;AMERICAN EXPRESS;US0258161092;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Finanza;0,20%
+83;ALLIANZ;DE0008404005;Germania;EUR;XETRA;Azionari;Aa3;DAX Index;Finanza;0,20%
+84;THERMO FISHER SCIENTIFIC INC;US8835561023;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Sanità;0,19%
+85;CROWDSTRIKE HOLDINGS INC CLASS A;US22788C1053;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,19%
+86;ABB LTD;CH0012221716;Svizzera;CHF;Scoach Switzerland;Azionari;A2;Swiss Market Index;Prodotti industriali;0,19%
+87;BOEING;US0970231058;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,19%
+88;SOFTBANK GROUP CORP;JP3436100006;Giappone;JPY;Tokyo Stock Exchange;Azionari;Ba1;TOPIX Index;Servizi di comunicazione;0,19%
+89;TOYOTA MOTOR CORP;JP3633400001;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Beni voluttuari;0,18%
+90;EATON PLC;IE00B8KQN827;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,18%
+91;UBS GROUP AG;CH0244767585;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Finanza;0,18%
+92;SAP;DE0007164600;Germania;EUR;XETRA;Azionari;-;DAX Index;Tecnologia dell'informazione;0,18%
+93;TOTALENERGIES;FR0000120271;Francia;EUR;Euronext Paris;Azionari;Aa1;CAC 40 Index;Energia;0,18%
+94;ROLLS-ROYCE HOLDINGS PLC;GB00B63H8491;Regno Unito;GBP;London Stock Exchange;Azionari;A2;FTSE 100 Index;Prodotti industriali;0,18%
+95;BLACKROCK INC;US09290D1019;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,17%
+96;CORNING INC;US2193501051;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,17%
+97;ABBOTT LABORATORIES;US0028241000;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A1;S&P 500 Index;Sanità;0,17%
+98;AT&T INC;US00206R1023;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Servizi di comunicazione;0,17%
+99;GILEAD SCIENCES INC;US3755581036;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Sanità;0,17%
+100;UNION PACIFIC CORP;US9078181081;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Prodotti industriali;0,17%
+101;SUMITOMO MITSUI FINANCIAL GROUP IN;JP3890350006;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Finanza;0,17%
+102;CHARLES SCHWAB CORP;US8085131055;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,17%
+103;SIEMENS ENERGY N AG;DE000ENER6Y0;Germania;EUR;-;Azionari;-;DAX Index;Prodotti industriali;0,17%
+104;WELLTOWER INC;US95040Q1040;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,16%
+105;IBERDROLA SA;ES0144580Y14;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa1;IBEX 35 Index;Servizi di pubblica utilità;0,16%
+106;HONEYWELL INTERNATIONAL INC;US4385161066;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Prodotti industriali;0,16%
+107;INTUITIVE SURGICAL INC;US46120E6023;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,16%
+108;LVMH;FR0000121014;Francia;EUR;Euronext Paris;Azionari;A1;CAC 40 Index;Beni voluttuari;0,16%
+109;PFIZER INC;US7170811035;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A1;S&P 500 Index;Sanità;0,16%
+110;DEERE;US2441991054;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Prodotti industriali;0,16%
+111;BANCO BILBAO VIZCAYA ARGENTARIA SA;ES0113211835;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa2;IBEX 35 Index;Finanza;0,16%
+112;NOVO NORDISK CLASS B;DK0062498333;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;-;Sanità;0,15%
+113;ADVANTEST CORP;JP3122400009;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,15%
+114;BOOKING HOLDINGS INC;US09857L1089;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni voluttuari;0,15%
+115;SHOPIFY SUBORDINATE VOTING INC CLA;CA82509L1076;Canada;CAD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,15%
+116;SAFRAN SA;FR0000073272;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Prodotti industriali;0,15%
+117;HITACHI LTD;JP3788600009;Giappone;JPY;Tokyo Stock Exchange;Azionari;A3;TOPIX Index;Prodotti industriali;0,15%
+118;CONOCOPHILLIPS;US20825C1045;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A1;S&P 500 Index;Energia;0,15%
+119;AIRBUS;NL0000235190;Francia;EUR;Euronext Paris;Azionari;A2;CAC 40 Index;Prodotti industriali;0,15%
+120;PROLOGIS REIT INC;US74340W1036;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,15%
+121;UBER TECHNOLOGIES INC;US90353T1007;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,14%
+122;UNILEVER PLC;GB00BVZK7T90;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Beni di prima necessità;0,14%
+123;S&P GLOBAL INC;US78409V1044;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,14%
+124;CVS HEALTH CORP;US1266501006;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Sanità;0,14%
+125;UNICREDIT;IT0005239360;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Finanza;0,14%
+126;LOWES COMPANIES INC;US5486611073;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Beni voluttuari;0,14%
+127;COMPAGNIE FINANCIERE RICHEMONT SA;CH0210483332;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Beni voluttuari;0,14%
+128;DELL TECHNOLOGIES INC CLASS C;US24703L2025;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,14%
+129;INFINEON TECHNOLOGIES AG;DE0006231004;Germania;EUR;XETRA;Azionari;-;DAX Index;Tecnologia dell'informazione;0,14%
+130;LAIR LIQUIDE SOCIETE ANONYME POUR;FR0000120073;Francia;EUR;Euronext Paris;Azionari;A1;CAC 40 Index;Materiali;0,14%
+131;MIZUHO FINANCIAL GROUP INC;JP3885780001;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Finanza;0,14%
+132;SALESFORCE INC;US79466L3024;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,14%
+133;VERTIV HOLDINGS CLASS A;US92537N1081;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,14%
+134;CAPITAL ONE FINANCIAL CORP;US14040H1059;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B1;S&P 500 Index;Finanza;0,13%
+135;PARKER-HANNIFIN CORP;US7010941042;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Prodotti industriali;0,13%
+136;PROGRESSIVE CORP;US7433151039;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,13%
+137;ENBRIDGE INC;CA29250N1050;Canada;CAD;Toronto Stock Exchange;Azionari;Baa1;S&P/TSX COMPOSITE Index;Energia;0,13%
+138;BANK OF MONTREAL;CA0636711016;Canada;CAD;Toronto Stock Exchange;Azionari;Aa3;S&P/TSX COMPOSITE Index;Finanza;0,13%
+139;MURATA MANUFACTURING LTD;JP3914400001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,13%
+140;SONY GROUP CORP;JP3435000009;Giappone;JPY;Tokyo Stock Exchange;Azionari;Ba1;TOPIX Index;Beni voluttuari;0,13%
+141;BRITISH AMERICAN TOBACCO;GB0002875804;Regno Unito;GBP;London Stock Exchange;Azionari;A3;FTSE 100 Index;Beni di prima necessità;0,13%
+142;ALTRIA GROUP INC;US02209S1033;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Beni di prima necessità;0,13%
+143;BNP PARIBAS SA;FR0000131104;Francia;EUR;Euronext Paris;Azionari;Baa2;CAC 40 Index;Finanza;0,13%
+144;VERTEX PHARMACEUTICALS INC;US92532F1003;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,13%
+145;STARBUCKS CORP;US8552441094;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A3;NASDAQ Composite Index;Beni voluttuari;0,13%
+146;CHUBB;CH0044328745;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,13%
+147;DANAHER CORP;US2358511028;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Sanità;0,13%
+148;NEWMONT;US6516391066;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Materiali;0,12%
+149;HOWMET AEROSPACE INC;US4432011082;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,12%
+150;BRISTOL MYERS SQUIBB;US1101221083;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Sanità;0,12%
+151;APPLOVIN CORP CLASS A;US03831W1080;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,12%
+152;EQUINIX INC;US29444U7000;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Immobiliare;0,12%
+153;BANK OF NOVA SCOTIA;CA0641491075;Canada;CAD;Toronto Stock Exchange;Azionari;Aa2;S&P/TSX COMPOSITE Index;Finanza;0,12%
+154;RIO TINTO PLC;GB0007188757;Australia;GBP;London Stock Exchange;Azionari;A3;FTSE 100 Index;Materiali;0,12%
+155;TRANE TECHNOLOGIES PLC;IE00BK9ZQ967;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,12%
+156;CADENCE DESIGN SYSTEMS INC;US1273871087;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,12%
+157;ZURICH INSURANCE GROUP AG;CH0011075394;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Finanza;0,12%
+158;LOREAL SA;FR0000120321;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Beni di prima necessità;0,12%
+159;DEUTSCHE TELEKOM N AG;DE0005557508;Germania;EUR;XETRA;Azionari;Baa1;DAX Index;Servizi di comunicazione;0,12%
+160;STRYKER CORP;US8636671013;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Sanità;0,12%
+161;LOCKHEED MARTIN CORP;US5398301094;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,12%
+162;DBS GROUP HOLDINGS LTD;SG1L01001701;Singapore;SGD;-;Azionari;-;-;Finanza;0,12%
+163;QUANTA SERVICES INC;US74762E1029;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,12%
+164;SOUTHERN;US8425871071;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,12%
+165;GLAXOSMITHKLINE;GB00BN7SWP63;Regno Unito;GBP;-;Azionari;-;-;Sanità;0,12%
+166;CANADIAN IMPERIAL BANK OF COMMERCE;CA1360691010;Canada;CAD;Toronto Stock Exchange;Azionari;Aa3;S&P/TSX COMPOSITE Index;Finanza;0,11%
+167;BP PLC;GB0007980591;Regno Unito;GBP;London Stock Exchange;Azionari;A2;FTSE 100 Index;Energia;0,11%
+168;MEDTRONIC PLC;IE00BTN1Y115;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,11%
+169;FAST RETAILING LTD;JP3802300008;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Beni voluttuari;0,11%
+170;SERVICENOW INC;US81762P1021;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Tecnologia dell'informazione;0,11%
+171;CUMMINS INC;US2310211063;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,11%
+172;AIA GROUP LTD;HK0000069689;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Finanza;0,11%
+173;FREEPORT MCMORAN INC;US35671D8570;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Materiali;0,11%
+174;BANK OF NEW YORK MELLON CORP;US0640581007;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa3;S&P 500 Index;Finanza;0,11%
+175;INTESA SANPAOLO;IT0000072618;Italia;EUR;Milan Stock Exchange;Azionari;Baa2;FTSE Italia All-Share Index;Finanza;0,11%
+176;DUKE ENERGY CORP;US26441C2044;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Servizi di pubblica utilità;0,11%
+177;PNC FINANCIAL SERVICES GROUP INC;US6934751057;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,10%
+178;ING GROEP NV;NL0011821202;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Finanza;0,10%
+179;RECRUIT HOLDINGS LTD;JP3970300004;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,10%
+180;MCKESSON CORP;US58155Q1031;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Sanità;0,10%
+181;BLACKSTONE INC;US09260D1072;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,10%
+182;SANOFI SA;FR0000120578;Francia;EUR;Euronext Paris;Azionari;A1;CAC 40 Index;Sanità;0,10%
+183;FORTINET INC;US34959E1091;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;B1;NASDAQ Composite Index;Tecnologia dell'informazione;0,10%
+184;KEYENCE CORP;JP3236200006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,10%
+185;US BANCORP;US9029733048;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A1;S&P 500 Index;Finanza;0,10%
+186;BARCLAYS PLC;GB0031348658;Regno Unito;GBP;London Stock Exchange;Azionari;A3;FTSE 100 Index;Finanza;0,10%
+187;T MOBILE US INC;US8725901040;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Ba2;NASDAQ Composite Index;Servizi di comunicazione;0,10%
+188;WILLIAMS INC;US9694571004;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Energia;0,10%
+189;CME GROUP INC CLASS A;US12572Q1058;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,10%
+190;BROOKFIELD CORP CLASS A;CA11271J1075;Canada;CAD;-;Azionari;-;-;Finanza;0,10%
+191;BLOOM ENERGY CLASS A CORP;US0937121079;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,10%
+192;JOHNSON CONTROLS INTERNATIONAL PLC;IE00BY7QL619;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,10%
+193;AUTOMATIC DATA PROCESSING INC;US0530151036;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Aaa;NASDAQ Composite Index;Prodotti industriali;0,10%
+194;ENEL;IT0003128367;Italia;EUR;Milan Stock Exchange;Azionari;Baa2;FTSE Italia All-Share Index;Servizi di pubblica utilità;0,10%
+195;MARRIOTT INTERNATIONAL INC CLASS A;US5719032022;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni voluttuari;0,10%
+196;WASTE MANAGEMENT INC;US94106L1098;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Prodotti industriali;0,10%
+197;MITSUBISHI CORP;JP3898400001;Giappone;JPY;Tokyo Stock Exchange;Azionari;A1;TOPIX Index;Prodotti industriali;0,10%
+198;CANADIAN NATURAL RESOURCES LTD;CA1363851017;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Energia;0,10%
+199;ELEVANCE HEALTH INC;US0367521038;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,10%
+200;CSX CORP;US1264081035;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,09%
+201;EMERSON ELECTRIC;US2910111044;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Prodotti industriali;0,09%
+202;WESTPAC BANKING CORPORATION CORP;AU000000WBC1;Australia;AUD;Australian Stock Exchange;Azionari;Aa2;ASX All Ordinaries Index;Finanza;0,09%
+203;CONSTELLATION ENERGY CORP;US21037T1097;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di pubblica utilità;0,09%
+204;3M;US88579Y1010;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa2;S&P 500 Index;Prodotti industriali;0,09%
+205;AGNICO EAGLE MINES LTD;CA0084741085;Canada;CAD;Toronto Stock Exchange;Azionari;B1;S&P/TSX COMPOSITE Index;Materiali;0,09%
+206;SYNOPSYS INC;US8716071076;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,09%
+207;LLOYDS BANKING GROUP PLC;GB0008706128;Regno Unito;GBP;London Stock Exchange;Azionari;A2;FTSE 100 Index;Finanza;0,09%
+208;AMERICAN TOWER REIT CORP;US03027X1000;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Immobiliare;0,09%
+209;TOKIO MARINE HOLDINGS INC;JP3910660004;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,09%
+210;ROBINHOOD MARKETS INC CLASS A;US7707001027;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,09%
+211;NATIONAL AUSTRALIA BANK LTD;AU000000NAB4;Australia;AUD;Australian Stock Exchange;Azionari;Aa2;ASX All Ordinaries Index;Finanza;0,09%
+212;GENERAL DYNAMICS CORP;US3695501086;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Prodotti industriali;0,09%
+213;HILTON WORLDWIDE HOLDINGS INC;US43300A2033;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,09%
+214;COMCAST CORP CLASS A;US20030N1019;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A3;NASDAQ Composite Index;Servizi di comunicazione;0,09%
+215;ROYAL CARIBBEAN GROUP LTD;LR0008862868;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Ba1;S&P 500 Index;Beni voluttuari;0,09%
+216;NXP SEMICONDUCTORS NV;NL0009538784;Paesi Bassi (Olanda);USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,09%
+217;MITSUBISHI HEAVY INDUSTRIES LTD;JP3900000005;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa1;TOPIX Index;Prodotti industriali;0,09%
+218;ADOBE INC;US00724F1012;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Tecnologia dell'informazione;0,09%
+219;ACCENTURE PLC CLASS A;IE00B4BNMY34;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,09%
+220;NATIONAL GRID PLC;GB00BDR05C01;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Servizi di pubblica utilità;0,09%
+221;UNITED PARCEL SERVICE INC CLASS B;US9113121068;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa3;S&P 500 Index;Prodotti industriali;0,09%
+222;MARSH INC;US5717481023;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,09%
+223;CANADIAN PACIFIC KANSAS CITY LTD;CA13646K1084;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Prodotti industriali;0,09%
+224;MONDELEZ INTERNATIONAL INC CLASS A;US6092071058;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Beni di prima necessità;0,09%
+225;AXA SA;FR0000120628;Francia;EUR;Euronext Paris;Azionari;A2;CAC 40 Index;Finanza;0,09%
+226;SNOWFLAKE INC;US8334451098;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,09%
+227;SHIN ETSU CHEMICAL LTD;JP3371200001;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Materiali;0,08%
+228;INTERCONTINENTAL EXCHANGE INC;US45866F1049;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Finanza;0,08%
+229;SHERWIN WILLIAMS;US8243481061;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Materiali;0,08%
+230;CRH PUBLIC LIMITED PLC;IE0001827041;Irlanda;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Materiali;0,08%
+231;TRANSDIGM GROUP INC;US8936411003;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,08%
+232;MERCADOLIBRE INC;US58733R1023;Brasile;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni voluttuari;0,08%
+233;ANZ GROUP HOLDINGS LTD;AU000000ANZ3;Australia;AUD;Australian Stock Exchange;Azionari;Aa2;ASX All Ordinaries Index;Finanza;0,08%
+234;INTUIT INC;US4612021034;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Tecnologia dell'informazione;0,08%
+235;MONOLITHIC POWER SYSTEMS INC;US6098391054;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,08%
+236;ROSS STORES INC;US7782961038;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A3;NASDAQ Composite Index;Beni voluttuari;0,08%
+237;CIGNA;US1255231003;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,08%
+238;O REILLY AUTOMOTIVE INC;US67103H1077;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa3;NASDAQ Composite Index;Beni voluttuari;0,08%
+239;ANHEUSER-BUSCH INBEV SA;BE0974293251;Belgio;EUR;Euronext Brussels;Azionari;-;BEL 20 Index;Beni di prima necessità;0,08%
+240;COHERENT CORP;US19247G1076;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,08%
+241;MARATHON PETROLEUM CORP;US56585A1025;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Energia;0,08%
+242;SLB NV;AN8068571086;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A1;S&P 500 Index;Energia;0,08%
+243;ILLINOIS TOOL INC;US4523081093;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Prodotti industriali;0,08%
+244;GENERAL MOTORS;US37045V1008;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aaa;S&P 500 Index;Beni voluttuari;0,08%
+245;FEDEX CORP;US31428X1063;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Prodotti industriali;0,08%
+246;BAE SYSTEMS PLC;GB0002634946;Regno Unito;GBP;London Stock Exchange;Azionari;Baa2;FTSE 100 Index;Prodotti industriali;0,08%
+247;MITSUBISHI ELECTRIC CORP;JP3902400005;Giappone;JPY;Tokyo Stock Exchange;Azionari;A1;TOPIX Index;Prodotti industriali;0,08%
+248;INVESTOR CLASS B;SE0015811963;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Finanza;0,08%
+249;INDUSTRIA DE DISENO TEXTIL SA;ES0148396007;Spagna;EUR;Mercado Continuo Espana;Azionari;-;IBEX 35 Index;Beni voluttuari;0,08%
+250;VALERO ENERGY CORP;US91913Y1001;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Energia;0,08%
+251;TC ENERGY CORP;CA87807B1076;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Energia;0,08%
+252;GLENCORE PLC;JE00B4T3BW64;Australia;GBP;London Stock Exchange;Azionari;Aa3;FTSE 100 Index;Materiali;0,08%
+253;NORTHROP GRUMMAN CORP;US6668071029;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Prodotti industriali;0,08%
+254;VINCI SA;FR0000125486;Francia;EUR;Euronext Paris;Azionari;Baa1;CAC 40 Index;Prodotti industriali;0,08%
+255;MUENCHENER RUECKVERSICHERUNGS-GESE;DE0008430026;Germania;EUR;XETRA;Azionari;Aa3;DAX Index;Finanza;0,08%
+256;DATADOG INC CLASS A;US23804L1035;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,08%
+257;CLOUDFLARE INC CLASS A;US18915M1071;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,08%
+258;AMERICAN ELECTRIC POWER INC;US0255371017;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Servizi di pubblica utilità;0,08%
+259;MITSUI LTD;JP3893600001;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Prodotti industriali;0,08%
+260;EOG RESOURCES INC;US26875P1012;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Energia;0,08%
+261;WESFARMERS LTD;AU000000WES1;Australia;AUD;Australian Stock Exchange;Azionari;A3;ASX All Ordinaries Index;Beni voluttuari;0,08%
+262;COMFORT SYSTEMS USA INC;US1999081045;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,08%
+263;SIMON PROPERTY GROUP  INC;US8288061091;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,08%
+264;SPOTIFY TECHNOLOGY SA;LU1778762911;Lussemburgo;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di comunicazione;0,08%
+265;NATWEST GROUP PLC;GB00BM8PJY71;Regno Unito;GBP;-;Azionari;-;-;Finanza;0,08%
+266;ECOLAB INC;US2788651006;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Materiali;0,08%
+267;TERADYNE INC;US8807701029;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,08%
+268;COLGATE-PALMOLIVE;US1941621039;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa3;S&P 500 Index;Beni di prima necessità;0,08%
+269;MANULIFE FINANCIAL CORP;CA56501R1064;Canada;CAD;Toronto Stock Exchange;Azionari;A2;S&P/TSX COMPOSITE Index;Finanza;0,08%
+270;NOKIA;FI0009000681;Finlandia;EUR;Helsinki Stock Exchange;Azionari;B1;OMX Helsinki Index;Tecnologia dell'informazione;0,08%
+271;MOODYS CORP;US6153691059;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,08%
+272;UNITED RENTALS INC;US9113631090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Ba3;S&P 500 Index;Prodotti industriali;0,08%
+273;BARRICK MINING CORP;CA06849F1080;Canada;CAD;Toronto Stock Exchange;Azionari;-;-;Materiali;0,08%
+274;NORFOLK SOUTHERN CORP;US6558441084;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Prodotti industriali;0,08%
+275;BOSTON SCIENTIFIC CORP;US1011371077;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Sanità;0,08%
+276;PHILLIPS;US7185461040;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Energia;0,07%
+277;MOTOROLA SOLUTIONS INC;US6200763075;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Tecnologia dell'informazione;0,07%
+278;TRAVELERS COMPANIES INC;US89417E1091;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Finanza;0,07%
+279;SUNCOR ENERGY INC (CANADA);CA8672241079;Canada;CAD;Toronto Stock Exchange;Azionari;Baa1;S&P/TSX COMPOSITE Index;Energia;0,07%
+280;MONSTER BEVERAGE CORP;US61174X1090;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni di prima necessità;0,07%
+281;AON PLC CLASS A;IE00BLP1HW54;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,07%
+282;DIGITAL REALTY TRUST REIT INC;US2538681030;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,07%
+283;ITOCHU CORP;JP3143600009;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa1;TOPIX Index;Prodotti industriali;0,07%
+284;DEUTSCHE BANK AG;DE0005140008;Germania;EUR;XETRA;Azionari;-;DAX Index;Finanza;0,07%
+285;DOORDASH INC CLASS A;US25809K1051;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,07%
+286;TE CONNECTIVITY PLC;IE000IVNQZ81;Irlanda;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,07%
+287;MACQUARIE GROUP LTD DEF;AU000000MQG1;Australia;AUD;Australian Stock Exchange;Azionari;A3;ASX All Ordinaries Index;Finanza;0,07%
+288;OVERSEA-CHINESE BANKING LTD;SG1S04926220;Singapore;SGD;-;Azionari;-;-;Finanza;0,07%
+289;REGENERON PHARMACEUTICALS INC;US75886F1075;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,07%
+290;RHEINMETALL AG;DE0007030009;Germania;EUR;XETRA;Azionari;Ba1;DAX Index;Prodotti industriali;0,07%
+291;PANASONIC HOLDINGS CORP;JP3866800000;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa3;TOPIX Index;Beni voluttuari;0,07%
+292;HEWLETT PACKARD ENTERPRISE;US42824C1099;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,07%
+293;PACCAR INC;US6937181088;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A1;NASDAQ Composite Index;Prodotti industriali;0,07%
+294;WARNER BROS. DISCOVERY INC SERIES;US9344231041;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,07%
+295;KEYSIGHT TECHNOLOGIES INC;US49338L1035;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,07%
+296;HOYA CORP;JP3837800006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Sanità;0,07%
+297;AIRBNB INC CLASS A;US0090661010;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni voluttuari;0,07%
+298;ESSILORLUXOTTICA SA;FR0000121667;Francia;EUR;Euronext Paris;Azionari;A2;CAC 40 Index;Sanità;0,07%
+299;LUMENTUM HOLDINGS INC;US55024U1097;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,07%
+300;CIENA CORP;US1717793095;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B2;S&P 500 Index;Tecnologia dell'informazione;0,07%
+301;TRUIST FINANCIAL CORP;US89832Q1094;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,07%
+302;NATIONAL BANK OF CANADA;CA6330671034;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Finanza;0,07%
+303;DOMINION ENERGY INC;US25746U1097;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Servizi di pubblica utilità;0,07%
+304;KKR AND CO INC;US48251W1045;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,07%
+305;WW GRAINGER INC;US3848021040;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa1;S&P 500 Index;Prodotti industriali;0,07%
+306;KINDER MORGAN INC;US49456B1017;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Energia;0,07%
+307;SEMPRA;US8168511090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di pubblica utilità;0,07%
+308;AIR PRODUCTS AND CHEMICALS INC;US0091581068;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Materiali;0,07%
+309;TARGET CORP;US87612E1064;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Beni di prima necessità;0,07%
+310;HCA HEALTHCARE INC;US40412C1018;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B3;S&P 500 Index;Sanità;0,07%
+311;PROSUS NV CLASS N;NL0013654783;Cina;EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Beni voluttuari;0,07%
+312;CANADIAN NATIONAL RAILWAY;CA1363751027;Canada;CAD;Toronto Stock Exchange;Azionari;A3;S&P/TSX COMPOSITE Index;Prodotti industriali;0,07%
+313;HONG KONG EXCHANGES AND CLEARING L;HK0388045442;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Finanza;0,07%
+314;CINTAS CORP;US1729081059;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A2;NASDAQ Composite Index;Prodotti industriali;0,06%
+315;NORDEA BANK;FI4000297767;Finlandia;EUR;Helsinki Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Finanza;0,06%
+316;BAKER HUGHES CLASS A;US05722G1004;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Energia;0,06%
+317;NEBIUS NV CLASS A;NL0009805522;Paesi Bassi (Olanda);USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,06%
+318;APOLLO GLOBAL MANAGEMENT INC;US03769M1062;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,06%
+319;SOCIETE GENERALE SA;FR0000130809;Francia;EUR;Euronext Paris;Azionari;A2;CAC 40 Index;Finanza;0,06%
+320;ASM INTERNATIONAL NV;NL0000334118;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;Ba1;Amsterdam Exchanges Index;Tecnologia dell'informazione;0,06%
+321;ALLSTATE CORP;US0200021014;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,06%
+322;ASTERA LABS INC;US04626A1034;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,06%
+323;RELX PLC;GB00B2B0DG97;Regno Unito;GBP;London Stock Exchange;Azionari;Baa1;FTSE 100 Index;Prodotti industriali;0,06%
+324;REALTY INCOME REIT CORP;US7561091049;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,06%
+325;ANGLO AMERICAN PLC;GB00BTK05J60;Regno Unito;GBP;-;Azionari;-;-;Materiali;0,06%
+326;ROCKET LAB CORP;US7731211089;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,06%
+327;WHEATON PRECIOUS METALS CORP;CA9628791027;Brasile;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Materiali;0,06%
+328;COMPASS GROUP PLC;GB00BD6K4575;Regno Unito;USD;London Stock Exchange;Azionari;-;FTSE 100 Index;Beni voluttuari;0,06%
+329;ENGIE SA;FR0010208488;Francia;EUR;Euronext Paris;Azionari;A1;CAC 40 Index;Servizi di pubblica utilità;0,06%
+330;L3HARRIS TECHNOLOGIES INC;US5024311095;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,06%
+331;VISTRA CORP;US92840M1027;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,06%
+332;FORD MOTOR;US3453708600;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Beni voluttuari;0,06%
+333;AMETEK INC;US0311001004;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,06%
+334;TARGA RESOURCES CORP;US87612G1013;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Energia;0,06%
+335;ARGENX;NL0010832176;Paesi Bassi (Olanda);EUR;Euronext Brussels;Azionari;-;-;Sanità;0,06%
+336;ARTHUR J GALLAGHER;US3635761097;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,06%
+337;FLEX LTD;SG9999000020;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Ba1;NASDAQ Composite Index;Tecnologia dell'informazione;0,06%
+338;NIKE INC CLASS B;US6541061031;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A1;S&P 500 Index;Beni voluttuari;0,06%
+339;DHL GROUP AG;DE0005552004;Germania;EUR;XETRA;Azionari;Baa1;DAX Index;Prodotti industriali;0,06%
+340;NUCOR CORP;US6703461052;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Materiali;0,06%
+341;MICROCHIP TECHNOLOGY INC;US5950171042;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,06%
+342;ONEOK INC;US6826801036;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Energia;0,06%
+343;CARRIER GLOBAL CORP;US14448C1045;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,06%
+344;AFLAC INC;US0010551028;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,06%
+345;SUMITOMO ELECTRIC INDUSTRIES LTD;JP3407400005;Giappone;JPY;Tokyo Stock Exchange;Azionari;A1;TOPIX Index;Beni voluttuari;0,06%
+346;CORTEVA INC;US22052L1044;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Materiali;0,06%
+347;FASTENAL;US3119001044;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,06%
+348;ROCKWELL AUTOMATION INC;US7739031091;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Prodotti industriali;0,06%
+349;VOLVO CLASS B;SE0000115446;Svezia;SEK;Stockholm Stock Exchange;Azionari;Baa2;OMX Stockholm 30 Index;Prodotti industriali;0,06%
+350;HERMES INTERNATIONAL;FR0000052292;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Beni voluttuari;0,06%
+351;CARDINAL HEALTH INC;US14149Y1082;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,06%
+352;ATLAS COPCO CLASS A;SE0017486889;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,06%
+353;ENTERGY CORP;US29364G1031;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,06%
+354;CAIXABANK SA;ES0140609019;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa3;IBEX 35 Index;Finanza;0,06%
+355;DEUTSCHE BOERSE AG;DE0005810055;Germania;EUR;XETRA;Azionari;Aa2;DAX Index;Finanza;0,06%
+356;CENCORA INC;US03073E1055;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,06%
+357;AUTOZONE INC;US0533321024;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,06%
+358;EDWARDS LIFESCIENCES CORP;US28176E1082;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Sanità;0,06%
+359;PUBLIC STORAGE REIT;US74460D1090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,06%
+360;TAKEDA PHARMACEUTICAL LTD;JP3463000004;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Sanità;0,06%
+361;KDDI CORP;JP3496400007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Servizi di comunicazione;0,06%
+362;BASF N;DE000BASF111;Germania;EUR;XETRA;Azionari;A1;DAX Index;Materiali;0,06%
+363;STMICROELECTRONICS NV;NL0000226223;Singapore;EUR;Euronext Paris;Azionari;Baa2;CAC 40 Index;Tecnologia dell'informazione;0,06%
+364;LONDON STOCK EXCHANGE GROUP PLC;GB00B0SWJX34;Regno Unito;GBP;London Stock Exchange;Azionari;Baa2;FTSE 100 Index;Finanza;0,06%
+365;RENESAS ELECTRONICS CORP;JP3164720009;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,05%
+366;HOLCIM LTD AG;CH0012214059;Svizzera;CHF;Scoach Switzerland;Azionari;Baa2;Swiss Market Index;Materiali;0,05%
+367;NINTENDO LTD;JP3756600007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Servizi di comunicazione;0,05%
+368;STANDARD CHARTERED PLC;GB0004082847;Regno Unito;GBP;London Stock Exchange;Azionari;A2;FTSE 100 Index;Finanza;0,05%
+369;XCEL ENERGY INC;US98389B1008;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Servizi di pubblica utilità;0,05%
+370;PRYSMIAN;IT0004176001;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Prodotti industriali;0,05%
+371;RIO TINTO LTD;AU000000RIO1;Australia;AUD;Australian Stock Exchange;Azionari;A3;ASX All Ordinaries Index;Materiali;0,05%
+372;ON SEMICONDUCTOR CORP;US6821891057;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Ba1;NASDAQ Composite Index;Tecnologia dell'informazione;0,05%
+373;METLIFE INC;US59156R1086;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Finanza;0,05%
+374;FIFTH THIRD BANCORP;US3167731005;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,05%
+375;DANONE SA;FR0000120644;Francia;EUR;Euronext Paris;Azionari;A3;CAC 40 Index;Beni di prima necessità;0,05%
+376;STATE STREET CORP;US8574771031;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,05%
+377;EXELON CORP;US30161N1019;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa2;NASDAQ Composite Index;Servizi di pubblica utilità;0,05%
+378;CHENIERE ENERGY INC;US16411R2085;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B1;S&P 500 Index;Energia;0,05%
+379;E.ON N;DE000ENAG999;Germania;EUR;XETRA;Azionari;A3;DAX Index;Servizi di pubblica utilità;0,05%
+380;WESTINGHOUSE AIR BRAKE TECHNOLOGIE;US9297401088;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Prodotti industriali;0,05%
+381;FERGUSON ENTERPRISES INC;US31488V1070;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,05%
+382;CAMECO CORP;CA13321L1085;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Energia;0,05%
+383;EBAY INC;US2786421030;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A2;NASDAQ Composite Index;Beni voluttuari;0,05%
+384;DEVON ENERGY CORP;US25179M1036;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Energia;0,05%
+385;CREDO TECHNOLOGY GROUP HOLDING LTD;KYG254571055;Isole Cayman;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,05%
+386;DISCO CORP;JP3548600000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,05%
+387;ELECTRONIC ARTS INC;US2855121099;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,05%
+388;TDK CORP;JP3538800008;Giappone;JPY;Tokyo Stock Exchange;Azionari;A3;TOPIX Index;Tecnologia dell'informazione;0,05%
+389;LEGRAND SA;FR0010307819;Francia;EUR;Euronext Paris;Azionari;A3;CAC 40 Index;Prodotti industriali;0,05%
+390;GOODMAN GROUP UNITS;AU000000GMG2;Australia;AUD;Australian Stock Exchange;Azionari;Baa2;ASX All Ordinaries Index;Immobiliare;0,05%
+391;SWISS RE AG;CH0126881561;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Finanza;0,05%
+392;DSV;DK0060079531;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;OMX COPENHAGEN 20 Index;Prodotti industriali;0,05%
+393;IDEXX LABORATORIES INC;US45168D1046;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,05%
+394;DIAGEO PLC;GB0002374006;Regno Unito;GBP;London Stock Exchange;Azionari;A3;FTSE 100 Index;Beni di prima necessità;0,05%
+395;ENI;IT0003132476;Italia;EUR;Milan Stock Exchange;Azionari;A3;FTSE Italia All-Share Index;Energia;0,05%
+396;SANDVIK;SE0000667891;Svezia;SEK;Stockholm Stock Exchange;Azionari;Baa2;OMX Stockholm 30 Index;Prodotti industriali;0,05%
+397;ORIX CORP;JP3200450009;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa2;TOPIX Index;Finanza;0,05%
+398;SUN LIFE FINANCIAL INC;CA8667961053;Canada;CAD;Toronto Stock Exchange;Azionari;A2;S&P/TSX COMPOSITE Index;Finanza;0,05%
+399;FANUC CORP;JP3802400006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,05%
+400;FERRARI NV;NL0011585146;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Beni voluttuari;0,05%
+401;HUMANA INC;US4448591028;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Aa2;S&P 500 Index;Sanità;0,05%
+402;LONZA GROUP AG;CH0013841017;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Sanità;0,05%
+403;MARUBENI CORP;JP3877600001;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa2;TOPIX Index;Prodotti industriali;0,05%
+404;AMERIPRISE FINANCE INC;US03076C1062;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,05%
+405;CARVANA CLASS A;US1468691027;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,05%
+406;CHIPOTLE MEXICAN GRILL INC;US1696561059;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,05%
+407;YUM BRANDS INC;US9884981013;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Beni voluttuari;0,05%
+408;CELESTICA INC;CA15101Q2071;Canada;CAD;-;Azionari;-;-;Tecnologia dell'informazione;0,05%
+409;TAKE TWO INTERACTIVE SOFTWARE INC;US8740541094;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,05%
+410;FRANCO NEVADA CORP;CA3518581051;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Materiali;0,05%
+411;OLD DOMINION FREIGHT LINE INC;US6795801009;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,05%
+412;JAPAN TOBACCO INC;JP3726800000;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Beni di prima necessità;0,05%
+413;FUJIKURA LTD;JP3811000003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,05%
+414;BAYER AG;DE000BAY0017;Germania;EUR;XETRA;Azionari;A3;DAX Index;Sanità;0,05%
+415;MSCI INC;US55354G1004;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Ba1;S&P 500 Index;Finanza;0,05%
+416;REPUBLIC SERVICES INC;US7607591002;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Prodotti industriali;0,05%
+417;SUMITOMO CORP;JP3404600003;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Prodotti industriali;0,05%
+418;D R HORTON INC;US23331A1097;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,05%
+419;AUTODESK INC;US0527691069;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,05%
+420;COMPAGNIE DE SAINT GOBAIN SA;FR0000125007;Francia;EUR;Euronext Paris;Azionari;Baa2;CAC 40 Index;Prodotti industriali;0,05%
+421;BECTON DICKINSON;US0758871091;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Sanità;0,05%
+422;ERSTE GROUP BANK AG;AT0000652011;Austria;EUR;Vienna Stock Exchange;Azionari;Baa1;Austrian Traded Index;Finanza;0,05%
+423;INTERACTIVE BROKERS GROUP INC CLAS;US45841N1072;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,05%
+424;GENERALI;IT0000062072;Italia;EUR;Milan Stock Exchange;Azionari;Baa2;FTSE Italia All-Share Index;Finanza;0,05%
+425;ALIMENTATION COUCHE TARD INC;CA01626P1484;Canada;CAD;Toronto Stock Exchange;Azionari;-;-;Beni di prima necessità;0,04%
+426;GALDERMA GROUP N AG;CH1335392721;Svizzera;CHF;-;Azionari;-;Swiss Market Index;Sanità;0,04%
+427;KEURIG DR PEPPER INC;US49271V1008;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni di prima necessità;0,04%
+428;VULCAN MATERIALS;US9291601097;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Ba3;S&P 500 Index;Materiali;0,04%
+429;PUBLIC SERVICE ENTERPRISE GROUP IN;US7445731067;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di pubblica utilità;0,04%
+430;AMERICAN INTERNATIONAL GROUP INC;US0268747849;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Finanza;0,04%
+431;RECKITT BENCKISER GROUP PLC;GB00BSZBP530;Regno Unito;GBP;-;Azionari;-;-;Beni di prima necessità;0,04%
+432;WASTE CONNECTIONS INC;CA94106B1013;Stati Uniti d'America;USD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Prodotti industriali;0,04%
+433;CONSOLIDATED EDISON INC;US2091151041;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,04%
+434;JABIL INC;US4663131039;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Ba1;S&P 500 Index;Tecnologia dell'informazione;0,04%
+435;CONSTELLATION SOFTWARE INC;CA21037X1006;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Tecnologia dell'informazione;0,04%
+436;GARMIN LTD;CH0114405324;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,04%
+437;CARNIVAL CORP LTD;BMG2004J1036;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,04%
+438;HALEON PLC;GB00BMX86B70;Svizzera;GBP;-;Azionari;-;-;Sanità;0,04%
+439;DAIICHI LIFE GROUP INC;JP3476480003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,04%
+440;DAIKIN INDUSTRIES LTD;JP3481800005;Giappone;JPY;Tokyo Stock Exchange;Azionari;A3;TOPIX Index;Prodotti industriali;0,04%
+441;VENTAS REIT INC;US92276F1003;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,04%
+442;CBRE GROUP INC CLASS A;US12504L1098;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,04%
+443;OCCIDENTAL PETROLEUM CORP;US6745991058;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A1;S&P 500 Index;Energia;0,04%
+444;BLOCK INC CLASS A;US8522341036;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,04%
+445;IRON MOUNTAIN INC;US46284V1017;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,04%
+446;WOODSIDE ENERGY GROUP LTD;AU0000224040;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Energia;0,04%
+447;TESCO PLC;GB00BLGZ9862;Regno Unito;GBP;-;Azionari;-;-;Beni di prima necessità;0,04%
+448;SYSCO CORP;US8718291078;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni di prima necessità;0,04%
+449;NASDAQ INC;US6311031081;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa3;NASDAQ Composite Index;Finanza;0,04%
+450;EMCOR GROUP INC;US29084Q1004;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,04%
+451;PRUDENTIAL FINANCIAL INC;US7443201022;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Finanza;0,04%
+452;ALNYLAM PHARMACEUTICALS INC;US02043Q1076;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,04%
+453;UNITED OVERSEAS BANK LTD;SG1M31001969;Singapore;SGD;-;Azionari;-;-;Finanza;0,04%
+454;PAYPAL HOLDINGS INC;US70450Y1038;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,04%
+455;SOFTBANK CORP;JP3732000009;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Servizi di comunicazione;0,04%
+456;ORANGE SA;FR0000133308;Francia;EUR;Euronext Paris;Azionari;Baa1;CAC 40 Index;Servizi di comunicazione;0,04%
+457;IBIDEN LTD;JP3148800000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,04%
+458;TEVA PHARMACEUTICAL INDUSTRIES ADR;US8816242098;Israele;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,04%
+459;SSE PLC;GB0007908733;Regno Unito;GBP;London Stock Exchange;Azionari;A3;FTSE 100 Index;Servizi di pubblica utilità;0,04%
+460;GIVAUDAN SA;CH0010645932;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Materiali;0,04%
+461;JAPAN POST BANK LTD;JP3946750001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,04%
+462;CSL LTD;AU000000CSL8;Stati Uniti d'America;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Sanità;0,04%
+463;WEC ENERGY GROUP INC;US92939U1060;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,04%
+464;DOLLARAMA INC;CA25675T1075;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Beni voluttuari;0,04%
+465;MARTIN MARIETTA MATERIALS INC;US5732841060;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Ba1;S&P 500 Index;Materiali;0,04%
+466;MERCEDES-BENZ GROUP N AG;DE0007100000;Germania;EUR;XETRA;Azionari;A3;DAX Index;Beni voluttuari;0,04%
+467;PG&E CORP;US69331C1080;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di pubblica utilità;0,04%
+468;RWE AG;DE0007037129;Germania;EUR;XETRA;Azionari;Baa1;DAX Index;Servizi di pubblica utilità;0,04%
+469;ASSA ABLOY CLASS B;SE0007100581;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,04%
+470;AGILENT TECHNOLOGIES INC;US00846U1016;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Sanità;0,04%
+471;HARTFORD INSURANCE GROUP INC;US4165151048;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,04%
+472;ARCHER DANIELS MIDLAND;US0394831020;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Beni di prima necessità;0,04%
+473;KONINKLIJKE AHOLD DELHAIZE NV;NL0011794037;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Beni di prima necessità;0,04%
+474;KOMATSU LTD;JP3304200003;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Prodotti industriali;0,04%
+475;CROWN CASTLE INC;US22822V1017;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,04%
+476;QNITY ELECTRONICS INC;US74743L1008;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,04%
+477;FUJITSU LTD;JP3818000006;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa1;TOPIX Index;Tecnologia dell'informazione;0,04%
+478;SANDOZ GROUP AG;CH1243598427;Svizzera;CHF;-;Azionari;-;Swiss Market Index;Sanità;0,04%
+479;COINBASE GLOBAL INC;US19260Q1076;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,04%
+480;INTACT FINANCIAL CORP;CA45823T1066;Canada;CAD;Toronto Stock Exchange;Azionari;Baa1;S&P/TSX COMPOSITE Index;Finanza;0,04%
+481;KENVUE INC;US49177J1025;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni di prima necessità;0,04%
+482;DIAMONDBACK ENERGY INC;US25278X1090;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;B1;NASDAQ Composite Index;Energia;0,04%
+483;UCB SA;BE0003739530;Belgio;EUR;Euronext Brussels;Azionari;-;BEL 20 Index;Sanità;0,04%
+484;STEEL DYNAMICS INC;US8581191009;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Ba2;NASDAQ Composite Index;Materiali;0,04%
+485;WATERS CORP;US9418481035;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,04%
+486;SUNBELT RENTALS HOLDINGS INC;US8669661048;Stati Uniti d'America;GBP;-;Azionari;-;-;Prodotti industriali;0,04%
+487;KIMBERLY CLARK CORP;US4943681035;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Beni di prima necessità;0,04%
+488;SEA ADS REPRESENTING LTD CLASS A;US81141R1005;Singapore;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,04%
+489;BANK LEUMI LE ISRAEL;IL0006046119;Israele;ILS;-;Azionari;-;-;Finanza;0,04%
+490;MS&AD INSURANCE GROUP HOLDINGS INC;JP3890310000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,04%
+491;ROPER TECHNOLOGIES INC;US7766961061;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Tecnologia dell'informazione;0,04%
+492;PRUDENTIAL PLC;GB0007099541;Hong Kong;GBP;London Stock Exchange;Azionari;A2;FTSE 100 Index;Finanza;0,04%
+493;HUNTINGTON BANCSHARES INC;US4461501045;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,04%
+494;M&T BANK CORP;US55261F1049;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,04%
+495;POWER CORPORATION OF CANADA;CA7392391016;Canada;CAD;Toronto Stock Exchange;Azionari;A2;S&P/TSX COMPOSITE Index;Finanza;0,04%
+496;DANSKE BANK;DK0010274414;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;Baa1;OMX COPENHAGEN 20 Index;Finanza;0,04%
+497;WOOLWORTHS GROUP LTD;AU000000WOW2;Australia;AUD;Australian Stock Exchange;Azionari;A3;ASX All Ordinaries Index;Beni di prima necessità;0,04%
+498;FERROVIAL NV;NL0015001FS8;Paesi Bassi (Olanda);EUR;Mercado Continuo Espana;Azionari;-;IBEX 35 Index;Prodotti industriali;0,04%
+499;CENOVUS ENERGY;CA15135U1093;Canada;CAD;Toronto Stock Exchange;Azionari;Baa2;S&P/TSX COMPOSITE Index;Energia;0,04%
+500;ADIDAS N AG;DE000A1EWWW0;Germania;EUR;XETRA;Azionari;-;DAX Index;Beni voluttuari;0,04%
+501;ZOETIS INC CLASS A;US98978V1035;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Sanità;0,04%
+502;TRANSURBAN GROUP STAPLED UNITS;AU000000TCL6;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Prodotti industriali;0,04%
+503;AXON ENTERPRISE INC;US05464C1018;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,04%
+504;HONDA MOTOR LTD;JP3854600008;Giappone;JPY;Tokyo Stock Exchange;Azionari;A1;TOPIX Index;Beni voluttuari;0,04%
+505;KINROSS GOLD CORP;CA4969024047;Canada;CAD;Toronto Stock Exchange;Azionari;Baa3;S&P/TSX COMPOSITE Index;Materiali;0,04%
+506;SOMPO HOLDINGS INC;JP3165000005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,04%
+507;ALCON AG;CH0432492467;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Sanità;0,04%
+508;KBC GROEP NV;BE0003565737;Belgio;EUR;Euronext Brussels;Azionari;A3;BEL 20 Index;Finanza;0,04%
+509;COREWEAVE INC CLASS A;US21873S1087;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,04%
+510;PAYCHEX INC;US7043261079;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,04%
+511;TOWER SEMICONDUCTOR LTD;IL0010823792;Israele;ILS;-;Azionari;-;Hang Seng Index;Tecnologia dell'informazione;0,04%
+512;ARCH CAPITAL GROUP LTD;BMG0450A1053;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A3;NASDAQ Composite Index;Finanza;0,04%
+513;EXTRA SPACE STORAGE REIT INC;US30225T1025;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,04%
+514;SIKA AG;CH0418792922;Svizzera;CHF;-;Azionari;-;Swiss Market Index;Materiali;0,04%
+515;CASEYS GENERAL STORES INC;US1475281036;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni di prima necessità;0,04%
+516;NETAPP INC;US64110D1046;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Tecnologia dell'informazione;0,03%
+517;CHUGAI PHARMACEUTICAL LTD;JP3519400000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Sanità;0,03%
+518;KROGER;US5010441013;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Beni di prima necessità;0,03%
+519;NATERA INC;US6323071042;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,03%
+520;AJINOMOTO INC;JP3119600009;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Beni di prima necessità;0,03%
+521;SWEDBANK CLASS A;SE0000242455;Svezia;SEK;Stockholm Stock Exchange;Azionari;A1;OMX Stockholm 30 Index;Finanza;0,03%
+522;BANK HAPOALIM BM;IL0006625771;Israele;ILS;-;Azionari;-;-;Finanza;0,03%
+523;INGERSOLL RAND INC;US45687V1061;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,03%
+524;DTE ENERGY;US2333311072;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di pubblica utilità;0,03%
+525;NUTRIEN LTD;CA67077M1086;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Materiali;0,03%
+526;ERICSSON CLASS B;SE0000108656;Svezia;SEK;Stockholm Stock Exchange;Azionari;Baa1;OMX Stockholm 30 Index;Tecnologia dell'informazione;0,03%
+527;FAIRFAX FINANCIAL HOLDINGS SUB VOT;CA3039011026;Canada;CAD;Toronto Stock Exchange;Azionari;Baa3;S&P/TSX COMPOSITE Index;Finanza;0,03%
+528;NEC CORP;JP3733000008;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa2;TOPIX Index;Tecnologia dell'informazione;0,03%
+529;NORTHERN TRUST CORP;US6658591044;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,03%
+530;ROBLOX CORP CLASS A;US7710491033;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di comunicazione;0,03%
+531;TECK RESOURCES SUBORDINATE VOTING;CA8787422044;Canada;CAD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Materiali;0,03%
+532;SWISS LIFE HOLDING AG;CH0014852781;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Finanza;0,03%
+533;DOVER CORP;US2600031080;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Prodotti industriali;0,03%
+534;EQT CORP;US26884L1098;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Energia;0,03%
+535;AMEREN CORP;US0236081024;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Servizi di pubblica utilità;0,03%
+536;EXPERIAN PLC;GB00B19NLV48;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Prodotti industriali;0,03%
+537;RESONA HOLDINGS INC;JP3500610005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,03%
+538;SKANDINAVISKA ENSKILDA BANKEN CLAS;SE0000148884;Svezia;SEK;Stockholm Stock Exchange;Azionari;A1;OMX Stockholm 30 Index;Finanza;0,03%
+539;CENTENE CORP;US15135B1017;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,03%
+540;3I GROUP PLC;GB00B1YW4409;Regno Unito;GBP;London Stock Exchange;Azionari;Baa2;FTSE 100 Index;Finanza;0,03%
+541;HEIDELBERG MATERIALS AG;DE0006047004;Germania;EUR;XETRA;Azionari;Ba1;DAX Index;Materiali;0,03%
+542;CURTISS WRIGHT CORP;US2315611010;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,03%
+543;VICI PPTYS INC;US9256521090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,03%
+544;STRATEGY INC CLASS A;US5949724083;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,03%
+545;BIOGEN INC;US09062X1037;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Aaa;NASDAQ Composite Index;Sanità;0,03%
+546;HALLIBURTON;US4062161017;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Energia;0,03%
+547;TAPESTRY INC;US8760301072;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,03%
+548;DAIICHI SANKYO LTD;JP3475350009;Giappone;JPY;Tokyo Stock Exchange;Azionari;A1;TOPIX Index;Sanità;0,03%
+549;OTIS WORLDWIDE CORP;US68902V1070;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,03%
+550;COMMERZBANK AG;DE000CBK1001;Germania;EUR;XETRA;Azionari;Baa1;DAX Index;Finanza;0,03%
+551;OTSUKA HOLDINGS LTD;JP3188220002;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Sanità;0,03%
+552;RAYMOND JAMES INC;US7547301090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,03%
+553;CITIZENS FINANCIAL GROUP INC;US1746101054;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,03%
+554;TELEDYNE TECHNOLOGIES INC;US8793601050;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,03%
+555;FORTIS INC;CA3495531079;Canada;CAD;Toronto Stock Exchange;Azionari;A3;S&P/TSX COMPOSITE Index;Servizi di pubblica utilità;0,03%
+556;IQVIA HOLDINGS INC;US46266C1053;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,03%
+557;EXPEDIA GROUP INC;US30212P3038;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Ba1;NASDAQ Composite Index;Beni voluttuari;0,03%
+558;ATMOS ENERGY CORP;US0495601058;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di pubblica utilità;0,03%
+559;CENTERPOINT ENERGY INC;US15189T1079;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di pubblica utilità;0,03%
+560;GE HEALTHCARE TECHNOLOGIES INC;US36266G1076;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,03%
+561;ADYEN NV;NL0012969182;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Finanza;0,03%
+562;DEXCOM INC;US2521311074;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,03%
+563;FTAI AVIATION LTD;KYG3730V1059;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,03%
+564;NTT INC;JP3735400008;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa2;TOPIX Index;Servizi di comunicazione;0,03%
+565;EDISON INTERNATIONAL;US2810201077;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,03%
+566;AMRIZE AG;CH1430134226;Stati Uniti d'America;USD;-;Azionari;-;Swiss Market Index;Materiali;0,03%
+567;TWILIO INC CLASS A;US90138F1021;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,03%
+568;HUBBELL INC;US4435106079;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,03%
+569;RESMED INC;US7611521078;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,03%
+570;XYLEM INC;US98419M1009;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Prodotti industriali;0,03%
+571;ARCELORMITTAL SA;LU1598757687;Lussemburgo;EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Materiali;0,03%
+572;LASERTEC CORP;JP3979200007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,03%
+573;REPSOL SA;ES0173516115;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa2;IBEX 35 Index;Energia;0,03%
+574;ARES MANAGEMENT CORP CLASS A;US03990B1017;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,03%
+575;PEMBINA PIPELINE CORP;CA7063271034;Canada;CAD;Toronto Stock Exchange;Azionari;Baa2;S&P/TSX COMPOSITE Index;Energia;0,03%
+576;ATLAS COPCO CLASS B;SE0017486897;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,03%
+577;LIVE NATION ENTERTAINMENT INC;US5380341090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B3;S&P 500 Index;Servizi di comunicazione;0,03%
+578;PPG INDUSTRIES INC;US6935061076;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Materiali;0,03%
+579;WILLIAMS SONOMA INC;US9699041011;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,03%
+580;ACS ACTIVIDADES DE CONSTRUCCION Y;ES0167050915;Spagna;EUR;Mercado Continuo Espana;Azionari;-;IBEX 35 Index;Prodotti industriali;0,03%
+581;IMPERIAL BRANDS PLC;GB0004544929;Regno Unito;GBP;London Stock Exchange;Azionari;Baa3;FTSE 100 Index;Beni di prima necessità;0,03%
+582;NRG ENERGY INC;US6293775085;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B1;S&P 500 Index;Servizi di pubblica utilità;0,03%
+583;COPART INC;US2172041061;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,03%
+584;CINCINNATI FINANCIAL CORP;US1720621010;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,03%
+585;KYOCERA CORP;JP3249600002;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,03%
+586;ENTEGRIS INC;US29362U1043;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,03%
+587;REVOLUTION MEDICINES INC;US76155X1000;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,03%
+588;PPL CORP;US69351T1060;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Servizi di pubblica utilità;0,03%
+589;AIB GROUP PLC;IE00BF0L3536;Irlanda;EUR;-;Azionari;-;-;Finanza;0,03%
+590;MITSUBISHI ESTATE LTD;JP3899600005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Immobiliare;0,03%
+591;FIRST SOLAR INC;US3364331070;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,03%
+592;NOMURA HOLDINGS INC;JP3762600009;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa3;TOPIX Index;Finanza;0,03%
+593;SYNCHRONY FINANCIAL;US87165B1035;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,03%
+594;EVERSOURCE ENERGY;US30040W1080;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di pubblica utilità;0,03%
+595;ABN AMRO BANK NV;NL0011540547;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Finanza;0,03%
+596;VODAFONE GROUP PLC;GB00BH4HKS39;Regno Unito;GBP;London Stock Exchange;Azionari;A3;FTSE 100 Index;Servizi di comunicazione;0,03%
+597;AMADEUS IT GROUP SA;ES0109067019;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa2;IBEX 35 Index;Beni voluttuari;0,03%
+598;CBOE GLOBAL MARKETS INC;US12503M1080;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;S&P 500 Index;Finanza;0,03%
+599;TECHNIPFMC PLC;GB00BDSFG982;Regno Unito;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Energia;0,03%
+600;BE SEMICONDUCTOR INDUSTRIES NV;NL0012866412;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Tecnologia dell'informazione;0,03%
+601;LOBLAW COMPANIES LTD;CA5394811015;Canada;CAD;Toronto Stock Exchange;Azionari;Baa2;S&P/TSX COMPOSITE Index;Beni di prima necessità;0,03%
+602;MONGODB INC CLASS A;US60937P1066;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,03%
+603;AVIVA PLC;GB00BPQY8M80;Regno Unito;GBP;-;Azionari;-;-;Finanza;0,03%
+604;VESTAS WIND SYSTEMS;DK0061539921;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;-;Prodotti industriali;0,03%
+605;FIRSTENERGY CORP;US3379321074;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,03%
+606;SAMPO CLASS A;FI4000552500;Finlandia;EUR;-;Azionari;-;OMX Helsinki Index;Finanza;0,03%
+607;HERSHEY FOODS;US4278661081;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Beni di prima necessità;0,03%
+608;QBE INSURANCE GROUP LTD;AU000000QBE9;Australia;AUD;Australian Stock Exchange;Azionari;Baa2;ASX All Ordinaries Index;Finanza;0,03%
+609;SINGAPORE TELECOMMUNICATIONS LTD;SG1T75931496;Singapore;SGD;-;Azionari;-;-;Servizi di comunicazione;0,03%
+610;WORKDAY INC CLASS A;US98138H1014;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;B1;NASDAQ Composite Index;Tecnologia dell'informazione;0,03%
+611;FISERV INC;US3377381088;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa2;NASDAQ Composite Index;Finanza;0,03%
+612;BPER BANCA;IT0000066123;Italia;EUR;Milan Stock Exchange;Azionari;Ba2;FTSE Italia All-Share Index;Finanza;0,03%
+613;FAIR ISAAC CORP;US3032501047;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B1;S&P 500 Index;Tecnologia dell'informazione;0,03%
+614;PULTEGROUP INC;US7458671010;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Ba2;S&P 500 Index;Beni voluttuari;0,03%
+615;DARDEN RESTAURANTS INC;US2371941053;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,03%
+616;BANCA MONTE DEI PASCHI DI SIENA SP;IT0005508921;Italia;EUR;-;Azionari;-;-;Finanza;0,03%
+617;WILLIS TOWERS WATSON PLC;IE00BDB6Q211;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,03%
+618;AVALONBAY COMMUNITIES REIT INC;US0534841012;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,03%
+619;DNB BANK;NO0010161896;Norvegia;NOK;Oslo Stock Exchange;Azionari;-;Oslo SE All-share Index;Finanza;0,03%
+620;TOYOTA TSUSHO CORP;JP3635000007;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Prodotti industriali;0,03%
+621;DOLLAR GENERAL CORP;US2566771059;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Beni di prima necessità;0,03%
+622;VEOLIA ENVIRON. SA;FR0000124141;Francia;EUR;Euronext Paris;Azionari;Baa1;CAC 40 Index;Servizi di pubblica utilità;0,03%
+623;REGIONS FINANCIAL CORP;US7591EP1005;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Ba1;S&P 500 Index;Finanza;0,03%
+624;AMERICAN WATER WORKS INC;US0304201033;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di pubblica utilità;0,03%
+625;SMC (JAPAN) CORP;JP3162600005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,03%
+626;INTERCONTINENTAL HOTELS GROUP PLC;GB00BHJYC057;Regno Unito;USD;-;Azionari;-;-;Beni voluttuari;0,03%
+627;FUJIFILM HOLDINGS CORP;JP3814000000;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Tecnologia dell'informazione;0,03%
+628;THALES SA;FR0000121329;Francia;EUR;Euronext Paris;Azionari;A2;CAC 40 Index;Prodotti industriali;0,03%
+629;ILLUMINA INC;US4523271090;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,03%
+630;SUMITOMO MITSUI TRUST GROUP INC;JP3892100003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,03%
+631;AENA SME SA;ES0105046017;Spagna;EUR;-;Azionari;-;-;Prodotti industriali;0,03%
+632;JAPAN POST HOLDINGS LTD;JP3752900005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,03%
+633;MICHELIN;FR001400AJ45;Francia;EUR;-;Azionari;-;-;Beni voluttuari;0,03%
+634;PUBLICIS GROUPE SA;FR0000130577;Francia;EUR;Euronext Paris;Azionari;Baa2;CAC 40 Index;Servizi di comunicazione;0,03%
+635;CK HUTCHISON HOLDINGS LTD;KYG217651051;Regno Unito;HKD;-;Azionari;-;Hang Seng Index;Prodotti industriali;0,03%
+636;LEONARDO;IT0003856405;Italia;EUR;Milan Stock Exchange;Azionari;Ba1;FTSE Italia All-Share Index;Prodotti industriali;0,03%
+637;RESTAURANTS BRANDS INTERNATIONAL I;CA76131D1033;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Beni voluttuari;0,03%
+638;WEST PHARMACEUTICAL SERVICES INC;US9553061055;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,03%
+639;METTLER TOLEDO INC;US5926881054;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,03%
+640;MARKEL GROUP INC;US5705351048;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Finanza;0,03%
+641;PRINCIPAL FINANCIAL GROUP INC;US74251V1026;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A3;NASDAQ Composite Index;Finanza;0,03%
+642;AERCAP HOLDINGS NV;NL0000687663;Irlanda;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,03%
+643;CHURCH AND DWIGHT INC;US1713401024;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni di prima necessità;0,03%
+644;FORTESCUE LTD;AU000000FMG4;Australia;AUD;Australian Stock Exchange;Azionari;Ba2;ASX All Ordinaries Index;Materiali;0,03%
+645;MITSUI FUDOSAN LTD;JP3893200000;Giappone;JPY;Tokyo Stock Exchange;Azionari;A3;TOPIX Index;Immobiliare;0,03%
+646;ASTELLAS PHARMA INC;JP3942400007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Sanità;0,03%
+647;EVERPURE INC CLASS A;US74624M1027;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,03%
+648;LPL FINANCIAL HOLDINGS INC;US50212V1008;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,03%
+649;MASTEC INC;US5763231090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,03%
+650;NISOURCE INC;US65473P1057;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Servizi di pubblica utilità;0,03%
+651;T ROWE PRICE GROUP INC;US74144T1088;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,03%
+652;BRIDGESTONE CORP;JP3830800003;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Beni voluttuari;0,03%
+653;VAT GROUP AG;CH0311864901;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Prodotti industriali;0,03%
+654;HEINEKEN NV;NL0000009165;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;Baa1;Amsterdam Exchanges Index;Beni di prima necessità;0,03%
+655;DAIMLER TRUCK HOLDING E AG;DE000DTR0CK8;Germania;EUR;-;Azionari;-;DAX Index;Prodotti industriali;0,03%
+656;NEXT PLC;GB0032089863;Regno Unito;GBP;London Stock Exchange;Azionari;Baa2;FTSE 100 Index;Beni voluttuari;0,03%
+657;SEVEN & I HOLDINGS LTD;JP3422950000;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Beni di prima necessità;0,03%
+658;DOW INC;US2605571031;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Materiali;0,03%
+659;XPO INC;US9837931008;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,03%
+660;VERISK ANALYTICS INC;US92345Y1064;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa3;NASDAQ Composite Index;Prodotti industriali;0,03%
+661;CMS ENERGY CORP;US1258961002;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,03%
+662;BOC HONG KONG HOLDINGS LTD;HK2388011192;Cina;HKD;-;Azionari;-;Hang Seng Index;Finanza;0,03%
+663;KERING SA;FR0000121485;Francia;EUR;Euronext Paris;Azionari;Baa2;CAC 40 Index;Beni voluttuari;0,03%
+664;EQUINOR;NO0010096985;Norvegia;NOK;Oslo Stock Exchange;Azionari;B1;Oslo SE All-share Index;Energia;0,03%
+665;SOFI TECHNOLOGIES INC;US83406F1021;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,03%
+666;VEEVA SYSTEMS INC CLASS A;US9224751084;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,03%
+667;SMURFIT WESTROCK PLC;IE00028FXN24;Irlanda;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Materiali;0,03%
+668;CANON INC;JP3242800005;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa1;TOPIX Index;Tecnologia dell'informazione;0,02%
+669;QUEST DIAGNOSTICS INC;US74834L1008;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Sanità;0,02%
+670;NN GROUP NV;NL0010773842;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Finanza;0,02%
+671;COLES GROUP LTD;AU0000030678;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Beni di prima necessità;0,02%
+672;EQUITY RESIDENTIAL REIT;US29476L1070;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,02%
+673;TECHTRONIC INDUSTRIES LTD;HK0669013440;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Prodotti industriali;0,02%
+674;FIRST QUANTUM MINERALS LTD;CA3359341052;Zambia;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Materiali;0,02%
+675;CH ROBINSON WORLDWIDE INC;US12541W2098;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,02%
+676;F5 INC;US3156161024;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+677;BURLINGTON STORES INC;US1220171060;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,02%
+678;ROYALTY PHARMA PLC CLASS A;GB00BMVP7Y09;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,02%
+679;UNIVERSAL MUSIC GROUP NV;NL0015000IY2;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Servizi di comunicazione;0,02%
+680;LABCORP HOLDINGS INC;US5049221055;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,02%
+681;GEBERIT AG;CH0030170408;Svizzera;CHF;Scoach Switzerland;Azionari;A2;Swiss Market Index;Prodotti industriali;0,02%
+682;CORPAY INC;US2199481068;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,02%
+683;UNITED THERAPEUTICS CORP;US91307C1027;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,02%
+684;HP INC;US40434L1052;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,02%
+685;ELBIT SYSTEMS LTD;IL0010811243;Israele;ILS;-;Azionari;-;-;Prodotti industriali;0,02%
+686;MTU AERO ENGINES HOLDING AG;DE000A0D9PT0;Germania;EUR;XETRA;Azionari;Baa3;DAX Index;Prodotti industriali;0,02%
+687;EXPEDITORS INTERNATIONAL OF WASHIN;US3021301094;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B1;S&P 500 Index;Prodotti industriali;0,02%
+688;NOVOZYMES CLASS B;DK0060336014;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;OMX COPENHAGEN 20 Index;Materiali;0,02%
+689;VERALTO CORP;US92338C1036;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+690;PAN AMERICAN SILVER CORP;CA6979001089;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Materiali;0,02%
+691;VERISIGN INC;US92343E1029;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa3;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+692;ZOOM COMMUNICATIONS INC CLASS A;US98980L1017;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+693;AFFIRM HOLDINGS INC;US00827B1061;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,02%
+694;EXPAND ENERGY CORP;US1651677353;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Energia;0,02%
+695;COGNIZANT TECHNOLOGY SOLUTIONS COR;US1924461023;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+696;ESTEE LAUDER INC CLASS A;US5184391044;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A2;S&P 500 Index;Beni di prima necessità;0,02%
+697;TEXAS PACIFIC LAND CORP;US88262P1021;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Energia;0,02%
+698;DOLLAR TREE INC;US2567461080;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni di prima necessità;0,02%
+699;BANK OF IRELAND GROUP PLC;IE00BD1RP616;Irlanda;EUR;-;Azionari;-;-;Finanza;0,02%
+700;EAST JAPAN RAILWAY;JP3783600004;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa2;TOPIX Index;Prodotti industriali;0,02%
+701;DENSO CORP;JP3551500006;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Beni voluttuari;0,02%
+702;BANCO BPM;IT0005218380;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Finanza;0,02%
+703;MERCK;DE0006599905;Germania;EUR;XETRA;Azionari;A3;DAX Index;Sanità;0,02%
+704;JB HUNT TRANSPORT SERVICES INC;US4456581077;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Prodotti industriali;0,02%
+705;FABRINET;KYG3323L1005;Thailandia;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,02%
+706;PACKAGING CORP OF AMERICA;US6951561090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Materiali;0,02%
+707;ARISTOCRAT LEISURE LTD;AU000000ALL7;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Beni voluttuari;0,02%
+708;SVENSKA HANDELSBANKEN CLASS A;SE0007100599;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Finanza;0,02%
+709;RB GLOBAL INC;CA74935Q1072;Stati Uniti d'America;CAD;-;Azionari;-;-;Prodotti industriali;0,02%
+710;SNAP ON INC;US8330341012;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Prodotti industriali;0,02%
+711;KONINKLIJKE PHILIPS NV;NL0000009538;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;A3;Amsterdam Exchanges Index;Sanità;0,02%
+712;OMNICOM GROUP INC;US6819191064;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Servizi di comunicazione;0,02%
+713;OKTA INC CLASS A;US6792951054;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+714;ULTA BEAUTY INC;US90384S3031;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni voluttuari;0,02%
+715;VOLKSWAGEN NON-VOTING PREF AG;DE0007664039;Germania;EUR;XETRA;Azionari;A3;DAX Index;Beni voluttuari;0,02%
+716;REDDIT INC CLASS A;US75734B1008;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di comunicazione;0,02%
+717;RELIANCE INC;US7595091023;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Materiali;0,02%
+718;NORTHERN STAR RESOURCES LTD;AU000000NST8;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Materiali;0,02%
+719;BANCO DE SABADELL;ES0113860A34;Spagna;EUR;Mercado Continuo Espana;Azionari;-;IBEX 35 Index;Finanza;0,02%
+720;STERIS;IE00BFY8C754;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Sanità;0,02%
+721;RESONAC HOLDINGS CORP;JP3368000000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,02%
+722;INSMED INC;US4576693075;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,02%
+723;FIDELITY NATIONAL INFORMATION SERV;US31620M1062;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,02%
+724;KEYCORP;US4932671088;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,02%
+725;SWISSCOM AG;CH0008742519;Svizzera;CHF;Scoach Switzerland;Azionari;A2;Swiss Market Index;Servizi di comunicazione;0,02%
+726;HELVETIA BALOISE HOLDING N AG;CH0466642201;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Finanza;0,02%
+727;COCA COLA EUROPACIFIC PARTNERS PLC;GB00BDCPN049;Regno Unito;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni di prima necessità;0,02%
+728;LEGAL AND GENERAL GROUP PLC;GB0005603997;Regno Unito;GBP;London Stock Exchange;Azionari;A3;FTSE 100 Index;Finanza;0,02%
+729;SBA COMMUNICATIONS REIT CORP CLASS;US78410G1040;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Immobiliare;0,02%
+730;SGS SA;CH1256740924;Svizzera;CHF;-;Azionari;-;Swiss Market Index;Prodotti industriali;0,02%
+731;IREN LTD;AU0000185993;Australia;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+732;DUPONT DE NEMOURS INC;US26614N1028;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Materiali;0,02%
+733;ENEOS HOLDINGS INC;JP3386450005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Energia;0,02%
+734;CONSTELLATION BRANDS INC CLASS A;US21036P1084;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Ba1;S&P 500 Index;Beni di prima necessità;0,02%
+735;HEICO CORP CLASS A;US4228062083;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+736;BMW AG;DE0005190003;Germania;EUR;XETRA;Azionari;A2;DAX Index;Beni voluttuari;0,02%
+737;HALMA PLC;GB0004052071;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Tecnologia dell'informazione;0,02%
+738;LIBERTY MEDIA FORMULA ONE SERIES C;US5312297550;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,02%
+739;EBARA CORP;JP3166000004;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,02%
+740;AMCOR PLC;JE00BV7DQ550;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Materiali;0,02%
+741;AST SPACEMOBILE INC CLASS A;US00217D1000;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,02%
+742;IONQ INC;US46222L1089;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,02%
+743;KRAFT HEINZ;US5007541064;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni di prima necessità;0,02%
+744;INTERNATIONAL FLAVORS & FRAGRANCES;US4595061015;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Materiali;0,02%
+745;ANTOFAGASTA PLC;GB0000456144;Cile;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Materiali;0,02%
+746;EVERGY INC;US30034W1062;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,02%
+747;KONINKLIJKE KPN NV;NL0000009082;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;Baa3;Amsterdam Exchanges Index;Servizi di comunicazione;0,02%
+748;LENNAR A CORP CLASS A;US5260571048;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,02%
+749;SUZUKI MOTOR CORP;JP3397200001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,02%
+750;WARTSILA;FI0009003727;Finlandia;EUR;Helsinki Stock Exchange;Azionari;-;OMX Helsinki Index;Prodotti industriali;0,02%
+751;EVOLUTION MINING LTD;AU000000EVN4;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Materiali;0,02%
+752;PARTNERS GROUP HOLDING AG;CH0024608827;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Finanza;0,02%
+753;ALLIANT ENERGY CORP;US0188021085;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;A3;NASDAQ Composite Index;Servizi di pubblica utilità;0,02%
+754;EPIROC CLASS A;SE0015658109;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,02%
+755;EQUIFAX INC;US2944291051;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Prodotti industriali;0,02%
+756;KONE CORP CLASS B;FI0009013403;Finlandia;EUR;Helsinki Stock Exchange;Azionari;-;OMX Helsinki Index;Prodotti industriali;0,02%
+757;INPEX CORP;JP3294460005;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Energia;0,02%
+758;FURUKAWA ELECTRIC LTD;JP3827200001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,02%
+759;TERUMO CORP;JP3546800008;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Sanità;0,02%
+760;FRESENIUS SE AND CO KGAA;DE0005785604;Germania;EUR;XETRA;Azionari;Ba1;DAX Index;Sanità;0,02%
+761;SUN HUNG KAI PROPERTIES LTD;HK0016000132;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Immobiliare;0,02%
+762;BOMBARDIER INC;CA0977518616;Canada;CAD;Toronto Stock Exchange;Azionari;-;-;Prodotti industriali;0,02%
+763;INTERNATIONAL PAPER;US4601461035;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Materiali;0,02%
+764;LUNDIN MINING CORP;CA5503721063;Cile;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Materiali;0,02%
+765;AEON LTD;JP3388200002;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa1;TOPIX Index;Beni di prima necessità;0,02%
+766;CREDIT AGRICOLE SA;FR0000045072;Francia;EUR;Euronext Paris;Azionari;A2;CAC 40 Index;Finanza;0,02%
+767;BRAMBLES LTD;AU000000BXB1;Australia;AUD;Australian Stock Exchange;Azionari;Baa1;ASX All Ordinaries Index;Prodotti industriali;0,02%
+768;ASICS CORP;JP3118000003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,02%
+769;GENERAL MILLS INC;US3703341046;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Beni di prima necessità;0,02%
+770;COEUR MINING INC;US1921085049;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B3;S&P 500 Index;Materiali;0,02%
+771;IHI CORP;JP3134800006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,02%
+772;LOEWS CORP;US5404241086;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,02%
+773;FEDEX FREIGHT HOLDING COMPANY INC;US3143521058;Stati Uniti d'America;USD;-;Azionari;-;-;Prodotti industriali;0,02%
+774;HEXAGON CLASS B;SE0015961909;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Tecnologia dell'informazione;0,02%
+775;ESSEX PROPERTY TRUST REIT INC;US2971781057;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,02%
+776;TERNA RETE ELETTRICA NAZIONALE;IT0003242622;Italia;EUR;Milan Stock Exchange;Azionari;Baa1;FTSE Italia All-Share Index;Servizi di pubblica utilità;0,02%
+777;NIPPON STEEL CORP;JP3381000003;Giappone;JPY;Tokyo Stock Exchange;Azionari;A3;TOPIX Index;Materiali;0,02%
+778;WEYERHAEUSER REIT;US9621661043;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Immobiliare;0,02%
+779;BOLIDEN;SE0020050417;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Materiali;0,02%
+780;KUBOTA CORP;JP3266400005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,02%
+781;SAAB CLASS B;SE0021921269;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,02%
+782;FORTIVE CORP;US34959J1088;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+783;NVR INC;US62944T1051;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Beni voluttuari;0,02%
+784;KAO CORP;JP3205800000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni di prima necessità;0,02%
+785;MAGNA INTERNATIONAL INC;CA5592224011;Canada;CAD;Toronto Stock Exchange;Azionari;Baa1;S&P/TSX COMPOSITE Index;Beni voluttuari;0,02%
+786;FINECOBANK BANCA FINECO;IT0000072170;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Finanza;0,02%
+787;VONOVIA;DE000A1ML7J1;Germania;EUR;XETRA;Azionari;Baa2;DAX Index;Immobiliare;0,02%
+788;NOVA LTD;IL0010845571;Israele;ILS;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+789;WSP GLOBAL INC;CA92938W2022;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Prodotti industriali;0,02%
+790;HANNOVER RUECK;DE0008402215;Germania;EUR;XETRA;Azionari;Aa3;DAX Index;Finanza;0,02%
+791;SANTOS LTD;AU000000STO6;Australia;AUD;Australian Stock Exchange;Azionari;Baa1;ASX All Ordinaries Index;Energia;0,02%
+792;BROWN & BROWN INC;US1152361010;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,02%
+793;ZIMMER BIOMET HOLDINGS INC;US98956P1021;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Sanità;0,02%
+794;BROADRIDGE FINANCIAL SOLUTIONS INC;US11133T1034;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Prodotti industriali;0,02%
+795;KIMCO REALTY REIT CORP;US49446R1095;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,02%
+796;EMERA INC;CA2908761018;Canada;CAD;Toronto Stock Exchange;Azionari;Baa1;S&P/TSX COMPOSITE Index;Servizi di pubblica utilità;0,02%
+797;ALFA LAVAL;SE0000695876;Svezia;SEK;Stockholm Stock Exchange;Azionari;Baa1;OMX Stockholm 30 Index;Prodotti industriali;0,02%
+798;SUPER MICRO COMPUTER INC;US86800U3023;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+799;ESSITY CLASS B;SE0009922164;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Beni di prima necessità;0,02%
+800;IMPERIAL OIL LTD;CA4530384086;Canada;CAD;Toronto Stock Exchange;Azionari;Aaa;S&P/TSX COMPOSITE Index;Energia;0,02%
+801;JULIUS BAER GRUPPE AG;CH0102484968;Svizzera;CHF;Scoach Switzerland;Azionari;A2;Swiss Market Index;Finanza;0,02%
+802;IDEX CORP;US45167R1041;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+803;MITSUI KINZOKU LIMITED LTD;JP3888400003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,02%
+804;LENNOX INTERNATIONAL INC;US5261071071;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+805;INCYTE CORP;US45337C1027;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,02%
+806;GREAT WEST LIFECO INC;CA39138C1068;Canada;CAD;Toronto Stock Exchange;Azionari;A1;S&P/TSX COMPOSITE Index;Finanza;0,02%
+807;LYONDELLBASELL INDUSTRIES CLASS A;NL0009434992;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Materiali;0,02%
+808;INVITATION HOMES INC;US46187W1071;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,02%
+809;SINGAPORE EXCHANGE LTD;SG1J26887955;Singapore;SGD;-;Azionari;-;-;Finanza;0,02%
+810;TRACTOR SUPPLY;US8923561067;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni voluttuari;0,02%
+811;ANNALY CAPITAL MANAGEMENT REIT INC;US0357108390;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,02%
+812;CAPGEMINI;FR0000125338;Francia;EUR;Euronext Paris;Azionari;Baa2;CAC 40 Index;Tecnologia dell'informazione;0,02%
+813;LOGITECH INTERNATIONAL SA;CH0025751329;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Tecnologia dell'informazione;0,02%
+814;CDW CORP;US12514G1085;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+815;W. P. CAREY REIT INC;US92936U1097;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,02%
+816;SECOM LTD;JP3421800008;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,02%
+817;CENTRAL JAPAN RAILWAY;JP3566800003;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Prodotti industriali;0,02%
+818;TELEFONICA SA;ES0178430E18;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa2;IBEX 35 Index;Servizi di comunicazione;0,02%
+819;FIRST CITIZENS BANCSHARES INC CLAS;US31946M1036;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,02%
+820;TOURMALINE OIL CORP;CA89156V1067;Canada;CAD;Toronto Stock Exchange;Azionari;B1;S&P/TSX COMPOSITE Index;Energia;0,02%
+821;POSTE ITALIANE;IT0003796171;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Finanza;0,02%
+822;CF INDUSTRIES HOLDINGS INC;US1252691001;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Materiali;0,02%
+823;TELECOM ITALIA;IT0005712671;Italia;EUR;-;Azionari;-;-;Servizi di comunicazione;0,02%
+824;CELLNEX TELECOM;ES0105066007;Spagna;EUR;Mercado Continuo Espana;Azionari;-;IBEX 35 Index;Servizi di comunicazione;0,02%
+825;NORDSON CORP;US6556631025;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,02%
+826;BROOKFIELD ASSET MANAGEMENT VOTING;CA1130041058;Canada;CAD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,02%
+827;ALAMOS GOLD INC CLASS A;CA0115321089;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Materiali;0,02%
+828;GLOBAL PAYMENTS INC;US37940X1028;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,02%
+829;DAIWA HOUSE INDUSTRY LTD;JP3505000004;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Immobiliare;0,02%
+830;NEUROCRINE BIOSCIENCES INC;US64125C1099;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,02%
+831;DECKERS OUTDOOR CORP;US2435371073;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,02%
+832;TEXTRON INC;US8832031012;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+833;PERNOD RICARD SA;FR0000120693;Francia;EUR;Euronext Paris;Azionari;Baa3;CAC 40 Index;Beni di prima necessità;0,02%
+834;RENTOKIL INITIAL PLC;GB00B082RF11;Regno Unito;GBP;London Stock Exchange;Azionari;Baa2;FTSE 100 Index;Prodotti industriali;0,02%
+835;TYSON FOODS INC CLASS A;US9024941034;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Beni di prima necessità;0,02%
+836;MASCO CORP;US5745991068;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+837;GENMAB;DK0010272202;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;OMX COPENHAGEN 20 Index;Sanità;0,02%
+838;SCREEN HOLDINGS LTD;JP3494600004;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,02%
+839;GENUINE PARTS;US3724601055;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,02%
+840;CLP HOLDINGS LTD;HK0002007356;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Servizi di pubblica utilità;0,02%
+841;BT GROUP PLC;GB0030913577;Regno Unito;GBP;London Stock Exchange;Azionari;Baa2;FTSE 100 Index;Servizi di comunicazione;0,02%
+842;WOLTERS KLUWER NV;NL0000395903;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;Baa1;Amsterdam Exchanges Index;Prodotti industriali;0,02%
+843;BUNGE GLOBAL SA;CH1300646267;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni di prima necessità;0,02%
+844;ORIENTAL LAND LTD;JP3198900007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,02%
+845;KAJIMA CORP;JP3210200006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,02%
+846;EDP ENERGIAS DE PORTUGAL SA;PTEDP0AM0009;Portogallo;EUR;Euronext Lisbon;Azionari;-;-;Servizi di pubblica utilità;0,02%
+847;MID AMERICA APARTMENT COMMUNITIES;US59522J1034;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,02%
+848;DICKS SPORTING INC;US2533931026;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,02%
+849;RPM INTERNATIONAL INC;US7496851038;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Materiali;0,02%
+850;SNAM;IT0003153415;Italia;EUR;Milan Stock Exchange;Azionari;Baa1;FTSE Italia All-Share Index;Servizi di pubblica utilità;0,02%
+851;TOROMONT INDUSTRIES LTD;CA8911021050;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Prodotti industriali;0,02%
+852;BEST BUY INC;US0865161014;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,02%
+853;UPM-KYMMENE;FI0009005987;Finlandia;EUR;Helsinki Stock Exchange;Azionari;Ba1;OMX Helsinki Index;Materiali;0,02%
+854;INFORMA PLC;GB00BMJ6DW54;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Servizi di comunicazione;0,02%
+855;DSM FIRMENICH AG;CH1216478797;Svizzera;EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Materiali;0,02%
+856;KINGSPAN GROUP PLC;IE0004927939;Irlanda;EUR;Irish Stock Exchange;Azionari;-;ISEQ Irish Overall Index;Prodotti industriali;0,02%
+857;CARLISLE COMPANIES INC;US1423391002;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+858;PINNACLE FINANCIAL PARTNERS INC;US72348N1090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,02%
+859;WR BERKLEY CORP;US0844231029;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Finanza;0,02%
+860;JACOBS SOLUTIONS INC;US46982L1089;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+861;NIDEC CORP;JP3734800000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,02%
+862;BAWAG GROUP AG;AT0000BAWAG2;Austria;EUR;Vienna Stock Exchange;Azionari;-;Austrian Traded Index;Finanza;0,02%
+863;SINGAPORE TECHNOLOGIES ENGINEERING;SG1F60858221;Singapore;SGD;-;Azionari;-;-;Prodotti industriali;0,02%
+864;JX ADVANCED METALS CORP;JP3379550001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,02%
+865;STRAUMANN HOLDING AG;CH1175448666;Svizzera;CHF;-;Azionari;-;Swiss Market Index;Sanità;0,02%
+866;TELSTRA GROUP LTD;AU000000TLS2;Australia;AUD;Australian Stock Exchange;Azionari;A2;ASX All Ordinaries Index;Servizi di comunicazione;0,02%
+867;PTC INC;US69370C1009;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+868;SUN COMMUNITIES REIT INC;US8666741041;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Immobiliare;0,02%
+869;FLUTTER ENTERTAINMENT PLC;IE00BWT6H894;Stati Uniti d'America;USD;London Stock Exchange;Azionari;-;FTSE 100 Index;Beni voluttuari;0,02%
+870;ECHOSTAR CORP CLASS A;US2787681061;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,02%
+871;NORSK HYDRO;NO0005052605;Norvegia;NOK;Oslo Stock Exchange;Azionari;Baa2;Oslo SE All-share Index;Materiali;0,02%
+872;LAS VEGAS SANDS CORP;US5178341070;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa3;S&P 500 Index;Beni voluttuari;0,02%
+873;BALL CORP;US0584981064;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Materiali;0,02%
+874;SCENTRE GROUP UNIT;AU000000SCG8;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Immobiliare;0,02%
+875;KERRY GROUP PLC;IE0004906560;Irlanda;EUR;Irish Stock Exchange;Azionari;Baa2;ISEQ Irish Overall Index;Beni di prima necessità;0,02%
+876;HEICO CORP;US4228061093;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+877;KAWASAKI HEAVY INDUSTRIES LTD;JP3224200000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,02%
+878;ASAHI KASEI CORP;JP3111200006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,02%
+879;SUNCORP GROUP LTD;AU000000SUN6;Australia;AUD;Australian Stock Exchange;Azionari;A2;ASX All Ordinaries Index;Finanza;0,02%
+880;MONCLER;IT0004965148;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Beni voluttuari;0,02%
+881;DAIFUKU LTD;JP3497400006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,02%
+882;SWISS PRIME SITE AG;CH0008038389;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Immobiliare;0,02%
+883;ROGERS COMMUNICATIONS NON-VOTING I;CA7751092007;Canada;CAD;Toronto Stock Exchange;Azionari;Baa1;S&P/TSX COMPOSITE Index;Servizi di comunicazione;0,02%
+884;DASSAULT SYSTEMES;FR0014003TT8;Francia;EUR;-;Azionari;-;-;Tecnologia dell'informazione;0,02%
+885;KANSAI ELECTRIC POWER INC;JP3228600007;Giappone;JPY;Tokyo Stock Exchange;Azionari;A3;TOPIX Index;Servizi di pubblica utilità;0,02%
+886;ATLASSIAN CORP CLASS A;US0494681010;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,02%
+887;SS AND C TECHNOLOGIES HOLDINGS INC;US78467J1007;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,02%
+888;PLS GROUP LTD;AU000000PLS0;Australia;AUD;-;Azionari;-;-;Materiali;0,02%
+889;DELTA AIR LINES INC;US2473617023;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B1;S&P 500 Index;Prodotti industriali;0,02%
+890;NESTE;FI0009013296;Finlandia;EUR;Helsinki Stock Exchange;Azionari;-;OMX Helsinki Index;Energia;0,02%
+891;NATURGY ENERGY GROUP SA;ES0116870314;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa2;IBEX 35 Index;Servizi di pubblica utilità;0,02%
+892;COMPUTERSHARE LTD;AU000000CPU5;Stati Uniti d'America;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Prodotti industriali;0,02%
+893;RIVIAN AUTOMOTIVE INC CLASS A;US76954A1034;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni voluttuari;0,02%
+894;NIPPON YUSEN;JP3753000003;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa2;TOPIX Index;Prodotti industriali;0,02%
+895;SYMRISE AG;DE000SYM9999;Germania;EUR;XETRA;Azionari;-;DAX Index;Materiali;0,02%
+896;WATSCO INC;US9426222009;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,02%
+897;SHIONOGI LTD;JP3347200002;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Sanità;0,02%
+898;T&D HOLDINGS INC;JP3539220008;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,02%
+899;EVEREST GROUP LTD;BMG3223R1088;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;A3;S&P 500 Index;Finanza;0,02%
+900;ENDESA SA;ES0130670112;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa2;IBEX 35 Index;Servizi di pubblica utilità;0,01%
+901;JAPAN EXCHANGE GROUP INC;JP3183200009;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,01%
+902;ASAHI GROUP HOLDINGS LTD;JP3116000005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni di prima necessità;0,01%
+903;MEDLINE INC CLASS A;US58507V1070;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,01%
+904;KIRIN HOLDINGS LTD;JP3258000003;Giappone;JPY;Tokyo Stock Exchange;Azionari;A3;TOPIX Index;Beni di prima necessità;0,01%
+905;SUMITOMO METAL MINING LTD;JP3402600005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,01%
+906;WHITECAP RESOURCES INC;CA96467A2002;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Energia;0,01%
+907;ZSCALER INC;US98980G1022;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,01%
+908;UNITED UTILITIES GROUP PLC;GB00B39J2M42;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Servizi di pubblica utilità;0,01%
+909;INSURANCE AUSTRALIA GROUP LTD;AU000000IAG3;Australia;AUD;Australian Stock Exchange;Azionari;A2;ASX All Ordinaries Index;Finanza;0,01%
+910;FISHER AND PAYKEL HEALTHCARE CORPO;NZFAPE0001S2;Nuova Zelanda;NZD;New Zealand Exchange;Azionari;-;NZX 50 Index;Sanità;0,01%
+911;ORIGIN ENERGY LTD;AU000000ORG5;Australia;AUD;Australian Stock Exchange;Azionari;Baa2;ASX All Ordinaries Index;Servizi di pubblica utilità;0,01%
+912;EURONEXT NV;NL0006294274;Paesi Bassi (Olanda);EUR;Euronext Paris;Azionari;-;CAC 40 Index;Finanza;0,01%
+913;APTIV PLC;JE00BTDN8H13;Irlanda;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,01%
+914;ISRAEL DISCOUNT BANK LTD;IL0006912120;Israele;ILS;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,01%
+915;KEPPEL LTD;SG1U68934629;Singapore;SGD;-;Azionari;-;-;Prodotti industriali;0,01%
+916;SOUTH32 LTD;AU000000S320;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Materiali;0,01%
+917;PHOENIX FINANCIAL LTD;IL0007670123;Israele;ILS;-;Azionari;-;-;Finanza;0,01%
+918;STELLANTIS NV;NL00150001Q9;Paesi Bassi (Olanda);EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Beni voluttuari;0,01%
+919;HYDRO ONE LTD;CA4488112083;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Servizi di pubblica utilità;0,01%
+920;COCA COLA HBC AG;CH0198251305;Italia;GBP;London Stock Exchange;Azionari;Baa1;FTSE 100 Index;Beni di prima necessità;0,01%
+921;SCHINDLER HOLDING PAR AG;CH0024638196;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Prodotti industriali;0,01%
+922;GEN DIGITAL INC;US6687711084;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,01%
+923;AVERY DENNISON CORP;US0536111091;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Materiali;0,01%
+924;NITTO DENKO CORP;JP3684000007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,01%
+925;ROLLINS INC;US7757111049;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,01%
+926;TAISEI CORP;JP3443600006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+927;KONGSBERG GRUPPEN;NO0013536151;Norvegia;NOK;Oslo Stock Exchange;Azionari;-;Oslo SE All-share Index;Prodotti industriali;0,01%
+928;SIEMENS HEALTHINEERS AG;DE000SHL1006;Germania;EUR;XETRA;Azionari;-;DAX Index;Sanità;0,01%
+929;SUMITOMO REALTY & DEVELOPMENT LTD;JP3409000001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Immobiliare;0,01%
+930;REGENCY CENTERS REIT CORP;US7588491032;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Immobiliare;0,01%
+931;FUJI ELECTRIC LTD;JP3820000002;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+932;TRANSUNION;US89400J1079;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,01%
+933;OBAYASHI CORP;JP3190000004;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+934;DAIWA SECURITIES GROUP INC;JP3502200003;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa3;TOPIX Index;Finanza;0,01%
+935;HENKEL & KGAA PREF AG;DE0006048432;Germania;EUR;XETRA;Azionari;A2;DAX Index;Beni di prima necessità;0,01%
+936;ASR NEDERLAND NV;NL0011872643;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Finanza;0,01%
+937;COOPER INC;US2166485019;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,01%
+938;EQT;SE0012853455;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Finanza;0,01%
+939;ROCKET COMPANIES INC CLASS A;US77311W1018;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,01%
+940;ROCHE HOLDING AG;CH0012032113;Svizzera;CHF;NASDAQ National Market System;Azionari;-;Swiss Market Index;Sanità;0,01%
+941;LEIDOS HOLDINGS INC;US5253271028;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Prodotti industriali;0,01%
+942;MCCORMICK & CO NON-VOTING INC;US5797802064;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni di prima necessità;0,01%
+943;RYANAIR HOLDINGS PLC;IE00BYTBXV33;Irlanda;EUR;Irish Stock Exchange;Azionari;-;ISEQ Irish Overall Index;Prodotti industriali;0,01%
+944;UNIBAIL RODAMCO WE STAPLED UNITS;FR0013326246;Francia;EUR;-;Azionari;-;-;Immobiliare;0,01%
+945;METRO INC;CA59162N1096;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Beni di prima necessità;0,01%
+946;SEKISUI HOUSE LTD;JP3420600003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+947;The invalid identifier ignored.;IE00BYQNZ507;Norvegia;USD;-;Azionari;-;-;sconosciuta;0,01%
+948;COSTAR GROUP INC;US22160N1090;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Immobiliare;0,01%
+949;ARC RESOURCES LTD;CA00208D4084;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Energia;0,01%
+950;GRACO INC;US3841091040;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,01%
+951;AGEAS SA;BE0974264930;Belgio;EUR;Euronext Brussels;Azionari;-;BEL 20 Index;Finanza;0,01%
+952;BOUYGUES SA;FR0000120503;Francia;EUR;Euronext Paris;Azionari;Baa1;CAC 40 Index;Prodotti industriali;0,01%
+953;BELIMO N AG;CH1101098163;Svizzera;CHF;-;Azionari;-;Swiss Market Index;Prodotti industriali;0,01%
+954;TOAST INC CLASS A;US8887871080;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,01%
+955;SONOVA HOLDING AG;CH0012549785;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Sanità;0,01%
+956;CARLSBERG CLASS B;DK0010181759;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;OMX COPENHAGEN 20 Index;Beni di prima necessità;0,01%
+957;ALLEGION PLC;IE00BFRT3W74;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,01%
+958;SEGRO REIT PLC;GB00B5ZN1N88;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Immobiliare;0,01%
+959;FIDELITY NATIONAL FINANCIAL INC;US31620R3030;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,01%
+960;GAMING AND LEISURE PROPERTIES REIT;US36467J1088;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Ba1;NASDAQ Composite Index;Immobiliare;0,01%
+961;SHARKNINJA INC;KYG8068L1086;Hong Kong;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,01%
+962;OSAKA GAS LTD;JP3180400008;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Servizi di pubblica utilità;0,01%
+963;POUND STERLING;_CURRENCYGBP;Regno Unito;GBP;-;Cash;-;-;sconosciuta;0,01%
+964;SMITH AND NEPHEW PLC;GB0009223206;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Sanità;0,01%
+965;LINK REAL ESTATE INVESTMENT TRUST;HK0823032773;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Immobiliare;0,01%
+966;CIRCLE INTERNET GROUP INC CLASS A;US1725731079;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,01%
+967;ENLIGHT RENEWABLE ENERGY LTD;IL0007200111;Israele;ILS;-;Azionari;-;-;Servizi di pubblica utilità;0,01%
+968;CHOCOLADEFABRIKEN LINDT & SPRUENGL;CH0010570759;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Beni di prima necessità;0,01%
+969;CLOROX;US1890541097;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa1;S&P 500 Index;Beni di prima necessità;0,01%
+970;IA FINANCIAL INC;CA45075E1043;Canada;CAD;-;Azionari;-;-;Finanza;0,01%
+971;ALTAGAS LTD;CA0213611001;Canada;CAD;Toronto Stock Exchange;Azionari;Baa2;S&P/TSX COMPOSITE Index;Servizi di pubblica utilità;0,01%
+972;CAPITALAND INTEGRATED COMMERCIAL T;SG1M51904654;Singapore;SGD;-;Azionari;-;-;Immobiliare;0,01%
+973;CARLYLE GROUP INC;US14316J1088;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,01%
+974;ENDEAVOUR MINING;GB00BL6K5J42;Regno Unito;GBP;-;Azionari;-;-;Materiali;0,01%
+975;LULULEMON ATHLETICA INC;US5500211090;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Beni voluttuari;0,01%
+976;CHUBU ELECTRIC POWER INC;JP3526600006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Servizi di pubblica utilità;0,01%
+977;GEORGE WESTON LTD;CA9611485090;Canada;CAD;Toronto Stock Exchange;Azionari;Baa2;S&P/TSX COMPOSITE Index;Beni di prima necessità;0,01%
+978;CGI INC CLASS A;CA12532H1047;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Tecnologia dell'informazione;0,01%
+979;TRIMBLE INC;US8962391004;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,01%
+980;ADMIRAL GROUP PLC;GB00B02J6398;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Finanza;0,01%
+981;LYNAS RARE EARTHS LTD;AU000000LYC6;Australia;AUD;-;Azionari;-;-;Materiali;0,01%
+982;YOKOHAMA FINANCIAL GROUP INC;JP3305990008;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,01%
+983;TRADEWEB MARKETS INC CLASS A;US8926721064;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,01%
+984;PENTAIR PLC;IE00BLS09M33;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Prodotti industriali;0,01%
+985;TYLER TECHNOLOGIES INC;US9022521051;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;B1;S&P 500 Index;Tecnologia dell'informazione;0,01%
+986;MITSUI OSK LINES LTD;JP3362700001;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa3;TOPIX Index;Prodotti industriali;0,01%
+987;TFI INTERNATIONAL INC;CA87241L1094;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Prodotti industriali;0,01%
+988;BANDAI NAMCO HOLDINGS INC;JP3778630008;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+989;TELIA COMPANY;SE0000667925;Svezia;SEK;Stockholm Stock Exchange;Azionari;A3;OMX Stockholm 30 Index;Servizi di comunicazione;0,01%
+990;SAMSARA INC CLASS A;US79589L1061;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Tecnologia dell'informazione;0,01%
+991;INTERTEK GROUP PLC;GB0031638363;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Prodotti industriali;0,01%
+992;TOKYO GAS LTD;JP3573000001;Giappone;JPY;Tokyo Stock Exchange;Azionari;Aa3;TOPIX Index;Servizi di pubblica utilità;0,01%
+993;METSO CORPORATION;FI0009014575;Finlandia;EUR;Helsinki Stock Exchange;Azionari;-;OMX Helsinki Index;Prodotti industriali;0,01%
+994;SEVERN TRENT PLC;GB00B1FH8J72;Regno Unito;GBP;London Stock Exchange;Azionari;Baa1;FTSE 100 Index;Servizi di pubblica utilità;0,01%
+995;KEYERA CORP;CA4932711001;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Energia;0,01%
+996;JARDINE MATHESON HOLDINGS LTD;BMG507361001;Hong Kong;USD;-;Azionari;-;-;Prodotti industriali;0,01%
+997;BANKINTER SA;ES0113679I37;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa3;IBEX 35 Index;Finanza;0,01%
+998;KUEHNE UND NAGEL INTERNATIONAL AG;CH0025238863;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Prodotti industriali;0,01%
+999;OLYMPUS CORP;JP3201200007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Sanità;0,01%
+1000;AKER BP;NO0010345853;Norvegia;NOK;Oslo Stock Exchange;Azionari;-;Oslo SE All-share Index;Energia;0,01%
+1001;FORTUM;FI0009007132;Finlandia;EUR;Helsinki Stock Exchange;Azionari;A2;OMX Helsinki Index;Servizi di pubblica utilità;0,01%
+1002;BUNZL;GB00B0744B38;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Prodotti industriali;0,01%
+1003;WASHINGTON H SOUL PATTINSON & COMP;AU000000SOL3;Australia;AUD;Australian Stock Exchange;Azionari;B1;ASX All Ordinaries Index;Finanza;0,01%
+1004;MIZRAHI TEFAHOT BANK LTD;IL0006954379;Israele;ILS;-;Azionari;-;-;Finanza;0,01%
+1005;RYOHIN KEIKAKU LTD;JP3976300008;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+1006;FOX CORP CLASS A;US35137L1052;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,01%
+1007;TELE2 CLASS B;SE0005190238;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Servizi di comunicazione;0,01%
+1008;AKZO NOBEL NV;NL0013267909;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Materiali;0,01%
+1009;ACCOR SA;FR0000120404;Francia;EUR;Euronext Paris;Azionari;Baa3;CAC 40 Index;Beni voluttuari;0,01%
+1010;GEA GROUP AG;DE0006602006;Germania;EUR;XETRA;Azionari;Baa3;DAX Index;Prodotti industriali;0,01%
+1011;SIGMA HEALTHCARE LTD;AU000000SIG5;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Sanità;0,01%
+1012;CENTRICA PLC;GB00B033F229;Regno Unito;GBP;London Stock Exchange;Azionari;A3;FTSE 100 Index;Servizi di pubblica utilità;0,01%
+1013;SMITHS GROUP PLC;GB00B1WY2338;Regno Unito;GBP;London Stock Exchange;Azionari;Baa2;FTSE 100 Index;Prodotti industriali;0,01%
+1014;NOMURA RESEARCH INSTITUTE LTD;JP3762800005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,01%
+1015;CARREFOUR SA;FR0000120172;Francia;EUR;Euronext Paris;Azionari;Baa2;CAC 40 Index;Beni di prima necessità;0,01%
+1016;AEGON LTD;BMG0112X1056;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Finanza;0,01%
+1017;OERSTED;DK0060094928;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;OMX COPENHAGEN 20 Index;Servizi di pubblica utilità;0,01%
+1018;THOMSON REUTERS CORP;CA8849038812;Canada;CAD;-;Azionari;-;-;Prodotti industriali;0,01%
+1019;CHOCOLADEFABRIKEN LINDT & SPRUENGL;CH0010570767;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Beni di prima necessità;0,01%
+1020;CHARTER COMMUNICATIONS INC CLASS A;US16119P1084;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,01%
+1021;EIFFAGE SA;FR0000130452;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Prodotti industriali;0,01%
+1022;CHECK POINT SOFTWARE TECHNOLOGIES;IL0010824113;Israele;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Tecnologia dell'informazione;0,01%
+1023;TORAY INDUSTRIES INC;JP3621000003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,01%
+1024;KONAMI GROUP CORP;JP3300200007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Servizi di comunicazione;0,01%
+1025;POWER ASSETS HOLDINGS LTD;HK0006000050;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Servizi di pubblica utilità;0,01%
+1026;CK ASSET HOLDINGS LTD;KYG2177B1014;Hong Kong;HKD;-;Azionari;-;-;Immobiliare;0,01%
+1027;BANCO COMERCIAL PORTUGUES SA;PTBCP0AM0015;Portogallo;EUR;Euronext Lisbon;Azionari;-;-;Finanza;0,01%
+1028;UNIPOL ASSICURAZIONI SPA;IT0004810054;Italia;EUR;Milan Stock Exchange;Azionari;Ba2;FTSE Italia All-Share Index;Finanza;0,01%
+1029;APA GROUP UNITS;AU000000APA1;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Servizi di pubblica utilità;0,01%
+1030;INSULET CORP;US45784P1012;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Sanità;0,01%
+1031;M&G PLC;GB00BKFB1C65;Regno Unito;GBP;-;Azionari;-;-;Finanza;0,01%
+1032;PAN PACIFIC INTERNATIONAL HOLDINGS;JP3639650005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+1033;DOMINOS PIZZA INC;US25754A2015;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Beni voluttuari;0,01%
+1034;MARKS AND SPENCER GROUP PLC;GB0031274896;Regno Unito;GBP;London Stock Exchange;Azionari;Baa3;FTSE 100 Index;Beni di prima necessità;0,01%
+1035;BUREAU VERITAS SA;FR0006174348;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Prodotti industriali;0,01%
+1036;SBI HOLDINGS INC;JP3436120004;Giappone;JPY;Tokyo Stock Exchange;Azionari;B1;TOPIX Index;Finanza;0,01%
+1037;MEDIBANK PRIVATE LTD;AU000000MPL3;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Finanza;0,01%
+1038;THE SAGE GROUP PLC;GB00B8C3BL03;Regno Unito;GBP;London Stock Exchange;Azionari;B1;FTSE 100 Index;Tecnologia dell'informazione;0,01%
+1039;EPIROC CLASS B;SE0015658117;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1040;REXEL SA;FR0010451203;Francia;EUR;Euronext Paris;Azionari;Ba3;CAC 40 Index;Prodotti industriali;0,01%
+1041;MINEBEA MITSUMI INC;JP3906000009;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+1042;UNITED AIRLINES HOLDINGS INC;US9100471096;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;B2;NASDAQ Composite Index;Prodotti industriali;0,01%
+1043;OMV AG;AT0000743059;Austria;EUR;Vienna Stock Exchange;Azionari;A3;Austrian Traded Index;Energia;0,01%
+1044;GRAB HOLDINGS LTD CLASS A;KYG4124C1096;Singapore;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Prodotti industriali;0,01%
+1045;JAPANESE YEN;_CURRENCYJPY;Giappone;JPY;-;Cash;-;-;sconosciuta;0,01%
+1046;HONG KONG AND CHINA GAS LTD;HK0003000038;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Servizi di pubblica utilità;0,01%
+1047;CONTINENTAL AG;DE0005439004;Germania;EUR;XETRA;Azionari;Baa3;DAX Index;Beni voluttuari;0,01%
+1048;TELENOR;NO0010063308;Norvegia;NOK;Oslo Stock Exchange;Azionari;A3;Oslo SE All-share Index;Servizi di comunicazione;0,01%
+1049;TENARIS SA;LU2598331598;Lussemburgo;EUR;-;Azionari;-;-;Energia;0,01%
+1050;SWEDISH ORPHAN BIOVITRUM;SE0000872095;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Sanità;0,01%
+1051;FRESENIUS MEDICAL CARE AG;DE0005785802;Germania;EUR;XETRA;Azionari;Ba1;DAX Index;Sanità;0,01%
+1052;MITSUBISHI CHEMICAL GROUP CORP;JP3897700005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,01%
+1053;CNH INDUSTRIAL N.V. NV;NL0010545661;Regno Unito;USD;Milan Stock Exchange;Azionari;Ba1;FTSE Italia All-Share Index;Prodotti industriali;0,01%
+1054;ATKINSREALIS GROUP INC;CA04764T1049;Canada;CAD;-;Azionari;-;-;Prodotti industriali;0,01%
+1055;TMX GROUP LTD;CA87262K1057;Canada;CAD;Toronto Stock Exchange;Azionari;B1;S&P/TSX COMPOSITE Index;Finanza;0,01%
+1056;SKF CLASS B;SE0000108227;Svezia;SEK;Stockholm Stock Exchange;Azionari;Baa1;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1057;SUBARU CORP;JP3814800003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+1058;NEWS CORP CLASS A;US65249B1098;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;Baa1;NASDAQ Composite Index;Servizi di comunicazione;0,01%
+1059;WH GROUP LTD;KYG960071028;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Beni di prima necessità;0,01%
+1060;EVOLUTION;SE0012673267;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Beni voluttuari;0,01%
+1061;HEINEKEN HOLDING NV;NL0000008977;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Beni di prima necessità;0,01%
+1062;SKANSKA CLASS B;SE0000113250;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1063;MOWI;NO0003054108;Norvegia;NOK;Oslo Stock Exchange;Azionari;-;Oslo SE All-share Index;Beni di prima necessità;0,01%
+1064;GILDAN ACTIVEWEAR INC;CA3759161035;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Beni voluttuari;0,01%
+1065;HOCHTIEF AG;DE0006070006;Germania;EUR;XETRA;Azionari;-;DAX Index;Prodotti industriali;0,01%
+1066;GALP ENERGIA SGPS SA CLASS B;PTGAL0AM0009;Portogallo;EUR;Euronext Lisbon;Azionari;-;-;Energia;0,01%
+1067;CCL INDUSTRIES INC CLASS B;CA1249003098;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Materiali;0,01%
+1068;SINGAPORE DOLLAR;_CURRENCYSGD;Singapore;SGD;-;Cash;-;-;sconosciuta;0,01%
+1069;TRELLEBORG CLASS B;SE0000114837;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1070;ADDTECH CLASS B;SE0014781795;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1071;AGC INC;JP3112000009;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Prodotti industriali;0,01%
+1072;KLEPIERRE REIT SA;FR0000121964;Francia;EUR;Euronext Paris;Azionari;A3;CAC 40 Index;Immobiliare;0,01%
+1073;XERO LTD;NZXROE0001S2;Nuova Zelanda;AUD;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,01%
+1074;SINGAPORE AIRLINES LTD;SG1V61937297;Singapore;SGD;-;Azionari;-;-;Prodotti industriali;0,01%
+1075;INDUSTRIVARDEN CLASS C;SE0000107203;Svezia;SEK;Stockholm Stock Exchange;Azionari;A3;OMX Stockholm 30 Index;Finanza;0,01%
+1076;CHIBA BANK LTD;JP3511800009;Giappone;JPY;Tokyo Stock Exchange;Azionari;A1;TOPIX Index;Finanza;0,01%
+1077;HENNES & MAURITZ CLASS B;SE0000106270;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Beni voluttuari;0,01%
+1078;THE LOTTERY CORPORATION LTD;AU0000219529;Australia;AUD;-;Azionari;-;-;Beni voluttuari;0,01%
+1079;EUROFINS SCIENTIFIC;FR0014000MR3;Lussemburgo;EUR;-;Azionari;-;-;Sanità;0,01%
+1080;GFL ENVIRONMENTAL SUBORDINATE VOTI;CA36168Q1046;Canada;CAD;Toronto Stock Exchange;Azionari;-;-;Prodotti industriali;0,01%
+1081;AUSTRALIAN DOLLAR;_CURRENCYAUD;Australia;AUD;-;Cash;-;-;sconosciuta;0,01%
+1082;AUCKLAND INTERNATIONAL AIRPORT LTD;NZAIAE0002S6;Nuova Zelanda;NZD;New Zealand Exchange;Azionari;-;-;Prodotti industriali;0,01%
+1083;KNORR BREMSE AG;DE000KBX1006;Germania;EUR;XETRA;Azionari;-;DAX Index;Prodotti industriali;0,01%
+1084;YANGZIJIANG SHIPBUILDING (HOLDINGS;SG1U76934819;Cina;SGD;-;Azionari;-;-;Prodotti industriali;0,01%
+1085;CAPITALAND ASCENDAS REIT;SG1M77906915;Singapore;SGD;-;Azionari;-;-;Immobiliare;0,01%
+1086;MELROSE INDUSTRIES PLC;GB00BNGDN821;Regno Unito;GBP;-;Azionari;-;-;Prodotti industriali;0,01%
+1087;ORION CLASS B;FI0009014377;Finlandia;EUR;Helsinki Stock Exchange;Azionari;-;OMX Helsinki Index;Sanità;0,01%
+1088;A P MOLLER MAERSK CLASS B;DK0010244508;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;Baa1;OMX COPENHAGEN 20 Index;Prodotti industriali;0,01%
+1089;BEIERSDORF AG;DE0005200000;Germania;EUR;XETRA;Azionari;-;DAX Index;Beni di prima necessità;0,01%
+1090;TALANX AG;DE000TLX1005;Germania;EUR;XETRA;Azionari;A3;DAX Index;Finanza;0,01%
+1091;EQUINOX GOLD CORP;CA29446Y5020;Canada;CAD;-;Azionari;-;-;Materiali;0,01%
+1092;MILLICOM INTERNATIONAL CELLULAR SA;LU0038705702;Svezia;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,01%
+1093;MAKITA CORP;JP3862400003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+1094;SHIMIZU CORP;JP3358800005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+1095;MAGNUM ICE CREAM NV;NL0015002MS2;Paesi Bassi (Olanda);EUR;-;Azionari;-;-;Beni di prima necessità;0,01%
+1096;HYATT HOTELS CORP CLASS A;US4485791028;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;Baa2;S&P 500 Index;Beni voluttuari;0,01%
+1097;RAIFFEISEN BANK INTERNATIONAL AG;AT0000606306;Austria;EUR;Vienna Stock Exchange;Azionari;A2;Austrian Traded Index;Finanza;0,01%
+1098;DANISH KRONE;_CURRENCYDKK;Danimarca;DKK;-;Cash;-;-;sconosciuta;0,01%
+1099;TRYG;DK0060636678;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;OMX COPENHAGEN 20 Index;Finanza;0,01%
+1100;FRESNILLO PLC;GB00B2QPKJ12;Regno Unito;GBP;London Stock Exchange;Azionari;Baa2;FTSE 100 Index;Materiali;0,01%
+1101;ACCIONA SA;ES0125220311;Spagna;EUR;Mercado Continuo Espana;Azionari;-;IBEX 35 Index;Servizi di pubblica utilità;0,01%
+1102;ELEMENT FLEET MANAGEMENT CORP;CA2861812014;Canada;CAD;Toronto Stock Exchange;Azionari;B1;S&P/TSX COMPOSITE Index;Prodotti industriali;0,01%
+1103;STANDARD LIFE PLC;GB00BGXQNP29;Regno Unito;GBP;-;Azionari;-;-;Finanza;0,01%
+1104;STANTEC INC;CA85472N1096;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Prodotti industriali;0,01%
+1105;ORKLA;NO0003733800;Norvegia;NOK;Oslo Stock Exchange;Azionari;-;Oslo SE All-share Index;Beni di prima necessità;0,01%
+1106;YOKOGAWA ELECTRIC CORP;JP3955000009;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,01%
+1107;BRENNTAG;DE000A1DAHH0;Germania;EUR;XETRA;Azionari;Baa3;DAX Index;Prodotti industriali;0,01%
+1108;PANDORA;DK0060252690;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;OMX COPENHAGEN 20 Index;Beni voluttuari;0,01%
+1109;YARA INTERNATIONAL;NO0010208051;Brasile;NOK;Oslo Stock Exchange;Azionari;Baa2;Oslo SE All-share Index;Materiali;0,01%
+1110;COREBRIDGE FINANCIAL INC;US21871X1090;Stati Uniti d'America;USD;New York Stock Exchange;Azionari;-;S&P 500 Index;Finanza;0,01%
+1111;WISE PLC CLASS A;JE00BQKY0816;Jersey;GBP;-;Azionari;-;-;Finanza;0,01%
+1112;PRO MEDICUS LTD;AU000000PME8;Australia;AUD;-;Azionari;-;-;Sanità;0,01%
+1113;OBIC LTD;JP3173400007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,01%
+1114;COLOPLAST CLASS B;DK0060448595;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;OMX COPENHAGEN 20 Index;Sanità;0,01%
+1115;ISUZU MOTORS LTD;JP3137200006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+1116;BCE INC;CA05534B7604;Canada;CAD;Toronto Stock Exchange;Azionari;Baa2;S&P/TSX COMPOSITE Index;Servizi di comunicazione;0,01%
+1117;WEST JAPAN RAILWAY;JP3659000008;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+1118;SPIRAX GROUP PLC;GB00BWFGQN14;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Prodotti industriali;0,01%
+1119;MITSUBISHI HC CAPITAL INC;JP3499800005;Giappone;JPY;Tokyo Stock Exchange;Azionari;A3;TOPIX Index;Finanza;0,01%
+1120;HONGKONG LAND HOLDINGS LTD;BMG4587L1090;Hong Kong;USD;-;Azionari;-;-;Immobiliare;0,01%
+1121;ASSOCIATED BRITISH FOODS PLC;GB0006731235;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Beni di prima necessità;0,01%
+1122;INFRATIL LTD;NZIFTE0003S3;Nuova Zelanda;NZD;-;Azionari;-;-;Finanza;0,01%
+1123;DELIVERY HERO;DE000A2E4K43;Repubblica di Corea (Corea del Sud);EUR;XETRA;Azionari;-;DAX Index;Beni voluttuari;0,01%
+1124;ITALGAS;IT0005211237;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Servizi di pubblica utilità;0,01%
+1125;SVENSKA CELLULOSA AKTIEBOLAGET SCA;SE0000112724;Svezia;SEK;Stockholm Stock Exchange;Azionari;Baa1;OMX Stockholm 30 Index;Materiali;0,01%
+1126;INTERNATIONAL AIRLINES GROUP SA;ES0177542018;Regno Unito;EUR;London Stock Exchange;Azionari;Ba2;FTSE 100 Index;Prodotti industriali;0,01%
+1127;QIAGEN NV;NL0015002SN0;Paesi Bassi (Olanda);EUR;-;Azionari;-;DAX Index;Sanità;0,01%
+1128;SECURITAS CLASS B;SE0000163594;Svezia;SEK;Stockholm Stock Exchange;Azionari;Baa2;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1129;PEARSON PLC;GB0006776081;Regno Unito;GBP;London Stock Exchange;Azionari;Baa1;FTSE 100 Index;Beni voluttuari;0,01%
+1130;GALAXY ENTERTAINMENT GROUP LTD;HK0027032686;Macao;HKD;-;Azionari;-;Hang Seng Index;Beni voluttuari;0,01%
+1131;CAR GROUP LTD;AU000000CAR3;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Servizi di comunicazione;0,01%
+1132;SHIMANO INC;JP3358000002;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+1133;HENKEL AG;DE0006048408;Germania;EUR;XETRA;Azionari;A2;DAX Index;Beni di prima necessità;0,01%
+1134;CAE INC;CA1247651088;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Prodotti industriali;0,01%
+1135;THE SWATCH GROUP AG;CH0012255151;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Beni voluttuari;0,01%
+1136;AISIN CORP;JP3102000001;Giappone;JPY;Tokyo Stock Exchange;Azionari;A1;TOPIX Index;Beni voluttuari;0,01%
+1137;SCOUT24 N;DE000A12DM80;Germania;EUR;XETRA;Azionari;-;DAX Index;Servizi di comunicazione;0,01%
+1138;LIFCO CLASS B;SE0015949201;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1139;ELIA GROUP SA;BE0003822393;Belgio;EUR;Euronext Brussels;Azionari;A3;BEL 20 Index;Servizi di pubblica utilità;0,01%
+1140;FOX CORP CLASS B;US35137L2043;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Servizi di comunicazione;0,01%
+1141;EXOR NV;NL0012059018;Paesi Bassi (Olanda);EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Finanza;0,01%
+1142;SCHRODERS PLC;GB00BP9LHF23;Regno Unito;GBP;-;Azionari;-;-;Finanza;0,01%
+1143;GROUPE BRUXELLES LAMBERT NV;BE0003797140;Belgio;EUR;Euronext Brussels;Azionari;-;BEL 20 Index;Finanza;0,01%
+1144;AVOLTA AG;CH0023405456;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Beni voluttuari;0,01%
+1145;KIKKOMAN CORP;JP3240400006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni di prima necessità;0,01%
+1146;STOCKLAND STAPLED UNITS LTD;AU000000SGP0;Australia;AUD;Australian Stock Exchange;Azionari;A3;ASX All Ordinaries Index;Immobiliare;0,01%
+1147;RECORDATI INDUSTRIA CHIMICA E FARM;IT0003828271;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Sanità;0,01%
+1148;LY CORP;JP3933800009;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Servizi di comunicazione;0,01%
+1149;SAPUTO INC;CA8029121057;Canada;CAD;Toronto Stock Exchange;Azionari;B1;S&P/TSX COMPOSITE Index;Beni di prima necessità;0,01%
+1150;SGH LTD;AU0000364754;Australia;AUD;-;Azionari;-;-;Prodotti industriali;0,01%
+1151;RAKUTEN GROUP INC;JP3967200001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+1152;VICINITY CENTRES;AU000000VCX7;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Immobiliare;0,01%
+1153;HAREL INSURANCE INVESTMENTS & FINA;IL0005850180;Israele;ILS;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Finanza;0,01%
+1154;SCHINDLER HOLDING AG;CH0024638212;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Prodotti industriali;0,01%
+1155;IVANHOE MINES LTD CLASS A;CA46579R1047;Canada;CAD;-;Azionari;-;-;Materiali;0,01%
+1156;REDEIA CORPORACION SA;ES0173093024;Spagna;EUR;Mercado Continuo Espana;Azionari;-;IBEX 35 Index;Servizi di pubblica utilità;0,01%
+1157;DAI NIPPON PRINTING LTD;JP3493800001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+1158;ALSTOM SA;FR0010220475;Francia;EUR;Euronext Paris;Azionari;Baa3;CAC 40 Index;Prodotti industriali;0,01%
+1159;MTR CORPORATION CORP LTD;HK0066009694;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Prodotti industriali;0,01%
+1160;SONIC HEALTHCARE LTD;AU000000SHL7;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Sanità;0,01%
+1161;SAINSBURY(J) PLC;GB00B019KW72;Regno Unito;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Beni di prima necessità;0,01%
+1162;LAND SECURITIES GROUP REIT PLC;GB00BYW0PQ60;Regno Unito;GBP;-;Azionari;-;-;Immobiliare;0,01%
+1163;YAMAHA MOTOR LTD;JP3942800008;Giappone;JPY;Tokyo Stock Exchange;Azionari;A3;TOPIX Index;Beni voluttuari;0,01%
+1164;ASX LTD;AU000000ASX7;Australia;AUD;Australian Stock Exchange;Azionari;Aa3;ASX All Ordinaries Index;Finanza;0,01%
+1165;ELISA;FI0009007884;Finlandia;EUR;Helsinki Stock Exchange;Azionari;Baa2;OMX Helsinki Index;Servizi di comunicazione;0,01%
+1166;A P MOLLER MAERSK CLASS A;DK0010244425;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;Baa1;OMX COPENHAGEN 20 Index;Prodotti industriali;0,01%
+1167;CANADIAN TIRE LTD CLASS A;CA1366812024;Canada;CAD;Toronto Stock Exchange;Azionari;Baa1;S&P/TSX COMPOSITE Index;Beni voluttuari;0,01%
+1168;NITORI HOLDINGS LTD;JP3756100008;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+1169;SHISEIDO LTD;JP3351600006;Giappone;JPY;Tokyo Stock Exchange;Azionari;A2;TOPIX Index;Beni di prima necessità;0,01%
+1170;RENAULT SA;FR0000131906;Francia;EUR;Euronext Paris;Azionari;Ba1;CAC 40 Index;Beni voluttuari;0,01%
+1171;AMUNDI SA;FR0004125920;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Finanza;0,01%
+1172;EISAI LTD;JP3160400002;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Sanità;0,01%
+1173;NIPPON SANSO HOLDINGS CORP;JP3711600001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,01%
+1174;HANKYU HANSHIN HOLDINGS INC;JP3774200004;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+1175;KINGFISHER PLC;GB0033195214;Regno Unito;GBP;London Stock Exchange;Azionari;Baa2;FTSE 100 Index;Beni voluttuari;0,01%
+1176;NIPPON PAINT HOLDINGS LTD;JP3749400002;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Materiali;0,01%
+1177;TOPPAN HOLDINGS INC;JP3629000005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+1178;DR ING HC F PORSCHE PRF AG;DE000PAG9113;Germania;EUR;-;Azionari;-;DAX Index;Beni voluttuari;0,01%
+1179;DESCARTES SYSTEMS GROUP INC;CA2499061083;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Tecnologia dell'informazione;0,01%
+1180;EURO CURRENCY;_CURRENCYEUR;-;EUR;-;Cash;-;-;sconosciuta;0,01%
+1181;IDEMITSU KOSAN LTD;JP3142500002;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Energia;0,01%
+1182;SARTORIUS PREF AG;DE0007165631;Germania;EUR;-;Azionari;-;DAX Index;Sanità;0,01%
+1183;IPSEN SA;FR0010259150;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Sanità;0,01%
+1184;DEUTSCHE LUFTHANSA AG;DE0008232125;Germania;EUR;XETRA;Azionari;Ba1;DAX Index;Prodotti industriali;0,01%
+1185;ZALANDO;DE000ZAL1111;Germania;EUR;XETRA;Azionari;-;DAX Index;Beni voluttuari;0,01%
+1186;DASSAULT AVIATION SA;FR0014004L86;Francia;EUR;-;Azionari;-;-;Prodotti industriali;0,01%
+1187;TELUS;CA87971M1032;Canada;CAD;Toronto Stock Exchange;Azionari;Baa1;S&P/TSX COMPOSITE Index;Servizi di comunicazione;0,01%
+1188;INDUSTRIVARDEN CLASS A;SE0000190126;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Finanza;0,01%
+1189;STORA ENSO CLASS R;FI0009005961;Finlandia;EUR;Helsinki Stock Exchange;Azionari;Ba2;OMX Helsinki Index;Materiali;0,01%
+1190;GETLINK;FR0010533075;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Prodotti industriali;0,01%
+1191;UNICHARM CORP;JP3951600000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni di prima necessità;0,01%
+1192;OPC ENERGY LTD;IL0011415713;Israele;ILS;-;Azionari;-;-;Servizi di pubblica utilità;0,01%
+1193;KAWASAKI KISEN LTD;JP3223800008;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,01%
+1194;KESKO CLASS B;FI0009000202;Finlandia;EUR;Helsinki Stock Exchange;Azionari;-;OMX Helsinki Index;Beni di prima necessità;0,01%
+1195;LUNDIN GOLD INC;CA5503711080;Canada;CAD;-;Azionari;-;-;Materiali;0,01%
+1196;AZRIELI GROUP LTD;IL0011194789;Israele;ILS;-;Azionari;-;-;Immobiliare;0,01%
+1197;BEIJER REF CLASS B;SE0015949748;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1198;EMS-CHEMIE HOLDING AG;CH0016440353;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Materiali;0,01%
+1199;JFE HOLDINGS INC;JP3386030005;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa1;TOPIX Index;Materiali;0,01%
+1200;PORSCHE AUTOMOBIL HOLDING PREF;DE000PAH0038;Germania;EUR;XETRA;Azionari;-;DAX Index;Beni voluttuari;0,01%
+1201;NORWEGIAN KRONE;_CURRENCYNOK;Norvegia;NOK;-;Cash;-;-;sconosciuta;0,01%
+1202;NIPPON BUILDING FUND REIT INC;JP3027670003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Immobiliare;0,01%
+1203;BROOKFIELD RENEWABLE SUBORDINATE V;CA11285B1085;Canada;CAD;New York Stock Exchange;Azionari;-;S&P 500 Index;Servizi di pubblica utilità;0,01%
+1204;SANRIO LTD;JP3343200006;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,01%
+1205;FUTU HOLDINGS ADR LTD;US36118L1061;Hong Kong;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,01%
+1206;HKT TRUST AND HKT UNITS LTD;HK0000093390;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Servizi di comunicazione;0,01%
+1207;SARTORIUS STEDIM BIOTECH SA;FR0013154002;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Sanità;0,01%
+1208;ABIVAX SA;FR0012333284;Francia;EUR;-;Azionari;-;-;Sanità;0,01%
+1209;SEMBCORP INDUSTRIES LTD;SG1R50925390;Singapore;SGD;-;Azionari;-;-;Servizi di pubblica utilità;0,01%
+1210;NIBE INDUSTRIER CLASS B;SE0015988019;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1211;SITC INTERNATIONAL HOLDINGS LTD;KYG8187G1055;Cina;HKD;-;Azionari;-;-;Prodotti industriali;0,01%
+1212;SYENSQO NV;BE0974464977;Belgio;EUR;Euronext Brussels;Azionari;-;-;Materiali;0,01%
+1213;BANCA MEDIOLANUM;IT0004776628;Italia;EUR;Milan Stock Exchange;Azionari;-;FTSE Italia All-Share Index;Finanza;0,01%
+1214;JERONIMO MARTINS SA;PTJMT0AE0001;Portogallo;EUR;Euronext Lisbon;Azionari;-;-;Beni di prima necessità;0,01%
+1215;FIRSTSERVICE SUBORDINATE VOTING CO;CA33767E2024;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Immobiliare;0,01%
+1216;WISETECH GLOBAL LTD;AU000000WTC3;Australia;AUD;-;Azionari;-;-;Tecnologia dell'informazione;0,01%
+1217;ERIE INDEMNITY CLASS A;US29530P1021;Stati Uniti d'America;USD;NASDAQ National Market System;Azionari;-;NASDAQ Composite Index;Finanza;0,01%
+1218;COCHLEAR LTD;AU000000COH5;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Sanità;0,01%
+1219;JAPAN POST INSURANCE LTD;JP3233250004;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Finanza;0,01%
+1220;REA GROUP LTD;AU000000REA9;Australia;AUD;Australian Stock Exchange;Azionari;-;ASX All Ordinaries Index;Servizi di comunicazione;0,01%
+1221;GJENSIDIGE FORSIKRING;NO0010582521;Norvegia;NOK;Oslo Stock Exchange;Azionari;A2;Oslo SE All-share Index;Finanza;0,01%
+1222;INDUTRADE;SE0001515552;Svezia;SEK;Stockholm Stock Exchange;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,01%
+1223;HENSOLDT AG;DE000HAG0005;Germania;EUR;-;Azionari;-;-;Prodotti industriali;0,01%
+1224;NEXON LTD;JP3758190007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Servizi di comunicazione;0,01%
+1225;CAPITALAND INVESTMENT LTD;SGXE62145532;Singapore;SGD;-;Azionari;-;-;Immobiliare;0,01%
+1226;IGM FINANCIAL INC;CA4495861060;Canada;CAD;Toronto Stock Exchange;Azionari;A1;S&P/TSX COMPOSITE Index;Finanza;0,01%
+1227;BARRY CALLEBAUT AG;CH0009002962;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Beni di prima necessità;0,01%
+1228;DAITO TRUST CONSTRUCTION LTD;JP3486800000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Immobiliare;0,01%
+1229;CONTACT ENERGY LTD;NZCENE0001S6;Nuova Zelanda;NZD;New Zealand Exchange;Azionari;-;-;Servizi di pubblica utilità;0,01%
+1230;HONG KONG DOLLAR;_CURRENCYHKD;Hong Kong;HKD;-;Cash;-;-;sconosciuta;0,01%
+1231;LOTUS BAKERIES NV;BE0003604155;Belgio;EUR;Euronext Brussels;Azionari;-;BEL 20 Index;Beni di prima necessità;0,01%
+1232;WHARF REAL ESTATE INVESTMENT COMPA;KYG9593A1040;Hong Kong;HKD;-;Azionari;-;-;Immobiliare;0,01%
+1233;SODEXO SA;FR0000121220;Francia;EUR;Euronext Paris;Azionari;A3;CAC 40 Index;Beni voluttuari;0,01%
+1234;EDP RENEWABLES SA;ES0127797019;Spagna;EUR;Euronext Lisbon;Azionari;B1;PSI 20 Index;Servizi di pubblica utilità;0,01%
+1235;QANTAS AIRWAYS LTD;AU000000QAN2;Australia;AUD;Australian Stock Exchange;Azionari;Ba2;ASX All Ordinaries Index;Prodotti industriali;0,01%
+1236;FINANCIERE DE TUBIZE SA;BE0003823409;Belgio;EUR;Euronext Brussels;Azionari;-;BEL 20 Index;Sanità;0,01%
+1237;CAPCOM LTD;JP3218900003;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Servizi di comunicazione;0,01%
+1238;INDRA SISTEMAS SA;ES0118594417;Spagna;EUR;Mercado Continuo Espana;Azionari;-;IBEX 35 Index;Tecnologia dell'informazione;0,01%
+1239;HULIC LTD;JP3360800001;Giappone;JPY;Tokyo Stock Exchange;Azionari;B1;TOPIX Index;Immobiliare;0,01%
+1240;AYVENS SA;FR0013258662;Francia;EUR;-;Azionari;-;-;Prodotti industriali;0,01%
+1241;SINO LAND LTD;HK0083000502;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Immobiliare;0,01%
+1242;WILMAR INTERNATIONAL LTD;SG1T56930848;Cina;SGD;-;Azionari;-;-;Beni di prima necessità;0,01%
+1243;EVONIK INDUSTRIES AG;DE000EVNK013;Germania;EUR;XETRA;Azionari;Baa2;DAX Index;Materiali;0,01%
+1244;NISSAN MOTOR LTD;JP3672400003;Giappone;JPY;Tokyo Stock Exchange;Azionari;Baa1;TOPIX Index;Beni voluttuari;0,00%
+1245;CANADIAN UTILITIES LTD CLASS A;CA1367178326;Canada;CAD;Toronto Stock Exchange;Azionari;A2;S&P/TSX COMPOSITE Index;Servizi di pubblica utilità;0,00%
+1246;ZENSHO HOLDINGS LTD;JP3429300001;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni voluttuari;0,00%
+1247;HENDERSON LAND DEVELOPMENT LTD;HK0012000102;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Immobiliare;0,00%
+1248;NEW ISRAELI SHEQEL;_CURRENCYILS;Israele;ILS;-;Cash;-;-;sconosciuta;0,00%
+1249;EMPIRE LTD CLASS A;CA2918434077;Canada;CAD;Toronto Stock Exchange;Azionari;-;S&P/TSX COMPOSITE Index;Beni di prima necessità;0,00%
+1250;CHEUNG KONG INFRASTRUCTURE HOLDING;BMG2178K1009;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Servizi di pubblica utilità;0,00%
+1251;SWEDISH KRONA;_CURRENCYSEK;Svezia;SEK;-;Cash;-;-;sconosciuta;0,00%
+1252;MAPFRE SA;ES0124244E34;Spagna;EUR;Mercado Continuo Espana;Azionari;Baa1;IBEX 35 Index;Finanza;0,00%
+1253;BUZZI;IT0001347308;Italia;EUR;Milan Stock Exchange;Azionari;Ba1;FTSE Italia All-Share Index;Materiali;0,00%
+1254;VERBUND AG;AT0000746409;Austria;EUR;Vienna Stock Exchange;Azionari;Baa1;Austrian Traded Index;Servizi di pubblica utilità;0,00%
+1255;AEROPORTS DE PARIS SA;FR0010340141;Francia;EUR;Euronext Paris;Azionari;A1;CAC 40 Index;Prodotti industriali;0,00%
+1256;INPOST SA;LU2290522684;Polonia;EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Prodotti industriali;0,00%
+1257;OTSUKA CORP;JP3188200004;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Tecnologia dell'informazione;0,00%
+1258;DIETEREN GROUP SA;BE0974259880;Belgio;EUR;Euronext Brussels;Azionari;-;BEL 20 Index;Beni voluttuari;0,00%
+1259;NEW ZEALAND DOLLAR;_CURRENCYNZD;Nuova Zelanda;NZD;-;Cash;-;-;sconosciuta;0,00%
+1260;VAR ENERGI;NO0011202772;Norvegia;NOK;Oslo Stock Exchange;Azionari;-;Oslo SE All-share Index;Energia;0,00%
+1261;DAVIDE CAMPARI MILANO NV;NL0015435975;Italia;EUR;-;Azionari;-;-;Beni di prima necessità;0,00%
+1262;BC VAUD N;CH0531751755;Svizzera;CHF;-;Azionari;-;Swiss Market Index;Finanza;0,00%
+1263;LUNDBERGFORETAGEN CLASS B;SE0000108847;Svezia;SEK;Stockholm Stock Exchange;Azionari;A1;OMX Stockholm 30 Index;Finanza;0,00%
+1264;SANDS CHINA LTD;KYG7800X1079;Macao;HKD;-;Azionari;-;Hang Seng Index;Beni voluttuari;0,00%
+1265;MERIDIAN ENERGY LTD;NZMELE0002S7;Nuova Zelanda;NZD;New Zealand Exchange;Azionari;-;-;Servizi di pubblica utilità;0,00%
+1266;BOLLORE;FR0000039299;Francia;EUR;Euronext Paris;Azionari;-;CAC 40 Index;Energia;0,00%
+1267;SOFINA SA;BE0003717312;Belgio;EUR;Euronext Brussels;Azionari;-;BEL 20 Index;Finanza;0,00%
+1268;BKW N AG;CH0130293662;Svizzera;CHF;Scoach Switzerland;Azionari;-;Swiss Market Index;Servizi di pubblica utilità;0,00%
+1269;CANADIAN DOLLAR;_CURRENCYCAD;Canada;CAD;-;Cash;-;-;sconosciuta;0,00%
+1270;SWISS FRANC;_CURRENCYCHF;Svizzera;CHF;-;Cash;-;-;sconosciuta;0,00%
+1271;TOHO (TOKYO) LTD;JP3598600009;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Servizi di comunicazione;0,00%
+1272;HIKARI TSUSHIN INC;JP3783420007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,00%
+1273;ICL GROUP LTD;IL0002810146;Israele;ILS;-;Azionari;-;-;Materiali;0,00%
+1274;AIRTEL AFRICA PLC;GB00BKDRYJ47;Regno Unito;GBP;-;Azionari;-;-;Servizi di comunicazione;0,00%
+1275;SEIBU HOLDINGS INC;JP3417200007;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,00%
+1276;BMW PREF AG;DE0005190037;Germania;EUR;XETRA;Azionari;-;DAX Index;Beni voluttuari;0,00%
+1277;RATIONAL AG;DE0007010803;Germania;EUR;XETRA;Azionari;-;DAX Index;Prodotti industriali;0,00%
+1278;SWIRE PACIFIC LTD A;HK0019000162;Hong Kong;HKD;-;Azionari;-;Hang Seng Index;Prodotti industriali;0,00%
+1279;FASTIGHETS BALDER CLASS B;SE0017832488;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Immobiliare;0,00%
+1280;KYOWA KIRIN LTD;JP3256000005;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Sanità;0,00%
+1281;SALMAR;NO0010310956;Norvegia;NOK;Oslo Stock Exchange;Azionari;-;Oslo SE All-share Index;Beni di prima necessità;0,00%
+1282;GECINA SA;FR0010040865;Francia;EUR;Euronext Paris;Azionari;Baa2;CAC 40 Index;Immobiliare;0,00%
+1283;CTS EVENTIM AG;DE0005470306;Germania;EUR;XETRA;Azionari;-;DAX Index;Servizi di comunicazione;0,00%
+1284;SAGAX CLASS B;SE0005127818;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Immobiliare;0,00%
+1285;SUNTORY BEVERAGE & FOOD LTD;JP3336560002;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Beni di prima necessità;0,00%
+1286;NEMETSCHEK;DE0006452907;Germania;EUR;XETRA;Azionari;-;DAX Index;Tecnologia dell'informazione;0,00%
+1287;COVIVIO SA;FR0000064578;Francia;EUR;Euronext Paris;Azionari;Baa3;CAC 40 Index;Immobiliare;0,00%
+1288;OCTAVE INTELLIGENCE SDR PLC;SE0028329433;Stati Uniti d'America;SEK;-;Azionari;-;-;Tecnologia dell'informazione;0,00%
+1289;CVC CAPITAL PARTNERS PLC;JE00BRX98089;Jersey;EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Finanza;0,00%
+1290;DEMANT;DK0060738599;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;OMX COPENHAGEN 20 Index;Sanità;0,00%
+1291;VERISURE PLC;GB00BVMN1558;Regno Unito;EUR;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,00%
+1292;BIOMERIEUX SA;FR0013280286;Francia;EUR;-;Azionari;-;-;Sanità;0,00%
+1293;ROCKWOOL CLASS B;DK0063855168;Danimarca;DKK;Copenhagen Stock Exchange;Azionari;-;-;Prodotti industriali;0,00%
+1294;LATOUR INVESTMENT CLASS B;SE0010100958;Svezia;SEK;-;Azionari;-;OMX Stockholm 30 Index;Prodotti industriali;0,00%
+1295;ANA HOLDINGS INC;JP3429800000;Giappone;JPY;Tokyo Stock Exchange;Azionari;-;TOPIX Index;Prodotti industriali;0,00%
+1296;CSG CLASS A NV;NL0015073TS8;Repubblica Ceca;EUR;Euronext Amsterdam;Azionari;-;Amsterdam Exchanges Index;Prodotti industriali;0,00%
+1297;LUNR ROYALTIES CORP;CA5504281067;Canada;CAD;-;Azionari;-;-;sconosciuta;0,00%
+1298;-;US436CVR0216;Stati Uniti d'America;USD;-;Azionari;-;-;sconosciuta;0,00%
+1299;ISRACARD LTD;IL0011574030;Israele;ILS;-;Azionari;-;-;Finanza;0,00%
+1300;NMC HEALTH PLC;GB00B7FC0762;Emirati Arabi Uniti;GBP;London Stock Exchange;Azionari;-;FTSE 100 Index;Sanità;N/A
+1301;CONSTELLATION SOFTWARE INC;CA21037X1345;Canada;CAD;-;Warrant;-;-;sconosciuta;N/A
+1302;MSCI WORLD INDEX  SEP26;___ADI2TZ8S1;Germania;USD;-;Future;-;-;sconosciuta;N/A
