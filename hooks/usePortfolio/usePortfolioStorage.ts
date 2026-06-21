@@ -105,23 +105,18 @@ export function usePortfolioStorage(
     }
   }, [t, setEtfs]);
 
-  // Load from indexedDB or fallback to local storage or defaults on mount
   useEffect(() => {
-    const loadInitialData = async () => {
-      // Check for shared file from Web Share Target API first
+    const loadSharedFile = async (): Promise<boolean> => {
       try {
         const sharedFile = await getItem<{ file: File; timestamp: number }>(
           'shared_portfolio_file'
         );
         if (sharedFile && sharedFile.file) {
-          // Prevent loading an old stale file (older than 5 minutes)
           if (Date.now() - sharedFile.timestamp < 300000) {
             const fileName = sharedFile.file.name.toLowerCase();
             if (fileName.endsWith('.csv') || sharedFile.file.type.includes('csv')) {
-              // It's a single ETF CSV! Pass it to the ETF form instead of importing as a full portfolio
               await setItem('shared_etf_csv', sharedFile);
             } else {
-              // It's a .lens or .png portfolio file
               try {
                 const sharedEtfs = await importPortfolioFromFile(sharedFile.file);
                 if (sharedEtfs && sharedEtfs.length > 0) {
@@ -131,7 +126,7 @@ export function usePortfolioStorage(
                   toast.success(t.components.common.notifications.defaultsLoaded, {
                     description: `Imported shared file: ${sharedFile.file.name}`,
                   });
-                  return;
+                  return true;
                 }
               } catch (err) {
                 console.error('Failed to parse shared file:', err);
@@ -143,11 +138,12 @@ export function usePortfolioStorage(
       } catch (e) {
         console.error('Failed to read shared_portfolio_file', e);
       }
+      return false;
+    };
 
+    const loadStoredPortfolio = async (): Promise<boolean> => {
       try {
         let parsed = await getItem<unknown[]>(STORAGE_KEY);
-
-        // Migrate from localStorage if indexedDB is empty
         if (!parsed) {
           const ls = localStorage.getItem(STORAGE_KEY);
           if (ls) {
@@ -161,7 +157,6 @@ export function usePortfolioStorage(
         }
 
         if (parsed && Array.isArray(parsed) && parsed.length > 0) {
-          // Auto-migrate legacy data that is missing the new fields
           const migrated = parsed.map((etf: unknown) => {
             const typedEtf = etf as Partial<EtfConfig>;
             const defaultMatch = DEFAULT_ETFS.find((d) => d.name === typedEtf.name);
@@ -182,7 +177,7 @@ export function usePortfolioStorage(
           if (validEtfs.length > 0) {
             setEtfs(validEtfs);
             setIsLoaded(true);
-            return;
+            return true;
           }
         }
       } catch (e) {
@@ -191,8 +186,12 @@ export function usePortfolioStorage(
           description: t.components.common.notifications.storageErrorDesc,
         });
       }
+      return false;
+    };
 
-      // If we reach here, local storage is empty or invalid. Load defaults!
+    const loadInitialData = async () => {
+      if (await loadSharedFile()) return;
+      if (await loadStoredPortfolio()) return;
       await loadDefaults();
     };
 

@@ -8,7 +8,7 @@ import textChunk from 'png-chunk-text';
 const CURRENT_VERSION = 1;
 const CHUNK_KEYWORD = 'lens-portfolio';
 
-export interface PortfolioPayload {
+interface PortfolioPayload {
   version: number;
   data: EtfConfig[];
 }
@@ -171,7 +171,7 @@ export async function importPortfolioFromSmartPNG(file: File): Promise<EtfConfig
   }
 }
 
-export const MAX_PORTFOLIO_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_PORTFOLIO_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
 /**
  * Unified entry point for importing a portfolio from any supported file type.
