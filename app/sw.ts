@@ -38,11 +38,11 @@ self.addEventListener('fetch', (event) => {
             });
           }
 
-          // Redirect to the home page with a query param indicating a shared file is pending
-          return Response.redirect('/?shared=true', 303);
+          // Redirect to the dashboard with a query param indicating a shared file is pending
+          return Response.redirect('/analyzer?shared=true', 303);
         } catch (error) {
           console.error('Error handling share target POST:', error);
-          return Response.redirect('/?shared=error', 303);
+          return Response.redirect('/analyzer?shared=error', 303);
         }
       })()
     );

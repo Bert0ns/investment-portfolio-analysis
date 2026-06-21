@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     if (!file) {
       return new Response(null, {
         status: 303,
-        headers: { Location: '/?shared=error' },
+        headers: { Location: '/analyzer?shared=error' },
       });
     }
 
@@ -60,18 +60,18 @@ export async function POST(request: Request) {
                 
                 const putReq = store.put({ file: file, timestamp: Date.now() }, 'shared_portfolio_file');
                 putReq.onsuccess = () => {
-                  window.location.replace('/?shared=true');
+                  window.location.replace('/analyzer?shared=true');
                 };
                 putReq.onerror = () => {
-                  window.location.replace('/?shared=error');
+                  window.location.replace('/analyzer?shared=error');
                 };
               };
               
               request.onerror = () => {
-                window.location.replace('/?shared=error');
+                window.location.replace('/analyzer?shared=error');
               };
             } catch (err) {
-              window.location.replace('/?shared=error');
+              window.location.replace('/analyzer?shared=error');
             }
           </script>
         </body>
@@ -86,7 +86,7 @@ export async function POST(request: Request) {
     console.error('Error in share-target API:', error);
     return new Response(null, {
       status: 303,
-      headers: { Location: '/?shared=error' },
+      headers: { Location: '/analyzer?shared=error' },
     });
   }
 }

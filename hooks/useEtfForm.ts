@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Issuer, EtfConfig, ReplicationMethod, UseOfProfit, Domicile } from '@/lib/types';
 import { getCsvParser } from '@/lib/parsers';
 import { toast } from 'sonner';
@@ -21,6 +21,30 @@ export function useEtfForm(onAddEtf: (etf: EtfConfig) => void) {
 
   const [file, setFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    import('@/lib/indexeddb').then(({ getItem, removeItem }) => {
+      const checkSharedCsv = async () => {
+        try {
+          const sharedData = await getItem<{ file: File; timestamp: number }>('shared_etf_csv');
+          if (sharedData && sharedData.file) {
+            if (Date.now() - sharedData.timestamp < 300000) {
+              setFile(sharedData.file);
+              setOpen(true);
+              toast.info(
+                t.pages.analyzer.components.etfForm.csvLoaded ||
+                  'CSV loaded from share intent. Please complete the form.'
+              );
+            }
+            await removeItem('shared_etf_csv');
+          }
+        } catch (e) {
+          console.error('Failed to load shared CSV:', e);
+        }
+      };
+      checkSharedCsv();
+    });
+  }, [t]);
 
   const resetForm = () => {
     setName('');

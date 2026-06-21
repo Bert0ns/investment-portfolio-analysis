@@ -116,19 +116,26 @@ export function usePortfolioStorage(
         if (sharedFile && sharedFile.file) {
           // Prevent loading an old stale file (older than 5 minutes)
           if (Date.now() - sharedFile.timestamp < 300000) {
-            try {
-              const sharedEtfs = await importPortfolioFromFile(sharedFile.file);
-              if (sharedEtfs && sharedEtfs.length > 0) {
-                setEtfs(sharedEtfs);
-                setIsLoaded(true);
-                await removeItem('shared_portfolio_file');
-                toast.success(t.components.common.notifications.defaultsLoaded, {
-                  description: `Imported shared file: ${sharedFile.file.name}`,
-                });
-                return;
+            const fileName = sharedFile.file.name.toLowerCase();
+            if (fileName.endsWith('.csv') || sharedFile.file.type.includes('csv')) {
+              // It's a single ETF CSV! Pass it to the ETF form instead of importing as a full portfolio
+              await setItem('shared_etf_csv', sharedFile);
+            } else {
+              // It's a .lens or .png portfolio file
+              try {
+                const sharedEtfs = await importPortfolioFromFile(sharedFile.file);
+                if (sharedEtfs && sharedEtfs.length > 0) {
+                  setEtfs(sharedEtfs);
+                  setIsLoaded(true);
+                  await removeItem('shared_portfolio_file');
+                  toast.success(t.components.common.notifications.defaultsLoaded, {
+                    description: `Imported shared file: ${sharedFile.file.name}`,
+                  });
+                  return;
+                }
+              } catch (err) {
+                console.error('Failed to parse shared file:', err);
               }
-            } catch (err) {
-              console.error('Failed to parse shared file:', err);
             }
           }
           await removeItem('shared_portfolio_file');
